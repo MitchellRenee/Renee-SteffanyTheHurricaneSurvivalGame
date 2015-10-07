@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package moonlight;
+package thehurricanesurvivalgame;
 
 /**
  *
  * @author Renee
  */
-public class MoonLight {
+public class TheHurricaneSurvivalGame {
 
     /**
      * @param args the command line arguments
