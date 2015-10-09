@@ -4,6 +4,7 @@ package thehurricanesurvivalgame;
 import byui.cit260.theHurricaneSurvivalGame.model.CampingStoreModel;
 import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGameModel;
 import byui.cit260.theHurricaneSurvivalGame.model.MapModel;
+import byui.cit260.theHurricaneSurvivalGame.model.ViewInventoryModel;
 
 /**
  *
@@ -43,6 +44,16 @@ public class TheHurricaneSurvivalGame {
         
         String hurricaneSurvivalGameInfo = access.toString();
         System.out.println(hurricaneSurvivalGameInfo);
+        
+        ViewInventoryModel view = new ViewInventoryModel();
+        
+        view.setViewSupplyList("view list of supplies");
+        
+        String viewInventoryInfo = view.toString();
+        System.out.println(mapInfo);
+        
+        
+        
         
         
         
