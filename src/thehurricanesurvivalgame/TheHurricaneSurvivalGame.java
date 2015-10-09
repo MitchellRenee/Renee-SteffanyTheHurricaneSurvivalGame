@@ -2,6 +2,7 @@
 package thehurricanesurvivalgame;
 
 import byui.cit260.theHurricaneSurvivalGame.model.CampingStoreModel;
+import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGameModel;
 import byui.cit260.theHurricaneSurvivalGame.model.MapModel;
 
 /**
@@ -33,6 +34,18 @@ public class TheHurricaneSurvivalGame {
         
         String campingStoreInfo = department.toString();
         System.out.println(campingStoreInfo);
+        
+        HurricaneSurvivalGameModel access = new HurricaneSurvivalGameModel();
+        
+        access.setAccessProgram("Computer starts game program");
+        access.setTotalTime(12);
+        access.setGameTime(48);
+        
+        String hurricaneSurvivalGameInfo = access.toString();
+        System.out.println(hurricaneSurvivalGameInfo);
+        
+        
+        
         
         
         
