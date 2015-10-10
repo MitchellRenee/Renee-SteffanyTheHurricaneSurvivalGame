@@ -20,12 +20,14 @@ public class CampingStoreModel implements Serializable {
     private String cookingSupplyAisle;
     private String gearAisle;
     private String generatorsAisle;
+    private String location;
+    private String aisles;
+    private String storeSize;
+    private String gameMenu;
 
     public CampingStoreModel() {
     }
     
-    
-
     public String getTentAndCanopyAisle() {
         return tentAndCanopyAisle;
     }
@@ -66,24 +68,58 @@ public class CampingStoreModel implements Serializable {
         this.generatorsAisle = generatorsAisle;
     }
 
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getAisles() {
+        return aisles;
+    }
+
+    public void setAisles(String aisles) {
+        this.aisles = aisles;
+    }
+
+    public String getStoreSize() {
+        return storeSize;
+    }
+
+    public void setStoreSize(String storeSize) {
+        this.storeSize = storeSize;
+    }
+
+    public String getGameMenu() {
+        return gameMenu;
+    }
+
+    public void setGameMenu(String gameMenu) {
+        this.gameMenu = gameMenu;
+    }
+
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 43 * hash + Objects.hashCode(this.tentAndCanopyAisle);
-        hash = 43 * hash + Objects.hashCode(this.lightingAisle);
-        hash = 43 * hash + Objects.hashCode(this.cookingSupplyAisle);
-        hash = 43 * hash + Objects.hashCode(this.gearAisle);
-        hash = 43 * hash + Objects.hashCode(this.generatorsAisle);
+        hash = 71 * hash + Objects.hashCode(this.tentAndCanopyAisle);
+        hash = 71 * hash + Objects.hashCode(this.lightingAisle);
+        hash = 71 * hash + Objects.hashCode(this.cookingSupplyAisle);
+        hash = 71 * hash + Objects.hashCode(this.gearAisle);
+        hash = 71 * hash + Objects.hashCode(this.generatorsAisle);
+        hash = 71 * hash + Objects.hashCode(this.location);
+        hash = 71 * hash + Objects.hashCode(this.aisles);
+        hash = 71 * hash + Objects.hashCode(this.storeSize);
+        hash = 71 * hash + Objects.hashCode(this.gameMenu);
         return hash;
-        
-        
     }
 
     @Override
     public String toString() {
-        return "CampingStoreModel{" + "tentAndCanopyAisle=" + tentAndCanopyAisle + ", lightingAisle=" + lightingAisle + ", cookingSupplyAisle=" + cookingSupplyAisle + ", gearAisle=" + gearAisle + ", generatorsAisle=" + generatorsAisle + '}';
+        return "CampingStoreModel{" + "tentAndCanopyAisle=" + tentAndCanopyAisle + ", lightingAisle=" + lightingAisle + ", cookingSupplyAisle=" + cookingSupplyAisle + ", gearAisle=" + gearAisle + ", generatorsAisle=" + generatorsAisle + ", location=" + location + ", aisles=" + aisles + ", storeSize=" + storeSize + ", gameMenu=" + gameMenu + '}';
     }
-
+    
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -108,10 +144,20 @@ public class CampingStoreModel implements Serializable {
         if (!Objects.equals(this.generatorsAisle, other.generatorsAisle)) {
             return false;
         }
+        if (!Objects.equals(this.location, other.location)) {
+            return false;
+        }
+        if (!Objects.equals(this.aisles, other.aisles)) {
+            return false;
+        }
+        if (!Objects.equals(this.storeSize, other.storeSize)) {
+            return false;
+        }
+        if (!Objects.equals(this.gameMenu, other.gameMenu)) {
+            return false;
+        }
         return true;
     }
-    
-    
     
     
     
