@@ -13,8 +13,12 @@ import java.util.Objects;
  * @author SteffanyFaldmo
  */
 public class Location implements Serializable{
-    
-    
+
+    public static boolean exists() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+   
+    //class instance variables
     private String displayLocations;
     private String enterLocationCoordinates;
     private String invalidCoordinates;
@@ -24,13 +28,12 @@ public class Location implements Serializable{
     private String row;
     private String column;
     private String visited;
+    private String exists;
+    private String move;
 
     public Location() {
     }
     
-    
-    
-
     public String getDisplayLocations() {
         return displayLocations;
     }
@@ -103,6 +106,22 @@ public class Location implements Serializable{
         this.visited = visited;
     }
 
+    public String getExists() {
+        return exists;
+    }
+
+    public void setExists(String exists) {
+        this.exists = exists;
+    }
+
+    public String getMove() {
+        return move;
+    }
+
+    public void setMove(String move) {
+        this.move = move;
+    }
+
     @Override
     public int hashCode() {
         int hash = 5;
@@ -115,9 +134,16 @@ public class Location implements Serializable{
         hash = 97 * hash + Objects.hashCode(this.row);
         hash = 97 * hash + Objects.hashCode(this.column);
         hash = 97 * hash + Objects.hashCode(this.visited);
+        hash = 97 * hash + Objects.hashCode(this.exists);
+        hash = 97 * hash + Objects.hashCode(this.move);
         return hash;
     }
 
+    @Override
+    public String toString() {
+        return "Location{" + "displayLocations=" + displayLocations + ", enterLocationCoordinates=" + enterLocationCoordinates + ", invalidCoordinates=" + invalidCoordinates + ", validCoordinates=" + validCoordinates + ", newLocationDisplaysInstructions=" + newLocationDisplaysInstructions + ", mainMapDisplayLocationCoordinates=" + mainMapDisplayLocationCoordinates + ", row=" + row + ", column=" + column + ", visited=" + visited + ", exists=" + exists + ", move=" + move + '}';
+    }
+    
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -154,15 +180,13 @@ public class Location implements Serializable{
         if (!Objects.equals(this.visited, other.visited)) {
             return false;
         }
-        return true;
+        if (!Objects.equals(this.exists, other.exists)) {
+            return false;
+        }
+        return Objects.equals(this.move, other.move);
     }
+    
+}    
+    
 
-    @Override
-    public String toString() {
-        return "Location{" + "displayLocations=" + displayLocations + ", enterLocationCoordinates=" + enterLocationCoordinates + ", invalidCoordinates=" + invalidCoordinates + ", validCoordinates=" + validCoordinates + ", newLocationDisplaysInstructions=" + newLocationDisplaysInstructions + ", mainMapDisplayLocationCoordinates=" + mainMapDisplayLocationCoordinates + ", row=" + row + ", column=" + column + ", visited=" + visited + '}';
-    }
     
-    
-    
-    
-}

@@ -63,10 +63,7 @@ public class MapModel implements Serializable{
         if (!Objects.equals(this.location, other.location)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.coordinates) != Double.doubleToLongBits(other.coordinates)) {
-            return false;
-        }
-        return true;
+        return Double.doubleToLongBits(this.coordinates) == Double.doubleToLongBits(other.coordinates);
     }
     
     
