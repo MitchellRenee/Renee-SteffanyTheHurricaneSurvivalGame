@@ -7,7 +7,7 @@ package byui.cit260.theHurricaneSurvivalGame.control;
 
 /**
  *
- * @author Renee
+ * @author Steffany
  */
 public class viewControl {
     
