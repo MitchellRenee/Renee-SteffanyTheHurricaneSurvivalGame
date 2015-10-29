@@ -9,6 +9,6 @@ package byui.cit260.theHurricaneSurvivalGame.control;
  *
  * @author Renee
  */
-public class DeliveryControl {
-    
+public class DeliveryControlFIX {
+    //Commit
 }
