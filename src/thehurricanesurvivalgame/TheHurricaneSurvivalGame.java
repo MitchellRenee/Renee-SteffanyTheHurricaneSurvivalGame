@@ -40,6 +40,7 @@ public class TheHurricaneSurvivalGame {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Sample comment
         Map mainMap = new Map();
             
         mainMap.setLocation("House");
