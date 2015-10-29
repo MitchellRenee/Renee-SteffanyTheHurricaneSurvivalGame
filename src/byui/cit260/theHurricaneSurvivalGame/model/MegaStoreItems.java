@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author Renee
  */
-public class MegaStoreItemsModel implements Serializable{
+public class MegaStoreItems implements Serializable{
     
     //class instance variables
     private String nameProtien;
@@ -28,7 +28,7 @@ public class MegaStoreItemsModel implements Serializable{
     private String nameWater;
     private String GameMenu;
 
-    public MegaStoreItemsModel() {
+    public MegaStoreItems() {
     }
     
     public String getNameProtien() {
@@ -158,7 +158,7 @@ public class MegaStoreItemsModel implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final MegaStoreItemsModel other = (MegaStoreItemsModel) obj;
+        final MegaStoreItems other = (MegaStoreItems) obj;
         if (!Objects.equals(this.nameProtien, other.nameProtien)) {
             return false;
         }

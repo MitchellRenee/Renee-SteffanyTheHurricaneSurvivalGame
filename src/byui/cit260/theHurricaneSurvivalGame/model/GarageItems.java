@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author Renee
  */
-public class GarageItemsModel implements Serializable{
+public class GarageItems implements Serializable{
     
     //class instance variables
     private String tent;
@@ -20,7 +20,7 @@ public class GarageItemsModel implements Serializable{
     private String cookingStove;
     private String generator;
 
-    public GarageItemsModel() {
+    public GarageItems() {
     }
     
     public String getTent() {
@@ -79,7 +79,7 @@ public class GarageItemsModel implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final GarageItemsModel other = (GarageItemsModel) obj;
+        final GarageItems other = (GarageItems) obj;
         if (!Objects.equals(this.tent, other.tent)) {
             return false;
         }

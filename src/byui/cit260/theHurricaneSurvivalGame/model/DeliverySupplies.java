@@ -124,10 +124,7 @@ public class DeliverySupplies implements Serializable{
         if (!Objects.equals(this.validResponseDisplayMessage, other.validResponseDisplayMessage)) {
             return false;
         }
-        if (!Objects.equals(this.returnToGameMenu, other.returnToGameMenu)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.returnToGameMenu, other.returnToGameMenu);
     }
 
     @Override

@@ -12,13 +12,13 @@ import java.util.Objects;
  *
  * @author Renee
  */
-public class BasementItemsModel implements Serializable{
+public class BasementItems implements Serializable{
       
     //class instance variables
     private String water;
     private String foodStorage;
 
-    public BasementItemsModel() {
+    public BasementItems() {
     }    
 
     public String getWater() {
@@ -59,7 +59,7 @@ public class BasementItemsModel implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final BasementItemsModel other = (BasementItemsModel) obj;
+        final BasementItems other = (BasementItems) obj;
         if (!Objects.equals(this.water, other.water)) {
             return false;
         }

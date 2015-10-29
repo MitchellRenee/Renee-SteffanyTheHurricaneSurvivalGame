@@ -11,7 +11,7 @@ import java.util.Objects;
  *
  * @author Renee
  */
-public class BathroomItemsModel {
+public class BathroomItems {
     
   //class instance variables
     private String hygienalKits;
@@ -20,7 +20,7 @@ public class BathroomItemsModel {
     private String unprescribedMedicine;
     private String firstaidKit;
 
-    public BathroomItemsModel() {
+    public BathroomItems() {
     }
     
     public String getHygienalKits() {
@@ -88,7 +88,7 @@ public class BathroomItemsModel {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final BathroomItemsModel other = (BathroomItemsModel) obj;
+        final BathroomItems other = (BathroomItems) obj;
         if (!Objects.equals(this.hygienalKits, other.hygienalKits)) {
             return false;
         }

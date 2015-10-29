@@ -17,13 +17,13 @@ public class DeliveryCenter implements Serializable{
     
     private String deliverWater;
     private String deliverSuppliesToNursingHome;
-    private String deliverSuppliesToPrison;
+    private String deliverSuppliesToPrisonp;
+    private String DeliveryOrder;
+    private String totalTimeOfDelivery;
+    private String totalCostofDelivery;
 
     public DeliveryCenter() {
     }
-    
-    
-    
 
     public String getDeliverWater() {
         return deliverWater;
@@ -41,23 +41,55 @@ public class DeliveryCenter implements Serializable{
         this.deliverSuppliesToNursingHome = deliverSuppliesToNursingHome;
     }
 
-    public String getDeliverSuppliesToPrison() {
-        return deliverSuppliesToPrison;
+    public String getDeliverSuppliesToPrisonp() {
+        return deliverSuppliesToPrisonp;
     }
 
-    public void setDeliverSuppliesToPrison(String deliverSuppliesToPrison) {
-        this.deliverSuppliesToPrison = deliverSuppliesToPrison;
+    public void setDeliverSuppliesToPrisonp(String deliverSuppliesToPrisonp) {
+        this.deliverSuppliesToPrisonp = deliverSuppliesToPrisonp;
+    }
+
+    public String getDeliveryOrder() {
+        return DeliveryOrder;
+    }
+
+    public void setDeliveryOrder(String DeliveryOrder) {
+        this.DeliveryOrder = DeliveryOrder;
+    }
+
+    public String getTotalTimeOfDelivery() {
+        return totalTimeOfDelivery;
+    }
+
+    public void setTotalTimeOfDelivery(String totalTimeOfDelivery) {
+        this.totalTimeOfDelivery = totalTimeOfDelivery;
+    }
+
+    public String getTotalCostofDelivery() {
+        return totalCostofDelivery;
+    }
+
+    public void setTotalCostofDelivery(String totalCostofDelivery) {
+        this.totalCostofDelivery = totalCostofDelivery;
     }
 
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 61 * hash + Objects.hashCode(this.deliverWater);
-        hash = 61 * hash + Objects.hashCode(this.deliverSuppliesToNursingHome);
-        hash = 61 * hash + Objects.hashCode(this.deliverSuppliesToPrison);
+        hash = 17 * hash + Objects.hashCode(this.deliverWater);
+        hash = 17 * hash + Objects.hashCode(this.deliverSuppliesToNursingHome);
+        hash = 17 * hash + Objects.hashCode(this.deliverSuppliesToPrisonp);
+        hash = 17 * hash + Objects.hashCode(this.DeliveryOrder);
+        hash = 17 * hash + Objects.hashCode(this.totalTimeOfDelivery);
+        hash = 17 * hash + Objects.hashCode(this.totalCostofDelivery);
         return hash;
     }
 
+    @Override
+    public String toString() {
+        return "DeliveryCenter{" + "deliverWater=" + deliverWater + ", deliverSuppliesToNursingHome=" + deliverSuppliesToNursingHome + ", deliverSuppliesToPrisonp=" + deliverSuppliesToPrisonp + ", DeliveryOrder=" + DeliveryOrder + ", totalTimeOfDelivery=" + totalTimeOfDelivery + ", totalCostofDelivery=" + totalCostofDelivery + '}';
+    }
+    
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -73,16 +105,27 @@ public class DeliveryCenter implements Serializable{
         if (!Objects.equals(this.deliverSuppliesToNursingHome, other.deliverSuppliesToNursingHome)) {
             return false;
         }
-        if (!Objects.equals(this.deliverSuppliesToPrison, other.deliverSuppliesToPrison)) {
+        if (!Objects.equals(this.deliverSuppliesToPrisonp, other.deliverSuppliesToPrisonp)) {
+            return false;
+        }
+        if (!Objects.equals(this.DeliveryOrder, other.DeliveryOrder)) {
+            return false;
+        }
+        if (!Objects.equals(this.totalTimeOfDelivery, other.totalTimeOfDelivery)) {
+            return false;
+        }
+        if (!Objects.equals(this.totalCostofDelivery, other.totalCostofDelivery)) {
             return false;
         }
         return true;
     }
 
-    @Override
-    public String toString() {
-        return "DeliveryCenter{" + "deliverWater=" + deliverWater + ", deliverSuppliesToNursingHome=" + deliverSuppliesToNursingHome + ", deliverSuppliesToPrison=" + deliverSuppliesToPrison + '}';
+    public void setDeliverSuppliesToPrison(String yes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    
+    
     
     
     

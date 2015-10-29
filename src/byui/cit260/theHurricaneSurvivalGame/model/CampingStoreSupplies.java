@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author Renee
  */
-public class CampingStoreSuppliesModel implements Serializable{
+public class CampingStoreSupplies implements Serializable{
     
     //class instance variables
     private String tentSize;
@@ -28,7 +28,7 @@ public class CampingStoreSuppliesModel implements Serializable{
     private String rainGear;
     private String gameMenu;
 
-    public CampingStoreSuppliesModel() {
+    public CampingStoreSupplies() {
     }
     
     public String getTentSize() {
@@ -159,7 +159,7 @@ public class CampingStoreSuppliesModel implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final CampingStoreSuppliesModel other = (CampingStoreSuppliesModel) obj;
+        final CampingStoreSupplies other = (CampingStoreSupplies) obj;
         if (!Objects.equals(this.tentSize, other.tentSize)) {
             return false;
         }

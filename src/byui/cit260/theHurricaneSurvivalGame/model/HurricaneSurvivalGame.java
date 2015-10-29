@@ -12,14 +12,14 @@ import java.util.Objects;
  *
  * @author Renee
  */
-public class HurricaneSurvivalGameModel implements Serializable{
+public class HurricaneSurvivalGame implements Serializable{
     
     //class instance variables
     private String accessProgram;
     private double totalTime;
     private double gameTime;
 
-    public HurricaneSurvivalGameModel() {
+    public HurricaneSurvivalGame() {
     }
     
     
@@ -70,7 +70,7 @@ public class HurricaneSurvivalGameModel implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final HurricaneSurvivalGameModel other = (HurricaneSurvivalGameModel) obj;
+        final HurricaneSurvivalGame other = (HurricaneSurvivalGame) obj;
         if (!Objects.equals(this.accessProgram, other.accessProgram)) {
             return false;
         }

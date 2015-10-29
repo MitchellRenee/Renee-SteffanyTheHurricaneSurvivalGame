@@ -12,13 +12,13 @@ import java.util.Objects;
  *
  * @author SteffanyFaldmo
  */
-public class MapModel implements Serializable{
+public class Map implements Serializable{
     
     //class instance variables
     private String location;
     private double coordinates;
 
-    public MapModel() {
+    public Map() {
     }
     
 
@@ -59,7 +59,7 @@ public class MapModel implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final MapModel other = (MapModel) obj;
+        final Map other = (Map) obj;
         if (!Objects.equals(this.location, other.location)) {
             return false;
         }

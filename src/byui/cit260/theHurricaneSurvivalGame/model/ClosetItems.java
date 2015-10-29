@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author Renee
  */
-public class ClosetItemsModel implements Serializable{
+public class ClosetItems implements Serializable{
     
     //class instance variables
     private String ledLantern;
@@ -23,7 +23,7 @@ public class ClosetItemsModel implements Serializable{
     private String flashlight;
     private String batteries;
 
-    public ClosetItemsModel() {
+    public ClosetItems() {
     }
     
     public String getLedLantern() {
@@ -109,7 +109,7 @@ public class ClosetItemsModel implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final ClosetItemsModel other = (ClosetItemsModel) obj;
+        final ClosetItems other = (ClosetItems) obj;
         if (!Objects.equals(this.ledLantern, other.ledLantern)) {
             return false;
         }

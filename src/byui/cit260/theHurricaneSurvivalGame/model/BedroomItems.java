@@ -12,14 +12,14 @@ import java.util.Objects;
  *
  * @author Renee
  */
-public class BedroomItemsModel implements Serializable{
+public class BedroomItems implements Serializable{
     
     //class instance variables
     private String clothes;
     private String shoes;
     private String blankets;
 
-    public BedroomItemsModel() {
+    public BedroomItems() {
     }
     
     public String getClothes() {
@@ -68,7 +68,7 @@ public class BedroomItemsModel implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final BedroomItemsModel other = (BedroomItemsModel) obj;
+        final BedroomItems other = (BedroomItems) obj;
         if (!Objects.equals(this.clothes, other.clothes)) {
             return false;
         }

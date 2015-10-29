@@ -20,7 +20,7 @@ public class MapControl {
     *@param Location is the destination
     *@return Was the player able to move to the new location?
     */
-     public static boolean move(Player p, Location l){
+    public static boolean move(Player p, Location l){
         boolean returnValue = false;
         if(Location.exists() && Player.canMove()){
             returnValue = true;

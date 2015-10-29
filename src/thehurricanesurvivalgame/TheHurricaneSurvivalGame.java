@@ -1,33 +1,33 @@
 
 package thehurricanesurvivalgame;
 
-import byui.cit260.theHurricaneSurvivalGame.model.BasementItemsModel;
-import byui.cit260.theHurricaneSurvivalGame.model.BathroomItemsModel;
-import byui.cit260.theHurricaneSurvivalGame.model.BedroomItemsModel;
-import byui.cit260.theHurricaneSurvivalGame.model.CampingStoreModel;
-import byui.cit260.theHurricaneSurvivalGame.model.CampingStoreSuppliesModel;
+import byui.cit260.theHurricaneSurvivalGame.model.BasementItems;
+import byui.cit260.theHurricaneSurvivalGame.model.BathroomItems;
+import byui.cit260.theHurricaneSurvivalGame.model.BedroomItems;
+import byui.cit260.theHurricaneSurvivalGame.model.CampingStore;
+import byui.cit260.theHurricaneSurvivalGame.model.CampingStoreSupplies;
 import byui.cit260.theHurricaneSurvivalGame.model.CityMap;
-import byui.cit260.theHurricaneSurvivalGame.model.ClosetItemsModel;
+import byui.cit260.theHurricaneSurvivalGame.model.ClosetItems;
 import byui.cit260.theHurricaneSurvivalGame.model.DeliveryCenter;
 import byui.cit260.theHurricaneSurvivalGame.model.DeliverySupplies;
 import byui.cit260.theHurricaneSurvivalGame.model.GameMenu;
-import byui.cit260.theHurricaneSurvivalGame.model.GarageItemsModel;
+import byui.cit260.theHurricaneSurvivalGame.model.GarageItems;
 import byui.cit260.theHurricaneSurvivalGame.model.HelpMenu;
 import byui.cit260.theHurricaneSurvivalGame.model.HouseMap;
-import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGameModel;
-import byui.cit260.theHurricaneSurvivalGame.model.KitchenItemsModel;
+import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGame;
+import byui.cit260.theHurricaneSurvivalGame.model.KitchenItems;
 import byui.cit260.theHurricaneSurvivalGame.model.Location;
 import byui.cit260.theHurricaneSurvivalGame.model.MainMenu;
-import byui.cit260.theHurricaneSurvivalGame.model.MapModel;
-import byui.cit260.theHurricaneSurvivalGame.model.MegaStoreItemsModel;
-import byui.cit260.theHurricaneSurvivalGame.model.MegaStoreModel;
+import byui.cit260.theHurricaneSurvivalGame.model.Map;
+import byui.cit260.theHurricaneSurvivalGame.model.MegaStoreItems;
+import byui.cit260.theHurricaneSurvivalGame.model.MegaStore;
 import byui.cit260.theHurricaneSurvivalGame.model.RetrieveGame;
 import byui.cit260.theHurricaneSurvivalGame.model.RoomList;
 import byui.cit260.theHurricaneSurvivalGame.model.SaveGame;
 import byui.cit260.theHurricaneSurvivalGame.model.StartMenu;
 import byui.cit260.theHurricaneSurvivalGame.model.StoreModel;
 import byui.cit260.theHurricaneSurvivalGame.model.ViewDeliveries;
-import byui.cit260.theHurricaneSurvivalGame.model.ViewInventoryModel;
+import byui.cit260.theHurricaneSurvivalGame.model.ViewInventory;
 import byui.cit260.theHurricaneSurvivalGame.model.ViewSupplyList;
 
 /**
@@ -40,7 +40,7 @@ public class TheHurricaneSurvivalGame {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        MapModel mainMap = new MapModel();
+        Map mainMap = new Map();
             
         mainMap.setLocation("House");
         mainMap.setCoordinates(7);
@@ -49,7 +49,7 @@ public class TheHurricaneSurvivalGame {
         System.out.println(mainMap);
         
         
-        CampingStoreModel department = new CampingStoreModel();
+        CampingStore department = new CampingStore();
         
         department.setTentAndCanopyAisle("Aisle 2");
         department.setLightingAisle("Aisle 5");
@@ -66,7 +66,7 @@ public class TheHurricaneSurvivalGame {
         System.out.println(campingStoreInfo);
         
         
-        CampingStoreSuppliesModel nameCampingSupply = new CampingStoreSuppliesModel();
+        CampingStoreSupplies nameCampingSupply = new CampingStoreSupplies();
         
         nameCampingSupply.setTentSize("medium tent or family size tent");
         nameCampingSupply.setCanopySize("medium canopy or large canopy");
@@ -86,7 +86,7 @@ public class TheHurricaneSurvivalGame {
         
      
         
-        HurricaneSurvivalGameModel access = new HurricaneSurvivalGameModel();
+        HurricaneSurvivalGame access = new HurricaneSurvivalGame();
         
         access.setAccessProgram("Computer starts game program");
         access.setTotalTime(12);
@@ -95,7 +95,7 @@ public class TheHurricaneSurvivalGame {
         String hurricaneSurvivalGameInfo = access.toString();
         System.out.println(hurricaneSurvivalGameInfo);
         
-        ViewInventoryModel view = new ViewInventoryModel();
+        ViewInventory view = new ViewInventory();
         
         view.setViewSupplyList("view list of supplies");
         
@@ -103,7 +103,7 @@ public class TheHurricaneSurvivalGame {
         System.out.println(viewInventoryInfo);
         
         
-        BasementItemsModel basementItems = new BasementItemsModel();
+        BasementItems basementItems = new BasementItems();
         
         basementItems.setWater("Store water");
         basementItems.setFoodStorage("Store foodstore");
@@ -112,7 +112,7 @@ public class TheHurricaneSurvivalGame {
         System.out.println(basementItemsInfo);
         
         
-        BathroomItemsModel bathroomItems = new BathroomItemsModel();
+        BathroomItems bathroomItems = new BathroomItems();
         
         bathroomItems.setHygienalKits("Store hygiene kits");
         bathroomItems.setToiletPaper("Store toilet paper");
@@ -124,7 +124,7 @@ public class TheHurricaneSurvivalGame {
         System.out.println(bathroomItemsInfo);
         
         
-        BedroomItemsModel bedroomItems = new BedroomItemsModel();
+        BedroomItems bedroomItems = new BedroomItems();
         
         bedroomItems.setClothes("Store clothes");
         bedroomItems.setShoes("Store shoes");
@@ -134,7 +134,7 @@ public class TheHurricaneSurvivalGame {
         System.out.println(bedroomItemsInfo);
         
         
-        ClosetItemsModel closetItems = new ClosetItemsModel();
+        ClosetItems closetItems = new ClosetItems();
         
         closetItems.setLedLantern("Store LED lantern");
         closetItems.setMylarBlankets("Store Mylar blankets");
@@ -148,7 +148,7 @@ public class TheHurricaneSurvivalGame {
         System.out.println(closetItemsInfo);
         
         
-        GarageItemsModel garageItems = new GarageItemsModel();
+        GarageItems garageItems = new GarageItems();
         
         garageItems.setTent("Store tent");
         garageItems.setCanopy("Store canopy");
@@ -159,7 +159,7 @@ public class TheHurricaneSurvivalGame {
         System.out.println(garageItemsInfo);
         
         
-        KitchenItemsModel kitchenItems = new KitchenItemsModel();
+        KitchenItems kitchenItems = new KitchenItems();
         
         kitchenItems.setProtein("Store proteins");
         kitchenItems.setCarbohydrates("Store carbohydrates");
@@ -183,7 +183,7 @@ public class TheHurricaneSurvivalGame {
         System.out.println(storeInfo);
         
         
-        MegaStoreModel availableMegaProducts = new MegaStoreModel();
+        MegaStore availableMegaProducts = new MegaStore();
         
         availableMegaProducts.setProtien("Proteins");
         availableMegaProducts.setSweets("Sweets");
@@ -202,7 +202,7 @@ public class TheHurricaneSurvivalGame {
         System.out.println(megaStoreInfo);
         
         
-        MegaStoreItemsModel nameMegaProducts = new MegaStoreItemsModel();
+        MegaStoreItems nameMegaProducts = new MegaStoreItems();
         
         nameMegaProducts.setNameProtien("meats,peanutbutter,and fresh vegetables");
         nameMegaProducts.setNameSnacks("graham crackers,fruits, and granola bars");

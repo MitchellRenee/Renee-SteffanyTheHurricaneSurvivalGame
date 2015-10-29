@@ -17,23 +17,25 @@ public class Player implements Serializable{
     public static boolean canMove() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    public static boolean name() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     //class instance variable
-    private String name;
+    private boolean namePlayer;
     private boolean bestTime;
     private boolean playerLocation;
     private boolean items;
     private double moneyAccount;
-
-    public Player() {
-    }    
-
-    public String getName() {
-        return name;
+    private boolean status;
+    
+    public boolean isNamePlayer() {
+        return namePlayer;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNamePlayer(boolean namePlayer) {
+        this.namePlayer = namePlayer;
     }
 
     public boolean isBestTime() {
@@ -68,20 +70,29 @@ public class Player implements Serializable{
         this.moneyAccount = moneyAccount;
     }
 
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 31 * hash + Objects.hashCode(this.name);
-        hash = 31 * hash + (this.bestTime ? 1 : 0);
-        hash = 31 * hash + (this.playerLocation ? 1 : 0);
-        hash = 31 * hash + (this.items ? 1 : 0);
-        hash = 31 * hash + (int) (Double.doubleToLongBits(this.moneyAccount) ^ (Double.doubleToLongBits(this.moneyAccount) >>> 32));
+        hash = 67 * hash + (this.namePlayer ? 1 : 0);
+        hash = 67 * hash + (this.bestTime ? 1 : 0);
+        hash = 67 * hash + (this.playerLocation ? 1 : 0);
+        hash = 67 * hash + (this.items ? 1 : 0);
+        hash = 67 * hash + (int) (Double.doubleToLongBits(this.moneyAccount) ^ (Double.doubleToLongBits(this.moneyAccount) >>> 32));
+        hash = 67 * hash + (this.status ? 1 : 0);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + ", bestTime=" + bestTime + ", playerLocation=" + playerLocation + ", items=" + items + ", moneyAccount=" + moneyAccount + '}';
+        return "Player{" + "namePlayer=" + namePlayer + ", bestTime=" + bestTime + ", playerLocation=" + playerLocation + ", items=" + items + ", moneyAccount=" + moneyAccount + ", status=" + status + '}';
     }
     
     @Override
@@ -93,7 +104,7 @@ public class Player implements Serializable{
             return false;
         }
         final Player other = (Player) obj;
-        if (!Objects.equals(this.name, other.name)) {
+        if (this.namePlayer != other.namePlayer) {
             return false;
         }
         if (this.bestTime != other.bestTime) {
@@ -108,9 +119,17 @@ public class Player implements Serializable{
         if (Double.doubleToLongBits(this.moneyAccount) != Double.doubleToLongBits(other.moneyAccount)) {
             return false;
         }
+        if (this.status != other.status) {
+            return false;
+        }
         return true;
     }
-}    
+}
+    
+    
+  
+        
+   
     
     
     
