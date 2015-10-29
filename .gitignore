@@ -39,3 +39,4 @@ source
 ehthumbs.db
 Thumbs.db
 /build/
+/nbproject/private/
