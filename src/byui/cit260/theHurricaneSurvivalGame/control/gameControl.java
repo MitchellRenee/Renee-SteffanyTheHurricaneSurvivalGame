@@ -7,8 +7,8 @@ package byui.cit260.theHurricaneSurvivalGame.control;
 
 /**
  *
- * @author Steffany
+ * @author Renee
  */
-public class gameControl {
-    
+public class GameControl {
+    //Sample comment
 }
