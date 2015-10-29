@@ -7,8 +7,8 @@ package byui.cit260.theHurricaneSurvivalGame.control;
 
 /**
  *
- * @author Steffany
+ * @author Renee
  */
-public class GameControlFIX {
+public class HarvestControl {
     
 }
