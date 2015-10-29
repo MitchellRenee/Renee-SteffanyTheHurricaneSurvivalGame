@@ -25,7 +25,7 @@ public class timeControlTest {
         System.out.println("calcTimeRemainingInGame");
         double TimeSpent = 0.0;
         double TotalTime = 0.0;
-        TimeControlFIX instance = new TimeControlFIX();
+        TimeControl instance = new TimeControl();
         double expResult = 0.0;
         double result = instance.calcTimeRemainingInGame(TimeSpent, TotalTime);
         assertEquals(expResult, result, 0.0);
