@@ -1,6 +1,7 @@
 
 package thehurricanesurvivalgame;
 
+import static byui.cit260.theHurricaneSurvivalGame.control.PlayerControl.player;
 import byui.cit260.theHurricaneSurvivalGame.model.BasementItems;
 import byui.cit260.theHurricaneSurvivalGame.model.BathroomItems;
 import byui.cit260.theHurricaneSurvivalGame.model.BedroomItems;
@@ -21,6 +22,7 @@ import byui.cit260.theHurricaneSurvivalGame.model.MainMenu;
 import byui.cit260.theHurricaneSurvivalGame.model.Map;
 import byui.cit260.theHurricaneSurvivalGame.model.MegaStoreItems;
 import byui.cit260.theHurricaneSurvivalGame.model.MegaStore;
+import byui.cit260.theHurricaneSurvivalGame.model.Player;
 import byui.cit260.theHurricaneSurvivalGame.model.RetrieveGame;
 import byui.cit260.theHurricaneSurvivalGame.model.RoomList;
 import byui.cit260.theHurricaneSurvivalGame.model.SaveGame;
@@ -29,19 +31,34 @@ import byui.cit260.theHurricaneSurvivalGame.model.StoreModel;
 import byui.cit260.theHurricaneSurvivalGame.model.ViewDeliveries;
 import byui.cit260.theHurricaneSurvivalGame.model.ViewInventory;
 import byui.cit260.theHurricaneSurvivalGame.model.ViewSupplyList;
+import byui.cit260.theHurricaneSurvivalGame.view.WelcomeView;
 
 /**
  *
  * @author SteffanyFaldmo
  */
 public class TheHurricaneSurvivalGame {
+    
+    Player player = new Player();
+    
+    WelcomeView welcomeView = new WelcomeView();
+    welcomeView.displayBanner();
+
+    
+    player.setName (welcomeView.getPlayerName());
+    
+    welcomeView.displayPlayerNameBanner:(player);
+   
+    
+    
+    
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //Sample comment
-        Map mainMap = new Map();
+      
+        /*Map mainMap = new Map();
             
         mainMap.setLocation("House");
         mainMap.setCoordinates(7);
@@ -411,9 +428,7 @@ public class TheHurricaneSurvivalGame {
         rooms.setGarage("garage");
         
         String roomListInfo = rooms.toString();
-        System.out.println(roomListInfo);
+        System.out.println(roomListInfo);*/
                 
-         }  
-    }
-    
-    
+        }  
+    }   

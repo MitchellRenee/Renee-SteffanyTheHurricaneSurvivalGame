@@ -5,13 +5,17 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
 
+import byui.cit260.theHurricaneSurvivalGame.model.Player;
+import java.util.Scanner;
+
 /**
  *
  * @author Renee
  */
-public class WelcomView {
+public class WelcomeView {
     
-    public WelcomView(){
+        
+    public WelcomeView(){
         
     }
     public void displayBanner(){
@@ -39,6 +43,32 @@ public class WelcomView {
         System.out.println("All of this has to be done in less than 48 hours");        
         System.out.println("The clock is ticking and there's no time to waist");
         System.out.println("*******************************************");
-    }   
+    }
+           
+    public String getPlayerName(){
+        
+        Scanner in = new Scanner(System.in);
+        String name = "";
+        
+        while(name.length() < 2){        
+            System.out.println("Please enter your name:");
+            name = in.nextLine();  
+        
+        if (name.length () <  2){   
+            System.out.println("Please enter a name with at least 2 characters:");
+        }
+    }             
+        
+    return name;
     
+    }
+    
+    public void displayPlayerNameBanner(Player p){
+        System.out.println("*******************************");
+        System.out.println("Welcome " + p.getName() + "");
+        System.out.println("Best of Luck!");
+        System.out.println("*******************************");
+    }
 }
+    
+
