@@ -19,7 +19,7 @@ public class DeliveryControl {
     *@param calculateDeliveryCost determines the cost of the total delivery of packages
     *@return Was the player able to move to the new location?
     */
-     public static boolean delivery(DeliveryOrder o, DeliveryTime t, DeliveryCost c){
+     public static boolean delivery(DeliveryOrder d, DeliveryTime t, DeliveryCost c){
         boolean returnValue = false;
         if(DeliveryOrder.validate() && DeliveryTime.calculate() && DeliveryCost.calculate()){
             returnValue = true;
@@ -27,6 +27,10 @@ public class DeliveryControl {
 
         return returnValue;
         }
+
+    static boolean deliveryOrder(Delivery d, Time t, Cost c) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     private static class DeliveryCost {
 
@@ -55,6 +59,24 @@ public class DeliveryControl {
         }
 
         public DeliveryOrder() {
+        }
+    }
+
+    static class Delivery {
+
+        public Delivery() {
+        }
+    }
+
+    static class Time {
+
+        public Time() {
+        }
+    }
+
+    static class Cost {
+
+        public Cost() {
         }
     }
     

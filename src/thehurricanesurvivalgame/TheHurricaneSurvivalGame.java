@@ -4,94 +4,10 @@ package thehurricanesurvivalgame;
 import static byui.cit260.theHurricaneSurvivalGame.control.PlayerControl.player;
 import byui.cit260.theHurricaneSurvivalGame.control.ProgramControl;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
-import byui.cit260.theHurricaneSurvivalGame.view.StartProgramView;
-import static byui.cit260.theHurricaneSurvivalGame.view.StartProgramView.startProgramView;
 import byui.cit260.theHurricaneSurvivalGame.view.WelcomeView;
 import java.util.Scanner;
 
-/**
- *
- * @author SteffanyFaldmo
- */
-public class TheHurricaneSurvivalGame {
-       
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        
-        Player player = new Player();
-        
-        WelcomeView welcomeView = new WelcomeView();
-        welcomeView.displayBanner();
-        
-        welcomeView.getPlayerName();
-        player.setName(welcomeView.getPlayerName());
-        
-        welcomeView.displayPlayerNameBanner(player);
-                
- 
-        
-        //Line 32 should not it say WelcomeView since I'm working on WelcomeView and then add import?
-        //Create StartProgramView and start the program
-        StartProgramView. startProgramView = new StartProgramView();
-        startProgramView.startProgram();      
-    }      
 
-        
-    public void startProgram(){
-    
-        //Display the banner screen
-        this.displayBanner();
-
-        //Prompt the player to enter their name. Retrieve the name of the player
-        String playersName = this.getPlayersName();
-        //If it's String playersName then create method if it's WelcomeView do I change?
-        
-        //Create and save the player object
-        Player player =ProgramControl.createPlayer(playersName);
-        //Import statement to import the Player class in lightbulb is missing
-        
-        //Display a personlized welcome message
-        
-        //Display the Main menu.
-        
-    }   
-        
-    private String getPlayersName(){
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
-    public String getPlayersName(){
-        boolean valid = false; //indicates if the name has been retrieved
-        String playersName = null;
-        Scanner keyboard = new Scanner(System.in);//keyboard input stream
-        
-        while(!valid){//while a valid name has not been retrieved
-                       
-            //Prompt for the player's name
-            System.out.println("Enter the player's name below");
-           
-            //Get the name from the keyboard and trim off the blanks
-            playersName = keyboard.nextLine();
-            playersName = playersName.trim();
-                     
-            //If the name is invalid (less than two character in length))
-            if(playersName.length() < 2) {
-                System.out.println("Invalid name - the name must not be blank");
-                continue; //and repeat again
-             }
-             break;//out of the (exit) the repetition
-        }
-          
-        return playersName; //return the       
-    } 
-    
-    public void startProgram();
-    
-        //Display the banner screen
-        this.displayBanner();
         
         //Prompt the player to enter their name
     
@@ -465,9 +381,15 @@ public class TheHurricaneSurvivalGame {
         rooms.setGarage("garage");
         
         String roomListInfo = rooms.toString();
-        System.out.println(roomListInfo);*/
+        System.out.println(roomListInfo);
+    }
+
+}
+
+
+*/
 
    
-    }  
+
  
-}  
+  
