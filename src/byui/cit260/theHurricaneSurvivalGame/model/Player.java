@@ -18,23 +18,22 @@ public class Player implements Serializable{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public static boolean name() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
+    
     
     //class instance variable
-    private boolean namePlayer;
+    private String namePlayer;
     private boolean bestTime;
     private boolean playerLocation;
     private boolean items;
     private double moneyAccount;
     private boolean status;
     
-    public boolean isNamePlayer() {
+    public String getNamePlayer() {
         return namePlayer;
     }
 
-    public void setNamePlayer(boolean namePlayer) {
+    public void setNamePlayer(String namePlayer) {
         this.namePlayer = namePlayer;
     }
 

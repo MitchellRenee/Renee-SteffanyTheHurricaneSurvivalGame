@@ -4,10 +4,40 @@ package thehurricanesurvivalgame;
 import static byui.cit260.theHurricaneSurvivalGame.control.PlayerControl.player;
 import byui.cit260.theHurricaneSurvivalGame.control.ProgramControl;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
+import byui.cit260.theHurricaneSurvivalGame.view.StartProgramView;
 import byui.cit260.theHurricaneSurvivalGame.view.WelcomeView;
 import java.util.Scanner;
 
 
+public class TheHurricaneSurvivalGame {
+       
+    /**
+     * @param args the command line arguments
+     */
+    
+    private static final Game currentGame = null;
+    private static final Player player = null;
+    
+            
+    public static void main(String[] args) {
+        //Create StartProgramView and start the program
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.startProgram();
+    
+     
+        
+        
+    }
+
+    public static void setPlayer(Player player) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
+}    
+            
+    
+       
         
         //Prompt the player to enter their name
     
@@ -381,15 +411,8 @@ import java.util.Scanner;
         rooms.setGarage("garage");
         
         String roomListInfo = rooms.toString();
-        System.out.println(roomListInfo);
-    }
-
-}
-
-
-*/
-
+        System.out.println(roomListInfo);*/
    
-
+      
  
   

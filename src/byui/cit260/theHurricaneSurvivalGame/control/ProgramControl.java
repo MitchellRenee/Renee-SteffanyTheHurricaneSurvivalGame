@@ -13,7 +13,21 @@ import byui.cit260.theHurricaneSurvivalGame.model.Player;
  */
 public class ProgramControl {
 
-    public static Player createPlayer(String playersName) {
+    public static Player createPlayer(String Name) {
+        Object name = null;
+       
+       if(name == null){ 
+           return null;        
+    }
+               
+    Player player = new Player();
+    player.setName(name);
+    
+    theHurricaneSurvivalGame.setPlayer(player);// save 
+       return player;
+    }
+
+    private static void If(boolean b) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
