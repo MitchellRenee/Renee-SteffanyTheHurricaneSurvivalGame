@@ -5,6 +5,7 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
 
+import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGame;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
 
 /**
@@ -13,22 +14,16 @@ import byui.cit260.theHurricaneSurvivalGame.model.Player;
  */
 public class ProgramControl {
 
-    public static Player createPlayer(String Name) {
-        Object name = null;
-       
-       if(name == null){ 
-           return null;        
-    }
-               
-    Player player = new Player();
-    player.setName(name);
-    
-    theHurricaneSurvivalGame.setPlayer(player);// save 
-       return player;
+    public static Player createPlayer(String name) {
+        if (name == null) {
+            return null;
+        }
+
+        Player player = new Player();
+        player.setName(name);
+
+        HurricaneSurvivalGame.getInstance().setPlayer(player);// save 
+        return player;
     }
 
-    private static void If(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }

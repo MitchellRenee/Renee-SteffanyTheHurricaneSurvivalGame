@@ -15,13 +15,29 @@ import java.util.Objects;
 public class HurricaneSurvivalGame implements Serializable{
     
     //class instance variables
+    private static HurricaneSurvivalGame instance;
     private String accessProgram;
     private double totalTime;
     private double gameTime;
+    private Player player;
+    
+    private HurricaneSurvivalGame() {
+    }
 
-    public HurricaneSurvivalGame() {
+    public static HurricaneSurvivalGame getInstance() {
+        if(instance == null) {
+            instance = new HurricaneSurvivalGame();
+        }
+        return instance;
     }
     
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
     
     public String getAccessProgram() {
         return accessProgram;
