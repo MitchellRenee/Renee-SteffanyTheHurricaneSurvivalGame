@@ -17,9 +17,6 @@ public class Player implements Serializable{
     public static boolean canMove() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    
-    
     
     //class instance variable
     private String namePlayer;
@@ -80,7 +77,6 @@ public class Player implements Serializable{
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 67 * hash + (this.namePlayer ? 1 : 0);
         hash = 67 * hash + (this.bestTime ? 1 : 0);
         hash = 67 * hash + (this.playerLocation ? 1 : 0);
         hash = 67 * hash + (this.items ? 1 : 0);
