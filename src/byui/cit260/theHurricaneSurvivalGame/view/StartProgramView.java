@@ -31,8 +31,10 @@ public class StartProgramView {
             
     //Display a personalized welcome message
     this.displayWelcomeMessage(player);
+    
     //Display the Main menu
-            
+    MainMenuView mainMenu = new MainMenuView();
+    mainMenu.displayMenu();
     }
     
     private void displayBanner(){
@@ -67,9 +69,9 @@ public class StartProgramView {
     
         
     }
-    // The next line is a stub function that starts out 
+   
     public String getPlayersName() {
-        //To change body of generated methods, choose Tools | Templates.
+        
         boolean valid = false; // Indicates if the name has been retrieved
         String playersName = null;
         Scanner keyboard = new Scanner(System.in); //Keyboard input stream
@@ -103,7 +105,12 @@ public class StartProgramView {
    
     }
 
-    
+    public class MainMenuView {
+        
+        void displayMenu(){
+            System.out.println("***MainMenuView.displayMenu() function called***");
+        }
+    }
 }        
     
 
