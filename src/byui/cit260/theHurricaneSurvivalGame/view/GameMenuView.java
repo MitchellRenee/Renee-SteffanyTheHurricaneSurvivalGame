@@ -12,12 +12,13 @@ package byui.cit260.theHurricaneSurvivalGame.view;
 public class GameMenuView {
     
     private void startNewGame(){
-                // Create a new game
-        GameControl.createNewGame (TheHurricaneSurvivalGame()));
+        
+       // Create a new game
+        GameControl.createNewGame (TheHurricaneSurvivalGame());
         
         // Display the game menu
-        GameMenuView gameMenu - new GameMenuView();
+        GameMenuView gameMenu = new GameMenuView();
         gameMenu.displayMenu();
     }
+}    
     
-}

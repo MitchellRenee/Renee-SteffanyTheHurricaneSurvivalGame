@@ -16,6 +16,10 @@ public class HurricaneSurvivalGame implements Serializable{
     
     //class instance variables
     private static HurricaneSurvivalGame instance;
+
+    public static Object setInstance() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     private String accessProgram;
     private double totalTime;
     private double gameTime;

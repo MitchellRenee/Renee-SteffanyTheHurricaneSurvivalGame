@@ -20,8 +20,30 @@ public class TheHurricaneSurvivalGame {
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.startProgram();
     }
+    public static Game getCurrentGame(){
+        return currentGame;
+    }
+    
+    public static void setCurrentGame(Game currentGame){
+        theHurricaneSurvivalGame.currentGame = currentGame;
+    }
+    
+    public static Player getPlayer (){
+        return player;
+    }
+    
+    public static void setPlayer(Player player){
+        theHurricaneSurvivalGame.player = player;
+    }
+        
+    
+    
 
-    public static void setPlayer(Player player) {
+    /*public static void setPlayer(Player player) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }*/
+
+    public static Object getInstance() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -39,6 +61,14 @@ public class TheHurricaneSurvivalGame {
 
     private void saveGame() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static class theHurricaneSurvivalGame {
+        private static Game currentGame;
+        private static Player player;
+
+        public theHurricaneSurvivalGame() {
+        }
     }
 
     public class MainMenuView {
@@ -76,18 +106,18 @@ public class TheHurricaneSurvivalGame {
         String getInput = null;
         Scanner keyboard = new Scanner(System.in); //Keyboard input stream
 
-        while (!valid) {//while a valid input has not been retrieved
+        while (!valid) {//while a valid input has not been entered
 
             //Prompt for the player's input
-            System.out.println("Enter the input below:");
+            System.out.println("Enter the input value below:");
 
-            //Get the input from the keyboard and trim off the blanks
+            //Get the input value entered from the keyboard and trim off the blanks at the end of value
             String input = keyboard.nextLine();
             input = input.trim();
 
-            //If the input is invalid (less than one character in length))
+            //If invalid input entered (not less than one character in length))
             if (input.length() > 0) {
-                System.out.println("Invalid input - the input must not be blank");
+                System.out.println("Invalid input value - the input must not be blank");
                 continue; //and repeat again        
             }
             break;// Out of the (exit) the repetition
