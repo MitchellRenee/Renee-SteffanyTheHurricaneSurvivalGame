@@ -13,22 +13,26 @@ import byui.cit260.theHurricaneSurvivalGame.model.Player;
  * @author Renee
  */
 public class HarvestControl {
-/**
-    *<h2>Move:</h2>
-    *<p>Delivery allows the player to take inventory of personal stock, purchase
-    * needed items, and deliver items to correct locations.</p>
-    *@param HarvestInventoryItems lets the player view and validate stock inventory
-    *@param HarvestInventorySupplies lets the player view items the store locations 
-    * and validate which items to purchase
-    *@return Are the correct items located in the inventory and the supplies?
-    */
-    public static boolean harvest(InventoryItems i, InventorySupplies s){
+
+    /**
+     * <h2>Move:</h2>
+     * <p>
+     * Delivery allows the player to take inventory of personal stock, purchase
+     * needed items, and deliver items to correct locations.</p>
+     *
+     * @param HarvestInventoryItems lets the player view and validate stock
+     * inventory
+     * @param HarvestInventorySupplies lets the player view items the store
+     * locations and validate which items to purchase
+     * @return Are the correct items located in the inventory and the supplies?
+     */
+    public static boolean harvest(InventoryItems i, InventorySupplies s) {
         boolean returnValue = false;
-        if(InventoryItems.exists() && InventorySupplies.valid()){
+        if (InventoryItems.exists() && InventorySupplies.valid()) {
             returnValue = true;
         }
 
-        return returnValue;    
+        return returnValue;
     }
 
     private static class InventoryItems {
@@ -51,4 +55,3 @@ public class HarvestControl {
         }
     }
 }
-    

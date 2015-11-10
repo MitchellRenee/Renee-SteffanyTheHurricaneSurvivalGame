@@ -11,22 +11,27 @@ package byui.cit260.theHurricaneSurvivalGame.control;
  */
 public class DeliveryControl {
 
- /**
-    *<h2>Move:</h2>
-    *<p>Move player from current location to a new location if the location is available.</p>
-    *@param validateDeliveryOrder validate that a pickup order exists
-    *@param calculateDeliveryTime determines the time it takes to deliver items
-    *@param calculateDeliveryCost determines the cost of the total delivery of packages
-    *@return Was the player able to move to the new location?
-    */
-     public static boolean delivery(DeliveryOrder d, DeliveryTime t, DeliveryCost c){
+    /**
+     * <h2>Move:</h2>
+     * <p>
+     * Move player from current location to a new location if the location is
+     * available.</p>
+     *
+     * @param validateDeliveryOrder validate that a pickup order exists
+     * @param calculateDeliveryTime determines the time it takes to deliver
+     * items
+     * @param calculateDeliveryCost determines the cost of the total delivery of
+     * packages
+     * @return Was the player able to move to the new location?
+     */
+    public static boolean delivery(DeliveryOrder d, DeliveryTime t, DeliveryCost c) {
         boolean returnValue = false;
-        if(DeliveryOrder.validate() && DeliveryTime.calculate() && DeliveryCost.calculate()){
+        if (DeliveryOrder.validate() && DeliveryTime.calculate() && DeliveryCost.calculate()) {
             returnValue = true;
         }
 
         return returnValue;
-        }
+    }
 
     static boolean deliveryOrder(Delivery d, Time t, Cost c) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -79,5 +84,5 @@ public class DeliveryControl {
         public Cost() {
         }
     }
-    
+
 }

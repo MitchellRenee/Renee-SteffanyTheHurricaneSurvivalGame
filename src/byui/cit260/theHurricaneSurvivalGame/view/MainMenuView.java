@@ -13,6 +13,9 @@ import java.util.Scanner;
  */
 public class MainMenuView {
 
+    public MainMenuView() {
+
+    }
     private final String MENU = "\n"
             + "\n------------------------------------"
             + "\n| MainMenu"
@@ -25,9 +28,9 @@ public class MainMenuView {
 
     public void displayMenu() {
 
-        char selection = 'G';
+        char selection = ' ';
         do {
-            boolean MENU = false;
+            //boolean MENU = false;
 
             System.out.println(MENU); //Display the main menu
 
@@ -37,10 +40,6 @@ public class MainMenuView {
             this.doAction(selection); // Do action based on selection
 
         } while (selection != 'E'); // An selection is not "Exit"
-    }
-
-    public MainMenuView() {
-
     }
 
     /*public void displayMenu() {
@@ -79,24 +78,118 @@ public class MainMenuView {
         return null;
     }
 
-    public void doAction(char input) {
+    //public String getInput() {
+    Scanner keyboard = new Scanner(System.in);
+    boolean valid = false;
+    String selection = null;
 
+    // While a valid name has no been retrieved
+    selection  = keyboard.nextLine();
+    selection  = selection.trim();
+
+    if (selection.length () 
+        < 1){ // Blank value entered
+            System.out.println("\n*** Invalid selection *** Try again");
+        continue;
     }
 
-    private int input() {
+    private void doAction(char selection) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void startNewGame() {
-        // Create a new game
-        GameControl.createNewGame(TheHurricaneSurvivalGame());
+break;
+        }
+    return selection; // Return the name
+ }
+
+    public void doAction(char choice) {
+
+        switch (choice) {
+            case 'N': // Create and start a new game
+                this.startNewGame();
+                break;
+            case 'G': // Get and start an exiting game
+                this.startExistingGame();
+                break;
+            case 'H': // Display the help menu
+                this.displayHelpMenu();
+                break;
+            case 'S': // Save the current game view 
+                this.saveGame();
+                break;
+            case 'E': // Exit the program
+                return;
+            default:
+                System.out.println("\n*** This is an invalid selection *** Please try again");
+                break;
+        }
 
     }
 
-    private static class GameControl {
+    private void startNewGame() {
+        System.out.println("*** startNewGame function called ***");
+    }
 
-        public GameControl() {
+    private void startExistingGame() {
+        System.out.println("*** startExistingGame function called ***");
+    }
+
+    private void saveGame() {
+        System.out.println("*** saveGame function called ***");
+    }
+
+    private void displayHelpMenu() {
+        System.out.println("*** saveGame function called ***");
+    }
+}
+/*After importing the GameControl and GameMenuView classes into the
+ MainMenuView class, we get the cannot find symbol errors again
+ because we have not created the createNewGame() and
+ displayMenu() functions yet.*/
+
+private void startNewGame(){
+    // Create a new game
+    int value = GameControl.createNewGame(TheHurricaneSurvivalGame.getPlayer());
+    if (value < 0)}
+        System.out.println ("ERROR  -  Failed to crate new game");
+    }
+
+    // Display the game menu
+    GameMenuView gameMenu = new GameMenuView();
+    gameMenu
+
+
+}
+
+
+
+
+.displayMenu();
+
+public class GameControl {
+
+    public static void createNewGame(Player player) {
+        System.out.println("\n***createNewGame stub function called ***");
+    }
+
+    private static class Player {
+
+        public Player() {
         }
     }
 
+    static class Player {
+
+        public Player() {
+        }
+    }
+}
+
+public class GameMenuView {
+
+    
+        void displayMenu{
+            System.out.println("\n*** displayeMenu stub function called ");
+
+    }
 }

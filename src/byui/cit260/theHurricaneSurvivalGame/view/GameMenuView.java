@@ -10,15 +10,20 @@ package byui.cit260.theHurricaneSurvivalGame.view;
  * @author Renee
  */
 public class GameMenuView {
-    
-    private void startNewGame(){
-        
-       // Create a new game
-        GameControl.createNewGame (TheHurricaneSurvivalGame());
-        
-        // Display the game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+   // Picture shows to create GameMenuView in the View Layer not Model Layer 
+  private void startNewGame(){
+             // Create a new game
+      GameControl.createNewGame(TheHurricaneSurvivalGame.getPlayer());
+      
+      // Display the game menu
+      GameMenuView gameMenu = new GameMenuView();
+      gameMenu.displayMenu();
+  }
+
+    private void displayMenu() {
+        System.out.println("\n*** displayeMenu stub function called ");
+  
     }
-}    
+    
+}
     

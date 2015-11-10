@@ -10,5 +10,12 @@ package byui.cit260.theHurricaneSurvivalGame.view;
  * @author Renee
  */
 class TheHurricaneSurvivalGame {
-    
-}
+
+    static GameControl.Player getPlayer() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+  
+    }
+
+

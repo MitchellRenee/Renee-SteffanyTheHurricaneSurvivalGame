@@ -10,5 +10,5 @@ package byui.cit260.theHurricaneSurvivalGame.control;
  * @author Steffany
  */
 public class RoomControl {
-   
+
 }

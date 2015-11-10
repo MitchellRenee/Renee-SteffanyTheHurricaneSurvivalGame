@@ -11,7 +11,3 @@ package byui.cit260.theHurricaneSurvivalGame.control;
  */
 public class StoreControl {
 }
-   
-    
-   
-     
