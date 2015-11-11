@@ -5,6 +5,9 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
 
+import byui.cit260.theHurricaneSurvivalGame.control.GameControl;
+import thehurricanesurvivalgame.TheHurricaneSurvivalGame;
+
 /**
  *
  * @author Renee
