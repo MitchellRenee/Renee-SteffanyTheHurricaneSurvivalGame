@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author SteffanyFaldmo
  */
-public class MainMenuView {
+public class MainMenuView  {
 
     public MainMenuView() {
 

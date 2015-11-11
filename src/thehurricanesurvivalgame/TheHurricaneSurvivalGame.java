@@ -113,7 +113,7 @@ public class TheHurricaneSurvivalGame {
                 input = input.trim();
 
                 //If invalid input entered (not less than one character in length))
-                if (input.length() > 0) {
+                if (input.length() < 1) {
                     System.out.println("Invalid input value - the input must not be blank");
                     continue; //and repeat again        
                 }

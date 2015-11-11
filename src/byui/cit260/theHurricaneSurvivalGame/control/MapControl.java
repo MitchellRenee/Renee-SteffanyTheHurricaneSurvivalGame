@@ -25,11 +25,9 @@ public class MapControl {
      * @return Was the player able to move to the new location?
      */
     public static boolean move(Player p, Location l) {
-        boolean returnValue = false;
-        if (Location.exists() && Player.canMove()) {
-            returnValue = true;
-        }
-
-        return returnValue;
+       
+        p.setPlayerLocation(l);
+        return true;
+     
     }
 }

@@ -14,8 +14,8 @@ import java.io.Serializable;
 public class Harvest implements Serializable{
     
     //class instance variables
-    private boolean harvestInventoryItems;
-    private boolean harvestInventorySupplies;
+    public boolean harvestInventoryItems;
+    public boolean harvestInventorySupplies;
 
     public Harvest() {
     }

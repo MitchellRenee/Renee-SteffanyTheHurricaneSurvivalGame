@@ -5,6 +5,7 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.model;
 
+import byui.cit260.theHurricaneSurvivalGame.control.HarvestControl;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public class Player implements Serializable{
     //class instance variable
     private String namePlayer;
     private boolean bestTime;
-    private boolean playerLocation;
+    private Location playerLocation;
     private boolean items;
     private double moneyAccount;
     private boolean status;
@@ -42,11 +43,11 @@ public class Player implements Serializable{
         this.bestTime = bestTime;
     }
 
-    public boolean isPlayerLocation() {
+    public Location getPlayerLocation() {
         return playerLocation;
     }
 
-    public void setPlayerLocation(boolean playerLocation) {
+    public void setPlayerLocation(Location playerLocation) {
         this.playerLocation = playerLocation;
     }
 
@@ -78,7 +79,7 @@ public class Player implements Serializable{
     public int hashCode() {
         int hash = 7;
         hash = 67 * hash + (this.bestTime ? 1 : 0);
-        hash = 67 * hash + (this.playerLocation ? 1 : 0);
+      
         hash = 67 * hash + (this.items ? 1 : 0);
         hash = 67 * hash + (int) (Double.doubleToLongBits(this.moneyAccount) ^ (Double.doubleToLongBits(this.moneyAccount) >>> 32));
         hash = 67 * hash + (this.status ? 1 : 0);
@@ -127,6 +128,8 @@ public class Player implements Serializable{
     public void setName(String playerName) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+  
+  
 }
     
     

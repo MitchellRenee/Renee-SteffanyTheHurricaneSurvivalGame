@@ -28,11 +28,18 @@ public class MapControlTest {
         System.out.println("move");
         Player p = new Player();
         Location home = new Location();
-        boolean expResult = false;
+        Location store = new Location();
+        Location deliveryCenter = new Location();
+        Location nursingHome = new Location();
+        Location prison = new Location();        
+        boolean expResult = true;
         boolean result = MapControl.move(p, home);
+        assertEquals(home, p.getPlayerLocation());
+        assertEquals(store, p.getPlayerLocation());
+        assertEquals(deliveryCenter, p.getPlayerLocation());
+        assertEquals(nursingHome, p.getPlayerLocation());
+        assertEquals(prison, p.getPlayerLocation());
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
