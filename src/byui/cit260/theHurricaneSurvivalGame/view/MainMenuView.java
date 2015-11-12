@@ -11,42 +11,63 @@ import java.util.Scanner;
  *
  * @author SteffanyFaldmo
  */
-public class MainMenuView  {
+public class MainMenuView extends View {
 
     public MainMenuView() {
-
-    }
-    private final String MENU = "\n"
-            + "\n------------------------------------"
-            + "\n| MainMenu"
-            + "\n------------------------------------"
-            + "\nG - Start game"
-            + "\nH - Get help on how to play the game"
-            + "\nS - Save game"
-            + "\nE - Exit"
-            + "\n------------------------------------";
-
-    public void displayMenu() {
-
-        char selection = ' ';
-        do {
-            //boolean MENU = false;
-
-            System.out.println(MENU); //Display the main menu
-
-            String input = this.getInput(); // Get the user's selection
-            selection = input.charAt(0); // Get first character of string
-
-            this.doAction(selection); // Do action based on selection
-
-        } while (selection != 'E'); // An selection is not "Exit"
+        // Call super constructor & pass in the String that will be the menu   
+        super("Please select an option:\n"
+                + "N - Begin new game\n"
+                + "L - Load saved game\n"
+                + "H - View help menu\n"
+                + "E -Exit game\n");
     }
 
+    /*private final String MENU = "\n"
+     + "\n------------------------------------"
+     + "\n| MainMenu"
+     + "\n------------------------------------"
+     + "\nG - Start game"
+     + "\nH - Get help on how to play the game"
+     + "\nS - Save game"
+     + "\nE - Exit"
+     + "\n------------------------------------";
+     */
+    /*public void displayMenu() {
+     //Display all of the text wanted
         
+     //Then capture the character the uper input
+     String in = getInput();
+     //Then perform the action
+     doAction(in); 
+     }
+     */
+    /**
+     * This calls a method based on the input
+     *
+     * @param input
+     */
+    /*public void displayMenu() {
+
+     char selection = ' ';
+     do {
+     //boolean MENU = false;
+
+     System.out.println(MENU); //Display the main menu
+
+     String input = this.getInput(); // Get the user's selection
+     selection = input.charAt(0); // Get first character of string
+
+     this.doAction(selection); // Do action based on selection
+
+     } while (selection != 'E'); // An selection is not "Exit"
+     }
+     */
+    
+    @Override
     public String getInput() {
 
         boolean valid = false; // Indicates the input has been retrieved
-        String input = null;
+        String input = "";
         Scanner keyboard = new Scanner(System.in); //Keyboard input stream
 
         while (!valid) { //while a valid input has not been entered
@@ -59,7 +80,8 @@ public class MainMenuView  {
             input = input.trim();
 
             //If invalid input entered (not less than one character in length))
-            if (input.length() < 0) {
+            if (input.length() < 1) {
+            } else {
                 System.out.println("Invalid input value - the input must not be blank");
                 continue; //and repeat again        
             }
@@ -68,7 +90,7 @@ public class MainMenuView  {
         return input;
     }
 
-    public void doAction(char choice) {
+    public boolean doAction(char choice) {
 
         switch (choice) {
             case 'N': // Create and start a new game
@@ -84,12 +106,13 @@ public class MainMenuView  {
                 this.saveGame();
                 break;
             case 'E': // Exit the program
-                return;
+                exitGame();
+                return false;
             default:
                 System.out.println("\n*** This is an invalid selection *** Please try again");
                 break;
         }
-
+        return true;
     }
 
     private void startNewGame() {
@@ -108,14 +131,13 @@ public class MainMenuView  {
         System.out.println("*** saveGame function called ***");
     }
 
+    private void exitGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean doAction(String input) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
-
-
-
-
-
-
-
-
-    
-

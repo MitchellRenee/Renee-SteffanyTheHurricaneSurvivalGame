@@ -3,6 +3,7 @@ package thehurricanesurvivalgame;
 import static byui.cit260.theHurricaneSurvivalGame.control.PlayerControl.player;
 import byui.cit260.theHurricaneSurvivalGame.control.ProgramControl;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
+import byui.cit260.theHurricaneSurvivalGame.view.MainMenuView;
 import byui.cit260.theHurricaneSurvivalGame.view.StartProgramView;
 import byui.cit260.theHurricaneSurvivalGame.view.WelcomeView;
 import java.util.Scanner;
@@ -16,7 +17,13 @@ public class TheHurricaneSurvivalGame {
     private static final Player player = null;
 
     public static void main(String[] args) {
-        //Create StartProgramView and start the program
+    
+MainMenuView mainView = new MainMenuView();
+    mainView.display();        
+
+
+
+//Create StartProgramView and start the program
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.startProgram();
     }
@@ -68,8 +75,11 @@ public class TheHurricaneSurvivalGame {
         public theHurricaneSurvivalGame() {
         }
     }
-
-    public class MainMenuView {
+}
+    
+    
+    
+    /*public class MainMenuView {
 
         private final String MENU = "\n"
                 + "\n------------------------------------"
