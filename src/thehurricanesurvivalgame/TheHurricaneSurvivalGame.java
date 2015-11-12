@@ -17,7 +17,17 @@ public class TheHurricaneSurvivalGame {
     private static final Player player = null;
 
     public static void main(String[] args) {
-    
+
+Player player = new Player();
+
+WelcomeView welcomeView = new WelcomeView();
+welcomeView.displayBannner();
+
+player.setName(welcomeView.getPlayerName());
+
+welcomeView.displayPlayerNameBanner(player);
+
+
 MainMenuView mainView = new MainMenuView();
     mainView.display();        
 

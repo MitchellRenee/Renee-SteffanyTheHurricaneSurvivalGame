@@ -14,22 +14,20 @@ import java.util.Scanner;
 public class HelpMenuView {
     
     public HelpMenuView(){
-        
-    }
-    
-    public void displayMenu(){
-        
-        System.out.println("Please select an option:");
-        System.out.println("G - What is the goal of this game?");
-        System.out.println("S - How do I view supplies needed?");
-        System.out.println("I - How do I view current inventory?");
-        System.out.println("P - How do I view survival points earned?");
-        System.out.println("M - How do I move locations?");
-        System.out.println("A - How do I make money?");
-        System.out.println("D - How do I deliver supplies?");
-        System.out.println("B - How do I buy supplies?");
-        System.out.println("V - How do I view what each location has?");
-        System.out.println("X - Close Help Menu");
+    }     
+    public void displayMenu(){ 
+        //super("A - About this game\n");         
+            System.out.println("Please select an option:");
+            System.out.println("G - What is the goal of this game?");
+            System.out.println("S - How do I view supplies needed?");
+            System.out.println("I - How do I view current inventory?");
+            System.out.println("P - How do I view survival points earned?");
+            System.out.println("M - How do I move locations?");
+            System.out.println("A - How do I make money?");
+            System.out.println("D - How do I deliver supplies?");
+            System.out.println("B - How do I buy supplies?");
+            System.out.println("V - How do I view what each location has?");
+            System.out.println("X - Close Help Menu");
         
     }
     
@@ -70,6 +68,11 @@ public class HelpMenuView {
     }
 
     private int input() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+   
+    public boolean doAction(String input) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

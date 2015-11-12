@@ -117,6 +117,10 @@ public class MainMenuView extends View {
 
     private void startNewGame() {
         System.out.println("*** startNewGame function called ***");
+        //TurnView t = new TurnView(;
+        //t.display();
+        //implement controllers here to change direction of view
+    
     }
 
     private void startExistingGame() {

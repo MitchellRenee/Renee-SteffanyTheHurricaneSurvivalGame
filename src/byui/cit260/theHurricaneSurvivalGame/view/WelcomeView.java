@@ -80,4 +80,8 @@ public class WelcomeView {
         System.out.println("DISPLAY main menu.");
         System.out.println("*******************************");
     }
+
+    public void displayBannner() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
