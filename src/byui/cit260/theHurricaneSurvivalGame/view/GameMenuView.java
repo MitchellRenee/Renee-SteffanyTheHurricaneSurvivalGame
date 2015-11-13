@@ -69,7 +69,7 @@ private final String MENU;
      *
      * @return
      */
-    public String getInput() {
+    /*public String getInput() {
 
         Scanner keyboard = new Scanner(System.in); //Keyboard input stream
         boolean valid = true; 
@@ -97,9 +97,13 @@ private final String MENU;
         //Return the name
         return selection;
     }
+    */
+    
 
+    private String getInput() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     private void doAction(char selection) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
 }

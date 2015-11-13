@@ -20,5 +20,5 @@ public interface ViewInterface {
     
     public String getInput();
     
-    public boolean doAction(String input);
+    public boolean doAction(Object obj);
 }

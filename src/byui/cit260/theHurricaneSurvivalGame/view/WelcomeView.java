@@ -98,9 +98,10 @@ public class WelcomeView {
 
             // An selection is not "Exit"
         } while (selection != 'E');
+    
     }
 
-    public void displayBannner() {
+    public void display() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 
     }
@@ -108,7 +109,7 @@ public class WelcomeView {
     private String getInput() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
     private void doAction(char selection) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

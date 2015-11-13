@@ -21,7 +21,7 @@ public class StartProgramView {
     public void startProgram() {
 
         //Display the banner screen
-        this.displayBanner();
+        this.display();
 
         //Prompt the player to enter their name. Retriever the name of the player
         String playersName = this.getPlayersName();
@@ -33,11 +33,17 @@ public class StartProgramView {
         this.displayWelcomeMessage(player);
 
         //Display the Main menu
-        MainMenuView mainMenu = new MainMenuView();
-        mainMenu.displayMenu();
-    }
+        MainMenuView mainMenu = new MainMenuView() {
 
-    private void displayBanner() {
+            public boolean doAction(String input) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+     
+    }
+        mainMenu.display();
+    
+    }
+    private void display() {
         System.out.println("\n\n*********************************************************************************************************************");
 
         System.out.println("*                                                                                                                       *"
@@ -103,7 +109,7 @@ public class StartProgramView {
         System.out.println("=====================================================");
 
     }
-
+    /*
     public class startProgramView {
 
         //void displayMenu() {
@@ -119,7 +125,7 @@ public class StartProgramView {
                 + "\nE - Exit"
                 + "\n------------------------------------";
 
-        public void displayMenu() {
+        public void display() {
 
             char selection = ' ';
             do {
@@ -163,7 +169,7 @@ public class StartProgramView {
                 break;// Out of the (exit) the repetition
             }
             return input;
-        }
+        }*/
 
         private void doAction(char selection) {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

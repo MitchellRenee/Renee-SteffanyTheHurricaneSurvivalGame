@@ -27,7 +27,7 @@ public abstract class MovePlayerView {
                 + "\n------------------------------------";
     }
 
-    public void display() {
+    /*public void display() {
         
         char selection =  ' ';
         do {
@@ -52,7 +52,7 @@ public abstract class MovePlayerView {
      *
      * @return
      */
-      public String getInput() {
+      /*public String getInput() {
 
         Scanner keyboard = new Scanner(System.in); //Keyboard input stream
         boolean valid = true; 
@@ -80,7 +80,7 @@ public abstract class MovePlayerView {
         //Return the name
         return selection;
     }
-
+*/
     private void doAction(char selection) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

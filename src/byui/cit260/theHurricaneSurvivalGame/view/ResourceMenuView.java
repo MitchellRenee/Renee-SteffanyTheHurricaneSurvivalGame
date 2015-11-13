@@ -27,7 +27,7 @@ public class ResourceMenuView {
                 + "\n------------------------------------";
     }
 
-    public void display() {
+    /*public void display() {
         char selection = ' ';
 
         do {
@@ -52,7 +52,7 @@ public class ResourceMenuView {
      *
      * @return
      */
-      public String getInput() {
+      /*public String getInput() {
 
         Scanner keyboard = new Scanner(System.in); //Keyboard input stream
         boolean valid = true; 
@@ -79,7 +79,7 @@ public class ResourceMenuView {
 
         //Return the name
         return selection;
-    }
+    }*/
 
     private void doAction(char selection) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

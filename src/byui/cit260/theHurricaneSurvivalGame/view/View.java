@@ -17,6 +17,8 @@ public abstract class View implements ViewInterface {
     // It gave us the display and getInput
     // Now the programmer has to implement the doAction's methods and variables.
     
+    
+    
     private String menu;
 
     //Set parameters to pass into constructor

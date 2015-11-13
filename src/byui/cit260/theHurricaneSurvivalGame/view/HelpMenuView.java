@@ -23,7 +23,9 @@ public class HelpMenuView {
             + "\nE - Exit"
             + "\n------------------------------------";
 
-    public void display() {
+    /*public void display() {
+        String value;
+        
         char selection = ' ';
         do {          
         
@@ -41,6 +43,8 @@ public class HelpMenuView {
 
         } while (selection != 'E');
         //An selection is no "Exit"
+        
+        return " ";
     }
 
     /**
@@ -48,7 +52,7 @@ public class HelpMenuView {
      *
      * @return
      */
-    public String getInput() {
+    /*public String getInput() {
 
         Scanner keyboard = new Scanner(System.in); //Keyboard input stream
         boolean valid = true;
@@ -75,7 +79,7 @@ public class HelpMenuView {
         //Return the name
         return selection;
     }
-
+    */
     private void doAction(char selection) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
