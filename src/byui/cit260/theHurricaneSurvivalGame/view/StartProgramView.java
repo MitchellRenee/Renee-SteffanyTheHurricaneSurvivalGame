@@ -104,10 +104,69 @@ public class StartProgramView {
 
     }
 
-    public class MainMenuView {
+    public class startProgramView {
 
-        void displayMenu() {
-            System.out.println("***MainMenuView.displayMenu() function called***");
+        //void displayMenu() {
+            //System.out.println("***MainMenuView.displayMenu() function called***");
+        }
+        private final String MENU = "\n"
+                + "\n------------------------------------"
+                + "\n| MainMenu"
+                + "\n------------------------------------"
+                + "\nG - Start game"
+                + "\nH - Get help on how to play the game"
+                + "\nS - Save game"
+                + "\nE - Exit"
+                + "\n------------------------------------";
+
+        public void displayMenu() {
+
+            char selection = ' ';
+            do {
+
+                //Display the main menu
+                System.out.println(MENU);
+
+                // Get the user's selection
+                String input = this.getInput();
+                // Get first character of string
+                selection = input.charAt(0);
+
+                // Do action based on selection
+                this.doAction(selection);
+
+                // An selection is not "Exit"
+            } while (selection != 'E');
+        }
+
+        public String getInput() {
+
+            Scanner keyboard = new Scanner(System.in); //Keyboard input stream
+            boolean valid = true; // Indicates the input has been retrieved
+            String input = "";
+
+            while (!valid) {
+
+                //Prompt for the player's input
+                System.out.println("Enter the input value below:");
+
+                //Get the input value entered from the keyboard and trim off the blanks at the end of value
+                input = keyboard.nextLine();
+                input = input.trim();
+
+                //If invalid input entered (not less than one character in length))
+                if (input.length() < 1) {
+                } else {
+                    System.out.println("Invalid input value - the input must not be blank");
+                    continue; //and repeat again        
+                }
+                break;// Out of the (exit) the repetition
+            }
+            return input;
+        }
+
+        private void doAction(char selection) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
     }
-}
+

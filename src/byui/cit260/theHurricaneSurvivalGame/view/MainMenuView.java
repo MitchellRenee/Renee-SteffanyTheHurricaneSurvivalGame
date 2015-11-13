@@ -22,7 +22,7 @@ public class MainMenuView extends View {
                 + "E -Exit game\n");
     }
 
-    /*private final String MENU = "\n"
+    private final String MENU = "\n"
      + "\n------------------------------------"
      + "\n| MainMenu"
      + "\n------------------------------------"
@@ -31,11 +31,11 @@ public class MainMenuView extends View {
      + "\nS - Save game"
      + "\nE - Exit"
      + "\n------------------------------------";
-     */
+     
     /*public void displayMenu() {
      //Display all of the text wanted
         
-     //Then capture the character the uper input
+     //Then capture the character the user input
      String in = getInput();
      //Then perform the action
      doAction(in); 
@@ -46,31 +46,35 @@ public class MainMenuView extends View {
      *
      * @param input
      */
-    /*public void displayMenu() {
+    public void displayMenu() {
 
-     char selection = ' ';
-     do {
-     //boolean MENU = false;
+        char selection = ' ';
+        do {
+           
+             //Display the main menu
+            System.out.println(MENU);
 
-     System.out.println(MENU); //Display the main menu
+            // Get the user's selection
+            String input = this.getInput(); 
+            // Get first character of string
+            selection = input.charAt(0); 
 
-     String input = this.getInput(); // Get the user's selection
-     selection = input.charAt(0); // Get first character of string
+            // Do action based on selection
+            this.doAction(selection); 
 
-     this.doAction(selection); // Do action based on selection
+        // An selection is not "Exit"
+        } while (selection != 'E'); 
+    }
 
-     } while (selection != 'E'); // An selection is not "Exit"
-     }
-     */
-    
     @Override
     public String getInput() {
 
-        boolean valid = false; // Indicates the input has been retrieved
-        String input = "";
         Scanner keyboard = new Scanner(System.in); //Keyboard input stream
-
-        while (!valid) { //while a valid input has not been entered
+        boolean valid = true; // Indicates the input has been retrieved
+        String input = "";
+        
+        
+        while (!valid) { 
 
             //Prompt for the player's input
             System.out.println("Enter the input value below:");
@@ -120,7 +124,7 @@ public class MainMenuView extends View {
         //TurnView t = new TurnView(;
         //t.display();
         //implement controllers here to change direction of view
-    
+
     }
 
     private void startExistingGame() {

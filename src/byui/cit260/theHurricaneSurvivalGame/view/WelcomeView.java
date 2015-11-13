@@ -81,7 +81,36 @@ public class WelcomeView {
         System.out.println("*******************************");
     }
 
+    public void displayBannner(boolean MENU) {
+        char selection = ' ';
+        do {
+
+            //Display the main menu
+            System.out.println(MENU);
+
+            // Get the user's selection
+            String input = this.getInput();
+            // Get first character of string
+            selection = input.charAt(0);
+
+            // Do action based on selection
+            this.doAction(selection);
+
+            // An selection is not "Exit"
+        } while (selection != 'E');
+    }
+
     public void displayBannner() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
     }
+
+    private String getInput() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void doAction(char selection) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

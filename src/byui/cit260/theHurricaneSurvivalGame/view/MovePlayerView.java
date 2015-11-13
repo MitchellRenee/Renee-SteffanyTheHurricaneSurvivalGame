@@ -5,50 +5,33 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
 
-import byui.cit260.theHurricaneSurvivalGame.control.GameControl;
 import java.util.Scanner;
-import thehurricanesurvivalgame.TheHurricaneSurvivalGame;
 
 /**
  *
  * @author Renee
  */
-public class GameMenuView {
+public abstract class MovePlayerView {
+    
+    private final String VIEW;
 
-    // Picture shows to create GameMenuView in the View Layer not Model Layer 
-
-    private void startNewGame() {
-        // Create a new game
-        GameControl.createNewGame(TheHurricaneSurvivalGame.getPlayer());
-
-        // Display the game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
-    }
-
-    private void displayMenu() {
-        System.out.println("\n*** displayeMenu stub function called ");
-    }
-        
-private final String MENU;
-
-    public GameMenuView() {
-        this.MENU = "\n"
+    public MovePlayerView() {
+        this.VIEW = "\n"
                 + "\n------------------------------------"
-                + "\n| Game Menu                         "
+                + "\n| Move Player View                     "
                 + "\n------------------------------------"
-                + "\nG - Start new game                      "
-                + "\nH - Get help on how to playgame     "
-                + "\nS - Save game"
+                + "\nG - Start player view menu                     "
+                + "\nH - Get help on how to view move"
+                + "\nS - Save view menu"
                 + "\nE - Exit"
                 + "\n------------------------------------";
     }
 
     public void display() {
-        char selection = ' ';
-
+        
+        char selection =  ' ';
         do {
-            System.out.println(MENU);
+            System.out.println(VIEW);
             //Display the player's move view menu
 
             //Then capture the character the user input
@@ -56,10 +39,10 @@ private final String MENU;
             //Get user's selection
             selection = input.charAt(0);
             //Get first character of string
-
+            
             this.doAction(selection);
             //Do action based on selection
-
+           
         } while (selection != 'E');
         //An selection is no "Exit"
     }
@@ -69,7 +52,7 @@ private final String MENU;
      *
      * @return
      */
-    public String getInput() {
+      public String getInput() {
 
         Scanner keyboard = new Scanner(System.in); //Keyboard input stream
         boolean valid = true; 
@@ -92,7 +75,7 @@ private final String MENU;
             // Out of the (exit) repetition
             break;
         }
-        String selection = "game menu selection";
+        String selection = "player view selection";
 
         //Return the name
         return selection;
@@ -103,3 +86,5 @@ private final String MENU;
     }
 
 }
+    
+
