@@ -169,5 +169,6 @@ public class MainMenuView extends View {
         public boolean doAction(Object obj){        
 
         String value = (String) obj;
-        value = value.toUpperCase(); //Convert to all upper case
-   
+        value = value.toUpperCase();
+        //Convert to all upper case
+
