@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author Renee
  */
 public class ResourceMenuView {
-     
+
     private final String MENU;
 
     public ResourceMenuView() {
@@ -27,7 +27,7 @@ public class ResourceMenuView {
                 + "\n------------------------------------";
     }
 
-    /*public void display() {
+    public void display() {
         char selection = ' ';
 
         do {
@@ -39,10 +39,10 @@ public class ResourceMenuView {
             //Get user's selection
             selection = input.charAt(0);
             //Get first character of string
-            
+
             this.doAction(selection);
             //Do action based on selection
-           
+
         } while (selection != 'E');
         //An selection is no "Exit"
     }
@@ -52,12 +52,11 @@ public class ResourceMenuView {
      *
      * @return
      */
-      /*public String getInput() {
+    public String getInput() {
 
         Scanner keyboard = new Scanner(System.in); //Keyboard input stream
-        boolean valid = true; 
+        boolean valid = true;
         String input = "";
-        
 
         //while a valid input has not been entered
         while (!valid) {
@@ -79,10 +78,10 @@ public class ResourceMenuView {
 
         //Return the name
         return selection;
-    }*/
-
-    private void doAction(char selection) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-}
+    private void doAction(char selection) {
+     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+     }
+
+     }

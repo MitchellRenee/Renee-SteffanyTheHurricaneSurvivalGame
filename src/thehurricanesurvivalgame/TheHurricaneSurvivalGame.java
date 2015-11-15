@@ -28,7 +28,7 @@ player.setName(welcomeView.getPlayerName());
 welcomeView.displayPlayerNameBanner(player);
 
 
-MainMenuView mainView = new MainMenuView() {
+MainMenuView mainView = new MainMenuView(" ") {
 
     public boolean doAction(String input) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

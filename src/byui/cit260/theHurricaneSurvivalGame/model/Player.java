@@ -100,7 +100,7 @@ public class Player implements Serializable{
             return false;
         }
         final Player other = (Player) obj;
-        if (this.namePlayer != other.namePlayer) {
+        if (!this.namePlayer.equals(other.namePlayer)) {
             return false;
         }
         if (this.bestTime != other.bestTime) {
