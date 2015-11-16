@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class RoomList implements Serializable{
     
-    
+    //class instance variables
     private String kitchen;
     private String bedroom;
     private String bathroom;

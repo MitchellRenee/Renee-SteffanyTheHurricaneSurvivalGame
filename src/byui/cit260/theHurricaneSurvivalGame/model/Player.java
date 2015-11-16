@@ -15,7 +15,7 @@ import java.util.Objects;
  */
 public class Player implements Serializable{
 
-    public static boolean canMove() {
+    public static boolean Move() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
@@ -26,6 +26,10 @@ public class Player implements Serializable{
     private boolean items;
     private double moneyAccount;
     private boolean status;
+    private String description;
+
+    public Player() {
+    }
     
     public String getNamePlayer() {
         return namePlayer;
@@ -75,21 +79,32 @@ public class Player implements Serializable{
         this.status = status;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
+        hash = 67 * hash + Objects.hashCode(this.namePlayer);
         hash = 67 * hash + (this.bestTime ? 1 : 0);
-      
+        hash = 67 * hash + Objects.hashCode(this.playerLocation);
         hash = 67 * hash + (this.items ? 1 : 0);
         hash = 67 * hash + (int) (Double.doubleToLongBits(this.moneyAccount) ^ (Double.doubleToLongBits(this.moneyAccount) >>> 32));
         hash = 67 * hash + (this.status ? 1 : 0);
+        hash = 67 * hash + Objects.hashCode(this.description);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Player{" + "namePlayer=" + namePlayer + ", bestTime=" + bestTime + ", playerLocation=" + playerLocation + ", items=" + items + ", moneyAccount=" + moneyAccount + ", status=" + status + '}';
+        return "Player{" + "namePlayer=" + namePlayer + ", bestTime=" + bestTime + ", playerLocation=" + playerLocation + ", items=" + items + ", moneyAccount=" + moneyAccount + ", status=" + status + ", description=" + description + '}';
     }
+    
     
     @Override
     public boolean equals(Object obj) {
@@ -100,13 +115,13 @@ public class Player implements Serializable{
             return false;
         }
         final Player other = (Player) obj;
-        if (!this.namePlayer.equals(other.namePlayer)) {
+        if (!Objects.equals(this.namePlayer, other.namePlayer)) {
             return false;
         }
         if (this.bestTime != other.bestTime) {
             return false;
         }
-        if (this.playerLocation != other.playerLocation) {
+        if (!Objects.equals(this.playerLocation, other.playerLocation)) {
             return false;
         }
         if (this.items != other.items) {
@@ -118,8 +133,11 @@ public class Player implements Serializable{
         if (this.status != other.status) {
             return false;
         }
+        if (!Objects.equals(this.description, other.description)) {
+            return false;
+        }
         return true;
-    }
+    }  
 
     public String getName() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -128,8 +146,6 @@ public class Player implements Serializable{
     public void setName(String playerName) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-  
-  
 }
     
     

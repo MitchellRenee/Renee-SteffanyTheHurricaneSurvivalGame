@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class GameMenu implements Serializable{
     
-    
+    //class instance variables
     private String mapOfTown;
     private String supplyList;
     private String inventoryList;

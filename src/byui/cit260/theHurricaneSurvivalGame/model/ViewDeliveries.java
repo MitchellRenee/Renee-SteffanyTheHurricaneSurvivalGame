@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class ViewDeliveries implements Serializable{
     
-    
+    //class instance variables
     private String deliveryAmount;
     private String deliveryLocations;
 

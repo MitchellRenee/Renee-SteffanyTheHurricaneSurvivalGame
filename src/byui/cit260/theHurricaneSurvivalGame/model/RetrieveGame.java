@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class RetrieveGame implements Serializable{
     
-    
+    //class instance variables
     private String locateSavedGame;
     private String readSavedGame;
     private String retrieveSavedGame;

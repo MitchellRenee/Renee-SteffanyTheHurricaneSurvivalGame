@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class HouseMap implements Serializable{
     
-    
+    //class instance variables
     private String kitchen;
     private String bedroom;
     private String bathroom;

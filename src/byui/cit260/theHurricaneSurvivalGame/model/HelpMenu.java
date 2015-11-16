@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class HelpMenu implements Serializable{
     
-    
+    //class instance variables
     private String goalOfGame;
     private String viewSuppliesNeeded;
     private String viewCurrentInventory;

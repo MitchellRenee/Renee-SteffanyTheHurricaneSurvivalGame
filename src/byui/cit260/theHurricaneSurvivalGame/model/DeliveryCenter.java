@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class DeliveryCenter implements Serializable{
     
-    
+    //class instance variables
     private String deliverWater;
     private String deliverSuppliesToNursingHome;
     private String deliverSuppliesToPrisonp;

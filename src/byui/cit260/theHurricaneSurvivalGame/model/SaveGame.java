@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class SaveGame implements Serializable{
     
-    
+    //class instance variables
     private String savePlayer;
     private String saveInventory;
     private String saveProgress;

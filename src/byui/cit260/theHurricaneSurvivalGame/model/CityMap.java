@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class CityMap implements Serializable{
     
-    
+    //class instance variables
     private String megaStore;
     private String campingStore;
     private String deliveryCenter;

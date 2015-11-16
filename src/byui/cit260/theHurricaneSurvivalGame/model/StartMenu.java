@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class StartMenu implements Serializable{
     
-    
+    //class instance variables
     private String continueGame;
     private String returnToMenu;
     private String viewMap;

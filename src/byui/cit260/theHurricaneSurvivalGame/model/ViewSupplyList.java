@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class ViewSupplyList implements Serializable{
     
-    
+    //class instance variables
     private String proteinPoints;
     private String carbohydratePoints;
     private String sweetsAndSugarPoints;
