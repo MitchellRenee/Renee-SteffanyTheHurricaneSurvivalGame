@@ -17,28 +17,30 @@ public abstract class View implements ViewInterface {
     // It gave us the display and getInput
     // Now the programmer has to implement the doAction's methods and variables.
     
-    
-    
+    Scanner keyboard = new Scanner(System.in);
+    protected String displayMessage;
+    //Add the definition of class variables common to all of the view layers
+      public View (String message){
+          this.displayMessage = message;
+      }
     private String menu;
 
     //Set parameters to pass into constructor
-    public View(String menuString) {
-        menu = menuString;
-    }
+    
+    
 
     @Override
     public void display() {
+        String value = "";
         boolean cont;
+        boolean done;
 
         do {
-            System.out.println(menu);
-        //Display all of the text wanted
-
-            //Then capture the character the user input
-            String in = getInput();
-            //Then perform the action
-            cont = doAction(in);
-        } while (cont);
+            System.out.println(this.displayMessage); // Print message
+            value = this.getInput(); //Get the users's selection
+            done = this.doAction(value); //do action base on selection
+        }    
+        while (!done);            
     }
 
     /**
@@ -48,27 +50,26 @@ public abstract class View implements ViewInterface {
      */
     @Override
     public String getInput() {
-
         boolean valid = false; // Indicates the input has been retrieved
-        String input = "";
-        Scanner keyboard = new Scanner(System.in); //Keyboard input stream
+        String selection = "";
+        //Scanner keyboard = new Scanner(System.in); //Keyboard input stream
 
-        while (!valid) { //while a valid input has not been entered
+        while (!valid) { //while a valid has not been entered
 
             //Prompt for the player's input
             System.out.println("Enter the input value below:");
 
-            //Get the input value entered from the keyboard and trim off the blanks at the end of value
-            input = keyboard.nextLine();
-            input = input.trim();
+            //Get the value entered from the keyboard and trim off the blanks at the end of value
+            selection = keyboard.nextLine();
+            selection = selection.trim();
 
-            //If invalid input entered (not less than one character in length))
-            if (input.length() < 1) {
-                System.out.println("Invalid input value - the input must not be blank");
+            //If invalid input entered (blank value entered)
+            if (selection.length() < 1) {
+                System.out.println("You must enter a value.");
                 continue; //and repeat again        
             }
             break;// Out of the (exit) the repetition
         }
-        return input;
+        return selection;
     }
 }

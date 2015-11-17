@@ -12,76 +12,67 @@ import java.util.Objects;
  *
  * @author Renee
  */
-public class Actor implements Serializable {
-//modify class keyword with enum keyword in class defininition
+//modify class keyword with enum keyword in class defininition.
+/*public enum Actor implements Serializable {
+
+    Joan("She is a middle-aged single woman, who is a naturalist."),
+    Zion("He is a disaster relief specialist, with a family."),
+    Moses("He is an emergency ambulance technician, with several years in firstaid traing."),
+    Martha("Is a homemaker of a family of 5, who volunteers, in a homeless shelter."),
+    Alma("Is a single parent of two girls, who works a the local farmer's market."};
+
+
+/**    private final String description;
+    private final Point coordinates;
+
+    Actor(String description){
+        this.description = description;
+        coordinates = new Point(1,1);
+    }
+
+    public String getDescription(){
+        return description;
+    }
+    public Point getCoordinates(){
+        return coordinates;
+    }
+}    
     
-    //class instance variables
-    private String name;
-    private String description;
-    private double coordinates;
+/class instance variables
+private String ;
+    private final String description;
+    private final Point coordinates;
 
     public Actor() {
     }
     
+    Actor(String description){
+        this.description = description;
+        coordinates = new Point (1,1);
+
+
+}
     public String getName() {
-        return name;
+        return ;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = ;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+    
 
     public double getCoordinates() {
         return coordinates;
     }
 
-    public void setCoordinates(double coordinates) {
-        this.coordinates = coordinates;
-    }
+    
 
     @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 41 * hash + Objects.hashCode(this.name);
-        hash = 41 * hash + Objects.hashCode(this.description);
-        hash = 41 * hash + (int) (Double.doubleToLongBits(this.coordinates) ^ (Double.doubleToLongBits(this.coordinates) >>> 32));
-        return hash;
-    }
-
-    @Override
-    public String toString() {
+        public String toString() {
         return "Actor{" + "name=" + name + ", description=" + description + ", coordinates=" + coordinates + '}';
-    }
-    
-    
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Actor other = (Actor) obj;
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        if (!Objects.equals(this.description, other.description)) {
-            return false;
-        }
-        if (Double.doubleToLongBits(this.coordinates) != Double.doubleToLongBits(other.coordinates)) {
-            return false;
-        }
-        return true;
-    }
-    
-    
-}
+*/
