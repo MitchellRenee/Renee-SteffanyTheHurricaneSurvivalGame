@@ -12,9 +12,9 @@ import static org.junit.Assert.*;
  *
  * @author SteffanyFaldmo
  */
-public class timeControlTest {
+public class TimeControlTest {
     
-    public timeControlTest() {
+    public TimeControlTest() {
     }
 
     /**
