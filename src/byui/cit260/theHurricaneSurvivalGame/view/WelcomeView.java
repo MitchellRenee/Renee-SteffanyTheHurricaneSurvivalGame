@@ -18,7 +18,7 @@ public class WelcomeView {
 
     }
 
-    public void displayBanner() {
+    public void display() {
 
         System.out.println("\n\n*********************************************************************************************************************");
 
@@ -99,11 +99,6 @@ public class WelcomeView {
             // An selection is not "Exit"
         } while (selection != 'E');
     
-    }
-
-    public void display() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-
     }
 
     private String getInput() {

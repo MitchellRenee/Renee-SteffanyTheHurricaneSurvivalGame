@@ -18,25 +18,18 @@ public class TheHurricaneSurvivalGame {
 
     public static void main(String[] args) {
 
-Player player = new Player();
+        Player player = new Player();
 
-WelcomeView welcomeView = new WelcomeView();
-welcomeView.display();
+        WelcomeView welcomeView = new WelcomeView();
+        welcomeView.display();
 
-player.setName(welcomeView.getPlayerName());
+        player.setName(welcomeView.getPlayerName());
 
-welcomeView.displayPlayerNameBanner(player);
+        welcomeView.displayPlayerNameBanner(player);
 
-
-MainMenuView mainView = new MainMenuView(" ") {
-
-    public boolean doAction(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-};
-    mainView.display();        
-
-
+        MainMenuView mainView = new MainMenuView(); 
+        
+        mainView.display();
 
 //Create StartProgramView and start the program
         StartProgramView startProgramView = new StartProgramView();
@@ -91,101 +84,99 @@ MainMenuView mainView = new MainMenuView(" ") {
         }
     }
 }
-    
-    
-    
-    /*public class MainMenuView {
 
-        private final String MENU = "\n"
-                + "\n------------------------------------"
-                + "\n| MainMenu"
-                + "\n------------------------------------"
-                + "\nG - Start game"
-                + "\nH - Get help on how to play the game"
-                + "\nS - Save game"
-                + "\nE - Exit"
-                + "\n------------------------------------";
+/*public class MainMenuView {
 
-        public void displayMenu() {
+ private final String MENU = "\n"
+ + "\n------------------------------------"
+ + "\n| MainMenu"
+ + "\n------------------------------------"
+ + "\nG - Start game"
+ + "\nH - Get help on how to play the game"
+ + "\nS - Save game"
+ + "\nE - Exit"
+ + "\n------------------------------------";
 
-            char selection = 'S';
-            do {
-                boolean MENU = false;
+ public void displayMenu() {
 
-                System.out.println(MENU); //Display the main menu
+ char selection = 'S';
+ do {
+ boolean MENU = false;
 
-                String input = this.getInput(); // Get the user's selection
-                selection = input.charAt(0); // Get first character of string
+ System.out.println(MENU); //Display the main menu
 
-                this.doAction(selection); // Do action based on selection
+ String input = this.getInput(); // Get the user's selection
+ selection = input.charAt(0); // Get first character of string
 
-            } while (selection != 'E'); // An selection is not "Exit"
-        }
+ this.doAction(selection); // Do action based on selection
 
-        public String getInput() {
+ } while (selection != 'E'); // An selection is not "Exit"
+ }
 
-            boolean valid = false; // Indicates the input has been retrieved
-            String getInput = null;
-            Scanner keyboard = new Scanner(System.in); //Keyboard input stream
+ public String getInput() {
 
-            while (!valid) {//while a valid input has not been entered
+ boolean valid = false; // Indicates the input has been retrieved
+ String getInput = null;
+ Scanner keyboard = new Scanner(System.in); //Keyboard input stream
 
-                //Prompt for the player's input
-                System.out.println("Enter the input value below:");
+ while (!valid) {//while a valid input has not been entered
 
-                //Get the input value entered from the keyboard and trim off the blanks at the end of value
-                String input = keyboard.nextLine();
-                input = input.trim();
+ //Prompt for the player's input
+ System.out.println("Enter the input value below:");
 
-                //If invalid input entered (not less than one character in length))
-                if (input.length() < 1) {
-                    System.out.println("Invalid input value - the input must not be blank");
-                    continue; //and repeat again        
-                }
-                break;// Out of the (exit) the repetition
-            }
-            return null;
-        }
+ //Get the input value entered from the keyboard and trim off the blanks at the end of value
+ String input = keyboard.nextLine();
+ input = input.trim();
 
-        public void doAction(char choice) {
+ //If invalid input entered (not less than one character in length))
+ if (input.length() < 1) {
+ System.out.println("Invalid input value - the input must not be blank");
+ continue; //and repeat again        
+ }
+ break;// Out of the (exit) the repetition
+ }
+ return null;
+ }
 
-            switch (choice) {
-                case 'N': // Create and start a new game
-                    this.startNewGame();
-                case 'G': // Get and start an exiting game
-                    this.startExistingGame();
-                case 'H': // Display the help menu
-                    this.displayHelpMenu();
-                case 'S': // Save the current game 
-                    this.saveGame();
-                case 'E': // Exit the program
-                    return;
-                default:
-                    System.out.println("\n*** This is an invalid selection *** Please try again");
-                    break;
-            }
-        }
+ public void doAction(char choice) {
 
-        private void startNewGame() {
-            System.out.println("*** startNewGame function called ***");
-        }
+ switch (choice) {
+ case 'N': // Create and start a new game
+ this.startNewGame();
+ case 'G': // Get and start an exiting game
+ this.startExistingGame();
+ case 'H': // Display the help menu
+ this.displayHelpMenu();
+ case 'S': // Save the current game 
+ this.saveGame();
+ case 'E': // Exit the program
+ return;
+ default:
+ System.out.println("\n*** This is an invalid selection *** Please try again");
+ break;
+ }
+ }
 
-        private void startExistingGame() {
-            System.out.println("*** startExistingGame function called ***");
-        }
+ private void startNewGame() {
+ System.out.println("*** startNewGame function called ***");
+ }
 
-        private void displayHelpMenu() {
-            System.out.println("*** displayHelpMenu funtion called ***");
-        }
+ private void startExistingGame() {
+ System.out.println("*** startExistingGame function called ***");
+ }
 
-        private void saveGame() {
-            System.out.println("*** saveGame function called ***");
-        }
-    }
-}
+ private void displayHelpMenu() {
+ System.out.println("*** displayHelpMenu funtion called ***");
+ }
 
-//Prompt the player to enter their name
-/*Map mainMap = new Map();
+ private void saveGame() {
+ System.out.println("*** saveGame function called ***");
+ }
+ }
+ }
+
+ //Prompt the player to enter their name
+ /*Map mainMap = new Map();
             
  mainMap.setLocation("House");
  mainMap.setCoordinates(7);

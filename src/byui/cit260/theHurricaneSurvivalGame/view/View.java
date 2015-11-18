@@ -32,8 +32,8 @@ public abstract class View implements ViewInterface {
     @Override
     public void display() {
         String value = "";
-        boolean cont;
-        boolean done;
+        //boolean cont;
+        boolean done = false;
 
         do {
             System.out.println(this.displayMessage); // Print message

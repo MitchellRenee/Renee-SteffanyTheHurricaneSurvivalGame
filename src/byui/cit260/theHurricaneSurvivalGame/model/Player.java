@@ -31,11 +31,11 @@ public class Player implements Serializable{
     public Player() {
     }
     
-    public String getNamePlayer() {
+    public String getName() {
         return namePlayer;
     }
 
-    public void setNamePlayer(String namePlayer) {
+    public void setName(String namePlayer) {
         this.namePlayer = namePlayer;
     }
 
@@ -139,13 +139,9 @@ public class Player implements Serializable{
         return true;
     }  
 
-    public String getName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setName(String playerName) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+  
+       
+   
 }
     
     
