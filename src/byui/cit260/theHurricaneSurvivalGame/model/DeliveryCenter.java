@@ -15,9 +15,9 @@ import java.util.Objects;
 public class DeliveryCenter implements Serializable{
     
     //class instance variables
-    private String deliverWater;
-    private String deliverSuppliesToNursingHome;
-    private String deliverSuppliesToPrisonp;
+    private String deliveryToHome;
+    private String deliveryToNursingHome;
+    private String deliveryToPrison;
     private String DeliveryOrder;
     private String totalTimeOfDelivery;
     private String totalCostofDelivery;
@@ -25,28 +25,28 @@ public class DeliveryCenter implements Serializable{
     public DeliveryCenter() {
     }
 
-    public String getDeliverWater() {
-        return deliverWater;
+    public String getDeliveryToHome() {
+        return deliveryToHome;
     }
 
-    public void setDeliverWater(String deliverWater) {
-        this.deliverWater = deliverWater;
+    public void setDeliveryToHome(String deliveryToHome) {
+        this.deliveryToHome = deliveryToHome;
     }
 
-    public String getDeliverSuppliesToNursingHome() {
-        return deliverSuppliesToNursingHome;
+    public String getDeliveryToNursingHome() {
+        return deliveryToNursingHome;
     }
 
-    public void setDeliverSuppliesToNursingHome(String deliverSuppliesToNursingHome) {
-        this.deliverSuppliesToNursingHome = deliverSuppliesToNursingHome;
+    public void setDeliveryToNursingHome(String deliveryToNursingHome) {
+        this.deliveryToNursingHome = deliveryToNursingHome;
     }
 
-    public String getDeliverSuppliesToPrisonp() {
-        return deliverSuppliesToPrisonp;
+    public String getDeliveryToPrison() {
+        return deliveryToPrison;
     }
 
-    public void setDeliverSuppliesToPrisonp(String deliverSuppliesToPrisonp) {
-        this.deliverSuppliesToPrisonp = deliverSuppliesToPrisonp;
+    public void setDeliveryToPrison(String deliveryToPrison) {
+        this.deliveryToPrison = deliveryToPrison;
     }
 
     public String getDeliveryOrder() {
@@ -74,22 +74,22 @@ public class DeliveryCenter implements Serializable{
     }
 
     @Override
+    public String toString() {
+        return "DeliveryCenter{" + "deliveryToHome=" + deliveryToHome + ", deliveryToNursingHome=" + deliveryToNursingHome + ", deliveryToPrison=" + deliveryToPrison + ", DeliveryOrder=" + DeliveryOrder + ", totalTimeOfDelivery=" + totalTimeOfDelivery + ", totalCostofDelivery=" + totalCostofDelivery + '}';
+    }
+    
+    @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 17 * hash + Objects.hashCode(this.deliverWater);
-        hash = 17 * hash + Objects.hashCode(this.deliverSuppliesToNursingHome);
-        hash = 17 * hash + Objects.hashCode(this.deliverSuppliesToPrisonp);
-        hash = 17 * hash + Objects.hashCode(this.DeliveryOrder);
-        hash = 17 * hash + Objects.hashCode(this.totalTimeOfDelivery);
-        hash = 17 * hash + Objects.hashCode(this.totalCostofDelivery);
+        int hash = 7;
+        hash = 41 * hash + Objects.hashCode(this.deliveryToHome);
+        hash = 41 * hash + Objects.hashCode(this.deliveryToNursingHome);
+        hash = 41 * hash + Objects.hashCode(this.deliveryToPrison);
+        hash = 41 * hash + Objects.hashCode(this.DeliveryOrder);
+        hash = 41 * hash + Objects.hashCode(this.totalTimeOfDelivery);
+        hash = 41 * hash + Objects.hashCode(this.totalCostofDelivery);
         return hash;
     }
 
-    @Override
-    public String toString() {
-        return "DeliveryCenter{" + "deliverWater=" + deliverWater + ", deliverSuppliesToNursingHome=" + deliverSuppliesToNursingHome + ", deliverSuppliesToPrisonp=" + deliverSuppliesToPrisonp + ", DeliveryOrder=" + DeliveryOrder + ", totalTimeOfDelivery=" + totalTimeOfDelivery + ", totalCostofDelivery=" + totalCostofDelivery + '}';
-    }
-    
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -99,13 +99,13 @@ public class DeliveryCenter implements Serializable{
             return false;
         }
         final DeliveryCenter other = (DeliveryCenter) obj;
-        if (!Objects.equals(this.deliverWater, other.deliverWater)) {
+        if (!Objects.equals(this.deliveryToHome, other.deliveryToHome)) {
             return false;
         }
-        if (!Objects.equals(this.deliverSuppliesToNursingHome, other.deliverSuppliesToNursingHome)) {
+        if (!Objects.equals(this.deliveryToNursingHome, other.deliveryToNursingHome)) {
             return false;
         }
-        if (!Objects.equals(this.deliverSuppliesToPrisonp, other.deliverSuppliesToPrisonp)) {
+        if (!Objects.equals(this.deliveryToPrison, other.deliveryToPrison)) {
             return false;
         }
         if (!Objects.equals(this.DeliveryOrder, other.DeliveryOrder)) {
@@ -119,10 +119,7 @@ public class DeliveryCenter implements Serializable{
         }
         return true;
     }
-
-    public void setDeliverSuppliesToPrison(String yes) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     
     

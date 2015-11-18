@@ -137,10 +137,7 @@ public class Player implements Serializable{
             return false;
         }
         return true;
-    }  
-
-  
-       
+    }     
    
 }
     

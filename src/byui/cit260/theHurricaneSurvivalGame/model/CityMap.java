@@ -12,18 +12,26 @@ import java.util.Objects;
  *
  * @author SteffanyFaldmo
  */
-public class CityMap implements Serializable{
-    
+public class CityMap implements Serializable {
+
     //class instance variables
+    private String home;
     private String megaStore;
-    private String campingStore;
     private String deliveryCenter;
+    private String nursingHome;
+    private String prison;
+    private String coordinates;
 
     public CityMap() {
     }
-    
-    
-    
+
+    public String getHome() {
+        return home;
+    }
+
+    public void setHome(String home) {
+        this.home = home;
+    }
 
     public String getMegaStore() {
         return megaStore;
@@ -31,14 +39,6 @@ public class CityMap implements Serializable{
 
     public void setMegaStore(String megaStore) {
         this.megaStore = megaStore;
-    }
-
-    public String getCampingStore() {
-        return campingStore;
-    }
-
-    public void setCampingStore(String campingStore) {
-        this.campingStore = campingStore;
     }
 
     public String getDeliveryCenter() {
@@ -49,12 +49,44 @@ public class CityMap implements Serializable{
         this.deliveryCenter = deliveryCenter;
     }
 
+    public String getNursingHome() {
+        return nursingHome;
+    }
+
+    public void setNursingHome(String nursingHome) {
+        this.nursingHome = nursingHome;
+    }
+
+    public String getPrison() {
+        return prison;
+    }
+
+    public void setPrison(String prison) {
+        this.prison = prison;
+    }
+
+    public String getCoordinates() {
+        return coordinates;
+    }
+
+    public void setCoordinates(String coordinates) {
+        this.coordinates = coordinates;
+    }
+
+    @Override
+    public String toString() {
+        return "CityMap{" + "home=" + home + ", megaStore=" + megaStore + ", deliveryCenter=" + deliveryCenter + ", nursingHome=" + nursingHome + ", prison=" + prison + ", coordinates=" + coordinates + '}';
+    }
+    
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 37 * hash + Objects.hashCode(this.megaStore);
-        hash = 37 * hash + Objects.hashCode(this.campingStore);
-        hash = 37 * hash + Objects.hashCode(this.deliveryCenter);
+        int hash = 7;
+        hash = 29 * hash + Objects.hashCode(this.home);
+        hash = 29 * hash + Objects.hashCode(this.megaStore);
+        hash = 29 * hash + Objects.hashCode(this.deliveryCenter);
+        hash = 29 * hash + Objects.hashCode(this.nursingHome);
+        hash = 29 * hash + Objects.hashCode(this.prison);
+        hash = 29 * hash + Objects.hashCode(this.coordinates);
         return hash;
     }
 
@@ -67,24 +99,27 @@ public class CityMap implements Serializable{
             return false;
         }
         final CityMap other = (CityMap) obj;
-        if (!Objects.equals(this.megaStore, other.megaStore)) {
+        if (!Objects.equals(this.home, other.home)) {
             return false;
         }
-        if (!Objects.equals(this.campingStore, other.campingStore)) {
+        if (!Objects.equals(this.megaStore, other.megaStore)) {
             return false;
         }
         if (!Objects.equals(this.deliveryCenter, other.deliveryCenter)) {
             return false;
         }
+        if (!Objects.equals(this.nursingHome, other.nursingHome)) {
+            return false;
+        }
+        if (!Objects.equals(this.prison, other.prison)) {
+            return false;
+        }
+        if (!Objects.equals(this.coordinates, other.coordinates)) {
+            return false;
+        }
         return true;
     }
 
-    @Override
-    public String toString() {
-        return "CityMap{" + "megaStore=" + megaStore + ", campingStore=" + campingStore + ", deliveryCenter=" + deliveryCenter + '}';
-    }
     
-   
-    
-    
+
 }

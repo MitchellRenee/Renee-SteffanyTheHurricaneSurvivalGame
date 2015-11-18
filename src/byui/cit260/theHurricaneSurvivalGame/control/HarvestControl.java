@@ -26,10 +26,10 @@ public class HarvestControl {
      * locations and validate which items to purchase
      * @return Are the correct items located in the inventory and the supplies?
      */
-    public static boolean harvest(Player p,InventoryItems i, InventorySupplies s) {
+    public static boolean harvestControl(Player p, InventoryItems i, InventorySupplies s) {
         boolean returnValue = false;
         if (InventoryItems.exists() && InventorySupplies.valid()) {
-          
+
         }
 
         return returnValue;
@@ -45,13 +45,24 @@ public class HarvestControl {
         }
     }
 
-    public static class InventorySupplies {
+    public static class Inventory {
 
-        private static boolean valid() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        private static boolean harvest(Player p, Supplies s, Items i) {
+
+            p.setSupplies(s);
+            p.setItems(i);
+            return true;
+
+        
+
+        
         }
+    }
+
+    private static class InventorySupplies {
 
         public InventorySupplies() {
         }
     }
-}
+
+    }

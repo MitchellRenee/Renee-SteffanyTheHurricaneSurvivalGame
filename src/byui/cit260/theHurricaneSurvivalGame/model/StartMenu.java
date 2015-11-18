@@ -21,10 +21,7 @@ public class StartMenu implements Serializable{
     private String goToHouse;
 
     public StartMenu() {
-    }
-    
-    
-    
+    }    
 
     public String getContinueGame() {
         return continueGame;

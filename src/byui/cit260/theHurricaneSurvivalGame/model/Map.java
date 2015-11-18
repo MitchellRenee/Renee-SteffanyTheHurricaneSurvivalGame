@@ -17,27 +17,14 @@ public class Map implements Serializable{
     //class instance variables
     private String location;
     private double coordinates;
+    private String houseLocation;
+    private String megaStore;
+    private String deliveryCenter;
+    private String nursingHome;
+    private String prison;
 
     public Map() {
-    }
-    
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public double getCoordinates() {
-        return coordinates;
-    }
-
-    public void setCoordinates(double coordinates) {
-        this.coordinates = coordinates;
-    }
-
+    }   
     @Override
     public String toString() {
         return "map{" + "location=" + location + ", coordinates=" + coordinates + '}';
@@ -65,6 +52,61 @@ public class Map implements Serializable{
         }
         return Double.doubleToLongBits(this.coordinates) == Double.doubleToLongBits(other.coordinates);
     }
-    
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public double getCoordinates() {
+        return coordinates;
+    }
+
+    public void setCoordinates(double coordinates) {
+        this.coordinates = coordinates;
+    }
+
+    public String getHouseLocation() {
+        return houseLocation;
+    }
+
+    public void setHouseLocation(String houseLocation) {
+        this.houseLocation = houseLocation;
+    }
+
+    public String getMegaStore() {
+        return megaStore;
+    }
+
+    public void setMegaStore(String megaStore) {
+        this.megaStore = megaStore;
+    }
+
+    public String getDeliveryCenter() {
+        return deliveryCenter;
+    }
+
+    public void setDeliveryCenter(String deliveryCenter) {
+        this.deliveryCenter = deliveryCenter;
+    }
+
+    public String getNursingHome() {
+        return nursingHome;
+    }
+
+    public void setNursingHome(String nursingHome) {
+        this.nursingHome = nursingHome;
+    }
+
+    public String getPrison() {
+        return prison;
+    }
+
+    public void setPrison(String prison) {
+        this.prison = prison;
+    }    
     
 }

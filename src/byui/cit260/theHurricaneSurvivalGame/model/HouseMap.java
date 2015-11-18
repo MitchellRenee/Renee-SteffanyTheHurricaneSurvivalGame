@@ -21,16 +21,62 @@ public class HouseMap implements Serializable{
     private String closet;
     private String basement;
     private String garage;
-    private String megaStoreDepartments;
-    private String campingStoreDepartments;
-    private String deliveryCenterDepartment;
+    private String coordinates;    
 
     public HouseMap() {
     }
-    
-    
-    
 
+    @Override
+    public String toString() {
+        return "HouseMap{" + "kitchen=" + kitchen + ", bedroom=" + bedroom + ", bathroom=" + bathroom + ", closet=" + closet + ", basement=" + basement + ", garage=" + garage + ", coordinates=" + coordinates + '}';
+    }
+    
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 79 * hash + Objects.hashCode(this.kitchen);
+        hash = 79 * hash + Objects.hashCode(this.bedroom);
+        hash = 79 * hash + Objects.hashCode(this.bathroom);
+        hash = 79 * hash + Objects.hashCode(this.closet);
+        hash = 79 * hash + Objects.hashCode(this.basement);
+        hash = 79 * hash + Objects.hashCode(this.garage);
+        hash = 79 * hash + Objects.hashCode(this.coordinates);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final HouseMap other = (HouseMap) obj;
+        if (!Objects.equals(this.kitchen, other.kitchen)) {
+            return false;
+        }
+        if (!Objects.equals(this.bedroom, other.bedroom)) {
+            return false;
+        }
+        if (!Objects.equals(this.bathroom, other.bathroom)) {
+            return false;
+        }
+        if (!Objects.equals(this.closet, other.closet)) {
+            return false;
+        }
+        if (!Objects.equals(this.basement, other.basement)) {
+            return false;
+        }
+        if (!Objects.equals(this.garage, other.garage)) {
+            return false;
+        }
+        if (!Objects.equals(this.coordinates, other.coordinates)) {
+            return false;
+        }
+        return true;
+    }
+    
     public String getKitchen() {
         return kitchen;
     }
@@ -79,90 +125,21 @@ public class HouseMap implements Serializable{
         this.garage = garage;
     }
 
-    public String getMegaStoreDepartments() {
-        return megaStoreDepartments;
+    public String getCoordinates() {
+        return coordinates;
     }
 
-    public void setMegaStoreDepartments(String megaStoreDepartments) {
-        this.megaStoreDepartments = megaStoreDepartments;
-    }
+    public void setCoordinates(String coordinates) {
+        this.coordinates = coordinates;
+    }    
+}    
+    
+    
 
-    public String getCampingStoreDepartments() {
-        return campingStoreDepartments;
-    }
-
-    public void setCampingStoreDepartments(String campingStoreDepartments) {
-        this.campingStoreDepartments = campingStoreDepartments;
-    }
-
-    public String getDeliveryCenterDepartment() {
-        return deliveryCenterDepartment;
-    }
-
-    public void setDeliveryCenterDepartment(String deliveryCenterDepartment) {
-        this.deliveryCenterDepartment = deliveryCenterDepartment;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 83 * hash + Objects.hashCode(this.kitchen);
-        hash = 83 * hash + Objects.hashCode(this.bedroom);
-        hash = 83 * hash + Objects.hashCode(this.bathroom);
-        hash = 83 * hash + Objects.hashCode(this.closet);
-        hash = 83 * hash + Objects.hashCode(this.basement);
-        hash = 83 * hash + Objects.hashCode(this.garage);
-        hash = 83 * hash + Objects.hashCode(this.megaStoreDepartments);
-        hash = 83 * hash + Objects.hashCode(this.campingStoreDepartments);
-        hash = 83 * hash + Objects.hashCode(this.deliveryCenterDepartment);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final HouseMap other = (HouseMap) obj;
-        if (!Objects.equals(this.kitchen, other.kitchen)) {
-            return false;
-        }
-        if (!Objects.equals(this.bedroom, other.bedroom)) {
-            return false;
-        }
-        if (!Objects.equals(this.bathroom, other.bathroom)) {
-            return false;
-        }
-        if (!Objects.equals(this.closet, other.closet)) {
-            return false;
-        }
-        if (!Objects.equals(this.basement, other.basement)) {
-            return false;
-        }
-        if (!Objects.equals(this.garage, other.garage)) {
-            return false;
-        }
-        if (!Objects.equals(this.megaStoreDepartments, other.megaStoreDepartments)) {
-            return false;
-        }
-        if (!Objects.equals(this.campingStoreDepartments, other.campingStoreDepartments)) {
-            return false;
-        }
-        if (!Objects.equals(this.deliveryCenterDepartment, other.deliveryCenterDepartment)) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "HouseMap{" + "kitchen=" + kitchen + ", bedroom=" + bedroom + ", bathroom=" + bathroom + ", closet=" + closet + ", basement=" + basement + ", garage=" + garage + ", megaStoreDepartments=" + megaStoreDepartments + ", campingStoreDepartments=" + campingStoreDepartments + ", deliveryCenterDepartment=" + deliveryCenterDepartment + '}';
-    }
+   
+   
     
     
     
     
-}
+

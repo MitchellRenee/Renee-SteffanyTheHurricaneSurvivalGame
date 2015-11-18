@@ -27,6 +27,9 @@ public class MegaStore implements Serializable{
     private String location;
     private String aisles;
     private String storeSize;
+    private String prescribedMeds;
+    private String unprescrbedMeds;
+    private String tent;
     private String gameMenu;
 
     public MegaStore() {

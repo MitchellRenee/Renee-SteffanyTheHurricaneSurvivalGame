@@ -5,6 +5,8 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
 
+import byui.cit260.theHurricaneSurvivalGame.model.DeliverySupplies;
+
 /**
  *
  * @author Renee
@@ -24,65 +26,20 @@ public class DeliveryControl {
      * packages
      * @return Was the player able to move to the new location?
      */
-    public static boolean delivery(DeliveryOrder d, DeliveryTime t, DeliveryCost c) {
-        boolean returnValue = false;
-        if (DeliveryOrder.validate() && DeliveryTime.calculate() && DeliveryCost.calculate()) {
-            returnValue = true;
-        }
+    public double delivery(DeliverySupplies d, double x1, double y1, double x2, double y2) {
 
+        double returnValue = 0;
+        if (d == null) {
+            return 0;
+        }
+        
+        double calDistance = this.distance(x1, y1, x2, y2); 
+        
+        returnValue = d.getDeliverCost();
         return returnValue;
     }
 
-    static boolean deliveryOrder(Delivery d, Time t, Cost c) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private static class DeliveryCost {
-
-        private static boolean calculate() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public DeliveryCost() {
-        }
-    }
-
-    private static class DeliveryTime {
-
-        private static boolean calculate() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public DeliveryTime() {
-        }
-    }
-
-    private static class DeliveryOrder {
-
-        private static boolean validate() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public DeliveryOrder() {
-        }
-    }
-
-    static class Delivery {
-
-        public Delivery() {
-        }
-    }
-
-    static class Time {
-
-        public Time() {
-        }
-    }
-
-    static class Cost {
-
-        public Cost() {
-        }
-    }
-
+    private double distance(double x1, double y1, double x2, double y2) {
+        return Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+    }       
 }

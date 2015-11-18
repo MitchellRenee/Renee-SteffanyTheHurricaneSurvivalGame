@@ -22,6 +22,25 @@ public class DeliverySupplies implements Serializable{
     private String chooseValidDeliveryLocation;
     private String validResponseDisplayMessage;
     private String returnToGameMenu;
+    private int deliveryTime;
+    private double deliverCost;
+
+    public double getDeliverCost() {
+        return deliverCost;
+    }
+
+    public void setDeliverCost(double deliverCost) {
+        this.deliverCost = deliverCost;
+    }
+
+    public int getDeliveryTime() {
+        return deliveryTime;
+    }
+
+    public void setDeliveryTime(int deliveryTime) {
+        this.deliveryTime = deliveryTime;
+    }
+  
 
     public DeliverySupplies() {
     }
