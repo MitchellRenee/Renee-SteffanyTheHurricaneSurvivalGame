@@ -21,6 +21,9 @@ public class DeliveryCenter implements Serializable{
     private String DeliveryOrder;
     private String totalTimeOfDelivery;
     private String totalCostofDelivery;
+    
+    private ViewDeliveries viewDeliveries;
+    private DeliverySupplies deliverySupplies;
 
     public DeliveryCenter() {
     }
@@ -72,6 +75,24 @@ public class DeliveryCenter implements Serializable{
     public void setTotalCostofDelivery(String totalCostofDelivery) {
         this.totalCostofDelivery = totalCostofDelivery;
     }
+
+    public ViewDeliveries getViewDeliveries() {
+        return viewDeliveries;
+    }
+
+    public void setViewDeliveries(ViewDeliveries viewDeliveries) {
+        this.viewDeliveries = viewDeliveries;
+    }
+
+    public DeliverySupplies getDeliverySupplies() {
+        return deliverySupplies;
+    }
+
+    public void setDeliverySupplies(DeliverySupplies deliverySupplies) {
+        this.deliverySupplies = deliverySupplies;
+    }
+    
+    
 
     @Override
     public String toString() {

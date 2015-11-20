@@ -30,6 +30,9 @@ public class Location implements Serializable{
     private String visited;
     private String exists;
     private String move;
+    
+    private StoreModel storeModel;
+    private MegaStore megaStore;
 
     public Location() {
     }
@@ -122,6 +125,24 @@ public class Location implements Serializable{
         this.move = move;
     }
 
+    public StoreModel getStoreModel() {
+        return storeModel;
+    }
+
+    public void setStoreModel(StoreModel storeModel) {
+        this.storeModel = storeModel;
+    }
+
+    public MegaStore getMegaStore() {
+        return megaStore;
+    }
+
+    public void setMegaStore(MegaStore megaStore) {
+        this.megaStore = megaStore;
+    }
+
+    
+    
     @Override
     public int hashCode() {
         int hash = 5;

@@ -27,6 +27,7 @@ public class Player implements Serializable{
     private double moneyAccount;
     private boolean status;
     private String description;
+    
 
     public Player() {
     }

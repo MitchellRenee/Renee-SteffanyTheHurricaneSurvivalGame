@@ -20,10 +20,21 @@ public class HurricaneSurvivalGame implements Serializable{
     public static Object setInstance() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    public static Player Player() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     private String accessProgram;
     private double totalTime;
     private double gameTime;
     private Player player;
+    
+    private MainMenu mainMenu;
+    private Map map;
+    private ViewSupplyList[] supplyItem;
+    
+    
+    
     
     private HurricaneSurvivalGame() {
     }
@@ -66,6 +77,32 @@ public class HurricaneSurvivalGame implements Serializable{
     public void setGameTime(double gameTime) {
         this.gameTime = gameTime;
     }
+
+    public MainMenu getMainMenu() {
+        return mainMenu;
+    }
+
+    public void setMainMenu(MainMenu mainMenu) {
+        this.mainMenu = mainMenu;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+
+    public ViewSupplyList[] getSupplyItem() {
+        return supplyItem;
+    }
+
+    public void setSupplyItem(ViewSupplyList[] supplyItem) {
+        this.supplyItem = supplyItem;
+    }
+      
+    
 
     @Override
     public int hashCode() {

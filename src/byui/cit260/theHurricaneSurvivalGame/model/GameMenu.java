@@ -31,6 +31,8 @@ public class GameMenu implements Serializable{
     public GameMenu() {
     }
     
+    private SaveGame save;
+    private RetrieveGame retrieve;
     
     
 
@@ -130,6 +132,24 @@ public class GameMenu implements Serializable{
         this.mainMenu = mainMenu;
     }
 
+    public SaveGame getSave() {
+        return save;
+    }
+
+    public void setSave(SaveGame save) {
+        this.save = save;
+    }
+
+    public RetrieveGame getRetrieve() {
+        return retrieve;
+    }
+
+    public void setRetrieve(RetrieveGame retrieve) {
+        this.retrieve = retrieve;
+    }
+
+    
+    
     @Override
     public int hashCode() {
         int hash = 7;
