@@ -21,7 +21,7 @@ public class GameControl {
     public static Item[] createInventoryList() {
         //Created an array list of supply items
 
-        Item[][] inventory = new Item[22];
+        Item[] inventory = new Item[22];
 
         Item protein = new Item();
         protein.setName("Protein");
@@ -41,6 +41,18 @@ public class GameControl {
     private static class Item {
 
         public Item() {
+        }
+
+        private void setName(String protein) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        private void setWeight(int i) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        private void setSurvivalPoint(int i) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
     }
 }
