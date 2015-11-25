@@ -14,6 +14,7 @@
  * saved game \n" + "H - View help menu \n" + "E -Exit game\n"); }
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
+import byui.cit260.theHurricaneSurvivalGame.control.GameControl;
 import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGame;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
 import java.util.Scanner;
@@ -44,28 +45,6 @@ public class MainMenuView extends View {
          */
     }
     
-    public class GameControl {
-
-        public void createNewGame(Player player) 
-            System.out.println("*** createNewGame in GameControl called ***");
-            
-        public static InventoryItem[] createInventoryList() {
-            //Created an array list of supply items
-            
-            InventoryItem inventory =
-            new InventoryItem[22];
-            
-            InventoryItem proteinPoints = new InventoryItem();
-            proteinPoints.setDescription("Protein");
-            proteinPoints.setQuantityInStock(5);
-            proteinPoints.setRequiredAmount(1);
-            inventory[0] = proteinPoints;
-            
-            return supplies;
-        }
-       
-    }
-
     public boolean doAction(Object obj) {
 
         String value = (String) obj;
@@ -97,7 +76,7 @@ public class MainMenuView extends View {
 
     private void startNewGame() {
         //Create a new game
-        GameControl.createNewGame(HurricaneSurvivalGame.getPlayer());
+        GameControl.createNewGame(HurricaneSurvivalGame.getInstance().getPlayer());
        
         //Display the game menu
         GameMenuView gameMenu = new GameMenuView();
