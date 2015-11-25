@@ -18,23 +18,29 @@ public class GameControl {
         System.out.println("\n***createNewGame stub function called ***");
     }
 
-    public static InventoryItem[] createInventoryList() {
+    public static Item[] createInventoryList() {
         //Created an array list of supply items
 
-        InventoryItem inventory = new InventoryItem[22];
+        Item[][] inventory = new Item[22];
 
-        InventoryItem proteinPoints = new InventoryItem();
-        proteinPoints.setDescription("Protein");
-        proteinPoints.setQuantityInStock(5);
-        proteinPoints.setRequiredAmount(1);
-        inventory[0] = proteinPoints;
+        Item protein = new Item();
+        protein.setName("Protein");
+        protein.setWeight(5);
+        protein.setSurvivalPoint(18);
+        inventory[8] = protein;
 
-        return supplies;
+        return inventory;
     }
 
     //Testing
     private void startNewGame() {
         // Create a new game
         GameControl.createNewGame(TheHurricaneSurvivalGame.getPlayer());
+    }
+
+    private static class Item {
+
+        public Item() {
+        }
     }
 }

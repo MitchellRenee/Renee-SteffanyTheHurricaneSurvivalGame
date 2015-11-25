@@ -16,14 +16,14 @@ import static org.junit.Assert.*;
  * @author Renee
  */
 public class HarvestControlTest {
-    
+
     public HarvestControlTest() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -35,13 +35,10 @@ public class HarvestControlTest {
     public void testHarvest() {
         System.out.println("harvest");
         Player p = null;
-        HarvestControl.InventoryItems i = null;
-        HarvestControl.InventorySupplies s = null;
+        HarvestControl.Item i = null;
+        HarvestControl.Supplies s = null;
         boolean expResult = false;
         boolean result = HarvestControl.harvest(p, i, s);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
-    
 }

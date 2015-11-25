@@ -18,6 +18,10 @@ public class Player implements Serializable{
     public static boolean Move() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    public static boolean exists() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     //class instance variable
     private String namePlayer;
@@ -139,6 +143,14 @@ public class Player implements Serializable{
         }
         return true;
     }     
+
+    public void setSupplies(HarvestControl.Supplies s) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setItem(HarvestControl.Item i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }      
    
 }
     

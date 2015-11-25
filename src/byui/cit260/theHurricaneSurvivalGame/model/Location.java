@@ -31,7 +31,7 @@ public class Location implements Serializable{
     private String exists;
     private String move;
     
-    private StoreModel storeModel;
+    private Store storeModel;
     private MegaStore megaStore;
 
     public Location() {
@@ -125,11 +125,11 @@ public class Location implements Serializable{
         this.move = move;
     }
 
-    public StoreModel getStoreModel() {
+    public Store getStoreModel() {
         return storeModel;
     }
 
-    public void setStoreModel(StoreModel storeModel) {
+    public void setStoreModel(Store storeModel) {
         this.storeModel = storeModel;
     }
 
