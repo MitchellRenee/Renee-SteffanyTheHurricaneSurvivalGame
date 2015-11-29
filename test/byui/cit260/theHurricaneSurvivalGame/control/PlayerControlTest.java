@@ -16,14 +16,14 @@ import static org.junit.Assert.*;
  * @author Renee
  */
 public class PlayerControlTest {
-    
+
     public PlayerControlTest() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -40,8 +40,5 @@ public class PlayerControlTest {
         boolean expResult = false;
         boolean result = PlayerControl.player(name, l, status);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
-    
 }

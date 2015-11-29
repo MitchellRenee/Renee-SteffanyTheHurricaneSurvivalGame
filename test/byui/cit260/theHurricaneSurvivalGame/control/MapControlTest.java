@@ -40,6 +40,5 @@ public class MapControlTest {
         assertEquals(nursingHome, p.getPlayerLocation());
         assertEquals(prison, p.getPlayerLocation());
         assertEquals(expResult, result);
-    }
-    
+    }    
 }

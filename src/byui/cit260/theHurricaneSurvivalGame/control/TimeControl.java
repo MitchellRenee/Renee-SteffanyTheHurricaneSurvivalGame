@@ -20,6 +20,7 @@ public class TimeControl {
      * @param TotalTime is the total time
      * @return What is the time remaining?
      */
+    //Did not pass test
     public double calcTimeRemainingInGame(double TimeSpent, double TotalTime) {
         if (TotalTime < 48) { // TotalTime must always be 48 hours 
             return 0;

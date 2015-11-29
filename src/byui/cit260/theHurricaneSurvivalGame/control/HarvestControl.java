@@ -13,7 +13,7 @@ import byui.cit260.theHurricaneSurvivalGame.model.Player;
  * @author Renee
  */
 public class HarvestControl {
-
+//Did not pass test 
     /**
      * <h2>Move:</h2>
      * <p>
@@ -34,15 +34,21 @@ public class HarvestControl {
 
         return returnValue;
     }
-
+    //Figure out how to write this so that the test doesn't fail
     static boolean harvest(Player p, Item i, Supplies s) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    
+
+    static boolean Harvest(Player p, Item i, Supplies s) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
     public static class Inventory {
 
-        public static boolean harvest(Player p, Supplies s, Item i) {
-       
+        public static boolean harvest(Player p, Supplies s, Item i) {      
         
         p.setSupplies(s);
         p.setItem(i);
@@ -50,6 +56,15 @@ public class HarvestControl {
             return true;
         }
     }
+
+    //public static class Supplies {
+
+        private static boolean valid() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        public HarvestControl() {
+        }
 
     public static class Supplies {
 
@@ -71,3 +86,6 @@ public class HarvestControl {
         }
     }
 }
+
+    
+       

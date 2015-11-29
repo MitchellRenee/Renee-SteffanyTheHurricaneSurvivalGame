@@ -32,10 +32,7 @@ public class HurricaneSurvivalGame implements Serializable{
     private MainMenu mainMenu;
     private Map map;
     private ViewSupplyList[] supplyItem;
-    
-    
-    
-    
+       
     private HurricaneSurvivalGame() {
     }
 

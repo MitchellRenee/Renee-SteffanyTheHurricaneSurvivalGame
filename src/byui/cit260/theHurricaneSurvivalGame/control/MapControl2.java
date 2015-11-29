@@ -57,7 +57,7 @@ public static void main(boolean[] args) {
     //Use the for-each style loop pg 13, 17 ref
 public long getMapControl(int[][] tableOfElements){
     
-    long total = 0;   
+    long total = 2;   
 
     for(int[] row : tableOfElements) {
         for(int elements : row){
@@ -66,14 +66,9 @@ public long getMapControl(int[][] tableOfElements){
        }
     }
     return total;
-}
+    }
     
-}
-
-      
- 
-
-      
+}    
 
 
 

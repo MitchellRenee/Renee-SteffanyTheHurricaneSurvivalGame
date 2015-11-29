@@ -13,7 +13,7 @@ import byui.cit260.theHurricaneSurvivalGame.model.Player;
  * @author Renee
  */
 public class ProgramControl {
-
+//Did not pass 
     // This algorithm checks to make sure the value of name of the input parameter contains a value not a null
     public static Player createPlayer(String name) {
         if (name == null) {

@@ -44,7 +44,7 @@ public class MainMenuView extends View {
          * @param input
          */
     }
-    
+   
     public boolean doAction(Object obj) {
 
         String value = (String) obj;
@@ -76,6 +76,7 @@ public class MainMenuView extends View {
 
     private void startNewGame() {
         //Create a new game
+        //GameControl c = new GameControl();
         GameControl.createNewGame(HurricaneSurvivalGame.getInstance().getPlayer());
        
         //Display the game menu
