@@ -150,7 +150,7 @@ public class Player implements Serializable{
 
     public void setItem(HarvestControl.Item i) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }      
+    }
    
 }
     

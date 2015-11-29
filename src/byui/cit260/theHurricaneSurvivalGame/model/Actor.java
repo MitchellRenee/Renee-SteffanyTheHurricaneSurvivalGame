@@ -13,7 +13,7 @@ import java.util.Objects;
  * @author Renee
  */
 //modify class keyword with enum keyword in class defininition.
-/*public  Actor implements Serializable {
+/**public enum Actor implements Serializable {
 
     Joan("She is a middle-aged single woman, who is a naturalist."),
     Zion("He is a disaster relief specialist, with a family."),
@@ -22,8 +22,7 @@ import java.util.Objects;
     Alma("Is a single parent of two girls, who works a the local farmer's market."};
 
 
-   
-    private final String description;
+  private final String description;
     private final Point coordinates;
 
     Actor(String description){
@@ -36,44 +35,44 @@ import java.util.Objects;
     }
     public Point getCoordinates(){
         return coordinates;
-    
-
-}
+    }
 }    
     
-/class instance 
-
-    variables
+/class instance variables
 private String ;
     private final String description;
     private final Point coordinates;
 
     public Actor() {
     }
-
-    Actor(String description) {
+    
+    Actor(String description){
         this.description = description;
-        coordinates = new Point(1, 1);
+        coordinates = new Point (1,1);
 
-    }
 
+}
     public String getName() {
-        return;
+        return ;
     }
 
     public void setName(String name) {
-        this.name =;
+        this.name = ;
     }
 
     public String getDescription() {
         return description;
     }
 
+    
+
     public double getCoordinates() {
         return coordinates;
     }
 
+    
+
     @Override
-    public String toString() {
+        public String toString() {
         return "Actor{" + "name=" + name + ", description=" + description + ", coordinates=" + coordinates + '}';
-*/
+ */

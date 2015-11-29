@@ -14,41 +14,41 @@ import java.io.Serializable;
 public class Harvest implements Serializable{
     
     //class instance variables
-    public boolean harvestItem;
-    public boolean harvestSupplies;
+    public boolean harvestInventoryItems;
+    public boolean harvestInventorySupplies;
 
     public Harvest() {
-    }    
+    }
     
-    public boolean isHarvesttem() {
-        return harvestItem;
+    public boolean isHarvestInventoryItems() {
+        return harvestInventoryItems;
     }
 
-    public void setHarvesttem(boolean harvesttem) {
-        this.harvestItem = harvesttem;
+    public void setHarvestInventoryItems(boolean harvestInventoryItems) {
+        this.harvestInventoryItems = harvestInventoryItems;
     }
 
-    public boolean isHarvestSupplies() {
-        return harvestSupplies;
+    public boolean isHarvestInventorySupplies() {
+        return harvestInventorySupplies;
     }
 
-    public void setHarvestSupplies(boolean harvestSupplies) {
-        this.harvestSupplies = harvestSupplies;
+    public void setHarvestInventorySupplies(boolean harvestInventorySupplies) {
+        this.harvestInventorySupplies = harvestInventorySupplies;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 53 * hash + (this.harvestInventoryItems ? 1 : 0);
+        hash = 53 * hash + (this.harvestInventorySupplies ? 1 : 0);
+        return hash;
     }
 
     @Override
     public String toString() {
-        return "Harvest{" + "harvesttem=" + harvestItem + ", harvestSupplies=" + harvestSupplies + '}';
+        return "Harvest{" + "harvestInventoryItems=" + harvestInventoryItems + ", harvestInventorySupplies=" + harvestInventorySupplies + '}';
     }
     
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 29 * hash + (this.harvestItem ? 1 : 0);
-        hash = 29 * hash + (this.harvestSupplies ? 1 : 0);
-        return hash;
-    }
-
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -58,14 +58,13 @@ public class Harvest implements Serializable{
             return false;
         }
         final Harvest other = (Harvest) obj;
-        if (this.harvestItem != other.harvestItem) {
+        if (this.harvestInventoryItems != other.harvestInventoryItems) {
             return false;
         }
-        if (this.harvestSupplies != other.harvestSupplies) {
+        if (this.harvestInventorySupplies != other.harvestInventorySupplies) {
             return false;
         }
         return true;
-    }
-
-      
+    }    
 }
+

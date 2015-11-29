@@ -15,14 +15,13 @@ import java.util.Objects;
 public class HouseMap implements Serializable{
     
     //class instance variables
-    private double coordinates;
     private String kitchen;
     private String bedroom;
     private String bathroom;
     private String closet;
     private String basement;
     private String garage;
-     
+    private String coordinates;    
 
     public HouseMap() {
     }
@@ -126,11 +125,11 @@ public class HouseMap implements Serializable{
         this.garage = garage;
     }
 
-    public double getCoordinates() {
+    public String getCoordinates() {
         return coordinates;
     }
 
-    public void setCoordinates(double coordinates) {
+    public void setCoordinates(String coordinates) {
         this.coordinates = coordinates;
     }    
 }    
@@ -143,4 +142,5 @@ public class HouseMap implements Serializable{
     
     
     
+
 

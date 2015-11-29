@@ -15,9 +15,7 @@ import java.util.Objects;
 public class Item implements Serializable{
 
     public static boolean located() {
-        System.out.println("Not supported yet."); 
-        
-        return false;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     private String name;
@@ -28,23 +26,7 @@ public class Item implements Serializable{
 
     public Item() {
     }
-
-    public double getQuantityInStock() {
-        return quantityInStock;
-    }
-
-    public void setQuantityInStock(double quantityInStock) {
-        this.quantityInStock = quantityInStock;
-    }
-
-    public double getRequiredAmount() {
-        return requiredAmount;
-    }
-
-    public void setRequiredAmount(double requiredAmount) {
-        this.requiredAmount = requiredAmount;
-    }
-
+        
     public String getName() {
         return name;
     }
@@ -69,19 +51,35 @@ public class Item implements Serializable{
         this.survivalPoints = survivalPoints;
     }
 
+    public double getQuantityInStock() {
+        return quantityInStock;
+    }
+
+    public void setQuantityInStock(double quantityInStock) {
+        this.quantityInStock = quantityInStock;
+    }
+
+    public double getRequiredAmount() {
+        return requiredAmount;
+    }
+
+    public void setRequiredAmount(double requiredAmount) {
+        this.requiredAmount = requiredAmount;
+    }
+
     @Override
     public String toString() {
         return "Item{" + "name=" + name + ", weight=" + weight + ", survivalPoints=" + survivalPoints + ", quantityInStock=" + quantityInStock + ", requiredAmount=" + requiredAmount + '}';
     }
-
+    
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 61 * hash + Objects.hashCode(this.name);
-        hash = 61 * hash + (int) (Double.doubleToLongBits(this.weight) ^ (Double.doubleToLongBits(this.weight) >>> 32));
-        hash = 61 * hash + (int) (Double.doubleToLongBits(this.survivalPoints) ^ (Double.doubleToLongBits(this.survivalPoints) >>> 32));
-        hash = 61 * hash + (int) (Double.doubleToLongBits(this.quantityInStock) ^ (Double.doubleToLongBits(this.quantityInStock) >>> 32));
-        hash = 61 * hash + (int) (Double.doubleToLongBits(this.requiredAmount) ^ (Double.doubleToLongBits(this.requiredAmount) >>> 32));
+        int hash = 5;
+        hash = 37 * hash + Objects.hashCode(this.name);
+        hash = 37 * hash + (int) (Double.doubleToLongBits(this.weight) ^ (Double.doubleToLongBits(this.weight) >>> 32));
+        hash = 37 * hash + (int) (Double.doubleToLongBits(this.survivalPoints) ^ (Double.doubleToLongBits(this.survivalPoints) >>> 32));
+        hash = 37 * hash + (int) (Double.doubleToLongBits(this.quantityInStock) ^ (Double.doubleToLongBits(this.quantityInStock) >>> 32));
+        hash = 37 * hash + (int) (Double.doubleToLongBits(this.requiredAmount) ^ (Double.doubleToLongBits(this.requiredAmount) >>> 32));
         return hash;
     }
 
@@ -111,4 +109,9 @@ public class Item implements Serializable{
         }
         return true;
     }
+    
+    
+    
+    
+    
 }
