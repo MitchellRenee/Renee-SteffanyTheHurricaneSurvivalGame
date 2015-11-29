@@ -14,18 +14,18 @@ import java.io.Serializable;
 public class Harvest implements Serializable{
     
     //class instance variables
-    public boolean harvesttem;
+    public boolean harvestItem;
     public boolean harvestSupplies;
 
     public Harvest() {
     }    
     
     public boolean isHarvesttem() {
-        return harvesttem;
+        return harvestItem;
     }
 
     public void setHarvesttem(boolean harvesttem) {
-        this.harvesttem = harvesttem;
+        this.harvestItem = harvesttem;
     }
 
     public boolean isHarvestSupplies() {
@@ -38,13 +38,13 @@ public class Harvest implements Serializable{
 
     @Override
     public String toString() {
-        return "Harvest{" + "harvesttem=" + harvesttem + ", harvestSupplies=" + harvestSupplies + '}';
+        return "Harvest{" + "harvesttem=" + harvestItem + ", harvestSupplies=" + harvestSupplies + '}';
     }
     
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 29 * hash + (this.harvesttem ? 1 : 0);
+        hash = 29 * hash + (this.harvestItem ? 1 : 0);
         hash = 29 * hash + (this.harvestSupplies ? 1 : 0);
         return hash;
     }
@@ -58,7 +58,7 @@ public class Harvest implements Serializable{
             return false;
         }
         final Harvest other = (Harvest) obj;
-        if (this.harvesttem != other.harvesttem) {
+        if (this.harvestItem != other.harvestItem) {
             return false;
         }
         if (this.harvestSupplies != other.harvestSupplies) {

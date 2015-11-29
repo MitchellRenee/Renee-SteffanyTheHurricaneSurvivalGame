@@ -213,5 +213,4 @@ public class GameControl {
         // Create a new game
         GameControl.createNewGame(TheHurricaneSurvivalGame.getPlayer());
     }
-
 }
