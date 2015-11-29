@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
-
+import byui.cit260.theHurricaneSurvivalGame.model.Item;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
 import thehurricanesurvivalgame.TheHurricaneSurvivalGame;
 
@@ -17,7 +17,6 @@ public class GameControl {
     public static void createNewGame(Player player) {
         System.out.println("\n***createNewGame stub function called ***");
     }
-
     public static Item[] createInventoryList() {
         //Created an array list of supply items
 
@@ -26,9 +25,11 @@ public class GameControl {
         Item protein = new Item();
         protein.setName("Protein");
         protein.setWeight(5);
-        protein.setSurvivalPoint(18);
-        inventory[8] = protein;
-
+        protein.setQuantityInStock(1);
+        protein.setRequiredAmount(2);
+        protein.setSurvivalPoints(10);
+        inventory[0] = protein;
+        
         return inventory;
     }
 
@@ -38,21 +39,4 @@ public class GameControl {
         GameControl.createNewGame(TheHurricaneSurvivalGame.getPlayer());
     }
 
-    private static class Item {
-
-        public Item() {
-        }
-
-        private void setName(String protein) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        private void setWeight(int i) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        private void setSurvivalPoint(int i) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-    }
 }
