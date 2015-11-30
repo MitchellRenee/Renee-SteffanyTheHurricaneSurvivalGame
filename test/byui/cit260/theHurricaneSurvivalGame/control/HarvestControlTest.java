@@ -41,4 +41,20 @@ public class HarvestControlTest {
         boolean result = HarvestControl.harvest(p, i, s);
         assertEquals(expResult, result);
     }
+
+    /**
+     * Test of harvestControl method, of class HarvestControl.
+     */
+    @Test
+    public void testHarvestControl() {
+        System.out.println("harvestControl");
+        Player p = null;
+        HarvestControl.Supplies s = null;
+        HarvestControl.Item i = null;
+        HarvestControl.DeliveryCenter d = null;
+        boolean expResult = false;
+        Object result = null;
+        //boolean result = HarvestControl.harvestControl(p, s, i, d);
+        assertEquals(expResult, result);
+    }
 }

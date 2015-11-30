@@ -14,13 +14,13 @@ import static org.junit.Assert.*;
  *
  * @author Renee
  */
-public class MapControl2Test {
+public class MoveControlTest {
     
-    public MapControl2Test() {
+    public MoveControlTest() {
     }
 
     /**
-     * Test of move method, of class MapControl2.
+     * Test of move method, of class MoveControl.
      */
     @Test
     public void testMove() {
@@ -29,34 +29,35 @@ public class MapControl2Test {
         Location l = null;
         AisleControl a = null;
         boolean expResult = false;
-        boolean result = MapControl2.move(p, l, a);
+        boolean result = MoveControl.move(p, l, a);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of main method, of class MapControl2.
+     * Test of main method, of class MoveControl.
      */
     @Test
     public void testMain() {
         System.out.println("main");
         boolean[] args = null;
-        MapControl2.main(args);
+        MoveControl.main(args);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of getMapControl method, of class MapControl2.
+     * Test of getMapControl method, of class MoveControl.
      */
     @Test
     public void testGetMapControl() {
         System.out.println("getMapControl");
         int[][] tableOfElements = null;
-        MapControl2 instance = new MapControl2();
+        MoveControl instance = new MoveControl();
         long expResult = 0L;
         long result = instance.getMapControl(tableOfElements);
-        assertEquals(expResult, result);
+        assertEquals(expResult, result);       
     }
+    
 }

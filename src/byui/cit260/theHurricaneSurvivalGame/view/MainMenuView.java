@@ -71,7 +71,7 @@ public class MainMenuView extends View {
                 System.out.println("\n*** This is an invalid selection *** Please try again");
                 break;
         }
-        return false;
+        return true;
     }
 
     private void startNewGame() {

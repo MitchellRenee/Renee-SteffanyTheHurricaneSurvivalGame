@@ -5,6 +5,8 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
 
+import static byui.cit260.theHurricaneSurvivalGame.control.StoreControl.MoneyAccount;
+import byui.cit260.theHurricaneSurvivalGame.model.Item;
 import byui.cit260.theHurricaneSurvivalGame.model.Location;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
 
@@ -13,79 +15,77 @@ import byui.cit260.theHurricaneSurvivalGame.model.Player;
  * @author Renee
  */
 public class HarvestControl {
-//Did not pass test 
-    /**
-     * <h2>Move:</h2>
-     * <p>
-     * Delivery allows the player to take inventory of personal stock, purchase
-     * needed items, and deliver items to correct locations.</p>
-     *
-     * @param HarvestInventoryItems lets the player view and validate stock
-     * inventory
-     * @param HarvestInventorySupplies lets the player view items at the store
-     * locations and validate which items to purchase
-     * @return Are the correct items located in the inventory and the supplies?
-     */
-    public static boolean harvestControl(Player p, Item i, Supplies s) {
-        boolean returnValue = false;
-        if (Item.exists() && Supplies.valid()) {
 
-        }
-
-        return returnValue;
-    }
-    //Figure out how to write this so that the test doesn't fail
     static boolean harvest(Player p, Item i, Supplies s) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+//Did not pass test 
 
     
-
-    static boolean Harvest(Player p, Item i, Supplies s) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-
-    public static class Inventory {
-
-        public static boolean harvest(Player p, Supplies s, Item i) {      
+    /**
+     * <h2>Move:</h2>
+     *
+     * @param Player gets items needed for their supply harvest.
+     * @param Items are the actual things acquired from the store.(yes
+     * @param Supplies is the list of items that the player needs to acquire.
+     * @param DeliveryCenter stores the purchased items from store
+     * locations and validate which items to purchase
+     * @return Are the correct items located in the inventory and the supplies?
+     */
+    public boolean harvestControl(Player p, Supplies s, Item i, DeliveryCenter d) {
+        boolean returnValue = false;
+        if(Player.exists() && Supplies.needed() && Items.located && DeliveryCenter.status ("Will have delivery order")){
+            returnValue = true;
+        }
         
-        p.setSupplies(s);
-        p.setItem(i);
+        return  returnValue;
+    }
+    
 
+    public static class DeliveryCenter {
+
+        private static boolean status(String will_have_delivery_order) {
+            System.out.println("Delivery order ready."); 
             return true;
+        }    
+
+        public DeliveryCenter() {
         }
     }
 
-    //public static class Supplies {
+    private static class Items {
+        private static boolean located;
 
-        private static boolean valid() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public HarvestControl() {
-        }
-
-    public static class Supplies {
-
-        private static boolean valid() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public Supplies() {
+        public Items() {
         }
     }
 
     public static class Item {
 
-        private static boolean exists() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
         public Item() {
         }
     }
-}
+    public class Supplies { 
 
+         
+
+        public Supplies() {
+        }      
+        
+        
+    }
+}    
     
-       
+
+        
+ 
+
+        
+        
+     
+ 
+
+   
+
+  
+        

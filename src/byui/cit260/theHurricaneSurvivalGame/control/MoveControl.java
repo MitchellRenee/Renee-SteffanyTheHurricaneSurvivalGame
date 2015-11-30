@@ -12,7 +12,7 @@ import byui.cit260.theHurricaneSurvivalGame.model.Player;
  *
  * @author Renee
  */
-public class MapControl2 {
+public class MoveControl {
 
     /**
      * <h2>Move:</h2>

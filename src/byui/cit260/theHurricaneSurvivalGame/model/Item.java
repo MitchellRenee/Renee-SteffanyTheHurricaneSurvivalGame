@@ -23,10 +23,11 @@ public class Item implements Serializable{
     private double survivalPoints;
     private double quantityInStock;
     private double requiredAmount;
+  
 
     public Item() {
     }
-        
+
     public String getName() {
         return name;
     }
@@ -74,12 +75,12 @@ public class Item implements Serializable{
     
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 37 * hash + Objects.hashCode(this.name);
-        hash = 37 * hash + (int) (Double.doubleToLongBits(this.weight) ^ (Double.doubleToLongBits(this.weight) >>> 32));
-        hash = 37 * hash + (int) (Double.doubleToLongBits(this.survivalPoints) ^ (Double.doubleToLongBits(this.survivalPoints) >>> 32));
-        hash = 37 * hash + (int) (Double.doubleToLongBits(this.quantityInStock) ^ (Double.doubleToLongBits(this.quantityInStock) >>> 32));
-        hash = 37 * hash + (int) (Double.doubleToLongBits(this.requiredAmount) ^ (Double.doubleToLongBits(this.requiredAmount) >>> 32));
+        int hash = 7;
+        hash = 17 * hash + Objects.hashCode(this.name);
+        hash = 17 * hash + (int) (Double.doubleToLongBits(this.weight) ^ (Double.doubleToLongBits(this.weight) >>> 32));
+        hash = 17 * hash + (int) (Double.doubleToLongBits(this.survivalPoints) ^ (Double.doubleToLongBits(this.survivalPoints) >>> 32));
+        hash = 17 * hash + (int) (Double.doubleToLongBits(this.quantityInStock) ^ (Double.doubleToLongBits(this.quantityInStock) >>> 32));
+        hash = 17 * hash + (int) (Double.doubleToLongBits(this.requiredAmount) ^ (Double.doubleToLongBits(this.requiredAmount) >>> 32));
         return hash;
     }
 
@@ -109,6 +110,10 @@ public class Item implements Serializable{
         }
         return true;
     }
+    
+    
+    
+ 
     
     
     
