@@ -5,6 +5,8 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
 
+import Exception.TimeException;
+
 /**
  *
  * @author Steffany
@@ -18,10 +20,13 @@ public class TimeControl {
      *
      * @param TimeSpent is the time spent in game
      * @param TotalTime is the total time
+     * @param TimeRemaining
      * @return What is the time remaining?
+     * @throws Exception.TimeException
      */
     //Did not pass test
-    public double calcTimeRemainingInGame(double TimeSpent, double TotalTime) {
+    public double calcTimeRemainingInGame(double TimeSpent, double TotalTime, double TimeRemaining) 
+           throws TimeException    {
         if (TotalTime < 48) { // TotalTime must always be 48 hours 
             return 0;
         }
@@ -30,4 +35,8 @@ public class TimeControl {
 
         return TimeRemaining;
     }
+    
+       if(TimeRemaining < 0 || TimeSpent <= 0) {
+            throw new TimeException ("Time cannot be less than 0.");
+                }
 }

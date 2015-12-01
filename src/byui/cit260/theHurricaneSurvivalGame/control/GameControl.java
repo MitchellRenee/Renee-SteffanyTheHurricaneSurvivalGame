@@ -13,7 +13,7 @@ import thehurricanesurvivalgame.TheHurricaneSurvivalGame;
  * @author Steffany
  */
 public class GameControl {
-
+    
     public static void createNewGame(Player player) {
         System.out.println("\n***createNewGame stub function called ***");
     }
@@ -213,4 +213,7 @@ public class GameControl {
         // Create a new game
         GameControl.createNewGame(TheHurricaneSurvivalGame.getPlayer());
     }
+    
+    //Exception
+    if ()
 }

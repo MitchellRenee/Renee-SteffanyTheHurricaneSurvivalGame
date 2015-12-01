@@ -30,10 +30,15 @@ public class PlayerControl {
      */
     public static boolean player(String name, Location l, String status) {
         boolean returnValue = false;
-        if (Location.exists() && name != null && status.equals("win")) {
-            returnValue = true;
+        throws TimeException  {
+        for (Player player : players) {
+            TimeRemaining = player.getTimeRemaining();
+        boolean returnValue = TimeControl.calcTimeRemainingInGame(TimeSpent, TotalTime, TimeRemaining);
+           // if (Location.exists() && name != null && status.equals("win")) {
+           // returnValue = true;
+           // }
         }
-
+     }
         return returnValue;
     }
 }
