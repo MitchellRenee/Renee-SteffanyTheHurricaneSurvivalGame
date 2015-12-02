@@ -5,7 +5,7 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
 
-import Exceptionss.MoveControlException;
+import Exception.MoveException;
 
 /**
  *

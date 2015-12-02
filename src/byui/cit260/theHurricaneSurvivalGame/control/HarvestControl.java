@@ -5,7 +5,7 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
 
-import Exceptionss.HarvestControlException;
+import Exception.HarvestException;
 import static byui.cit260.theHurricaneSurvivalGame.control.StoreControl.MoneyAccount;
 import byui.cit260.theHurricaneSurvivalGame.model.Item;
 import byui.cit260.theHurricaneSurvivalGame.model.Location;
@@ -32,11 +32,11 @@ public class HarvestControl {
      * @return Are the correct items located in the inventory and the supplies?
      */
     public static boolean harvestControl(Player p, Supplies s, Item i, DeliveryCenter d) 
-                    throws HarvestControlExcepton, HarvestControlException {
+                    throws HarvestExcepton, HarvestException {
         
         boolean returnValue = false;
         if(Player.exists() && Supplies.needed() && Items.located && DeliveryCenter.status ("Will have delivery order")){
-            throw new HarvestControlException("Cannot create method without error.");
+            throw new HarvestException("Cannot create method without error.");
         }
         
         return  returnValue;
@@ -64,6 +64,12 @@ public class HarvestControl {
     public static class Item {
 
         public Item() {
+        }
+    }
+
+    private static class HarvestExcepton extends Exception {
+
+        public HarvestExcepton() {
         }
     }
     public class Supplies { 
