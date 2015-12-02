@@ -17,13 +17,13 @@ import byui.cit260.theHurricaneSurvivalGame.model.Location;
  */
 public class LocationControl {
 
-    public boolean moveNorth(Player p, Map m) throws MoveException {
+    public boolean moveNorth(Player p, Map m) throws MoveException, MoveException {
 
-        if (p.getLocation().getRow() == 0) {
+      if (p.getLocation().getRow() == 0) {
             throw new MoveException("Player cannot move leave the map");
         }
 
-        Location newLoc = m.getMatrix()[p.getLocation().getRow() - 1][p.getLocation().getCol()];
+        Location newLoc = m.getMatrix()[p.getLocation().getRow() - 1][p.getLocation().getCol()]{
 
         p.setPlayerLocation(newLoc);
 
@@ -35,29 +35,32 @@ public class LocationControl {
             throw new MoveException("Player cannot move from the map");
             
        
-        Location newLoc = m.getMatrix()[p.getLocation().getRow() -1][p.getLocation().getCol()];
+        Location newLoc = m.getMatrix()[p.getLocation().getRow() -1][p.getLocation().getCol()]{
         
          p.setPlayerLocation(newLoc);
         
         return true;
+    }
+
 
     
-    public boolean moveSouth(Player p, Map m)throws MoveException, MoveException {
+    public boolean moveSouth(Player p, Map m)throws MoveException{
         if(p.getLocation().getRow() == 0){
             throw new MoveException("Player can move from current location");
        
-        Location newLoc = m.getMatrix()[p.getLocation().getRow() -1][p.getLocation().getCol()];
+        Location newLoc = m.getMatrix()[p.getLocation().getRow() -1][p.getLocation().getCol()]{
         
         p.setPlayerLocation(newLoc);
         
         return true;
     
 
-      public boolean moveWest(Player p, Map m)throws MoveException, MoveException {
+      public boolean moveWest(Player p, Map m)throws MoveException{
         if(p.getLocation().getRow() == 1){
             throw new MoveException("Player can move from current location");
      
-        Location newLoc = null m.getMatrix()[p.getLocation().getRow() -1][p.getLocation().getCol()];
+        Location newLoc = null m.getMatrix()[p.getLocation().getRow() -1][p.getLocation().getCol()]{
         p.setPlayerLocation(newLoc);
         
         return true;
+
