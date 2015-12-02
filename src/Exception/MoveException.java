@@ -9,7 +9,7 @@ package Exception;
  *
  * @author Renee
  */
-public class MoveException extends Exception{
+public class MoveException extends Exception {
 
     public MoveException() {
     }

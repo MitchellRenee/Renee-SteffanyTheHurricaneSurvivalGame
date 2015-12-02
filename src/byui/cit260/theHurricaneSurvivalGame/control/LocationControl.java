@@ -16,55 +16,48 @@ import byui.cit260.theHurricaneSurvivalGame.model.Location;
  * @author Renee
  */
 public class LocationControl {
-    
-    public boolean  moveNorth(Player p, Map m)throws MoveException, MoveException {  
-        
-        if(p.getLocation().getRow()== 0){
-            throw new MoveException("Player cannot move from current location");
+
+    public boolean moveNorth(Player p, Map m) throws MoveException {
+
+        if (p.getLocation().getRow() == 0) {
+            throw new MoveException("Player cannot move leave the map");
         }
+
         Location newLoc = m.getMatrix()[p.getLocation().getRow() - 1][p.getLocation().getCol()];
-        // is this the number 1 or the letter l check video
+
         p.setPlayerLocation(newLoc);
-        
-        
-      
+
         return true;
     }
-    public boolean moveEast(Player p, Map m)throws MoveException, MoveException {
-        if(p.getLocation().getRow() == 1){
-            throw new MoveException("Player can move from current location");
-        }
-        Location newLoc = null m.getMatrix()[p.getLocation().getRow() -1][p.getLocation().getCol()];
-        p.setPlayerLocation(newLoc);
+}
+    public boolean  moveEast(Player p, Map m) throws MoveException, MoveException {
+        if(p.getLocation().getRow() == 0){
+            throw new MoveException("Player cannot move from the map");
+            
+       
+        Location newLoc = m.getMatrix()[p.getLocation().getRow() -1][p.getLocation().getCol()];
+        
+         p.setPlayerLocation(newLoc);
         
         return true;
-    }
+
     
-     public boolean moveSouth(Player p, Map m)throws MoveException, MoveException {
-        if(p.getLocation().getRow() == 1){
+    public boolean moveSouth(Player p, Map m)throws MoveException, MoveException {
+        if(p.getLocation().getRow() == 0){
             throw new MoveException("Player can move from current location");
-        }
-        Location newLoc = null m.getMatrix()[p.getLocation().getRow() -1][p.getLocation().getCol()];
+       
+        Location newLoc = m.getMatrix()[p.getLocation().getRow() -1][p.getLocation().getCol()];
+        
         p.setPlayerLocation(newLoc);
         
         return true;
-     }
+    
+
       public boolean moveWest(Player p, Map m)throws MoveException, MoveException {
         if(p.getLocation().getRow() == 1){
             throw new MoveException("Player can move from current location");
-        }
+     
         Location newLoc = null m.getMatrix()[p.getLocation().getRow() -1][p.getLocation().getCol()];
         p.setPlayerLocation(newLoc);
         
         return true;
-    }   
-
-}
-    class MovementException extends Exception {
-
-        public MovementException(String player_cannot_move_from_current_location) {
-        }
-    }
-
-
-    

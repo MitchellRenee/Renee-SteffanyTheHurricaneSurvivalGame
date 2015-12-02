@@ -5,6 +5,7 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
 
+import Exceptionss.HarvestControlException;
 import static byui.cit260.theHurricaneSurvivalGame.control.StoreControl.MoneyAccount;
 import byui.cit260.theHurricaneSurvivalGame.model.Item;
 import byui.cit260.theHurricaneSurvivalGame.model.Location;
@@ -16,9 +17,7 @@ import byui.cit260.theHurricaneSurvivalGame.model.Player;
  */
 public class HarvestControl {
 
-    static boolean harvest(Player p, Item i, Supplies s) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 //Did not pass test 
 
     
@@ -32,10 +31,12 @@ public class HarvestControl {
      * locations and validate which items to purchase
      * @return Are the correct items located in the inventory and the supplies?
      */
-    public boolean harvestControl(Player p, Supplies s, Item i, DeliveryCenter d) {
+    public static boolean harvestControl(Player p, Supplies s, Item i, DeliveryCenter d) 
+                    throws HarvestControlExcepton, HarvestControlException {
+        
         boolean returnValue = false;
         if(Player.exists() && Supplies.needed() && Items.located && DeliveryCenter.status ("Will have delivery order")){
-            returnValue = true;
+            throw new HarvestControlException("Cannot create method without error.");
         }
         
         return  returnValue;
@@ -66,6 +67,10 @@ public class HarvestControl {
         }
     }
     public class Supplies { 
+
+        private static boolean needed() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
 
          
 

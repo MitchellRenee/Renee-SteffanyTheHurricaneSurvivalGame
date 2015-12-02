@@ -9,7 +9,7 @@ package Exception;
  *
  * @author Renee
  */
-public class ViewException extends Exception {
+public class ViewException extends  Exception {
 
     public ViewException() {
     }

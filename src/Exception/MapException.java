@@ -39,12 +39,12 @@ public class MapException  extends Exception {
 
         ArrayList<String> stringList = new ArrayList<>();
 
-        stringList = mapException(stringList);
+        stringList = mapControlException(stringList);
 
         System.out.println("List: " + stringList);
     }
 
-    public static ArrayList<String> mapException(ArrayList<String> stringList) {
+    public static ArrayList<String> mapControlException(ArrayList<String> stringList) {
 
         try {
             stringList.add("Sample");
@@ -77,23 +77,3 @@ public class MapException  extends Exception {
     
 
         
-
-/**
- * public class MapControlException extends Exception {
- *
- * public MapControlException() { }
- *
- * public MapControlException(String message) { super(message); }
- *
- * public MapControlException(String message, Throwable cause) { super(message,
- * cause); }
- *
- * public MapControlException(Throwable cause) { super(cause); }
- *
- * public MapControlException(String message, Throwable cause, boolean
- * enableSuppression, boolean writableStackTrace) { super(message, cause,
- * enableSuppression, writableStackTrace); }
- *
- *
- * }
- */
