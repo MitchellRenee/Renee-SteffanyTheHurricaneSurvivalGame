@@ -33,7 +33,7 @@ public class MainMenuView extends View {
                 + "\n------------------------------------"
                 + "\n| Main Menu"
                 + "\n------------------------------------"
-                + "\nG - Start new game                  "
+                + "\nN - Start new game                  "
                 + "\nH - Get help on how to play the game"
                 + "\nS - Save game                       "
                 + "\nQ- Quit                             "
@@ -77,12 +77,11 @@ public class MainMenuView extends View {
     private void startNewGame() {
         //Create a new game
         //GameControl c = new GameControl();
-        GameControl.createNewGame(HurricaneSurvivalGame.getInstance().getPlayer());
+        GameControl.createNewGame();
        
         //Display the game menu
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
-
     }
 
     private void startExistingGame() {

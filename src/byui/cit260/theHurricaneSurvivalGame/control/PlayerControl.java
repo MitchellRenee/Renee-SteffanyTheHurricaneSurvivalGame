@@ -31,6 +31,5 @@ public class PlayerControl {
      */
     public static boolean player(String name, Location l, String status) {
         return true;
-        
     }
 }

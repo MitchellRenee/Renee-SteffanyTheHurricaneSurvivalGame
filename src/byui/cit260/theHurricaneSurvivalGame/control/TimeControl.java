@@ -18,20 +18,20 @@ public class TimeControl {
      * <p>
      * Calculate the time left in the game.</p>
      *
-     * @param TimeSpent is the time spent in game
-     * @param TotalTime is the total time
-     * @param TimeRemaining
+     * @param timeSpent is the time spent in game
+     * @param totalTime is the total time
      * @return What is the time remaining?
      * @throws Exception.TimeException
      */
     //Did not pass test
     public double calcTimeRemainingInGame(double timeSpent, double totalTime) throws TimeException {
-        if (totalTime < 48) { // TotalTime must always be 48 hours 
+        if (totalTime < 48) { // totalTime must always be 48 hours
+
             return 0;
         }
 
         double timeRemaining = totalTime - timeSpent;
-        
+
         if (timeRemaining < 0 || timeSpent <= 0) {
             throw new TimeException("Time cannot be less than 0.");
         }
