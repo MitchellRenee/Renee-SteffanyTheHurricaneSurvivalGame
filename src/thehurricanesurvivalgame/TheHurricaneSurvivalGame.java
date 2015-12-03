@@ -2,6 +2,8 @@ package thehurricanesurvivalgame;
 
 import static byui.cit260.theHurricaneSurvivalGame.control.PlayerControl.player;
 import byui.cit260.theHurricaneSurvivalGame.control.ProgramControl;
+import byui.cit260.theHurricaneSurvivalGame.model.CityMap;
+import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGame;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
 import byui.cit260.theHurricaneSurvivalGame.view.MainMenuView;
 import byui.cit260.theHurricaneSurvivalGame.view.StartProgramView;
@@ -13,7 +15,6 @@ public class TheHurricaneSurvivalGame {
     /**
      * @param args the command line arguments
      */
-    private static final Game currentGame = null;
     private static final Player player = null;
 
     public static void main(String[] args) {
@@ -26,63 +27,25 @@ public class TheHurricaneSurvivalGame {
         player.setName(welcomeView.getPlayerName());
 
         welcomeView.displayPlayerNameBanner(player);
-
-        MainMenuView mainView = new MainMenuView(); 
         
+        HurricaneSurvivalGame.getInstance().setPlayer(player);
+
+        MainMenuView mainView = new MainMenuView();
+
         mainView.display();
 
 //Create StartProgramView and start the program
-        StartProgramView startProgramView = new StartProgramView();
-        startProgramView.startProgram();
+//        StartProgramView startProgramView = new StartProgramView();
+//        startProgramView.startProgram();
+
+//        System.out.println("MAP");
+//        CityMap myMap = new CityMap();
+//        myMap.init();
+//
+//        System.out.println(myMap.getMapDisplay());
     }
 
-    public static Game getCurrentGame() {
-        return currentGame;
-    }
-
-    public static void setCurrentGame(Game currentGame) {
-        theHurricaneSurvivalGame.currentGame = currentGame;
-    }
-
-    public static Player getPlayer() {
-        return player;
-    }
-
-    public static void setPlayer(Player player) {
-        theHurricaneSurvivalGame.player = player;
-    }
-
-    /*public static void setPlayer(Player player) {
-     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-     }*/
-    public static Object getInstance() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void startNewGame() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void startExistingGame() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void displayHelpMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void saveGame() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private static class theHurricaneSurvivalGame {
-
-        private static Game currentGame;
-        private static Player player;
-
-        public theHurricaneSurvivalGame() {
-        }
-    }
+    
 }
 
 /*public class MainMenuView {

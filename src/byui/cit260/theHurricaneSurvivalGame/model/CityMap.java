@@ -6,7 +6,6 @@
 package byui.cit260.theHurricaneSurvivalGame.model;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  *
@@ -14,113 +13,76 @@ import java.util.Objects;
  */
 public class CityMap implements Serializable {
 
-    //class instance variables
-    private String home;
-    private String megaStore;
-    private String deliveryCenter;
-    private String nursingHome;
-    private String prison;
-    private String coordinates;
+    private Location[][] locationMatrix;
 
     public CityMap() {
+        locationMatrix = new Location[5][5];
     }
 
-    public String getHome() {
-        return home;
-    }
+    public void init() {
 
-    public void setHome(String home) {
-        this.home = home;
-    }
+        for (int row = 0; row < locationMatrix.length; row++) {
+            for (int col = 0; col < locationMatrix[0].length; col++) {
+                Location tempLocation = new Location();
+                tempLocation.setRow(row);
+                tempLocation.setColumn(col);
+                tempLocation.setLocationType(LocationType.Empty);
 
-    public String getMegaStore() {
-        return megaStore;
-    }
-
-    public void setMegaStore(String megaStore) {
-        this.megaStore = megaStore;
-    }
-
-    public String getDeliveryCenter() {
-        return deliveryCenter;
-    }
-
-    public void setDeliveryCenter(String deliveryCenter) {
-        this.deliveryCenter = deliveryCenter;
-    }
-
-    public String getNursingHome() {
-        return nursingHome;
-    }
-
-    public void setNursingHome(String nursingHome) {
-        this.nursingHome = nursingHome;
-    }
-
-    public String getPrison() {
-        return prison;
-    }
-
-    public void setPrison(String prison) {
-        this.prison = prison;
-    }
-
-    public String getCoordinates() {
-        return coordinates;
-    }
-
-    public void setCoordinates(String coordinates) {
-        this.coordinates = coordinates;
-    }
-
-    @Override
-    public String toString() {
-        return "CityMap{" + "home=" + home + ", megaStore=" + megaStore + ", deliveryCenter=" + deliveryCenter + ", nursingHome=" + nursingHome + ", prison=" + prison + ", coordinates=" + coordinates + '}';
-    }
-    
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 29 * hash + Objects.hashCode(this.home);
-        hash = 29 * hash + Objects.hashCode(this.megaStore);
-        hash = 29 * hash + Objects.hashCode(this.deliveryCenter);
-        hash = 29 * hash + Objects.hashCode(this.nursingHome);
-        hash = 29 * hash + Objects.hashCode(this.prison);
-        hash = 29 * hash + Objects.hashCode(this.coordinates);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
+                locationMatrix[row][col] = tempLocation;
+            }
         }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final CityMap other = (CityMap) obj;
-        if (!Objects.equals(this.home, other.home)) {
-            return false;
-        }
-        if (!Objects.equals(this.megaStore, other.megaStore)) {
-            return false;
-        }
-        if (!Objects.equals(this.deliveryCenter, other.deliveryCenter)) {
-            return false;
-        }
-        if (!Objects.equals(this.nursingHome, other.nursingHome)) {
-            return false;
-        }
-        if (!Objects.equals(this.prison, other.prison)) {
-            return false;
-        }
-        if (!Objects.equals(this.coordinates, other.coordinates)) {
-            return false;
-        }
-        return true;
+
+        locationMatrix[0][1].setLocationType(LocationType.Home);
+
+        locationMatrix[4][2].setLocationType(LocationType.MegaStore);
+
+        locationMatrix[0][4].setLocationType(LocationType.DeliveryCenter);
+
     }
 
-    
+    public Location[][] getLocationMatrix() {
+        return locationMatrix;
+    }
+
+    public void setLocationMatrix(Location[][] locationMatrix) {
+        this.locationMatrix = locationMatrix;
+    }
+
+    public Location getHomeLocation() {
+        for (int row = 0; row < locationMatrix.length; row++) {
+            for (int col = 0; col < locationMatrix[0].length; col++) {
+                if (locationMatrix[row][col].getLocationType() == LocationType.Home) {
+                    return locationMatrix[row][col];
+                }
+            }
+        }
+
+        return null;
+    }
+
+    public Location getLocation(int row, int col) {
+        if (row < 0 || row > locationMatrix.length) {
+            return null;
+        }
+        if (col < 0 || col > locationMatrix[0].length) {
+            return null;
+        }
+        
+        return locationMatrix[row][col];
+    }
+
+    public String getMapDisplay() {
+
+        String rtn = "";
+
+        for (int row = 0; row < locationMatrix.length; row++) {
+            for (int col = 0; col < locationMatrix[0].length; col++) {
+                rtn += "[" + locationMatrix[row][col].getLocationType() + "]";
+            }
+            rtn += "\n";
+        }
+
+        return rtn;
+    }
 
 }
-

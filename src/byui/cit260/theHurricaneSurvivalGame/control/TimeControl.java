@@ -25,18 +25,12 @@ public class TimeControl {
      * @throws Exception.TimeException
      */
     //Did not pass test
-    public double calcTimeRemainingInGame(double TimeSpent, double TotalTime, double TimeRemaining) 
-           throws TimeException    {
+    public double calcTimeRemainingInGame(double TimeSpent, double TotalTime, double TimeRemaining)
+            throws TimeException {
         if (TotalTime < 48) { // TotalTime must always be 48 hours 
             return 0;
         }
 
-        double TimeRemaining = TotalTime - TimeSpent;
-
         return TimeRemaining;
     }
-    
-       if(TimeRemaining < 0 || TimeSpent <= 0) {
-            throw new TimeException ("Time cannot be less than 0.");
-                }
 }
