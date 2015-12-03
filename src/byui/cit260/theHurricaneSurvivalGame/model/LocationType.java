@@ -3,12 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package thehurricanesurvivalgame;
+package byui.cit260.theHurricaneSurvivalGame.model;
 
 /**
  *
- * @author Renee
+ * @author Daniel
  */
-class Game {
-    
+public enum LocationType {
+    Empty,
+    MegaStore,
+    Home,
+    DeliveryCenter,
+    Prison,
+    NursingHome,
+    ADDMORE
 }

@@ -31,17 +31,15 @@ public class HarvestControl {
     public static boolean harvestControl(Player p, Supplies s, Item i, DeliveryCenter d)
             throws HarvestExcepton, HarvestException {
 
-    boolean returnValue = false;
-    
-        if (Player.exists() && Supplies.isNeeded() && Item.located() && DeliveryCenter.status("Will have delivery order")) {
-            throw new HarvestException("Create method with no error.");
-        }
+        boolean returnValue = false;
+
+//        if (Player.exists() && Supplies.isNeeded() && Item.located() && DeliveryCenter.status("Will have delivery order")) {
+//            throw new HarvestException("Create method with no error.");
+//        }
 
         returnValue = true;
         return returnValue;
     }
-
-   
 
     static boolean harvest(Player p, Item i, Supplies s) throws HarvestException {
         throw new HarvestException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -85,18 +83,15 @@ public class HarvestControl {
         public item() {
         }
     }
-    
+
     public class Supplies {
 
-    private boolean isNeeded() {
+        private boolean isNeeded() {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }    
-        
+        }
+
         public Supplies() {
         }
-    
-        
-     
 
     }
 }
