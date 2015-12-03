@@ -9,24 +9,24 @@ package Exception;
  *
  * @author Renee
  */
-public class HarvestControlException extends Exception {
+public class HarvestException extends Exception {
 
-    public HarvestControlException() {
+    public HarvestException() {
     }
 
-    public HarvestControlException(String message) {
+    public HarvestException(String message) {
         super(message);
     }
 
-    public HarvestControlException(String message, Throwable cause) {
+    public HarvestException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public HarvestControlException(Throwable cause) {
+    public HarvestException(Throwable cause) {
         super(cause);
     }
 
-    public HarvestControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public HarvestException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
     

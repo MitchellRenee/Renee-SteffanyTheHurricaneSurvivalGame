@@ -9,7 +9,7 @@ package Exception;
  *
  * @author Renee
  */
-public class MoneyAccountException extends Exception {
+public class MoneyAccountException  extends Exception {
 
     public MoneyAccountException() {
     }
