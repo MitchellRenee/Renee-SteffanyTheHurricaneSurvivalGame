@@ -31,7 +31,7 @@ public class CityMapControl {
     public static boolean move(Player p, Location l)
             throws CityMapException {
         if (Player.Move() && Location.exists()) {
-            throw new CityMapException("Map must contain 25 locations,");
+            throw new CityMapException("Map cannot have less than 25 locations.");
         }
         p.setPlayerLocation(l);
         return false;

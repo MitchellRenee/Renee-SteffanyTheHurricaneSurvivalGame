@@ -142,6 +142,10 @@ public class Player implements Serializable {
         return true;
         //To change body of generated methods, choose Tools | Templates.
     }
+
+    public Object getLocation() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
 //    public void setItem(HarvestControl.Item i) {
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
