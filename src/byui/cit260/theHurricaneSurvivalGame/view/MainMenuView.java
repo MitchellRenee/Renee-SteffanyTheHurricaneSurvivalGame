@@ -14,6 +14,7 @@
  * saved game \n" + "H - View help menu \n" + "E -Exit game\n"); }
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
+
 import byui.cit260.theHurricaneSurvivalGame.control.GameControl;
 import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGame;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
@@ -45,7 +46,7 @@ public class MainMenuView extends View {
          * @param input
          */
     }
-   
+
     public boolean doAction(Object obj) {
 
         String value = (String) obj;
@@ -55,9 +56,9 @@ public class MainMenuView extends View {
 
         switch (choice) {
             /*case 'N': // Create and start a new game
-                this.startNewGame();
-                break;
-            */
+             this.startNewGame();
+             break;
+             */
             case 'G': // Get and start an exiting game
                 this.startExistingGame();
                 break;
@@ -80,15 +81,15 @@ public class MainMenuView extends View {
     }
 
     /*private void startNewGame() {
-        //Create a new game
-        //GameControl c = new GameControl();
-        GameControl.createNewGame();
+     //Create a new game
+     //GameControl c = new GameControl();
+     GameControl.createNewGame();
        
-        //Display the game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.display();
-    }
-    */
+     //Display the game menu
+     GameMenuView gameMenu = new GameMenuView();
+     gameMenu.display();
+     }
+     */
     private void startExistingGame() {
         System.out.println("*** startExistingGame function called ***");
     }
@@ -104,7 +105,7 @@ public class MainMenuView extends View {
     private void exitGame() {
         System.out.println("*** exit out of the game ***");
     }
- //MoveView t = new MoveView(;
+    //MoveView t = new MoveView(;
     //m.display();
     //implement controllers here to change direction of view
 
@@ -112,5 +113,3 @@ public class MainMenuView extends View {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
-
-

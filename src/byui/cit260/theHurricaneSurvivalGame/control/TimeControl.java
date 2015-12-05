@@ -27,7 +27,7 @@ public class TimeControl {
     //Did not pass test
 
     public double calcTimeRemainingInGame(double timeSpent, double totalTime)
-          throws TimeException {
+            throws TimeException {
         if (totalTime < 48) { // TotalTime must always be 48 hours 
             return 0;
         }

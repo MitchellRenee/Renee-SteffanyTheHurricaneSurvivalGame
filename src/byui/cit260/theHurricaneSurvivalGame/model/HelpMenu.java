@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author SteffanyFaldmo
  */
-public class HelpMenu implements Serializable{
-    
+public class HelpMenu implements Serializable {
+
     //class instance variables
     private String goalOfGame;
     private String viewSuppliesNeeded;
@@ -28,10 +28,7 @@ public class HelpMenu implements Serializable{
 
     public HelpMenu() {
     }
-    
-    
-    
-    
+
     public String getGoalOfGame() {
         return goalOfGame;
     }
@@ -174,10 +171,5 @@ public class HelpMenu implements Serializable{
     public String toString() {
         return "HelpMenu{" + "goalOfGame=" + goalOfGame + ", viewSuppliesNeeded=" + viewSuppliesNeeded + ", viewCurrentInventory=" + viewCurrentInventory + ", viewSurvivalPointsEarned=" + viewSurvivalPointsEarned + ", moveToLocations=" + moveToLocations + ", makeMoney=" + makeMoney + ", buySupplies=" + buySupplies + ", deliverSupplies=" + deliverSupplies + ", viewEachLocationInventory=" + viewEachLocationInventory + ", closeHelpMenu=" + closeHelpMenu + '}';
     }
-    
-    
-    
-    
-    
-}
 
+}

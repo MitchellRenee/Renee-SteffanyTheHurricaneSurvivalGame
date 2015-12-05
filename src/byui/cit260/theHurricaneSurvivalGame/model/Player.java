@@ -13,7 +13,7 @@ import java.util.Objects;
  *
  * @author Renee
  */
-public class Player implements Serializable{
+public class Player implements Serializable {
 
     public static boolean Move() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -22,7 +22,7 @@ public class Player implements Serializable{
     public static boolean exists() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
     //class instance variable
     private String namePlayer;
     private boolean bestTime;
@@ -31,11 +31,10 @@ public class Player implements Serializable{
     private double moneyAccount;
     private boolean status;
     private String description;
-    
 
     public Player() {
     }
-    
+
     public String getName() {
         return namePlayer;
     }
@@ -109,8 +108,7 @@ public class Player implements Serializable{
     public String toString() {
         return "Player{" + "namePlayer=" + namePlayer + ", bestTime=" + bestTime + ", playerLocation=" + playerLocation + ", items=" + items + ", moneyAccount=" + moneyAccount + ", status=" + status + ", description=" + description + '}';
     }
-    
-    
+
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -142,28 +140,10 @@ public class Player implements Serializable{
             return false;
         }
         return true;
-    }     
-
-    public void setSupplies(HarvestControl.Supplies s) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //To change body of generated methods, choose Tools | Templates.
     }
-
+}
 //    public void setItem(HarvestControl.Item i) {
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-   
-}
-    
-    
-  
-        
-   
-    
-    
-    
-    
-    
-    
-    
+// 
 
-    

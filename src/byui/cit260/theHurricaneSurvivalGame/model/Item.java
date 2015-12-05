@@ -12,18 +12,17 @@ import java.util.Objects;
  *
  * @author Renee
  */
-public class Item implements Serializable{
+public class Item implements Serializable {
 
     public static boolean located() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
     private String name;
     private double weight;
     private double survivalPoints;
     private double quantityInStock;
     private double requiredAmount;
-  
 
     public Item() {
     }
@@ -72,7 +71,7 @@ public class Item implements Serializable{
     public String toString() {
         return "Item{" + "name=" + name + ", weight=" + weight + ", survivalPoints=" + survivalPoints + ", quantityInStock=" + quantityInStock + ", requiredAmount=" + requiredAmount + '}';
     }
-    
+
     @Override
     public int hashCode() {
         int hash = 7;
@@ -110,13 +109,5 @@ public class Item implements Serializable{
         }
         return true;
     }
-    
-    
-    
- 
-    
-    
-    
-    
-    
+
 }

@@ -29,41 +29,15 @@ public class HarvestControl {
      * validate which items to purchase
      * @return Are the correct items located in the inventory and the supplies?
      */
-    public static int harvestControl(Player p, Supplies s, Item i, Delivery d)
-            throws HarvestException {
-        if (item < 0); {// item must be greater than 0 on supplies inventory
-              return 0;    
-            }
-        if (Player.exists() && Supplies.isNeeded() && Item.located() && Delivery.status("Has delivery.")){
-            throw new HarvestException("Items cannot be less than 0 to have a deliver.");
-        }
-        return delivery;   
-      
-    }
-
-    private static class Supplies {
-
-        private static boolean isNeeded() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public Supplies() {
-        }
-    }
-
-    private static class Delivery {
-
-        private static boolean status(String will_have_delivery_order) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public Delivery() {
-        }
-    }
-}     
-
-            
-   
-
-
-
+    /* public static boolean harvestControl(Player p, Supplies s, Item i, Delivery d)
+     throws HarvestException {
+     if (item < 0);
+     {// item must be greater than 0 on supplies inventory
+     return false;
+     }
+     if (Player.exists() && Supplies.isNeeded() && Item.located() && Delivery.status("Has delivery.")) {
+     throw new HarvestException("Items cannot be less than 0 to have a deliver.");
+     }
+     return true;
+     */
+}

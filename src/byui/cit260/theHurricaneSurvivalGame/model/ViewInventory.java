@@ -12,14 +12,13 @@ import java.util.Objects;
  *
  * @author Renee
  */
-public class ViewInventory implements Serializable{
-    
+public class ViewInventory implements Serializable {
+
     //class instance variables
     private String viewSupplyList;
 
     public ViewInventory() {
     }
-       
 
     public String getViewSupplyList() {
         return viewSupplyList;
@@ -55,10 +54,5 @@ public class ViewInventory implements Serializable{
         }
         return true;
     }
-    
-    
-    
-    
-    
-    
+
 }

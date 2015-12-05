@@ -5,7 +5,7 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
 
-import Exception.MapException;
+import Exception.CityMapException;
 import Exception.TimeException;
 import byui.cit260.theHurricaneSurvivalGame.model.CityMap;
 import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGame;
@@ -30,31 +30,11 @@ public class CityMapControl {
      */
     public static boolean move(Player p, Location l)
             throws CityMapException {
-        if (Player.Move() && Location.exists());
-        
+        if (Player.Move() && Location.exists()) {
+            throw new CityMapException("Map must contain 25 locations,");
+        }
         p.setPlayerLocation(l);
         return false;
-    }    
-
-    boolean CityMapException() {
-
-        Location = LocationType;
-        
-        if (row){               
-            
-            throw new CityMapException("");
-            }
-            return 
-
-        }
-
-    private static class CityMapException extends Exception {
-
-        public CityMapException() {
-        }
-
-        private CityMapException(String string) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
     }
-    }
+
+}

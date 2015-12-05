@@ -12,24 +12,24 @@ import java.util.ArrayList;
  * @author Renee
  */
 //now create an nullpoint exception
-public class MapException  extends Exception {
+public class CityMapException  extends Exception {
 
-    public MapException() {
+    public CityMapException() {
     }
 
-    public MapException(String message) {
+    public CityMapException(String message) {
         super(message);
     }
 
-    public MapException(String message, Throwable cause) {
+    public CityMapException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public MapException(Throwable cause) {
+    public CityMapException(Throwable cause) {
         super(cause);
     }
 
-    public MapException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public CityMapException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
     

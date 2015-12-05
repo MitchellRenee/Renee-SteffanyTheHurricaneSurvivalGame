@@ -81,7 +81,7 @@ public class Location implements Serializable {
     public String toString() {
         return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + ", locationType=" + locationType + ", storeModel=" + storeModel + ", megaStore=" + megaStore + '}';
     }
-    
+
     @Override
     public int hashCode() {
         int hash = 5;
@@ -123,5 +123,5 @@ public class Location implements Serializable {
         }
         return true;
     }
-    
+
 }

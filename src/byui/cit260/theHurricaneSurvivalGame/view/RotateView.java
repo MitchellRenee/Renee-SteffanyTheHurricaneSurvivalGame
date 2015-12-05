@@ -12,14 +12,15 @@ import Exception.MoveException;
  * @author Renee
  */
 public class RotateView extends View {
-    doAction(){
-        try{
-            movePlayer(player,0,1);
-        }
-    }
+    /*    doAction(){
+     try{
+     movePlayer(player,0,1);
+     }
+     }
+     */
 
     public RotateView(String message) {
-           
+
         super("Please make a selection:\n"
                 + "N - Move North\n"
                 + "E - Move East\n"
@@ -28,15 +29,16 @@ public class RotateView extends View {
                 + "I - Search for item\n"
                 + "G - Save Game\n"
                 + "Q - Quit to Main Menu\n");
-       
+
     }
-    
+
     /**
      * Call method for input
+     *
      * @param input
      */
-    public boolean doAction(char input){
-       
+    public boolean doAction(char input) {
+
         switch (input) {
             case 'N':
                 moveNorth();
@@ -44,7 +46,7 @@ public class RotateView extends View {
             case 'G':
                 moveEast();
                 break;
-            case 'H': 
+            case 'H':
                 moveSouth();
                 break;
             case 'S':
@@ -61,7 +63,7 @@ public class RotateView extends View {
 
     private void moveNorth() {
         LocationControl l = new LocatonControl();
-        l.moveNorth(null,null);
+        l.moveNorth(null, null);
     }
 
     private void moveEast() {
@@ -102,5 +104,5 @@ public class RotateView extends View {
         public LocatonControl() {
         }
     }
-   
+
 }

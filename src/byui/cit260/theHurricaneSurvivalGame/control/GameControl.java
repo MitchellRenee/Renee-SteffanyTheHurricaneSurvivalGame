@@ -239,35 +239,30 @@ public class GameControl {
     //This section gets re-written below starting at line 257
     //public static Player finishCreatePlayer(String name) {
     //    Player p = new Player();
-        
     //    p.setName(name);
     //    p.setMoneyAccount(STARTING_CASH);
-        
     /*    CityMap gameMap = HurricaneSurvialGame.getInstance().getMap();
         
-        //for loop w/ if statement that is iterating rows & col
-        //while using a getter & setter.
-        for (int row = 0; row < gameMap.getlocationMatrix.length; row++) {
-            for (int col = 0; col < gameMap.getlocationMatrix[0].length; col++) {
-                if (gameMap.getLocationMatrix()[row][col].getLocationType() == LocationType.Home) {
-                p.setPlayerLocation(gameMap.getLocationMatrix()[row][col]);
-            //this section was cleanly edited & put into cityMap
-            }  
-        }        
+     //for loop w/ if statement that is iterating rows & col
+     //while using a getter & setter.
+     for (int row = 0; row < gameMap.getlocationMatrix.length; row++) {
+     for (int col = 0; col < gameMap.getlocationMatrix[0].length; col++) {
+     if (gameMap.getLocationMatrix()[row][col].getLocationType() == LocationType.Home) {
+     p.setPlayerLocation(gameMap.getLocationMatrix()[row][col]);
+     //this section was cleanly edited & put into cityMap
+     }  
+     }        
         
-    p.setPlayerLocation(null);
+     p.setPlayerLocation(null);
     
-    */
-
+     */
     public static void finishCreatePlayer() {
         Player p = HurricaneSurvivalGame.getInstance().getPlayer();
         p.setMoneyAccount(STARTING_CASH);
 
         CityMap gameMap = HurricaneSurvivalGame.getInstance().getMap();
         p.setPlayerLocation(gameMap.getHomeLocation());
- 
+
         //return p;
     }
-}   
-
-
+}

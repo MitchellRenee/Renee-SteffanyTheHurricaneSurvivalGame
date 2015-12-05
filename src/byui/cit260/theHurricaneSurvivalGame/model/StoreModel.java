@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author Renee
  */
-public class StoreModel implements Serializable{
-    
+public class StoreModel implements Serializable {
+
     //class instance variables
     private String location;
     private String aisles;
@@ -44,17 +44,17 @@ public class StoreModel implements Serializable{
     private String overTheCounterMeds;
     private String clothing;
     private String blankets;
-    private String water;    
+    private String water;
     private String gameMenu;
 
     public StoreModel() {
-    }    
+    }
 
     @Override
     public String toString() {
         return "StoreModel{" + "location=" + location + ", aisles=" + aisles + ", shelves=" + shelves + ", selectItems=" + selectItems + ", buyItems=" + buyItems + ", deliverItems=" + deliverItems + ", tent=" + tent + ", canopy=" + canopy + ", flashlight=" + flashlight + ", batteries=" + batteries + ", candle=" + candle + ", ledLantern=" + ledLantern + ", matches=" + matches + ", lighter=" + lighter + ", crankRadio=" + crankRadio + ", cookingStove=" + cookingStove + ", fuel=" + fuel + ", rainParker=" + rainParker + ", rainBoots=" + rainBoots + ", protein=" + protein + ", snacks=" + snacks + ", sweets=" + sweets + ", carbs=" + carbs + ", toiletries=" + toiletries + ", firstaidKit=" + firstaidKit + ", prescribedMeds=" + prescribedMeds + ", overTheCounterMeds=" + overTheCounterMeds + ", clothing=" + clothing + ", blankets=" + blankets + ", water=" + water + ", gameMenu=" + gameMenu + '}';
     }
-    
+
     @Override
     public int hashCode() {
         int hash = 7;
@@ -192,8 +192,8 @@ public class StoreModel implements Serializable{
             return false;
         }
         return true;
-        
-    } 
+
+    }
 
     public String getLocation() {
         return location;
@@ -442,5 +442,5 @@ public class StoreModel implements Serializable{
     public void setGameMenu(String gameMenu) {
         this.gameMenu = gameMenu;
     }
-    
+
 }

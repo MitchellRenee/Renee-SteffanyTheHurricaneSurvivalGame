@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author SteffanyFaldmo
  */
-public class RetrieveGame implements Serializable{
-    
+public class RetrieveGame implements Serializable {
+
     //class instance variables
     private String locateSavedGame;
     private String readSavedGame;
@@ -21,9 +21,6 @@ public class RetrieveGame implements Serializable{
 
     public RetrieveGame() {
     }
-    
-    
-    
 
     public String getLocateSavedGame() {
         return locateSavedGame;
@@ -83,9 +80,5 @@ public class RetrieveGame implements Serializable{
     public String toString() {
         return "RetrieveGame{" + "locateSavedGame=" + locateSavedGame + ", readSavedGame=" + readSavedGame + ", retrieveSavedGame=" + retrieveSavedGame + '}';
     }
-    
-    
-    
-    
-}
 
+}

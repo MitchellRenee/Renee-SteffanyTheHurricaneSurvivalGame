@@ -38,11 +38,11 @@ public class CityMap implements Serializable {
         locationMatrix[4][2].setLocationType(LocationType.MegaStore);
 
         locationMatrix[0][4].setLocationType(LocationType.DeliveryCenter);
-        
+
         locationMatrix[1][3].setLocationType(LocationType.NursingHome);
-        
+
         locationMatrix[4][4].setLocationType(LocationType.Prison);
-        
+
         locationMatrix[2][3].setLocationType(LocationType.Empty);
 
     }
@@ -74,7 +74,7 @@ public class CityMap implements Serializable {
         if (col < 0 || col > locationMatrix[0].length) {
             return null;
         }
-        
+
         return locationMatrix[row][col];
     }
 

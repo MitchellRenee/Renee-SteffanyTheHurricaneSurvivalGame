@@ -5,16 +5,22 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
 
+import Exception.MoneyAccountException;
+
 /**
  *
  * @author Renee
  */
 public class MoneyAccountControl {
 
-     () {
-    {
-        throws MoneyAccountException("");
-        
+    public double subtractMoney(double totalCash, double cashDeducted, double cashRemaining)
+            throws MoneyAccountException {
+        if (totalCash < 0) {
+
+            throw new MoneyAccountException("Player cannot buy item.");
+
+        }
+        return 0;
     }
-     return null;
+
 }

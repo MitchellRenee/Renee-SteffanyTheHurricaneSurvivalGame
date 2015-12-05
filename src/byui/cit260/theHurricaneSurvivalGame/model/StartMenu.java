@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author SteffanyFaldmo
  */
-public class StartMenu implements Serializable{
-    
+public class StartMenu implements Serializable {
+
     //class instance variables
     private String continueGame;
     private String returnToMenu;
@@ -21,7 +21,7 @@ public class StartMenu implements Serializable{
     private String goToHouse;
 
     public StartMenu() {
-    }    
+    }
 
     public String getContinueGame() {
         return continueGame;
@@ -89,8 +89,4 @@ public class StartMenu implements Serializable{
         return true;
     }
 
-    
-    
-    
 }
-

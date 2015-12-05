@@ -5,9 +5,12 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
 
+import Exception.MoveException;
 import byui.cit260.theHurricaneSurvivalGame.control.GameControl;
 import byui.cit260.theHurricaneSurvivalGame.control.MoveControl;
 import byui.cit260.theHurricaneSurvivalGame.model.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -18,12 +21,12 @@ public class GameMenuView extends View {
     private void startNewGame() {
         //Create new game
         GameControl.createNewGame();
-       
+
         //Display the game menu
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
     }
-    
+
     public GameMenuView() {
         super("\n"
                 + "\n------------------------------------"
@@ -39,33 +42,38 @@ public class GameMenuView extends View {
     }
 
     public boolean doAction(Object action) {
-        String value = (String) action;
+        try {
+            String value = (String) action;
 
-        value = value.toUpperCase(); // Convert to all upper case
-        char choice = value.charAt(0); // Get first character entered
+            value = value.toUpperCase(); // Convert to all upper case
+            char choice = value.charAt(0); // Get first character entered
 
-        switch (choice) {
-            case 'V': // Create and start a new game
-                this.viewLocation();
-                break;
-            case 'N':
-                this.moveNorth();
-                break;
-            case 'E':
-                this.moveEast();
-                break;
-            case 'S':
-                this.moveSouth();
-                break;
-            case 'W':
-                this.moveWest();
-                break;
-            case 'M':
-                this.viewMap();
-                break;
-            default:
-                System.out.println("\n*** This is an invalid selection *** Please try again");
-                break;
+            switch (choice) {
+                case 'V': // Create and start a new game
+                    this.viewLocation();
+                    break;
+                case 'N':
+                    this.moveNorth();
+                    break;
+                case 'E':
+                    this.moveEast();
+                    break;
+                case 'S':
+                    this.moveSouth();
+                    break;
+                case 'W':
+                    this.moveWest();
+                    break;
+                case 'M':
+                    this.viewMap();
+                    break;
+                default:
+                    System.out.println("\n*** This is an invalid selection *** Please try again");
+                    break;
+            }
+            return false;
+        } catch (MoveException ex) {
+            Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
         }
         return false;
     }
@@ -97,12 +105,12 @@ public class GameMenuView extends View {
         mc.moveSouth(HurricaneSurvivalGame.getInstance().getPlayer());
     }
 
-    public void moveWest() {
+    public void moveWest() throws MoveException {
         MoveControl mc = new MoveControl();
 
         mc.moveWest(HurricaneSurvivalGame.getInstance().getPlayer());
     }
-    
+
     public void viewMap() {
         System.out.println(HurricaneSurvivalGame.getInstance().getMap().getMapDisplay());
     }

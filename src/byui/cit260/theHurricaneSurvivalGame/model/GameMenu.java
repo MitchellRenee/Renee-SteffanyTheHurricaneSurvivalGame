@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author SteffanyFaldmo
  */
-public class GameMenu implements Serializable{
-    
+public class GameMenu implements Serializable {
+
     //class instance variables
     private String mapOfTown;
     private String supplyList;
@@ -30,11 +30,9 @@ public class GameMenu implements Serializable{
 
     public GameMenu() {
     }
-    
+
     private SaveGame save;
     private RetrieveGame retrieve;
-    
-    
 
     public String getMapOfTown() {
         return mapOfTown;
@@ -148,8 +146,6 @@ public class GameMenu implements Serializable{
         this.retrieve = retrieve;
     }
 
-    
-    
     @Override
     public int hashCode() {
         int hash = 7;
@@ -220,8 +216,5 @@ public class GameMenu implements Serializable{
     public String toString() {
         return "GameMenu{" + "mapOfTown=" + mapOfTown + ", supplyList=" + supplyList + ", inventoryList=" + inventoryList + ", newLocation=" + newLocation + ", deliverSupplies=" + deliverSupplies + ", viewDeliveries=" + viewDeliveries + ", whatLocationHas=" + whatLocationHas + ", moneyAccount=" + moneyAccount + ", survivalPointsEarned=" + survivalPointsEarned + ", timeBeforeHurricane=" + timeBeforeHurricane + ", help=" + help + ", mainMenu=" + mainMenu + '}';
     }
-    
-    
-    
-    
+
 }
