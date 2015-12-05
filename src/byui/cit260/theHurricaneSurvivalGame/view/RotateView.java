@@ -12,6 +12,11 @@ import Exception.MoveException;
  * @author Renee
  */
 public class RotateView extends View {
+    doAction(){
+        try{
+            movePlayer(player,0,1);
+        }
+    }
 
     public RotateView(String message) {
            

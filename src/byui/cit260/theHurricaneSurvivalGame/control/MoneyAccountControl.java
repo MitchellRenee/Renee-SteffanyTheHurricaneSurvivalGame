@@ -9,6 +9,12 @@ package byui.cit260.theHurricaneSurvivalGame.control;
  *
  * @author Renee
  */
-public class MoneyAccount {
-    
+public class MoneyAccountControl {
+
+     () {
+    {
+        throws MoneyAccountException("");
+        
+    }
+     return null;
 }

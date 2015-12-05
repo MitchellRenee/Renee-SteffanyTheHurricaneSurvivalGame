@@ -21,12 +21,11 @@ public class LocationControl {
 //            throw new MoveException("Player cannot move leave the map");
 //        }
 //
-//        Location newLoc = m.getMatrix()[p.getLocation().getRow() - 1][p.getLocation().getCol()]
-//        {
+//        Location newLoc = m.getMatrix()[p.getLocation().getRow() - 1][p.getLocation().getCol()] {
 //
-//            p.setPlayerLocation(newLoc);
+//        p.setPlayerLocation(newLoc);
 //
-//            return true;
+//        return true;
 //        }
 //    }
 //
@@ -34,26 +33,20 @@ public class LocationControl {
 //        if (p.getLocation().getRow() == 0) {
 //            throw new MoveException("Player cannot move from the map");
 //
-//            Location newLoc = m.getMatrix()[p.getLocation().getRow() - 1][p.getLocation().getCol()]
-//            {
+//        Location newLoc = m.getMatrix()[p.getLocation().getRow() - 1][p.getLocation().getCol()] {
 //
-//                p.setPlayerLocation(newLoc);
+//        p.setPlayerLocation(newLoc);
 //
-//                return true;
-//            }
-//
-//
-//    
-//    
+//        return true;
+//    }    
 //
 //    public boolean moveSouth(Player p, Map m) throws MoveException {
-//        if (p.getLocation().getRow() == 0) {
+//       if (p.getLocation().getRow() == 0) {
 //            throw new MoveException("Player can move from current location");
 //
-//            Location newLoc = m.getMatrix()[p.getLocation().getRow() - 1][p.getLocation().getCol()]
-//            {
+//       Location newLoc = m.getMatrix()[p.getLocation().getRow() - 1][p.getLocation().getCol()] {
 //
-//                p.setPlayerLocation(newLoc);
+//       p.setPlayerLocation(newLoc);
 //
 //                return true;
 //    
@@ -64,11 +57,11 @@ public class LocationControl {
 //        if (p.getLocation().getRow() == 1) {
 //            throw new MoveException("Player can move from current location");
 //
-//            Location newLoc = null m.getMatrix()[p.getLocation().getRow() - 1][p.getLocation().getCol()]
-//            {
-//                p.setPlayerLocation(newLoc);
+//        Location newLoc = null m.getMatrix()[p.getLocation().getRow() - 1][p.getLocation().getCol()] {
+//       
+//        p.setPlayerLocation(newLoc);
 //
-//                return true;
+//        return true;
 //            }
 //        }
 //    }

@@ -6,12 +6,17 @@
 package byui.cit260.theHurricaneSurvivalGame.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  *
  * @author SteffanyFaldmo
  */
 public class Location implements Serializable {
+
+    public static boolean exists() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     private int row;
     private int column;
@@ -70,6 +75,53 @@ public class Location implements Serializable {
 
     public void setMegaStore(MegaStore megaStore) {
         this.megaStore = megaStore;
+    }
+
+    @Override
+    public String toString() {
+        return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + ", locationType=" + locationType + ", storeModel=" + storeModel + ", megaStore=" + megaStore + '}';
+    }
+    
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 79 * hash + this.row;
+        hash = 79 * hash + this.column;
+        hash = 79 * hash + Objects.hashCode(this.visited);
+        hash = 79 * hash + Objects.hashCode(this.locationType);
+        hash = 79 * hash + Objects.hashCode(this.storeModel);
+        hash = 79 * hash + Objects.hashCode(this.megaStore);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Location other = (Location) obj;
+        if (this.row != other.row) {
+            return false;
+        }
+        if (this.column != other.column) {
+            return false;
+        }
+        if (!Objects.equals(this.visited, other.visited)) {
+            return false;
+        }
+        if (this.locationType != other.locationType) {
+            return false;
+        }
+        if (!Objects.equals(this.storeModel, other.storeModel)) {
+            return false;
+        }
+        if (!Objects.equals(this.megaStore, other.megaStore)) {
+            return false;
+        }
+        return true;
     }
     
 }

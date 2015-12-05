@@ -5,9 +5,8 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
 
+import byui.cit260.theHurricaneSurvivalGame.model.Item;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -19,25 +18,45 @@ public class GameControlTest {
     
     public GameControlTest() {
     }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
+
+    /**
+     * Test of createInventoryList method, of class GameControl.
+     */
+    @Test
+    public void testCreateInventoryList() {
+        System.out.println("createInventoryList");
+        Item[] expResult = null;
+        Item[] result = GameControl.createInventoryList();
+        assertArrayEquals(expResult, result);
     }
 
     /**
      * Test of createNewGame method, of class GameControl.
      */
     @Test
-    public void testCreateNewGame() {
+    public void testCreateNewGame_Player() {
         System.out.println("createNewGame");
         Player player = null;
         GameControl.createNewGame(player);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    
+    }
+
+    /**
+     * Test of createNewGame method, of class GameControl.
+     */
+    @Test
+    public void testCreateNewGame_0args() {
+        System.out.println("createNewGame");
+        GameControl.createNewGame();
+    }
+
+    /**
+     * Test of finishCreatePlayer method, of class GameControl.
+     */
+    @Test
+    public void testFinishCreatePlayer() {
+        System.out.println("finishCreatePlayer");
+        GameControl.finishCreatePlayer();
     }
     
 }

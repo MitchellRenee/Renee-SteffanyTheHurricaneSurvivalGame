@@ -14,6 +14,7 @@ import java.io.Serializable;
 public class CityMap implements Serializable {
 
     private Location[][] locationMatrix;
+    public boolean getMapDisplay;
 
     public CityMap() {
         locationMatrix = new Location[5][5];

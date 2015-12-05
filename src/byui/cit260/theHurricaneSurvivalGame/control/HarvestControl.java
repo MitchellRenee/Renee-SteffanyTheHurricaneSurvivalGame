@@ -7,6 +7,7 @@ package byui.cit260.theHurricaneSurvivalGame.control;
 
 import Exception.HarvestException;
 import static byui.cit260.theHurricaneSurvivalGame.control.StoreControl.MoneyAccount;
+import byui.cit260.theHurricaneSurvivalGame.model.DeliveryCenter;
 import byui.cit260.theHurricaneSurvivalGame.model.Item;
 import byui.cit260.theHurricaneSurvivalGame.model.Location;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
@@ -28,70 +29,41 @@ public class HarvestControl {
      * validate which items to purchase
      * @return Are the correct items located in the inventory and the supplies?
      */
-    public static boolean harvestControl(Player p, Supplies s, Item i, DeliveryCenter d)
-            throws HarvestExcepton, HarvestException {
-
-        boolean returnValue = false;
-
-//        if (Player.exists() && Supplies.isNeeded() && Item.located() && DeliveryCenter.status("Will have delivery order")) {
-//            throw new HarvestException("Create method with no error.");
-//        }
-
-        returnValue = true;
-        return returnValue;
+    public static int harvestControl(Player p, Supplies s, Item i, Delivery d)
+            throws HarvestException {
+        if (item < 0); {// item must be greater than 0 on supplies inventory
+              return 0;    
+            }
+        if (Player.exists() && Supplies.isNeeded() && Item.located() && Delivery.status("Has delivery.")){
+            throw new HarvestException("Items cannot be less than 0 to have a deliver.");
+        }
+        return delivery;   
+      
     }
 
-    static boolean harvest(Player p, Item i, Supplies s) throws HarvestException {
-        throw new HarvestException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static class Supplies {
 
-    }
-
-    public static class DeliveryCenter {
-
-        private static boolean status(String will_have_delivery_order) {
-            System.out.println("Delivery order ready.");
-            return true;
-        }
-
-        public DeliveryCenter() {
-        }
-    }
-
-    public static class Item {
-
-        private static boolean located() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public Item() {
-        }
-
-        private void setIsNeeded(String item_needed_if_amount_is_not_in_the_inven) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-    }
-
-    private static class HarvestExcepton extends Exception {
-
-        public HarvestExcepton() {
-        }
-    }
-
-    private static class item extends Item {
-
-        public item() {
-        }
-    }
-
-    public class Supplies {
-
-        private boolean isNeeded() {
+        private static boolean isNeeded() {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
 
         public Supplies() {
         }
-
     }
-}
+
+    private static class Delivery {
+
+        private static boolean status(String will_have_delivery_order) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        public Delivery() {
+        }
+    }
+}     
+
+            
+   
+
+
+

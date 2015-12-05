@@ -26,7 +26,7 @@ public class StoreControl {
      * player's money account.
      * @return correct items if money is in the money account.
      */
-    public static boolean purchase(Item i, ItemAmount a, MoneyAccount m) {
+    public static boolean purchase(Item i, ItemAmount a, MoneyAccountControl m) {
         boolean returnValue = false;
         if (Item.located() && ItemAmount() >= 1 && MoneyAccount() >= 4.50) {
             returnValue = true;

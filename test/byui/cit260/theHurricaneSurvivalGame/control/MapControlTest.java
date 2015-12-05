@@ -33,7 +33,7 @@ public class MapControlTest {
         Location nursingHome = new Location();
         Location prison = new Location();        
         boolean expResult = true;
-        boolean result = MapControl.move(p, home);
+        boolean result = CityMapControl.move(p, home);
         assertEquals(home, p.getPlayerLocation());
         assertEquals(store, p.getPlayerLocation());
         assertEquals(deliveryCenter, p.getPlayerLocation());

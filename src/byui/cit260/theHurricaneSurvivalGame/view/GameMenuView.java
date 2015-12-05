@@ -5,6 +5,7 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
 
+import byui.cit260.theHurricaneSurvivalGame.control.GameControl;
 import byui.cit260.theHurricaneSurvivalGame.control.MoveControl;
 import byui.cit260.theHurricaneSurvivalGame.model.*;
 
@@ -14,6 +15,15 @@ import byui.cit260.theHurricaneSurvivalGame.model.*;
  */
 public class GameMenuView extends View {
 
+    private void startNewGame() {
+        //Create new game
+        GameControl.createNewGame();
+       
+        //Display the game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
+    }
+    
     public GameMenuView() {
         super("\n"
                 + "\n------------------------------------"

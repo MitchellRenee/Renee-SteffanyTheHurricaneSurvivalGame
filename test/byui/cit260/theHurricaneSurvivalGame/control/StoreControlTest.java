@@ -26,7 +26,7 @@ public class StoreControlTest {
         System.out.println("purchase");
         Item i = null;
         StoreControl.ItemAmount a = null;
-        MoneyAccount m = null;
+        MoneyAccountControl m = null;
         boolean expResult = false;
         boolean result = StoreControl.purchase(i, a, m);
         assertEquals(expResult, result);        

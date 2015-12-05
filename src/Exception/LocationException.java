@@ -5,31 +5,69 @@
  */
 package Exception;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Renee
  */
-public class LocationException extends Exception {
+/*public class LocationException extends Exception {
 
-    public LocationException() {
-    }
+ public LocationException() {
+ }
 
-    public LocationException(String message) {
-        super(message);
-    }
+ public LocationException(String message) {
+ super(message);
+ }
 
-    public LocationException(String message, Throwable cause) {
-        super(message, cause);
-    }
+ public LocationException(String message, Throwable cause) {
+ super(message, cause);
+ }
 
-    public LocationException(Throwable cause) {
-        super(cause);
-    }
+ public LocationException(Throwable cause) {
+ super(cause);
+ }
 
-    public LocationException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
-    }
+ public LocationException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+ super(message, cause, enableSuppression, writableStackTrace);
+ }
+ */
+public class LocationException extends Exception { 
     
-    
-    
+    public static void main(String args[]) {
+
+        // the action of the stringList will be null 
+        ArrayList<String> stringList =  new ArrayList<>();
+        
+        //pass stringList call the method
+        stringList = LocationException(stringList);
+
+        System.out.println("List: " + stringList);
+    }
+
+    public static ArrayList<String> LocationException(ArrayList<String> stringList) {
+
+        try {
+            stringList.add("Sample");
+            System.out.println("No Exception");
+        } catch (NullPointerException nullException) {
+            stringList = new ArrayList<String>();  //The stringList is null; initialize stringList.
+            stringList.add("Sample Exception");
+
+            System.out.println("Exception");
+            
+            return null;
+         
+        } finally {
+            stringList.add("No.2 Exception");
+            
+            return stringList;
+        }
+
+    }
 }
+
+
+    
+
+
