@@ -5,6 +5,7 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
 
+import byui.cit260.theHurricaneSurvivalGame.model.Player;
 import java.util.Scanner;
 
 /**
@@ -26,6 +27,9 @@ public abstract class MovePlayerView extends View {
     }
 
     public boolean doAction(Object selection) {
+        Player player;
+        
+        
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
