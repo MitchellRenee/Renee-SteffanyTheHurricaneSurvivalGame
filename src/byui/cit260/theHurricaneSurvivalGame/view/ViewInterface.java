@@ -5,6 +5,9 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
 
+
+import thehurricanesurvivalgame.TheHurricaneSurvivalGame;
+
 /**
  *
  * @author Renee
@@ -18,7 +21,12 @@ public interface ViewInterface {
 
     public void display();
 
-    public String getInput();
+    public String getInput(){
+        
+      
+    }
+    
+    
 
     public boolean doAction(Object obj);
     //Remember only the function signature are required

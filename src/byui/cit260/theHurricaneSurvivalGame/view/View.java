@@ -5,7 +5,10 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import thehurricanesurvivalgame.TheHurricaneSurvivalGame;
 
 /**
  *
@@ -21,11 +24,13 @@ public abstract class View implements ViewInterface {
     protected String displayMessage;
 
     //Add the definition of class variables common to all of the view layers
-
     public View(String message) {
         this.displayMessage = message;
     }
-    private String menu;
+    private String message;
+
+    protected final BufferedReader keyboard = TheHurricaneSurvivalGame.getInFile();
+    protected final PrintWriter console = TheHurricaneSurvivalGame.getOutFile();
 
     //Set parameters to pass into constructor
     @Override
@@ -35,7 +40,7 @@ public abstract class View implements ViewInterface {
         boolean done = false;
 
         do {
-            System.out.println(this.displayMessage); // Print message
+            this.console.println(this.displayMessage); // Print message
             value = this.getInput(); //Get the users's selection
             done = this.doAction(value); //do action base on selection
         } while (!done);
@@ -48,9 +53,9 @@ public abstract class View implements ViewInterface {
      */
     @Override
     public String getInput() {
+        //Scanner keyboard = new Scanner(System.in); //Keyboard input stream
         boolean valid = false; // Indicates the input has been retrieved
         String selection = "";
-        //Scanner keyboard = new Scanner(System.in); //Keyboard input stream
 
         while (!valid) { //while a valid has not been entered
 
@@ -58,16 +63,23 @@ public abstract class View implements ViewInterface {
             System.out.println("Enter the input value below:");
 
             //Get the value entered from the keyboard and trim off the blanks at the end of value
-            selection = keyboard.nextLine();
+            selection = this.keyboard.
+            );
             selection = selection.trim();
 
             //If invalid input entered (blank value entered)
             if (selection.length() < 1) {
-                System.out.println("You must enter a value.");
+                ErrorView.display(this.getClass().getName(),
+                        "You must enter a value.");
                 continue; //and repeat again        
             }
             break;// Out of the (exit) the repetition
-        }
-        return selection;
+        }       
+  
+} catch (Exception e) {
+
+    ErrorView.display(this.getClass().getName(),
+                "Error reading input:" + e.getMessage());
+    return null;
     }
 }

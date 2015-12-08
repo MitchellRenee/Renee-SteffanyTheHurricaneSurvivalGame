@@ -44,7 +44,7 @@ public class HarvestControl {
     public static class Supplies {
 
         public static boolean needed() {
-            System.out.println("Items needed if not in inventory."); 
+            System.out.println("Items needed if not in inventory.");
             return false;
         }
 
@@ -55,7 +55,7 @@ public class HarvestControl {
     public static class Delivery {
 
         private static boolean ready() {
-            System.out.println("Status is not ready if items are not located."); 
+            System.out.println("Status is not ready if items are not located.");
             return false;
         }
 
