@@ -18,13 +18,13 @@ public class HelpMenu implements Serializable {
     private String goalOfGame;
     private String viewSuppliesNeeded;
     private String viewCurrentInventory;
-    private String viewSurvivalPointsEarned;
-    private String moveToLocations;
+    private double viewSurvivalPointsEarned;
+    private Location moveToLocations;
     private String makeMoney;
-    private String buySupplies;
+    private double buySupplies;
     private String deliverSupplies;
     private String viewEachLocationInventory;
-    private String closeHelpMenu;
+    private String exitHelpMenu;
 
     public HelpMenu() {
     }
@@ -53,19 +53,19 @@ public class HelpMenu implements Serializable {
         this.viewCurrentInventory = viewCurrentInventory;
     }
 
-    public String getViewSurvivalPointsEarned() {
+    public double getViewSurvivalPointsEarned() {
         return viewSurvivalPointsEarned;
     }
 
-    public void setViewSurvivalPointsEarned(String viewSurvivalPointsEarned) {
+    public void setViewSurvivalPointsEarned(double viewSurvivalPointsEarned) {
         this.viewSurvivalPointsEarned = viewSurvivalPointsEarned;
     }
 
-    public String getMoveToLocations() {
+    public Location getMoveToLocations() {
         return moveToLocations;
     }
 
-    public void setMoveToLocations(String moveToLocations) {
+    public void setMoveToLocations(Location moveToLocations) {
         this.moveToLocations = moveToLocations;
     }
 
@@ -77,11 +77,11 @@ public class HelpMenu implements Serializable {
         this.makeMoney = makeMoney;
     }
 
-    public String getBuySupplies() {
+    public double getBuySupplies() {
         return buySupplies;
     }
 
-    public void setBuySupplies(String buySupplies) {
+    public void setBuySupplies(double buySupplies) {
         this.buySupplies = buySupplies;
     }
 
@@ -102,11 +102,11 @@ public class HelpMenu implements Serializable {
     }
 
     public String getCloseHelpMenu() {
-        return closeHelpMenu;
+        return exitHelpMenu;
     }
 
     public void setCloseHelpMenu(String closeHelpMenu) {
-        this.closeHelpMenu = closeHelpMenu;
+        this.exitHelpMenu = closeHelpMenu;
     }
 
     @Override
@@ -121,7 +121,7 @@ public class HelpMenu implements Serializable {
         hash = 17 * hash + Objects.hashCode(this.buySupplies);
         hash = 17 * hash + Objects.hashCode(this.deliverSupplies);
         hash = 17 * hash + Objects.hashCode(this.viewEachLocationInventory);
-        hash = 17 * hash + Objects.hashCode(this.closeHelpMenu);
+        hash = 17 * hash + Objects.hashCode(this.exitHelpMenu);
         return hash;
     }
 
@@ -161,7 +161,7 @@ public class HelpMenu implements Serializable {
         if (!Objects.equals(this.viewEachLocationInventory, other.viewEachLocationInventory)) {
             return false;
         }
-        if (!Objects.equals(this.closeHelpMenu, other.closeHelpMenu)) {
+        if (!Objects.equals(this.exitHelpMenu, other.exitHelpMenu)) {
             return false;
         }
         return true;
@@ -169,7 +169,7 @@ public class HelpMenu implements Serializable {
 
     @Override
     public String toString() {
-        return "HelpMenu{" + "goalOfGame=" + goalOfGame + ", viewSuppliesNeeded=" + viewSuppliesNeeded + ", viewCurrentInventory=" + viewCurrentInventory + ", viewSurvivalPointsEarned=" + viewSurvivalPointsEarned + ", moveToLocations=" + moveToLocations + ", makeMoney=" + makeMoney + ", buySupplies=" + buySupplies + ", deliverSupplies=" + deliverSupplies + ", viewEachLocationInventory=" + viewEachLocationInventory + ", closeHelpMenu=" + closeHelpMenu + '}';
+        return "HelpMenu{" + "goalOfGame=" + goalOfGame + ", viewSuppliesNeeded=" + viewSuppliesNeeded + ", viewCurrentInventory=" + viewCurrentInventory + ", viewSurvivalPointsEarned=" + viewSurvivalPointsEarned + ", moveToLocations=" + moveToLocations + ", makeMoney=" + makeMoney + ", buySupplies=" + buySupplies + ", deliverSupplies=" + deliverSupplies + ", viewEachLocationInventory=" + viewEachLocationInventory + ", exitHelpMenu=" + exitHelpMenu + '}';
     }
 
 }

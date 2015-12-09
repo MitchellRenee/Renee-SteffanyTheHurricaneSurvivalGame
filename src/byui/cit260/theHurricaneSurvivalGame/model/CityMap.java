@@ -35,11 +35,17 @@ public class CityMap implements Serializable {
 
         locationMatrix[0][1].setLocationType(LocationType.Home);
 
-        locationMatrix[4][2].setLocationType(LocationType.MegaStore);
+        locationMatrix[0][4].setLocationType(LocationType.School);
+        
+        locationMatrix[0][1].setLocationType(LocationType.Home);
+        
+        locationMatrix[3][0].setLocationType(LocationType.MegaStore);
 
         locationMatrix[0][4].setLocationType(LocationType.DeliveryCenter);
 
         locationMatrix[1][3].setLocationType(LocationType.NursingHome);
+        
+        locationMatrix[4][1].setLocationType(LocationType.Shelter);
 
         locationMatrix[4][4].setLocationType(LocationType.Prison);
 

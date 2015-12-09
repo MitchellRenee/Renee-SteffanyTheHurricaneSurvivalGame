@@ -16,30 +16,9 @@ public class DeliverySupplies implements Serializable {
 
     //class instance variables
     private String moveToDeliveryLocation;
-    private String playerEntersResponse;
-    private String gameMenu;
-    private String deliverSupplies;
-    private String chooseValidDeliveryLocation;
-    private String validResponseDisplayMessage;
-    private String returnToGameMenu;
     private int deliveryTime;
     private double deliverCost;
-
-    public double getDeliverCost() {
-        return deliverCost;
-    }
-
-    public void setDeliverCost(double deliverCost) {
-        this.deliverCost = deliverCost;
-    }
-
-    public int getDeliveryTime() {
-        return deliveryTime;
-    }
-
-    public void setDeliveryTime(int deliveryTime) {
-        this.deliveryTime = deliveryTime;
-    }
+    private String deliverSupplies;
 
     public DeliverySupplies() {
     }
@@ -52,20 +31,20 @@ public class DeliverySupplies implements Serializable {
         this.moveToDeliveryLocation = moveToDeliveryLocation;
     }
 
-    public String getPlayerEntersResponse() {
-        return playerEntersResponse;
+    public int getDeliveryTime() {
+        return deliveryTime;
     }
 
-    public void setPlayerEntersResponse(String playerEntersResponse) {
-        this.playerEntersResponse = playerEntersResponse;
+    public void setDeliveryTime(int deliveryTime) {
+        this.deliveryTime = deliveryTime;
     }
 
-    public String getGameMenu() {
-        return gameMenu;
+    public double getDeliverCost() {
+        return deliverCost;
     }
 
-    public void setGameMenu(String gameMenu) {
-        this.gameMenu = gameMenu;
+    public void setDeliverCost(double deliverCost) {
+        this.deliverCost = deliverCost;
     }
 
     public String getDeliverSupplies() {
@@ -76,40 +55,18 @@ public class DeliverySupplies implements Serializable {
         this.deliverSupplies = deliverSupplies;
     }
 
-    public String getChooseValidDeliveryLocation() {
-        return chooseValidDeliveryLocation;
-    }
-
-    public void setChooseValidDeliveryLocation(String chooseValidDeliveryLocation) {
-        this.chooseValidDeliveryLocation = chooseValidDeliveryLocation;
-    }
-
-    public String getValidResponseDisplayMessage() {
-        return validResponseDisplayMessage;
-    }
-
-    public void setValidResponseDisplayMessage(String validResponseDisplayMessage) {
-        this.validResponseDisplayMessage = validResponseDisplayMessage;
-    }
-
-    public String getReturnToGameMenu() {
-        return returnToGameMenu;
-    }
-
-    public void setReturnToGameMenu(String returnToGameMenu) {
-        this.returnToGameMenu = returnToGameMenu;
+    @Override
+    public String toString() {
+        return "DeliverySupplies{" + "moveToDeliveryLocation=" + moveToDeliveryLocation + ", deliveryTime=" + deliveryTime + ", deliverCost=" + deliverCost + ", deliverSupplies=" + deliverSupplies + '}';
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 29 * hash + Objects.hashCode(this.moveToDeliveryLocation);
-        hash = 29 * hash + Objects.hashCode(this.playerEntersResponse);
-        hash = 29 * hash + Objects.hashCode(this.gameMenu);
-        hash = 29 * hash + Objects.hashCode(this.deliverSupplies);
-        hash = 29 * hash + Objects.hashCode(this.chooseValidDeliveryLocation);
-        hash = 29 * hash + Objects.hashCode(this.validResponseDisplayMessage);
-        hash = 29 * hash + Objects.hashCode(this.returnToGameMenu);
+        int hash = 5;
+        hash = 59 * hash + Objects.hashCode(this.moveToDeliveryLocation);
+        hash = 59 * hash + this.deliveryTime;
+        hash = 59 * hash + (int) (Double.doubleToLongBits(this.deliverCost) ^ (Double.doubleToLongBits(this.deliverCost) >>> 32));
+        hash = 59 * hash + Objects.hashCode(this.deliverSupplies);
         return hash;
     }
 
@@ -125,27 +82,16 @@ public class DeliverySupplies implements Serializable {
         if (!Objects.equals(this.moveToDeliveryLocation, other.moveToDeliveryLocation)) {
             return false;
         }
-        if (!Objects.equals(this.playerEntersResponse, other.playerEntersResponse)) {
+        if (this.deliveryTime != other.deliveryTime) {
             return false;
         }
-        if (!Objects.equals(this.gameMenu, other.gameMenu)) {
+        if (Double.doubleToLongBits(this.deliverCost) != Double.doubleToLongBits(other.deliverCost)) {
             return false;
         }
         if (!Objects.equals(this.deliverSupplies, other.deliverSupplies)) {
             return false;
         }
-        if (!Objects.equals(this.chooseValidDeliveryLocation, other.chooseValidDeliveryLocation)) {
-            return false;
-        }
-        if (!Objects.equals(this.validResponseDisplayMessage, other.validResponseDisplayMessage)) {
-            return false;
-        }
-        return Objects.equals(this.returnToGameMenu, other.returnToGameMenu);
-    }
-
-    @Override
-    public String toString() {
-        return "DeliverySupplies{" + "moveToDeliveryLocation=" + moveToDeliveryLocation + ", playerEntersResponse=" + playerEntersResponse + ", gameMenu=" + gameMenu + ", deliverSupplies=" + deliverSupplies + ", chooseValidDeliveryLocation=" + chooseValidDeliveryLocation + ", validResponseDisplayMessage=" + validResponseDisplayMessage + ", returnToGameMenu=" + returnToGameMenu + '}';
+        return true;
     }
 
 }

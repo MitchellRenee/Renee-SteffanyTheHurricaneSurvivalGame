@@ -98,21 +98,25 @@ public class TheHurricaneSurvivalGame {
             }
         }
     }
-    //System.out.println("MAP");
-    //CityMap myMap = new CityMap();
-    //myMap.init();
-    //System.out.println(myMap.getMapDisplay());
-    //Player player = new Player();
 
+    private static class Game {
+
+        public Game() {
+        }
+    }
+}
+/*
+    System.out.println("MAP");
+    CityMap myMap = new CityMap();
+    myMap.init();
+    System.out.println(myMap.getMapDisplay());
+    Player player = new Player();
+//ERROR
     WelcomeView welcomeView = new WelcomeView();
 
     welcomeView.display ();
 
-    player.setName (welcomeView.getPlayerName
-
-    
-
-    ());
+    player.setName (welcomeView.getPlayerName());
 
     welcomeView.displayPlayerNameBanner (player);
 
@@ -120,48 +124,45 @@ public class TheHurricaneSurvivalGame {
 
     mainView.display ();
 
-    HurricaneSurvivalGame.getInstance ()
+    HurricaneSurvivalGame.getInstance ().setPlayer(player);
+        
+    Create StartProgramView and start the program
 
-
-
-.setPlayer(player);
-        //Create StartProgramView and start the program
-
-        //StartProgramView startProgramView = new StartProgramView();
-        //startProgramView.startProgram();
-    }
-
+    StartProgramView startProgramView = new StartProgramView();
+        
+    startProgramView.startProgram();
+    
     private static class Game {
 
     public Game() {
     }
 }
-}
 
-/* public class MainMenuView {
 
- private final String MENU = "\n"
- + "\n------------------------------------"
- + "\n| MainMenu"
- + "\n------------------------------------"
- + "\nG - Start game"
- + "\nH - Get help on how to play the game"
- + "\nS - Save game"
- + "\nE - Exit"
- + "\n------------------------------------";
+    public class MainMenuView {
 
- public void displayMenu() {
+    private final String MENU = "\n"
+        + "\n------------------------------------"
+        + "\n| MainMenu"
+        + "\n------------------------------------"
+        + "\nG - Start game"
+        + "\nH - Get help on how to play the game"
+        + "\nS - Save game"
+        + "\nE - Exit"
+        + "\n------------------------------------";
 
- char selection = 'S';
- do {
- boolean MENU = false;
+    public void displayMenu() {
 
- System.out.println(MENU); //Display the main menu
+        char selection = 'S';
+        do {
+         boolean MENU = false;
 
- String input = this.getInput(); // Get the user's selection
- selection = input.charAt(0); // Get first character of string
+         System.out.println(MENU); //Display the main menu
 
- this.doAction(selection); // Do action based on selection
+        String input = this.getInput(); // Get the user's selection
+        selection = input.charAt(0); // Get first character of string
+
+        this.doAction(selection); // Do action based on selection
 
  } while (selection != 'E'); // An selection is not "Exit"
  }
@@ -191,23 +192,23 @@ public class TheHurricaneSurvivalGame {
  return null;
  }
 
- public void doAction(char choice) {
+    public void doAction(char choice) {
 
- switch (choice) {
- case 'N': // Create and start a new game
- this.startNewGame();
- case 'G': // Get and start an exiting game
- this.startExistingGame();
- case 'H': // Display the help menu
- this.displayHelpMenu();
- case 'S': // Save the current game 
- this.saveGame();
- case 'E': // Exit the program
- return;
- default:
- System.out.println("\n*** This is an invalid selection *** Please try again");
- break;
- }
+        switch (choice) {
+        case 'N': // Create and start a new game
+        this.startNewGame();
+        case 'G': // Get and start an exiting game
+            this.startExistingGame();
+        case 'H': // Display the help menu
+            this.displayHelpMenu();
+        case 'S': // Save the current game 
+            this.saveGame();
+        case 'E': // Exit the program
+        return;
+        default:
+            System.out.println("\n*** This is an invalid selection *** Please try again");
+         break;
+    }
  }
 
  private void startNewGame() {
@@ -229,7 +230,8 @@ public class TheHurricaneSurvivalGame {
  }
 
  //Prompt the player to enter their name
- /*Map mainMap = new Map();
+
+Map mainMap = new Map();
             
  mainMap.setLocation("House");
  mainMap.setCoordinates(7);

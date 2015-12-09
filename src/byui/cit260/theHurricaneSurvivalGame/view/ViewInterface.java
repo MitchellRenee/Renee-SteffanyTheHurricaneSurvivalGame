@@ -5,7 +5,6 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
 
-
 import thehurricanesurvivalgame.TheHurricaneSurvivalGame;
 
 /**
@@ -18,17 +17,13 @@ public interface ViewInterface {
      * Interfaces are method declaration only must implement the methods below
      * the display, getInput, and doAction methods.
      */
-
     public void display();
 
-    public String getInput(){
-        
-      
-    }
-    
-    
+    //public String getInput() {
 
-    public boolean doAction(Object obj);
+    }
+
+    //public boolean doAction(Object obj);
     //Remember only the function signature are required
     //to be the same across all of the view layers
-}
+ //}

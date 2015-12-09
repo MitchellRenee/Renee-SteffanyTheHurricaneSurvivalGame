@@ -29,7 +29,8 @@ public abstract class View implements ViewInterface {
     }
     private String message;
 
-    protected final BufferedReader keyboard = TheHurricaneSurvivalGame.getInFile();
+    //ERROR
+    //protected final BufferedReader keyboard = TheHurricaneSurvivalGame.getInFile();
     protected final PrintWriter console = TheHurricaneSurvivalGame.getOutFile();
 
     //Set parameters to pass into constructor
@@ -51,7 +52,6 @@ public abstract class View implements ViewInterface {
      *
      * @return
      */
-    @Override
     public String getInput() {
         //Scanner keyboard = new Scanner(System.in); //Keyboard input stream
         boolean valid = false; // Indicates the input has been retrieved
@@ -63,8 +63,7 @@ public abstract class View implements ViewInterface {
             System.out.println("Enter the input value below:");
 
             //Get the value entered from the keyboard and trim off the blanks at the end of value
-            selection = this.keyboard.
-            );
+            selection = this.keyboard.nextLine();
             selection = selection.trim();
 
             //If invalid input entered (blank value entered)
@@ -74,12 +73,19 @@ public abstract class View implements ViewInterface {
                 continue; //and repeat again        
             }
             break;// Out of the (exit) the repetition
-        }       
-  
-} catch (Exception e) {
+        }
+        return null;
+    }
+
+    private boolean doAction(String value) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+}
+  //ERROR
+/*} catch (Exception e) {
 
     ErrorView.display(this.getClass().getName(),
                 "Error reading input:" + e.getMessage());
-    return null;
+    //return null;
     }
-}
+}*/

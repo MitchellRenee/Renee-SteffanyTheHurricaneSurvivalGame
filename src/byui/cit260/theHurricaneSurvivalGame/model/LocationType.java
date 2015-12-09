@@ -17,5 +17,7 @@ public enum LocationType {
     DeliveryCenter,
     Prison,
     NursingHome,
-    ADDMORE
+    School,
+    Shelter,
+    ADDMORE, 
 }

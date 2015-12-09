@@ -12,31 +12,29 @@ import java.util.Objects;
  *
  * @author Renee
  */
-public class HurricaneSurvivalGame implements Serializable{
-    
+public class HurricaneSurvivalGame implements Serializable {
+
     //class instance variables
     private static HurricaneSurvivalGame instance;
-    
+
     private String accessProgram;
     private double totalTime;
     private double gameTime;
     private Player player;
-    
+
     private MainMenu mainMenu;
     private CityMap map;
-    private ViewSupplyList[] supplyItem;
-    
-    
+
     private HurricaneSurvivalGame() {
     }
 
     public static HurricaneSurvivalGame getInstance() {
-        if(instance == null) {
+        if (instance == null) {
             instance = new HurricaneSurvivalGame();
         }
         return instance;
     }
-    
+
     public Player getPlayer() {
         return player;
     }
@@ -44,7 +42,7 @@ public class HurricaneSurvivalGame implements Serializable{
     public void setPlayer(Player player) {
         this.player = player;
     }
-    
+
     public String getAccessProgram() {
         return accessProgram;
     }
@@ -85,16 +83,6 @@ public class HurricaneSurvivalGame implements Serializable{
         this.map = map;
     }
 
-    public ViewSupplyList[] getSupplyItem() {
-        return supplyItem;
-    }
-
-    public void setSupplyItem(ViewSupplyList[] supplyItem) {
-        this.supplyItem = supplyItem;
-    }
-      
-    
-
     @Override
     public int hashCode() {
         int hash = 7;
@@ -108,7 +96,6 @@ public class HurricaneSurvivalGame implements Serializable{
     public String toString() {
         return "HurricaneSurvivalGameModel{" + "accessProgram=" + accessProgram + ", totalTime=" + totalTime + ", gameTime=" + gameTime + '}';
     }
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -130,8 +117,11 @@ public class HurricaneSurvivalGame implements Serializable{
         }
         return true;
     }
-    
-    
-    
-}    
-    
+
+    public static class getInstance {
+
+        public getInstance() {
+        }
+    }
+
+}

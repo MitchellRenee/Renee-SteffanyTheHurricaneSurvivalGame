@@ -15,13 +15,13 @@ import java.util.Objects;
 public class Map implements Serializable {
 
     //class instance variables
-    private String location;
+    private Location location;
     private double coordinates;
-    private String houseLocation;
-    private String megaStore;
-    private String deliveryCenter;
-    private String nursingHome;
-    private String prison;
+    private Location houseLocation;
+    private Location  megaStore;
+    private Location  deliveryCenter;
+    private Location  nursingHome;
+    private Location  prison;
 
     public Map() {
     }
@@ -54,11 +54,11 @@ public class Map implements Serializable {
         return Double.doubleToLongBits(this.coordinates) == Double.doubleToLongBits(other.coordinates);
     }
 
-    public String getLocation() {
+    public Location getLocation() {
         return location;
     }
 
-    public void setLocation(String location) {
+    public void setLocation(Location location) {
         this.location = location;
     }
 
@@ -70,43 +70,43 @@ public class Map implements Serializable {
         this.coordinates = coordinates;
     }
 
-    public String getHouseLocation() {
+    public Location getHouseLocation() {
         return houseLocation;
     }
 
-    public void setHouseLocation(String houseLocation) {
+    public void setHouseLocation(Location  houseLocation) {
         this.houseLocation = houseLocation;
     }
 
-    public String getMegaStore() {
+    public Location  getMegaStore() {
         return megaStore;
     }
 
-    public void setMegaStore(String megaStore) {
+    public void setMegaStore(Location  megaStore) {
         this.megaStore = megaStore;
     }
 
-    public String getDeliveryCenter() {
+    public Location getDeliveryCenter() {
         return deliveryCenter;
     }
 
-    public void setDeliveryCenter(String deliveryCenter) {
+    public void setDeliveryCenter(Location  deliveryCenter) {
         this.deliveryCenter = deliveryCenter;
     }
 
-    public String getNursingHome() {
+    public Location getNursingHome() {
         return nursingHome;
     }
 
-    public void setNursingHome(String nursingHome) {
+    public void setNursingHome(Location nursingHome) {
         this.nursingHome = nursingHome;
     }
 
-    public String getPrison() {
+    public Location getPrison() {
         return prison;
     }
 
-    public void setPrison(String prison) {
+    public void setPrison(Location prison) {
         this.prison = prison;
     }
 

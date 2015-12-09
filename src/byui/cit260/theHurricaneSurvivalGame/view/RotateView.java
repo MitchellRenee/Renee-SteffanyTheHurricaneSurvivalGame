@@ -65,7 +65,7 @@ public class RotateView extends View {
 
         LocationControl l = new LocatonControl();
         //try {
-            l.moveNorth(null, null);
+        l.moveNorth(null, null);
         //} catch (MoveException me) {
         //    System.out.println(me.getMessage());
         //}
@@ -86,7 +86,6 @@ public class RotateView extends View {
         l.moveWest(null, null);
     }
 
-    @Override
     public boolean doAction(Object obj) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
