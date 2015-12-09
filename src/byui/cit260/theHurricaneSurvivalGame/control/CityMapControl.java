@@ -5,6 +5,10 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
 
+import Exception.CityMapException;
+import Exception.TimeException;
+import byui.cit260.theHurricaneSurvivalGame.model.CityMap;
+import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGame;
 import byui.cit260.theHurricaneSurvivalGame.model.Location;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
 
@@ -12,7 +16,7 @@ import byui.cit260.theHurricaneSurvivalGame.model.Player;
  *
  * @author Renee
  */
-public class MapControl {
+public class CityMapControl {
 
     /**
      * <h2>Move:</h2>
@@ -24,10 +28,13 @@ public class MapControl {
      * @param Location is the destination
      * @return Was the player able to move to the new location?
      */
-    public static boolean move(Player p, Location l) {
-       
+    public static boolean move(Player p, Location l)
+            throws CityMapException {
+        if (Player.Move() && Location.exists()) {
+            throw new CityMapException("Map cannot have less than 25 locations.");
+        }
         p.setPlayerLocation(l);
-        return true;
-     
+        return false;
     }
+
 }

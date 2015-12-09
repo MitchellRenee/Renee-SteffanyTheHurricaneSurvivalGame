@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author SteffanyFaldmo
  */
-public class RoomList implements Serializable{
-    
+public class RoomList implements Serializable {
+
     //class instance variables
     private String kitchen;
     private String bedroom;
@@ -24,9 +24,6 @@ public class RoomList implements Serializable{
 
     public RoomList() {
     }
-    
-    
-    
 
     public String getKitchen() {
         return kitchen;
@@ -122,8 +119,5 @@ public class RoomList implements Serializable{
     public String toString() {
         return "RoomList{" + "kitchen=" + kitchen + ", bedroom=" + bedroom + ", bathroom=" + bathroom + ", closet=" + closet + ", basement=" + basement + ", garage=" + garage + '}';
     }
-    
-    
-    
-}
 
+}

@@ -26,7 +26,7 @@ public class StoreControl {
      * player's money account.
      * @return correct items if money is in the money account.
      */
-    public static boolean purchase(Item i, ItemAmount a, MoneyAccount m) {
+    public static boolean purchase(Item i, ItemAmount a, MoneyAccountControl m) {
         boolean returnValue = false;
         if (Item.located() && ItemAmount() >= 1 && MoneyAccount() >= 4.50) {
             returnValue = true;
@@ -38,7 +38,7 @@ public class StoreControl {
     public static void main(boolean[] args) {
 
         int[][] aryNumbers = new int[2][2];
-    //Create a multidemnsional array
+        //Create a multidemnsional array
 
         boolean[][] items = new boolean[0][0];
         boolean[][] itemAmount = new boolean[0][1];
@@ -52,7 +52,7 @@ public class StoreControl {
         int column = 2;
         int i, j;
     }
-        //Use the for-each style loop pg 13, 17 ref
+    //Use the for-each style loop pg 13, 17 ref
 
     public long getStoreControl(int[][] tableOfElements) {
 

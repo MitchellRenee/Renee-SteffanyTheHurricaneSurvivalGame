@@ -11,15 +11,15 @@ import java.io.Serializable;
  *
  * @author Renee
  */
-public class Harvest implements Serializable{
-    
+public class Harvest implements Serializable {
+
     //class instance variables
     public boolean harvestInventoryItems;
     public boolean harvestInventorySupplies;
 
     public Harvest() {
     }
-    
+
     public boolean isHarvestInventoryItems() {
         return harvestInventoryItems;
     }
@@ -48,7 +48,7 @@ public class Harvest implements Serializable{
     public String toString() {
         return "Harvest{" + "harvestInventoryItems=" + harvestInventoryItems + ", harvestInventorySupplies=" + harvestInventorySupplies + '}';
     }
-    
+
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -65,6 +65,5 @@ public class Harvest implements Serializable{
             return false;
         }
         return true;
-    }    
+    }
 }
-

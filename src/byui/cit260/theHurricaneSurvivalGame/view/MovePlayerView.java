@@ -9,20 +9,21 @@ import java.util.Scanner;
 
 /**
  *
- * @author Renee
+ * @author Steffany
  */
 public abstract class MovePlayerView extends View {
 
-    public MovePlayerView() {
-        super("\n"
-                + "\n------------------------------------"
-                + "\n| Move Player View                     "
-                + "\n------------------------------------"
-                + "\nG - Start player view menu                     "
-                + "\nH - Get help on how to view move"
-                + "\nS - Save view menu"
-                + "\nE - Exit"
-                + "\n------------------------------------");
+     public MovePlayerView(String message) {
+
+        super("Please make a selection:\n"
+                + "N - Move North\n"
+                + "E - Move East\n"
+                + "S - Move South\n"
+                + "W - Move West\n"
+                + "I - Search for item\n"
+                + "G - Save Game\n"
+                + "Q - Quit to Main Menu\n");
+
     }
 
     public boolean doAction(Object selection) {

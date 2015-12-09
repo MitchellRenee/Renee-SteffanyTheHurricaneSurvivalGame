@@ -14,6 +14,7 @@
  * saved game \n" + "H - View help menu \n" + "E -Exit game\n"); }
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
+
 import byui.cit260.theHurricaneSurvivalGame.control.GameControl;
 import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGame;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
@@ -34,6 +35,7 @@ public class MainMenuView extends View {
                 + "\n| Main Menu"
                 + "\n------------------------------------"
                 + "\nN - Start new game                  "
+                + "\nV - View player location            "
                 + "\nH - Get help on how to play the game"
                 + "\nS - Save game                       "
                 + "\nQ- Quit                             "
@@ -44,7 +46,7 @@ public class MainMenuView extends View {
          * @param input
          */
     }
-   
+
     public boolean doAction(Object obj) {
 
         String value = (String) obj;
@@ -53,11 +55,15 @@ public class MainMenuView extends View {
         char choice = value.charAt(0); // Get first character entered
 
         switch (choice) {
-            case 'N': // Create and start a new game
-                this.startNewGame();
-                break;
+            /*case 'N': // Create and start a new game
+             this.startNewGame();
+             break;
+             */
             case 'G': // Get and start an exiting game
                 this.startExistingGame();
+                break;
+            case 'V': //Lets the player view the player's location
+                this.displaysPlayerLocation();
                 break;
             case 'H': // Display the help menu
                 this.displayHelpMenu();
@@ -74,16 +80,16 @@ public class MainMenuView extends View {
         return true;
     }
 
-    private void startNewGame() {
-        //Create a new game
-        //GameControl c = new GameControl();
-        GameControl.createNewGame();
+    /*private void startNewGame() {
+     //Create a new game
+     //GameControl c = new GameControl();
+     GameControl.createNewGame();
        
-        //Display the game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.display();
-    }
-
+     //Display the game menu
+     GameMenuView gameMenu = new GameMenuView();
+     gameMenu.display();
+     }
+     */
     private void startExistingGame() {
         System.out.println("*** startExistingGame function called ***");
     }
@@ -99,8 +105,11 @@ public class MainMenuView extends View {
     private void exitGame() {
         System.out.println("*** exit out of the game ***");
     }
- //MoveView t = new MoveView(;
+    //MoveView t = new MoveView(;
     //m.display();
     //implement controllers here to change direction of view
 
+    private void displaysPlayerLocation() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

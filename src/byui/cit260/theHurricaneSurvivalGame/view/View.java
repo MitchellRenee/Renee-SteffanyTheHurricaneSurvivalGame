@@ -16,19 +16,18 @@ public abstract class View implements ViewInterface {
     // It gets the programmer partially there to a completed program
     // It gave us the display and getInput
     // Now the programmer has to implement the doAction's methods and variables.
-    
+
     Scanner keyboard = new Scanner(System.in);
     protected String displayMessage;
+
     //Add the definition of class variables common to all of the view layers
-      public View (String message){
-          this.displayMessage = message;
-      }
+
+    public View(String message) {
+        this.displayMessage = message;
+    }
     private String menu;
 
     //Set parameters to pass into constructor
-    
-    
-
     @Override
     public void display() {
         String value = "";
@@ -39,8 +38,7 @@ public abstract class View implements ViewInterface {
             System.out.println(this.displayMessage); // Print message
             value = this.getInput(); //Get the users's selection
             done = this.doAction(value); //do action base on selection
-        }    
-        while (!done);            
+        } while (!done);
     }
 
     /**

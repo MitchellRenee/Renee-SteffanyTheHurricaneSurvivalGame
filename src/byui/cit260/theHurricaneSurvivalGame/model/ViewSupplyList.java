@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author SteffanyFaldmo
  */
-public class ViewSupplyList implements Serializable{
-    
+public class ViewSupplyList implements Serializable {
+
     //class instance variables
     private String proteinPoints;
     private String carbohydratePoints;
@@ -40,9 +40,6 @@ public class ViewSupplyList implements Serializable{
 
     public ViewSupplyList() {
     }
-    
-    
-    
 
     public String getProteinPoints() {
         return proteinPoints;
@@ -330,8 +327,5 @@ public class ViewSupplyList implements Serializable{
     public String toString() {
         return "ViewSupplyList{" + "proteinPoints=" + proteinPoints + ", carbohydratePoints=" + carbohydratePoints + ", sweetsAndSugarPoints=" + sweetsAndSugarPoints + ", clothesPoints=" + clothesPoints + ", shoesPoints=" + shoesPoints + ", blanketsPoints=" + blanketsPoints + ", hygeinalKitsPoints=" + hygeinalKitsPoints + ", toiletPaperPoints=" + toiletPaperPoints + ", prescribedMedicationPoints=" + prescribedMedicationPoints + ", unprescribedMedicationPoints=" + unprescribedMedicationPoints + ", firstAidKitPoints=" + firstAidKitPoints + ", ledLanternPoints=" + ledLanternPoints + ", mylarBlanketsPoints=" + mylarBlanketsPoints + ", crankRadioPoints=" + crankRadioPoints + ", matchesPoints=" + matchesPoints + ", candlesPoints=" + candlesPoints + ", flashlightPoints=" + flashlightPoints + ", batteriesPoints=" + batteriesPoints + ", waterPoints=" + waterPoints + ", tentPoints=" + tentPoints + ", cookingStovePoints=" + cookingStovePoints + ", canopyPoints=" + canopyPoints + '}';
     }
-    
-    
-    
-    
+
 }

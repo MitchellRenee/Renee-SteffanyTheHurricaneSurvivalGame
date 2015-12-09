@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author SteffanyFaldmo
  */
-public class DeliverySupplies implements Serializable{
-    
+public class DeliverySupplies implements Serializable {
+
     //class instance variables
     private String moveToDeliveryLocation;
     private String playerEntersResponse;
@@ -40,12 +40,9 @@ public class DeliverySupplies implements Serializable{
     public void setDeliveryTime(int deliveryTime) {
         this.deliveryTime = deliveryTime;
     }
-  
 
     public DeliverySupplies() {
     }
-    
-    
 
     public String getMoveToDeliveryLocation() {
         return moveToDeliveryLocation;
@@ -150,8 +147,5 @@ public class DeliverySupplies implements Serializable{
     public String toString() {
         return "DeliverySupplies{" + "moveToDeliveryLocation=" + moveToDeliveryLocation + ", playerEntersResponse=" + playerEntersResponse + ", gameMenu=" + gameMenu + ", deliverSupplies=" + deliverSupplies + ", chooseValidDeliveryLocation=" + chooseValidDeliveryLocation + ", validResponseDisplayMessage=" + validResponseDisplayMessage + ", returnToGameMenu=" + returnToGameMenu + '}';
     }
-    
-    
-    
-}
 
+}

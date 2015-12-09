@@ -12,17 +12,14 @@ import java.util.Objects;
  *
  * @author SteffanyFaldmo
  */
-public class ViewDeliveries implements Serializable{
-    
+public class ViewDeliveries implements Serializable {
+
     //class instance variables
     private String deliveryAmount;
     private String deliveryLocations;
 
     public ViewDeliveries() {
     }
-    
-    
-    
 
     public String getDeliveryAmount() {
         return deliveryAmount;
@@ -70,9 +67,5 @@ public class ViewDeliveries implements Serializable{
     public String toString() {
         return "ViewDeliveries{" + "deliveryAmount=" + deliveryAmount + ", deliveryLocations=" + deliveryLocations + '}';
     }
-    
-    
-    
-    
-}
 
+}

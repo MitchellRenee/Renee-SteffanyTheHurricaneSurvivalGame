@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author SteffanyFaldmo
  */
-public class Map implements Serializable{
-    
+public class Map implements Serializable {
+
     //class instance variables
     private String location;
     private double coordinates;
@@ -24,7 +24,8 @@ public class Map implements Serializable{
     private String prison;
 
     public Map() {
-    }   
+    }
+
     @Override
     public String toString() {
         return "map{" + "location=" + location + ", coordinates=" + coordinates + '}';
@@ -107,7 +108,10 @@ public class Map implements Serializable{
 
     public void setPrison(String prison) {
         this.prison = prison;
-    }    
-    
-}
+    }
 
+    public Location[][] getMatrix() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+}

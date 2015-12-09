@@ -10,6 +10,7 @@ package byui.cit260.theHurricaneSurvivalGame.model;
  * @author Daniel
  */
 public enum LocationType {
+
     Empty,
     MegaStore,
     Home,

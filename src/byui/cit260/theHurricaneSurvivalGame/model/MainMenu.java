@@ -12,9 +12,8 @@ import java.util.Objects;
  *
  * @author SteffanyFaldmo
  */
-public class MainMenu implements Serializable{
-    
-    
+public class MainMenu implements Serializable {
+
     private String startGame;
     private String returnToGame;
     private String howToPlay;
@@ -23,8 +22,6 @@ public class MainMenu implements Serializable{
 
     public MainMenu() {
     }
-    
-    
 
     public String getStartGame() {
         return startGame;
@@ -108,7 +105,5 @@ public class MainMenu implements Serializable{
     public String toString() {
         return "MainMenu{" + "startGame=" + startGame + ", returnToGame=" + returnToGame + ", howToPlay=" + howToPlay + ", saveGame=" + saveGame + ", exit=" + exit + '}';
     }
-    
-    
-}
 
+}

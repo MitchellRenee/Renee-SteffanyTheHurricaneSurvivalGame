@@ -12,19 +12,15 @@ import java.util.Objects;
  *
  * @author SteffanyFaldmo
  */
-public class SaveGame implements Serializable{
-    
+public class SaveGame implements Serializable {
+
     //class instance variables
     private String savePlayer;
     private String saveInventory;
     private String saveProgress;
-    
 
     public SaveGame() {
     }
-    
-    
-    
 
     public String getSavePlayer() {
         return savePlayer;
@@ -84,8 +80,5 @@ public class SaveGame implements Serializable{
     public String toString() {
         return "SaveGame{" + "savePlayer=" + savePlayer + ", saveInventory=" + saveInventory + ", saveProgress=" + saveProgress + '}';
     }
-    
-    
-    
-    
+
 }

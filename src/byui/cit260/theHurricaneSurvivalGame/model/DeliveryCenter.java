@@ -12,8 +12,12 @@ import java.util.Objects;
  *
  * @author SteffanyFaldmo
  */
-public class DeliveryCenter implements Serializable{
-    
+public class DeliveryCenter implements Serializable {
+
+    public static boolean status(String will_have_delivery_order) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     //class instance variables
     private String deliveryToHome;
     private String deliveryToNursingHome;
@@ -21,7 +25,7 @@ public class DeliveryCenter implements Serializable{
     private String DeliveryOrder;
     private String totalTimeOfDelivery;
     private String totalCostofDelivery;
-    
+
     private ViewDeliveries viewDeliveries;
     private DeliverySupplies deliverySupplies;
 
@@ -91,14 +95,12 @@ public class DeliveryCenter implements Serializable{
     public void setDeliverySupplies(DeliverySupplies deliverySupplies) {
         this.deliverySupplies = deliverySupplies;
     }
-    
-    
 
     @Override
     public String toString() {
         return "DeliveryCenter{" + "deliveryToHome=" + deliveryToHome + ", deliveryToNursingHome=" + deliveryToNursingHome + ", deliveryToPrison=" + deliveryToPrison + ", DeliveryOrder=" + DeliveryOrder + ", totalTimeOfDelivery=" + totalTimeOfDelivery + ", totalCostofDelivery=" + totalCostofDelivery + '}';
     }
-    
+
     @Override
     public int hashCode() {
         int hash = 7;
@@ -140,13 +142,5 @@ public class DeliveryCenter implements Serializable{
         }
         return true;
     }
-    
 
-    
-    
-    
-    
-    
-    
 }
-

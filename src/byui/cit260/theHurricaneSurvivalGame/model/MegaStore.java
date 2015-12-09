@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author Renee
  */
-public class MegaStore implements Serializable{
-    
+public class MegaStore implements Serializable {
+
     //class instance variables
     private String protien;
     private String snacks;
@@ -34,7 +34,7 @@ public class MegaStore implements Serializable{
 
     public MegaStore() {
     }
-    
+
     public String getProtien() {
         return protien;
     }
@@ -162,7 +162,7 @@ public class MegaStore implements Serializable{
     public String toString() {
         return "MegaStoreModel{" + "protien=" + protien + ", snacks=" + snacks + ", sweets=" + sweets + ", carbs=" + carbs + ", toiletries=" + toiletries + ", firstaid=" + firstaid + ", clothing=" + clothing + ", blankets=" + blankets + ", water=" + water + ", location=" + location + ", aisles=" + aisles + ", storeSize=" + storeSize + ", gameMenu=" + gameMenu + '}';
     }
-    
+
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -213,8 +213,5 @@ public class MegaStore implements Serializable{
         }
         return true;
     }
-    
-    
-    
-    
+
 }
