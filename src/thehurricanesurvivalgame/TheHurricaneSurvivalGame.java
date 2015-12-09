@@ -105,13 +105,13 @@ public class TheHurricaneSurvivalGame {
         }
     }
 }
-/*
-    System.out.println("MAP");
+
+System.out.println("MAP");
     CityMap myMap = new CityMap();
     myMap.init();
     System.out.println(myMap.getMapDisplay());
     Player player = new Player();
-//ERROR
+
     WelcomeView welcomeView = new WelcomeView();
 
     welcomeView.display ();
@@ -130,7 +130,13 @@ public class TheHurricaneSurvivalGame {
 
     StartProgramView startProgramView = new StartProgramView();
         
-    startProgramView.startProgram();
+    startProgramView
+
+
+
+
+
+.startProgram();
     
     private static class Game {
 
@@ -138,99 +144,96 @@ public class TheHurricaneSurvivalGame {
     }
 }
 
-
-    public class MainMenuView {
+public class MainMenuView {
 
     private final String MENU = "\n"
-        + "\n------------------------------------"
-        + "\n| MainMenu"
-        + "\n------------------------------------"
-        + "\nG - Start game"
-        + "\nH - Get help on how to play the game"
-        + "\nS - Save game"
-        + "\nE - Exit"
-        + "\n------------------------------------";
+            + "\n------------------------------------"
+            + "\n| MainMenu"
+            + "\n------------------------------------"
+            + "\nG - Start game"
+            + "\nH - Get help on how to play the game"
+            + "\nS - Save game"
+            + "\nE - Exit"
+            + "\n------------------------------------";
 
     public void displayMenu() {
 
         char selection = 'S';
         do {
-         boolean MENU = false;
+            boolean MENU = false;
 
-         System.out.println(MENU); //Display the main menu
+            System.out.println(MENU); //Display the main menu
 
-        String input = this.getInput(); // Get the user's selection
-        selection = input.charAt(0); // Get first character of string
+            String input = this.getInput(); // Get the user's selection
+            selection = input.charAt(0); // Get first character of string
 
-        this.doAction(selection); // Do action based on selection
+            this.doAction(selection); // Do action based on selection
 
- } while (selection != 'E'); // An selection is not "Exit"
- }
+        } while (selection != 'E'); // An selection is not "Exit"
+    }
 
- public String getInput() {
+    public String getInput() {
 
- boolean valid = false; // Indicates the input has been retrieved
- String getInput = null;
- Scanner keyboard = new Scanner(System.in); //Keyboard input stream
+        boolean valid = false; // Indicates the input has been retrieved
+        String getInput = null;
+        Scanner keyboard = new Scanner(System.in); //Keyboard input stream
 
- while (!valid) {//while a valid input has not been entered
+        while (!valid) {//while a valid input has not been entered
 
- //Prompt for the player's input
- System.out.println("Enter the input value below:");
+            //Prompt for the player's input
+            System.out.println("Enter the input value below:");
 
- //Get the input value entered from the keyboard and trim off the blanks at the end of value
- String input = keyboard.nextLine();
- input = input.trim();
+            //Get the input value entered from the keyboard and trim off the blanks at the end of value
+            String input = keyboard.nextLine();
+            input = input.trim();
 
- //If invalid input entered (not less than one character in length))
- if (input.length() < 1) {
- System.out.println("Invalid input value - the input must not be blank");
- continue; //and repeat again        
- }
- break;// Out of the (exit) the repetition
- }
- return null;
- }
+            //If invalid input entered (not less than one character in length))
+            if (input.length() < 1) {
+                System.out.println("Invalid input value - the input must not be blank");
+                continue; //and repeat again        
+            }
+            break;// Out of the (exit) the repetition
+        }
+        return null;
+    }
 
     public void doAction(char choice) {
 
         switch (choice) {
-        case 'N': // Create and start a new game
-        this.startNewGame();
-        case 'G': // Get and start an exiting game
-            this.startExistingGame();
-        case 'H': // Display the help menu
-            this.displayHelpMenu();
-        case 'S': // Save the current game 
-            this.saveGame();
-        case 'E': // Exit the program
-        return;
-        default:
-            System.out.println("\n*** This is an invalid selection *** Please try again");
-         break;
+            case 'N': // Create and start a new game
+                this.startNewGame();
+            case 'G': // Get and start an exiting game
+                this.startExistingGame();
+            case 'H': // Display the help menu
+                this.displayHelpMenu();
+            case 'S': // Save the current game 
+                this.saveGame();
+            case 'E': // Exit the program
+                return;
+            default:
+                System.out.println("\n*** This is an invalid selection *** Please try again");
+                break;
+        }
     }
- }
 
- private void startNewGame() {
- System.out.println("*** startNewGame function called ***");
- }
+    private void startNewGame() {
+        System.out.println("*** startNewGame function called ***");
+    }
 
- private void startExistingGame() {
- System.out.println("*** startExistingGame function called ***");
- }
+    private void startExistingGame() {
+        System.out.println("*** startExistingGame function called ***");
+    }
 
- private void displayHelpMenu() {
- System.out.println("*** displayHelpMenu funtion called ***");
- }
+    private void displayHelpMenu() {
+        System.out.println("*** displayHelpMenu funtion called ***");
+    }
 
- private void saveGame() {
- System.out.println("*** saveGame function called ***");
- }
- }
- }
+    private void saveGame() {
+        System.out.println("*** saveGame function called ***");
+    }
+}
 
  //Prompt the player to enter their name
-
 Map mainMap = new Map();
             
  mainMap.setLocation("House");
@@ -562,43 +565,64 @@ Map mainMap = new Map();
  System.out.println(deliverySuppliesInfo);
         
         
- ViewSupplyList supplyList = new ViewSupplyList();
+    ViewSupplyList supplyList = new ViewSupplyList();
         
- supplyList.setProteinPoints("30 points");
- supplyList.setCarbohydratePoints("25 points");
- supplyList.setSweetsAndSugarPoints("20 points");
- supplyList.setClothesPoints("25 points");
- supplyList.setShoesPoints("25 points");
- supplyList.setBlanketsPoints("15 points");
- supplyList.setHygeinalKitsPoints("10 points");
- supplyList.setToiletPaperPoints("10 points");
- supplyList.setPrescribedMedicationPoints("10 points");
- supplyList.setUnprescribedMedicationPoints("10 points");
- supplyList.setFirstAidKitPoints("15 points");
- supplyList.setLedLanternPoints("15 points");
- supplyList.setMylarBlanketsPoints("25 points");
- supplyList.setCrankRadioPoints("10 points");
- supplyList.setMatchesPoints("15 points");
- supplyList.setCandlesPoints("15 points");
- supplyList.setFlashlightPoints("15 points");
- supplyList.setBatteriesPoints("10 points");
- supplyList.setWaterPoints("25 points");
- supplyList.setTentPoints("25 points");
- supplyList.setCookingStovePoints("15 points");
- supplyList.setCanopyPoints("15 points");
+        supplyList.setProteinPoints("30 points");
+
+        supplyList.setCarbohydratePoints("25 points");
+
+        supplyList.setSweetsAndSugarPoints("20 points");
+
+        supplyList.setClothesPoints("25 points");
+ 
+        supplyList.setShoesPoints("25 points");
+ 
+        supplyList.setBlanketsPoints("15 points");
+        
+        supplyList.setHygeinalKitsPoints("10 points");
+ 
+        supplyList.setToiletPaperPoints("10 points");
+
+        supplyList.setPrescribedMedicationPoints("10 points");
+        
+        supplyList.setUnprescribedMedicationPoints("10 points");
+        
+        supplyList.setFirstAidKitPoints("15 points");
+        
+        supplyList.setLedLanternPoints("15 points");
+            
+        supplyList.setMylarBlanketsPoints("25 points");
+            
+        supplyList.setCrankRadioPoints("10 points");
+        
+        supplyList.setMatchesPoints("15 points");
+        
+        supplyList.setCandlesPoints("15 points");
+        
+        supplyList.setFlashlightPoints("15 points");
+        
+        supplyList.setBatteriesPoints("10 points");
+        
+        supplyList.setWaterPoints("25 points");
+       
+        supplyList.setTentPoints("25 points");
+        
+        supplyList.setCookingStovePoints("15 points");
+       
+        supplyList.setCanopyPoints("15 points");        
+        
+        String viewSupplyListInfo = supplyList.toString();
+        
+        System.out.println(viewSupplyListInfo);
         
         
- String viewSupplyListInfo = supplyList.toString();
- System.out.println(viewSupplyListInfo);
+        RoomList rooms = new RoomList();
         
+        rooms.setBasement("basement");
+        rooms.setKitchen("kitchen");
+        rooms.setBedroom("bedroom");
+        rooms.setCloset("closet");
+        rooms.setGarage("garage");
         
- RoomList rooms = new RoomList();
-        
- rooms.setBasement("basement");
- rooms.setKitchen("kitchen");
- rooms.setBedroom("bedroom");
- rooms.setCloset("closet");
- rooms.setGarage("garage");
-        
- String roomListInfo = rooms.toString();
- System.out.println(roomListInfo);*/
+        String roomListInfo = rooms.toString();
+        System.out.println(roomListInfo);*/

@@ -8,6 +8,7 @@ package byui.cit260.theHurricaneSurvivalGame.view;
 import Exception.MoveException;
 import byui.cit260.theHurricaneSurvivalGame.model.Location;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -36,9 +37,7 @@ public abstract class MovePlayerView extends View {
     //private static Location currentGame = null;
     
     //private static PrintWriter outFile = null;
-    //private static BuferedReader inFile = null;
-
-     
+    //private static BuferedReader inFile = null;    
         
     
     public int doAction(Object selection) {
@@ -84,14 +83,14 @@ public abstract class MovePlayerView extends View {
         try (doAction out = newPrintWriter(outputLocation)) {
             
             out.println("\n\               Location name");
-            out.println("\n                Location index");
-            out.println("\n               Location row")";
-            out.println("\n               Location column");
-            out.println("\n               Location visted");
+            out.println("\n               Location index");
+            out.println("\n                 Location row");
+            out.println("\n              Location column");
+            out.println("\n              Location visted");
             Iterable<Location> locationCoordinates = null;
             
             for (Location location : locationCoordinates) {
-                out.printf("Location type dat" 
+                out.printf("Location type data" 
                                     ,location.getLocationType()
                                     ,location.getLocationName()
                                     ,location.getIndex()
@@ -103,11 +102,7 @@ public abstract class MovePlayerView extends View {
             System.out.println("I/O Error: " + ex.getMessage());
         }
     }
-            
-        }
-            
-        }
-    }     
+    
 
     private void viewMap() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -138,39 +133,7 @@ public abstract class MovePlayerView extends View {
         public Printwriter() {
         }
     }
-
-           
-
-
-    private void viewMap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void moveNorth() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void moveEast() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void moveSouth() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void moveWest() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void viewLocation() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private static class BuferedReader {
-
-        public BuferedReader() {
-        }
-    }
+}
       
         
               
