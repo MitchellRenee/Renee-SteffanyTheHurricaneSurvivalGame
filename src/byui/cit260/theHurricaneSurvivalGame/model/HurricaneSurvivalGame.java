@@ -124,4 +124,7 @@ public class HurricaneSurvivalGame implements Serializable {
         }
     }
 
-}
+    private static class MainMenu {
+
+        public MainMenu() {
+    }
