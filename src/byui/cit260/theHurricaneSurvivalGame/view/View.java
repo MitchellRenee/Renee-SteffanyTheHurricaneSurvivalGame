@@ -55,10 +55,10 @@ public abstract class View implements ViewInterface {
     public String getInput() {
         //Scanner keyboard = new Scanner(System.in); //Keyboard input stream
         boolean valid = false; // Indicates the input has been retrieved
-        String selection = "";
-
-        while (!valid) { //while a valid has not been entered
-
+        String selection = " ";
+        try {
+        
+            while (!valid) { //while a valid has not been entered
             //Prompt for the player's input
             System.out.println("Enter the input value below:");
 
@@ -73,16 +73,15 @@ public abstract class View implements ViewInterface {
                 continue; //and repeat again        
             }
             break;// Out of the (exit) the repetition
-        }
-        return null;
+        }       
+    }
+        catch (Exception e) {
+
+            ErrorView.display(this.getClass().getName(),
+                "Error reading input:" + e.getMessage());
+ 
+    return selection;
     }
 
- }
-
- catch (Exception e) {
-
-    ErrorView.display(this.getClass().getName(),
-                "Error reading input:" + e.getMessage());
-    //return null;
 
 
