@@ -1,12 +1,11 @@
 /**
  * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates and open the template
- * in the editor.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
 
-import byui.cit260.theHurricaneSurvivalGame.Exception.MoveException;
-import byui.cit260.theHurricaneSurvivalGame.Exception.TimeException;
+import Exception.TimeException;
 
 /**
  *
@@ -26,10 +25,11 @@ public class TimeControl {
      * @throws Exception.TimeException
      */
     //Did not pass test
-    public double calcTimeRemainingInGame(double timeSpent, double totalTime) throws TimeException {
+
+    public double calcTimeRemainingInGame(double timeSpent, double totalTime)
+            throws TimeException {
         if (totalTime < 48) { // TotalTime must always be 48 hours 
-            throw new TimeException("Total start time cannot be less than 48 hours.");
-           
+            return 0;
         }
 
         double timeRemaining = totalTime - timeSpent;
@@ -41,9 +41,13 @@ public class TimeControl {
         return timeRemaining;
     }
 }
+    
+    /**try {
+        TimeControl.calTimeRemainingInGame(double timeSpent, double totalTime){
+    } catch (TimeException te) {
+        System.out.println(te.getMessage());
+    }*/ 
 
-/**
- * try { TimeControl.calTimeRemainingInGame(double timeSpent, double totalTime){
- * } catch (TimeException te) { System.out.println(te.getMessage());
-    }
- */
+
+    
+

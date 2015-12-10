@@ -5,7 +5,7 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
 
-import byui.cit260.theHurricaneSurvivalGame.Exception.MoveException;
+import Exception.MoveException;
 import byui.cit260.theHurricaneSurvivalGame.control.GameControl;
 import byui.cit260.theHurricaneSurvivalGame.control.MoveControl;
 import byui.cit260.theHurricaneSurvivalGame.model.*;
@@ -87,19 +87,19 @@ public class GameMenuView extends View {
         System.out.println("Which is a " + HurricaneSurvivalGame.getInstance().getPlayer().getPlayerLocation().getLocationType() + " location");
     }
 
-    public void moveNorth() throws MoveException {
+    public void moveNorth() {
         MoveControl mc = new MoveControl();
 
         mc.moveNorth(HurricaneSurvivalGame.getInstance().getPlayer());
     }
 
-    public void moveEast() throws MoveException {
+    public void moveEast() {
         MoveControl mc = new MoveControl();
 
         mc.moveEast(HurricaneSurvivalGame.getInstance().getPlayer());
     }
 
-    public void moveSouth() throws MoveException {
+    public void moveSouth() {
         MoveControl mc = new MoveControl();
 
         mc.moveSouth(HurricaneSurvivalGame.getInstance().getPlayer());

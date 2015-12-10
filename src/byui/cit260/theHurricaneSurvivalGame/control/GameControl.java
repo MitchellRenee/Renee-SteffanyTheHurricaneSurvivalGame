@@ -5,11 +5,18 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
 
+import Exception.GameException;
 import byui.cit260.theHurricaneSurvivalGame.model.CityMap;
 import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGame;
 import byui.cit260.theHurricaneSurvivalGame.model.Item;
 import byui.cit260.theHurricaneSurvivalGame.model.LocationType;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import thehurricanesurvivalgame.TheHurricaneSurvivalGame;
 
 /**
@@ -215,9 +222,43 @@ public class GameControl {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    public static void getSavedGame(String filePath) throws GameException {
+        throws GameException {
+        
+    Game game = null;
+            String filepath = null;
+    
+    try( FileInputStream fips = new FileInputStream (filepath)) {
+        ObjectInputStream output = new ObjectInputStream(fips);
+        
+        game = (Game) output.readObject(); //read the game object from file
+    }
+    catch (FileNotFoundException fnfe) {
+        throw new GameException(fnfe.getMessage());
+    }
+    catch (Exception e) {
+        throw new GameException(e.getMessage());
+    }
+    
+    //close the output file
+    TheHurricaneSurvivalGame.setCurrentGame(game); //save in The Hurricane Survival Game
+    }
+    }
+
     private void startNewGame() {
         // Create a new game
 //        GameControl.createNewGame();
+    }
+    
+    public static void saveGame(GameControl gameControl, String filepath)
+            throws GameException, IOException {
+        try( FileOutputStream fops = new FileOutputStream(filepath)) {
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+            
+            output.writeObject(gameControl); //write the game object to file
+        } catch(IOException e) {
+            throw new GameException(e.getMessage());
+        }
     }
 
     public static void createNewGame() {
