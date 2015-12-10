@@ -19,6 +19,7 @@ import byui.cit260.theHurricaneSurvivalGame.control.GameControl;
 import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGame;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
 import java.util.Scanner;
+import thehurricanesurvivalgame.TheHurricaneSurvivalGame;
 
 /**
  *
@@ -36,7 +37,7 @@ public class MainMenuView extends View {
                 + "\n------------------------------------"
                 + "\nN - Start new game                  "
                 + "\nV - View player location            "
-                + "\nH - Get help on how to play the game"
+                + "\nH - Help"
                 + "\nS - Save game                       "
                 + "\nQ- Quit                             "
                 + "\n------------------------------------");
@@ -91,11 +92,34 @@ public class MainMenuView extends View {
      }
      */
     private void startExistingGame() {
-        System.out.println("*** startExistingGame function called ***");
+        System.out.println("\n\nEnter the file path or file where the game "
+                            + "is to be saved.");
+        String filePath = this.getInput();
+        
+        try { 
+            //start a saved game
+            GameControl.getSavedGame(filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+        
+        //display game menu
+        
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
 
     private void saveGame() {
-        System.out.println("*** saveGame function called ***");
+        System.out.println("\n\nEnter the file path or file where the game "
+                            + "is to be saved.");
+        String filePath = this.getInput();
+        
+        try { 
+            //save game specified file
+            GameControl.saveGame(TheHurricaneSurvivalGame.getCurrentGame(), filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
     }
 
     private void displayHelpMenu() {

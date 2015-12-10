@@ -12,6 +12,9 @@ import java.util.Scanner;
  * @author SteffanyFaldmo
  */
 public class HelpMenuView extends View {
+    
+    boolean display;
+    private boolean MENU;
 
     public HelpMenuView() {
         super("\n"
@@ -28,9 +31,50 @@ public class HelpMenuView extends View {
     /**
      * This just gets the player's input
      *
+     * @param obj
      * @return
      */
-    public boolean doAction(Object selection) {
+    public boolean doAction(Object obj) {
+        String value = (String) obj;
+
+        value = value.toUpperCase(); // Convert to all upper case
+        char choice = value.charAt(0); // Get first character entered
+
+        switch (choice) {
+            case 'G':
+                this.startResourceList();
+                break;
+            case 'H':
+                this.inventoryHelp();
+                break;
+            case 'S':
+                this.saveResourceList();
+                break;
+            case 'E':
+                this.exitHelpMenu();
+                break;
+            case 'Q':
+                return true;
+            default:
+                System.out.println("\n*** This is an invalid selection *** Please try again");
+                break;
+        }
+        return true;
+    }
+
+    private void startResourceList() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void inventoryHelp() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void saveResourceList() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void exitHelpMenu() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
