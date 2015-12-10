@@ -5,7 +5,7 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
 
-import Exception.ProgramException;
+import byui.cit260.theHurricaneSurvivalGame.Exception.ProgramException;
 import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGame;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
 
