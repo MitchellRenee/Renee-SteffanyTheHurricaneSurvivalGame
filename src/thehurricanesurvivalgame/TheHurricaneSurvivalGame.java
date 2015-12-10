@@ -1,22 +1,25 @@
 package thehurricanesurvivalgame;
 
+import byui.cit260.theHurricaneSurvivalGame.control.GameControl;
 import static byui.cit260.theHurricaneSurvivalGame.control.PlayerControl.player;
 import byui.cit260.theHurricaneSurvivalGame.control.ProgramControl;
 import byui.cit260.theHurricaneSurvivalGame.model.CityMap;
 import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGame;
+import byui.cit260.theHurricaneSurvivalGame.model.Item;
 import byui.cit260.theHurricaneSurvivalGame.model.Location;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
-import byui.cit260.theHurricaneSurvivalGame.view.MainMenuView;
 import byui.cit260.theHurricaneSurvivalGame.view.StartProgramView;
 import byui.cit260.theHurricaneSurvivalGame.view.WelcomeView;
 import java.io.BufferedReader;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import static sun.audio.AudioPlayer.player;
+
 
 /**
  * @param args the command line arguments
@@ -24,19 +27,21 @@ import static sun.audio.AudioPlayer.player;
 public class TheHurricaneSurvivalGame {
 
     private static final Game currentGame = null;
-    private static Location location = null;
+    private static final Location location = null;
 
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
 
-    private static PrintWriter logFile = null;
+    public static PrintWriter logFile = null;
 
     public static PrintWriter getLogFile() {
         return logFile;
     }
-
+    //Ex: of output stream
+    //ref pg 8
     public static void setLogFile(PrintWriter logFile) {
         TheHurricaneSurvivalGame.logFile = logFile;
+        //The output stream is assigned to the log file instance variable here.
     }
 
     public static PrintWriter getOutFile() {
@@ -63,21 +68,23 @@ public class TheHurricaneSurvivalGame {
             TheHurricaneSurvivalGame.inFile = new BufferedReader(new InputStreamReader(System.in));
 
             TheHurricaneSurvivalGame.outFile = new PrintWriter(System.out, true);
-
+            
             String filePath = "log.txt";
             TheHurricaneSurvivalGame.logFile = new PrintWriter(filePath);
-            //Do we need to make a log.txt file? 
+            //overload constructor allows you to pass in the file path of the file that is being written to.
+            //This is the file path it can be change to a different directory
+            //C:\Users\Documents\tmp\logfile.txt (Windows)
+            
             StartProgramView startProgramView = new StartProgramView();
             startProgramView.display();
-            return;
 
-        } catch (Throwable e) {
+        } catch (Exception e) {
 
             System.out.println("Exception: " + e.toString()
-                    + "\nCause: " + e.getCause()
-                    + "\nMessage: " + e.getMessage());
-
-            e.printStackTrace();;
+                             + "\nCause: " + e.getCause()
+                             + "\nMessage: " + e.getMessage());
+        
+            e.printStackTrace();
         } finally {
             try {
                 if (TheHurricaneSurvivalGame.inFile != null) {
@@ -91,21 +98,37 @@ public class TheHurricaneSurvivalGame {
                 if (TheHurricaneSurvivalGame.logFile != null) {
                     TheHurricaneSurvivalGame.logFile.close();
                 }
-
+                
+            //Ref pg 9
+            //Link: https://content.byui.edu/file/2a20357d-883f-4256-bfe5-8297c455549b/1/Lesson%2011%20-%20Team%20Assignment.pdf
             } catch (IOException ex) {
                 System.out.println("Error closing files");
-                return;
+                return;         
             }
         }
+    }              
+  
+    //ERROR
+    //Ask Steffany why is this here
+    //public static void setCurrentGame(GameControl.Game game) {
+    //   throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    //}
+
+    public static GameControl getCurrentGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private static class Game {
+        public void write(int b) throws IOException {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+    class Game {
 
         public Game() {
         }
     }
-}
-
+ 
+/*
 System.out.println("MAP");
     CityMap myMap = new CityMap();
     myMap.init();
@@ -130,20 +153,14 @@ System.out.println("MAP");
 
     StartProgramView startProgramView = new StartProgramView();
         
-    startProgramView
-
-
-
-
-
-.startProgram();
+    startProgramView.startProgram();
     
-    private static class Game {
+    public static class Game {
 
     public Game() {
     }
 }
-
+*/
 public class MainMenuView {
 
     private final String MENU = "\n"
@@ -232,7 +249,7 @@ public class MainMenuView {
         System.out.println("*** saveGame function called ***");
     }
 }
-
+/*
  //Prompt the player to enter their name
 Map mainMap = new Map();
             
@@ -624,5 +641,5 @@ Map mainMap = new Map();
         rooms.setCloset("closet");
         rooms.setGarage("garage");
         
-        String roomListInfo = rooms.toString();
-        System.out.println(roomListInfo);*/
+        String roomListInfo = rooms.toString*/
+}
