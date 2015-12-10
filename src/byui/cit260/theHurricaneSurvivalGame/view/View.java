@@ -77,15 +77,12 @@ public abstract class View implements ViewInterface {
         return null;
     }
 
-    private boolean doAction(String value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-}
-  //ERROR
+ }
+
  catch (Exception e) {
 
     ErrorView.display(this.getClass().getName(),
                 "Error reading input:" + e.getMessage());
     //return null;
-}
-}
+
+
