@@ -18,8 +18,9 @@ public class TimeControl {
      * <p>
      * Calculate the time left in the game.</p>
      *
-     * @param timeSpent is the time spent in game
-     * @param totalTime is the total time
+     * @param TimeSpent is the time spent in game
+     * @param TotalTime is the total time
+     * @param TimeRemaining
      * @return What is the time remaining?
      * @throws Exception.TimeException
      */

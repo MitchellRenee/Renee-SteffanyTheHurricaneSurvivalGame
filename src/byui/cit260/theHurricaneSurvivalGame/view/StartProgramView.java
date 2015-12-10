@@ -103,7 +103,7 @@ public class StartProgramView {
 
     }
 
-    private void display() {
+    public void display() {
         System.out.println("display startProgramView");//??????? 
     }
 

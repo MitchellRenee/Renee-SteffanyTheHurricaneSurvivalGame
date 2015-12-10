@@ -15,30 +15,27 @@ import java.util.Objects;
 public class GameMenu implements Serializable {
 
     //class instance variables
-    private String mapOfTown;
+    private double mapOfTown;
     private String supplyList;
     private String inventoryList;
-    private String newLocation;
-    private String deliverSupplies;
+    private Location newLocation;
+    private double deliverSupplies;
     private String viewDeliveries;
     private String whatLocationHas;
-    private String moneyAccount;
-    private String survivalPointsEarned;
-    private String timeBeforeHurricane;
+    private double moneyAccount;
+    private double survivalPointsEarned;
+    private double timeBeforeHurricane;
     private String help;
     private String mainMenu;
 
     public GameMenu() {
     }
 
-    private SaveGame save;
-    private RetrieveGame retrieve;
-
-    public String getMapOfTown() {
+    public double getMapOfTown() {
         return mapOfTown;
     }
 
-    public void setMapOfTown(String mapOfTown) {
+    public void setMapOfTown(double mapOfTown) {
         this.mapOfTown = mapOfTown;
     }
 
@@ -58,19 +55,19 @@ public class GameMenu implements Serializable {
         this.inventoryList = inventoryList;
     }
 
-    public String getNewLocation() {
+    public Location getNewLocation() {
         return newLocation;
     }
 
-    public void setNewLocation(String newLocation) {
+    public void setNewLocation(Location newLocation) {
         this.newLocation = newLocation;
     }
 
-    public String getDeliverSupplies() {
+    public double getDeliverSupplies() {
         return deliverSupplies;
     }
 
-    public void setDeliverSupplies(String deliverSupplies) {
+    public void setDeliverSupplies(double deliverSupplies) {
         this.deliverSupplies = deliverSupplies;
     }
 
@@ -90,27 +87,27 @@ public class GameMenu implements Serializable {
         this.whatLocationHas = whatLocationHas;
     }
 
-    public String getMoneyAccount() {
+    public double getMoneyAccount() {
         return moneyAccount;
     }
 
-    public void setMoneyAccount(String moneyAccount) {
+    public void setMoneyAccount(double moneyAccount) {
         this.moneyAccount = moneyAccount;
     }
 
-    public String getSurvivalPointsEarned() {
+    public double getSurvivalPointsEarned() {
         return survivalPointsEarned;
     }
 
-    public void setSurvivalPointsEarned(String survivalPointsEarned) {
+    public void setSurvivalPointsEarned(double survivalPointsEarned) {
         this.survivalPointsEarned = survivalPointsEarned;
     }
 
-    public String getTimeBeforeHurricane() {
+    public double getTimeBeforeHurricane() {
         return timeBeforeHurricane;
     }
 
-    public void setTimeBeforeHurricane(String timeBeforeHurricane) {
+    public void setTimeBeforeHurricane(double timeBeforeHurricane) {
         this.timeBeforeHurricane = timeBeforeHurricane;
     }
 
@@ -130,37 +127,26 @@ public class GameMenu implements Serializable {
         this.mainMenu = mainMenu;
     }
 
-    public SaveGame getSave() {
-        return save;
+    @Override
+    public String toString() {
+        return "GameMenu{" + "mapOfTown=" + mapOfTown + ", supplyList=" + supplyList + ", inventoryList=" + inventoryList + ", newLocation=" + newLocation + ", deliverSupplies=" + deliverSupplies + ", viewDeliveries=" + viewDeliveries + ", whatLocationHas=" + whatLocationHas + ", moneyAccount=" + moneyAccount + ", survivalPointsEarned=" + survivalPointsEarned + ", timeBeforeHurricane=" + timeBeforeHurricane + ", help=" + help + ", mainMenu=" + mainMenu + '}';
     }
-
-    public void setSave(SaveGame save) {
-        this.save = save;
-    }
-
-    public RetrieveGame getRetrieve() {
-        return retrieve;
-    }
-
-    public void setRetrieve(RetrieveGame retrieve) {
-        this.retrieve = retrieve;
-    }
-
+    
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 97 * hash + Objects.hashCode(this.mapOfTown);
-        hash = 97 * hash + Objects.hashCode(this.supplyList);
-        hash = 97 * hash + Objects.hashCode(this.inventoryList);
-        hash = 97 * hash + Objects.hashCode(this.newLocation);
-        hash = 97 * hash + Objects.hashCode(this.deliverSupplies);
-        hash = 97 * hash + Objects.hashCode(this.viewDeliveries);
-        hash = 97 * hash + Objects.hashCode(this.whatLocationHas);
-        hash = 97 * hash + Objects.hashCode(this.moneyAccount);
-        hash = 97 * hash + Objects.hashCode(this.survivalPointsEarned);
-        hash = 97 * hash + Objects.hashCode(this.timeBeforeHurricane);
-        hash = 97 * hash + Objects.hashCode(this.help);
-        hash = 97 * hash + Objects.hashCode(this.mainMenu);
+        int hash = 5;
+        hash = 11 * hash + Objects.hashCode(this.mapOfTown);
+        hash = 11 * hash + Objects.hashCode(this.supplyList);
+        hash = 11 * hash + Objects.hashCode(this.inventoryList);
+        hash = 11 * hash + Objects.hashCode(this.newLocation);
+        hash = 11 * hash + Objects.hashCode(this.deliverSupplies);
+        hash = 11 * hash + Objects.hashCode(this.viewDeliveries);
+        hash = 11 * hash + Objects.hashCode(this.whatLocationHas);
+        hash = 11 * hash + Objects.hashCode(this.moneyAccount);
+        hash = 11 * hash + Objects.hashCode(this.survivalPointsEarned);
+        hash = 11 * hash + Objects.hashCode(this.timeBeforeHurricane);
+        hash = 11 * hash + Objects.hashCode(this.help);
+        hash = 11 * hash + Objects.hashCode(this.mainMenu);
         return hash;
     }
 
@@ -211,10 +197,8 @@ public class GameMenu implements Serializable {
         }
         return true;
     }
+    
+   }
 
-    @Override
-    public String toString() {
-        return "GameMenu{" + "mapOfTown=" + mapOfTown + ", supplyList=" + supplyList + ", inventoryList=" + inventoryList + ", newLocation=" + newLocation + ", deliverSupplies=" + deliverSupplies + ", viewDeliveries=" + viewDeliveries + ", whatLocationHas=" + whatLocationHas + ", moneyAccount=" + moneyAccount + ", survivalPointsEarned=" + survivalPointsEarned + ", timeBeforeHurricane=" + timeBeforeHurricane + ", help=" + help + ", mainMenu=" + mainMenu + '}';
-    }
 
-}
+

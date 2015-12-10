@@ -12,12 +12,12 @@ import java.util.Objects;
  *
  * @author Renee
  */
-public class ViewInventory implements Serializable {
+public class Inventory implements Serializable {
 
     //class instance variables
     private String viewSupplyList;
 
-    public ViewInventory() {
+    public Inventory() {
     }
 
     public String getViewSupplyList() {
@@ -48,7 +48,7 @@ public class ViewInventory implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final ViewInventory other = (ViewInventory) obj;
+        final Inventory other = (Inventory) obj;
         if (!Objects.equals(this.viewSupplyList, other.viewSupplyList)) {
             return false;
         }

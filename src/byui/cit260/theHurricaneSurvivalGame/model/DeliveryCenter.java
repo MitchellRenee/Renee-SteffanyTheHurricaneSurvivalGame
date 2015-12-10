@@ -19,73 +19,64 @@ public class DeliveryCenter implements Serializable {
     }
 
     //class instance variables
-    private String deliveryToHome;
-    private String deliveryToNursingHome;
-    private String deliveryToPrison;
-    private String DeliveryOrder;
-    private String totalTimeOfDelivery;
-    private String totalCostofDelivery;
+    private Location deliveryToHome;
+    private Location deliveryToNursingHome;
+    private Location deliveryToPrison;
+    private Location DeliveryOrder;
+    private double totalTimeOfDelivery;
+    private double totalCostofDelivery;
 
-    private ViewDeliveries viewDeliveries;
     private DeliverySupplies deliverySupplies;
 
     public DeliveryCenter() {
     }
 
-    public String getDeliveryToHome() {
+    public Location getDeliveryToHome() {
         return deliveryToHome;
     }
 
-    public void setDeliveryToHome(String deliveryToHome) {
+    public void setDeliveryToHome(Location deliveryToHome) {
         this.deliveryToHome = deliveryToHome;
     }
 
-    public String getDeliveryToNursingHome() {
+    public Location getDeliveryToNursingHome() {
         return deliveryToNursingHome;
     }
 
-    public void setDeliveryToNursingHome(String deliveryToNursingHome) {
+    public void setDeliveryToNursingHome(Location deliveryToNursingHome) {
         this.deliveryToNursingHome = deliveryToNursingHome;
     }
 
-    public String getDeliveryToPrison() {
+    public Location getDeliveryToPrison() {
         return deliveryToPrison;
     }
 
-    public void setDeliveryToPrison(String deliveryToPrison) {
+    public void setDeliveryToPrison(Location deliveryToPrison) {
         this.deliveryToPrison = deliveryToPrison;
     }
 
-    public String getDeliveryOrder() {
+    public Location getDeliveryOrder() {
         return DeliveryOrder;
     }
 
-    public void setDeliveryOrder(String DeliveryOrder) {
+    public void setDeliveryOrder(Location DeliveryOrder) {
         this.DeliveryOrder = DeliveryOrder;
     }
 
-    public String getTotalTimeOfDelivery() {
+    public double getTotalTimeOfDelivery() {
         return totalTimeOfDelivery;
     }
 
-    public void setTotalTimeOfDelivery(String totalTimeOfDelivery) {
+    public void setTotalTimeOfDelivery(double totalTimeOfDelivery) {
         this.totalTimeOfDelivery = totalTimeOfDelivery;
     }
 
-    public String getTotalCostofDelivery() {
+    public double getTotalCostofDelivery() {
         return totalCostofDelivery;
     }
 
-    public void setTotalCostofDelivery(String totalCostofDelivery) {
+    public void setTotalCostofDelivery(double totalCostofDelivery) {
         this.totalCostofDelivery = totalCostofDelivery;
-    }
-
-    public ViewDeliveries getViewDeliveries() {
-        return viewDeliveries;
-    }
-
-    public void setViewDeliveries(ViewDeliveries viewDeliveries) {
-        this.viewDeliveries = viewDeliveries;
     }
 
     public DeliverySupplies getDeliverySupplies() {

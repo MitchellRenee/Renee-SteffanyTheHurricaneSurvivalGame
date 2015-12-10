@@ -6,6 +6,7 @@
 package byui.cit260.theHurricaneSurvivalGame.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  *
@@ -22,7 +23,6 @@ public class Location implements Serializable {
     private String visited;
     private LocationType locationType;
 
-    private StoreModel storeModel;
     private MegaStore megaStore;
 
     public Location() {
@@ -58,14 +58,7 @@ public class Location implements Serializable {
 
     public void setLocationType(LocationType locationType) {
         this.locationType = locationType;
-    }
 
-    public StoreModel getStoreModel() {
-        return storeModel;
-    }
-
-    public void setStoreModel(StoreModel storeModel) {
-        this.storeModel = storeModel;
     }
 
     public MegaStore getMegaStore() {
@@ -78,7 +71,7 @@ public class Location implements Serializable {
 
     @Override
     public String toString() {
-        return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + ", locationType=" + locationType + ", storeModel=" + storeModel + ", megaStore=" + megaStore + '}';
+        return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + ", locationType=" + locationType + ", megaStore=" + megaStore + '}';
     }
 
     @Override
@@ -88,7 +81,6 @@ public class Location implements Serializable {
         hash = 79 * hash + this.column;
         hash = 79 * hash + Objects.hashCode(this.visited);
         hash = 79 * hash + Objects.hashCode(this.locationType);
-        hash = 79 * hash + Objects.hashCode(this.storeModel);
         hash = 79 * hash + Objects.hashCode(this.megaStore);
         return hash;
     }
@@ -112,9 +104,6 @@ public class Location implements Serializable {
             return false;
         }
         if (this.locationType != other.locationType) {
-            return false;
-        }
-        if (!Objects.equals(this.storeModel, other.storeModel)) {
             return false;
         }
         if (!Objects.equals(this.megaStore, other.megaStore)) {

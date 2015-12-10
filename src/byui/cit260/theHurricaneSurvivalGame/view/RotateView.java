@@ -62,23 +62,30 @@ public class RotateView extends View {
     }
 
     private void moveNorth() {
+
         LocationControl l = new LocatonControl();
+        //try {
         l.moveNorth(null, null);
+        //} catch (MoveException me) {
+        //    System.out.println(me.getMessage());
+        //}
     }
 
     private void moveEast() {
-        System.out.println("Player moves to east coordinates."); //To change body of generated methods, choose Tools | Templates.
+        LocationControl l = new LocatonControl();
+        l.moveEast(null, null);
     }
 
     private void moveSouth() {
-        System.out.println("Player moves to south coordinates."); //To change body of generated methods, choose Tools | Templates.
+        LocationControl l = new LocatonControl();
+        l.moveSouth(null, null);
     }
 
     private void moveWest() {
-        System.out.println("Player moves to west coordinates."); //To change body of generated methods, choose Tools | Templates.
+        LocationControl l = new LocatonControl();
+        l.moveWest(null, null);
     }
 
-    @Override
     public boolean doAction(Object obj) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -95,6 +102,18 @@ public class RotateView extends View {
         }
 
         private void moveNorth(Object object, Object object0) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        private void moveEast(Object object, Object object0) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        private void moveSouth(Object object, Object object0) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        private void moveWest(Object object, Object object0) {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
     }
