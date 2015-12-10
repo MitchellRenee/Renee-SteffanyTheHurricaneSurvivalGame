@@ -4,11 +4,17 @@
  * and open the template in the editor.
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
-
-import Exception.GameException;
+/**
+* @param nameCreates a player for a new gam
+* @return  
+*/
+import byui.cit260.theHurricaneSurvivalGame.Exception.CityMapException;
+import byui.cit260.theHurricaneSurvivalGame.Exception.GameException;
+import static byui.cit260.theHurricaneSurvivalGame.control.PlayerControl.player;
 import byui.cit260.theHurricaneSurvivalGame.model.CityMap;
 import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGame;
 import byui.cit260.theHurricaneSurvivalGame.model.Item;
+import byui.cit260.theHurricaneSurvivalGame.model.Location;
 import byui.cit260.theHurricaneSurvivalGame.model.LocationType;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
 import java.io.FileInputStream;
@@ -17,6 +23,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import static javafx.beans.binding.Bindings.or;
 import thehurricanesurvivalgame.TheHurricaneSurvivalGame;
 
 /**
@@ -217,15 +226,22 @@ public class GameControl {
 
         return inventory;
     }
+   
+    public static boolean move(Player p, Location l)
+            throws CityMapException {
+        if (Player.move() && Location.exists()) {
+            throw new CityMapException("Map cannot have less than 25 locations.");
+        }
+        p.setPlayerLocation(l);
+        return false;
+    }   
 
-    static void createNewGame(Player player) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public static void getSavedGame(String filePath) throws GameException {
-        throws GameException {
-        
-    Game game = null;
+    public static void getSavedGame(String filePath) 
+            throws GameException {
+        if (Game.exists() && Game.saved()) {
+        throw new GameException ("Computer retrieves saved game."); 
+        }
+            Game game = null;
             String filepath = null;
     
     try( FileInputStream fips = new FileInputStream (filepath)) {
@@ -234,22 +250,20 @@ public class GameControl {
         game = (Game) output.readObject(); //read the game object from file
     }
     catch (FileNotFoundException fnfe) {
-        throw new GameException(fnfe.getMessage());
+        try {
+            throw new GameException(fnfe.getMessage());
+        } catch (GameException ex) {
+            Logger.getLogger(GameControl.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     catch (Exception e) {
-        throw new GameException(e.getMessage());
+        try {
+            throw new GameException(e.getMessage());
+        } catch (GameException ex) {
+            Logger.getLogger(GameControl.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
-    
-    //close the output file
-    TheHurricaneSurvivalGame.setCurrentGame(game); //save in The Hurricane Survival Game
-    }
-    }
-
-    private void startNewGame() {
-        // Create a new game
-//        GameControl.createNewGame();
-    }
-    
+}
     public static void saveGame(GameControl gameControl, String filepath)
             throws GameException, IOException {
         try( FileOutputStream fops = new FileOutputStream(filepath)) {
@@ -258,52 +272,81 @@ public class GameControl {
             output.writeObject(gameControl); //write the game object to file
         } catch(IOException e) {
             throw new GameException(e.getMessage());
-        }
+    
     }
+}           
 
     public static void createNewGame() {
-        System.out.println("\n***createNewGame stub function called ***");
+        System.out.println("Displays create new player for new game.");      
+     } 
+    public static void createNewPlayer() {
+        System.out.println("Display you may now create a new player.");    
+    }
 
+    public static void saveGame() {
+        System.out.println("Locate current game."); 
+   
+    }
+
+    //close the output file
+    TheHurricaneSurvivalGame.setCurrentGame(game);  
+
+    private void startNewGame() {
+        
+    Create a new game GameControl.createNewGame();
+    
         CityMap map = new CityMap();
         map.init();
         HurricaneSurvivalGame.getInstance().setMap(map);
         //HurricaneSurvivalGame.getInstance().setPlayer(player);
-        finishCreatePlayer();
-    }
-
-    /**
-     * Creates a player for a new game
-     *
-     * @param name
-     * @return
-     */
-    //This section gets re-written below starting at line 257
-    //public static Player finishCreatePlayer(String name) {
-    //    Player p = new Player();
-    //    p.setName(name);
-    //    p.setMoneyAccount(STARTING_CASH);
-    /*    CityMap gameMap = HurricaneSurvialGame.getInstance().getMap();
-        
-     //for loop w/ if statement that is iterating rows & col
-     //while using a getter & setter.
-     for (int row = 0; row < gameMap.getlocationMatrix.length; row++) {
-     for (int col = 0; col < gameMap.getlocationMatrix[0].length; col++) {
-     if (gameMap.getLocationMatrix()[row][col].getLocationType() == LocationType.Home) {
-     p.setPlayerLocation(gameMap.getLocationMatrix()[row][col]);
-     //this section was cleanly edited & put into cityMap
-     }  
-     }        
-        
-     p.setPlayerLocation(null);
-    
-     */
-    public static void finishCreatePlayer() {
+        finishCreatePlayer();    
+    } 
+    public static Player finishCreatePlayer() {
         Player p = HurricaneSurvivalGame.getInstance().getPlayer();
         p.setMoneyAccount(STARTING_CASH);
 
         CityMap gameMap = HurricaneSurvivalGame.getInstance().getMap();
         p.setPlayerLocation(gameMap.getHomeLocation());
 
-        //return p;
+        return p;
+
+    }
+
+    public boolean exists() {
+        return false;     
+    }
+    public boolean saved() {
+        return false;
+    }
+    
+    public void Game() {
+    }
+
+    private static class Game {
+
+        private static boolean exists() {
+        System.out.println("Location cannot exists off the map. Player cannot exists until created.");
+        return true;
+    }
+
+        private static boolean saved() {
+        System.out.println("Save existing game.");
+        return true;
+    }     
+        public Game() {
+            
+        }      
+    }
+
+    private static class game {
+
+        public game() {
+        }
+    }
+
+    private static class Create {
+
+        public Create() {
+        }
     }
 }

@@ -31,8 +31,9 @@ public abstract class MovePlayerView extends View {
                 + "\n------------------------------------");
     }
 
-    public boolean doAction(Object selection) {
+    public boolean doAction(Object move) {
         Player player;
+        
         String value = (String)move;//action was in place of move
         value = value.toUpperCase();
         char choice = value.charAt(0);

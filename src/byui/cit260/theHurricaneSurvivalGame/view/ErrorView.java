@@ -5,6 +5,7 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
 
+import com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
 import java.io.PrintWriter;
 import thehurricanesurvivalgame.TheHurricaneSurvivalGame;
 
@@ -13,19 +14,21 @@ import thehurricanesurvivalgame.TheHurricaneSurvivalGame;
  * @author Renee
  */
 public class ErrorView {
-    
+
     private static final PrintWriter errorFile = TheHurricaneSurvivalGame.getOutFile();
     private static final PrintWriter logFile = TheHurricaneSurvivalGame.getLogFile();
-    
+
     public static void display(String className, String errorMessage) {
-        
+        String Message = null;
+
         errorFile.println(
-                  "---------------------------------------------"
+                "---------------------------------------------"
                 + "\n- ERROR - " + errorMessage
+                + "\n- SUCCESS - " + Message
                 + "\n-------------------------------------------");
-        
-        //log erro
-        logFile.println(className + " - " + errorMessage);
+        String successMessage = null;
+
+        //log error
+        logFile.println(className + " - " + errorMessage + successMessage);
     }
-    
 }

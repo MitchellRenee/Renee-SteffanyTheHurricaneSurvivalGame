@@ -1,6 +1,7 @@
 package thehurricanesurvivalgame;
 
 import byui.cit260.theHurricaneSurvivalGame.control.GameControl;
+import static byui.cit260.theHurricaneSurvivalGame.control.GameControl.createNewGame;
 import static byui.cit260.theHurricaneSurvivalGame.control.PlayerControl.player;
 import byui.cit260.theHurricaneSurvivalGame.control.ProgramControl;
 import byui.cit260.theHurricaneSurvivalGame.model.CityMap;
@@ -118,9 +119,27 @@ public class TheHurricaneSurvivalGame {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-        public void write(int b) throws IOException {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public static void setCurrentGame() {
+        System.out.println("Retreive current game.");     }
+
+    public static void setCurrentGame(byui.cit260.theHurricaneSurvivalGame.control.Game game) {
+         //close the output file
+        TheHurricaneSurvivalGame.setCurrentGame(game);  
+
+        public void startNewGame() {
+      
+        Create a new game GameControl.createNewGame(); 
         }
+
+        public void write(int b) throws IOException {
+            System.out.println("Write to file and throw IOException if error."); 
+        }
+
+    public static class setCurrentGame {
+
+        public setCurrentGame() {
+        }
+    }
 
     class Game {
 

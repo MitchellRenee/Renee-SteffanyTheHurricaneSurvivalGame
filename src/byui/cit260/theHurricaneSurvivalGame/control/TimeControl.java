@@ -5,7 +5,7 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
 
-import Exception.TimeException;
+import byui.cit260.theHurricaneSurvivalGame.Exception.TimeException;
 
 /**
  *
@@ -42,7 +42,7 @@ public class TimeControl {
     }
 }
     
-    /**try {
+    /*try {
         TimeControl.calTimeRemainingInGame(double timeSpent, double totalTime){
     } catch (TimeException te) {
         System.out.println(te.getMessage());

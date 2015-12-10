@@ -5,7 +5,15 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
 
+import byui.cit260.theHurricaneSurvivalGame.model.Item;
+import byui.cit260.theHurricaneSurvivalGame.model.Player;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Scanner;
+import thehurricanesurvivalgame.TheHurricaneSurvivalGame;
 
 /**
  *
@@ -13,20 +21,131 @@ import java.util.Scanner;
  */
 public class ResourceMenuView extends View {
 
-    public ResourceMenuView() {
-        super("\n"
-                + "\n------------------------------------"
-                + "\n| Resource Menu                     "
-                + "\n------------------------------------"
-                + "\nG - Start resource list                     "
-                + "\nH - Get help on how to inventory resource"
-                + "\nS - Save resource list"
-                + "\nE - Exit"
-                + "\n------------------------------------");
+    private static final PrintWriter outFile = null;
+    //private static final Buffered inFile = null;
+    
+    private static final PrintWriter logFile = null;
+
+    public static PrintWriter getLogFile() {
+        return logFile;
     }
 
-    public boolean doAction(Object selection) {
+    public static void setLogFile(PrintWriter logFile) {
+        TheHurricaneSurvivalGame.logFile = logFile;
+    }
+
+    public ResourceMenuView(String message) {
+        super(message);
+    }
+
+    
+    /*} catch(Exception e) {
+              System.out.print("Error reading input: " + e.getMessage());
+    }      
+    return selecton;
+    */
+    
+    //Ref pg 8
+    //Link: https://content.byui.edu/file/2a20357d-883f-4256-bfe5-8297c455549b/1/Lesson%2011%20-%20Team%20Assignment.pdf
+    
+    //Reference pg. 9 
+    //Link: https://content.byui.edu/file/2a20357d-883f-4256-bfe5-8297c455549b/1/Lesson%2011%20-%20Team%20Assignment.pdf
+    //To print in Windows directory: C:\Users\Document\tmp\logfile.txt
+    String filePath = "log.txt";
+
+    //This is implemented in the main(String [] args) of Line 67-68
+    //TheHurricaneSurvivalGame.logFile = new PrintWriter(filePath);
+    
+    //Menu Option
+    public ResourceMenuView() {
+        super("\n"
+                + "\n-----------------------------------------"
+                + "\n| Resource Menu                          "
+                + "\n-----------------------------------------"
+                + "\nG - Start resource list                  "
+                + "\nH - Get help on how to inventory resource"
+                + "\nS - Save resource list                   "
+                + "\nE - Exit                                 "
+                + "\n-----------------------------------------"); 
+    }        
+        /*Add code to doActon()function to
+        selection the report menu option
+        call a view layer function that prints the report.
+        Ref pg 3
+        Link: https://content.byui.edu/file/2a20357d-883f-4256-bfe5-8297c455549b/1/Lesson%2011%20-%20Individual%20Assignment.pdf
+        */
+  
+    public boolean doAction(Object obj) {
+        Item item;
+
+        String value = (String) obj;
+
+        value = value.toUpperCase(); // Convert to all upper case
+        char choice = value.charAt(0); // Get first character entered
+
+        switch (choice) {
+            /*case 'N': // Create and start a new game
+             this.startNewGame();
+             break;
+             */
+            case 'S': // Get and start an exiting game
+                this.selectReportMenu();
+                break;
+            case 'R': //Lets the player view the player's location
+                this.displayReportMenu();
+                break;
+            case 'V': // Display the help menu
+                this.callResourceMenuViewFunction();
+                break;
+            case 'D': // Save the current game view 
+                this.displayResourceMenuView();
+                break;
+            case 'Q': // Quit the program
+                return true;
+            default:
+                System.out.println("\n*** This is an invalid selection *** Please try again");
+                break;
+        }
+        return true;
+    }
+
+    private void selectReportMenu() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-}
+    private void displayReportMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void callResourceViewLayerFunction() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void displayResourceViewLayer() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void displayResourceMenuView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void callResourceMenuViewFunction() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void write(int b) throws IOException {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void printResourceMenuViewReport(ArrayList<Item> resourceItems,
+                                            String outputLocaton) {
+    } 
+}    
+   
+
+
+  
+
+    
+        
+     

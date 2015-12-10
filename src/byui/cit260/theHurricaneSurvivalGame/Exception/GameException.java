@@ -51,5 +51,9 @@ public class GameException extends Exception {
             System.out.println("Exception: " + nullException.toString());//message will be nullPointer exception
         }    
     }
+
+    public GameException(String message) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
    
