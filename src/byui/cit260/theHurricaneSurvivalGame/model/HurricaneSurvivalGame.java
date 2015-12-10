@@ -22,7 +22,7 @@ public class HurricaneSurvivalGame implements Serializable {
     private double gameTime;
     private Player player;
 
-    private MainMenu mainMenu;
+;
     private CityMap map;
 
     private HurricaneSurvivalGame() {
@@ -67,14 +67,7 @@ public class HurricaneSurvivalGame implements Serializable {
         this.gameTime = gameTime;
     }
 
-    public MainMenu getMainMenu() {
-        return mainMenu;
-    }
-
-    public void setMainMenu(MainMenu mainMenu) {
-        this.mainMenu = mainMenu;
-    }
-
+  
     public CityMap getMap() {
         return map;
     }

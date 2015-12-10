@@ -5,8 +5,8 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
 
-import Exception.CityMapException;
-import Exception.TimeException;
+import byui.cit260.theHurricaneSurvivalGame.Exception.CityMapException;
+import byui.cit260.theHurricaneSurvivalGame.Exception.TimeException;
 import byui.cit260.theHurricaneSurvivalGame.model.CityMap;
 import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGame;
 import byui.cit260.theHurricaneSurvivalGame.model.Location;

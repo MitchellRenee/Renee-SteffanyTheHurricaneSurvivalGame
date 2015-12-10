@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Exception;
+package byui.cit260.theHurricaneSurvivalGame.Exception;
 
 import java.util.ArrayList;
 
@@ -11,34 +11,36 @@ import java.util.ArrayList;
  *
  * @author Renee
  */
-/*public class DeliveryException extends Exception {
+/*public class GameException extends Exception {
 
-    public DeliveryException() {
+    public GameException() {
     }
 
-    public DeliveryException(String message) {
+    public GameException(String message) {
         super(message);
     }
 
-    public DeliveryException(String message, Throwable cause) {
+    public GameException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public DeliveryException(Throwable cause) {
+    public GameException(Throwable cause) {
         super(cause);
-    }
 
-    public DeliveryException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+     public GameException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
-*/    
     
-public class DeliveryException extends Exception {
+    
+}    
+    }
+*/
+public class GameException extends Exception {
     
     public static void main(String args[]){
         
         // the action of the stringList will be null 
-        ArrayList<String> stringList = new ArrayList<>(); 
+        ArrayList<String> stringList = null; 
        
         try {               
             stringList.add("Sample");
@@ -49,5 +51,5 @@ public class DeliveryException extends Exception {
             System.out.println("Exception: " + nullException.toString());//message will be nullPointer exception
         }    
     }
-}    
-
+}
+   

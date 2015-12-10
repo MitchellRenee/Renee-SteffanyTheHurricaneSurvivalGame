@@ -19,11 +19,11 @@ public interface ViewInterface {
      */
     public void display();
 
-    //public String getInput() {
+    public String getInput();
 
-    }
+   
 
     public boolean doAction(Object obj);
     //Remember only the function signature are required
     //to be the same across all of the view layers
- }
+}

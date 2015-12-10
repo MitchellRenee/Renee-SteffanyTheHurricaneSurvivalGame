@@ -5,6 +5,8 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
 
+import byui.cit260.theHurricaneSurvivalGame.Exception.MoveException;
+import byui.cit260.theHurricaneSurvivalGame.Exception.StoreException;
 import byui.cit260.theHurricaneSurvivalGame.model.Item;
 
 /**
@@ -26,10 +28,11 @@ public class StoreControl {
      * player's money account.
      * @return correct items if money is in the money account.
      */
-    public static boolean purchase(Item i, ItemAmount a, MoneyAccountControl m) {
+    public static boolean purchase(Item i, ItemAmount a, MoneyAccountControl m) throws StoreException {
         boolean returnValue = false;
         if (Item.located() && ItemAmount() >= 1 && MoneyAccount() >= 4.50) {
-            returnValue = true;
+             throw new StoreException("Cannot move west.");
+            
         }
 
         return returnValue;

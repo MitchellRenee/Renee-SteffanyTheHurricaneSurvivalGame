@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Exception;
+package byui.cit260.theHurricaneSurvivalGame.Exception;
 
 import java.util.ArrayList;
 
@@ -32,13 +32,13 @@ import java.util.ArrayList;
  super(message, cause, enableSuppression, writableStackTrace);
  }
  */
-public class LocationException extends Exception { 
-    
+public class LocationException extends Exception {
+
     public static void main(String args[]) {
 
         // the action of the stringList will be null 
-        ArrayList<String> stringList =  new ArrayList<>();
-        
+        ArrayList<String> stringList = new ArrayList<>();
+
         //pass stringList call the method
         stringList = LocationException(stringList);
 
@@ -55,19 +55,14 @@ public class LocationException extends Exception {
             stringList.add("Sample Exception");
 
             System.out.println("Exception");
-            
+
             return null;
-         
+
         } finally {
             stringList.add("No.2 Exception");
-            
+
             return stringList;
         }
 
     }
 }
-
-
-    
-
-

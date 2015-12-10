@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Exception;
+package byui.cit260.theHurricaneSurvivalGame.Exception;
 
 import java.util.ArrayList;
 
@@ -11,35 +11,34 @@ import java.util.ArrayList;
  *
  * @author Renee
  */
-/* public class StoreException extends Exception {
+/*public class DeliveryException extends Exception {
 
-   public StoreException() {
+    public DeliveryException() {
     }
 
-    public StoreException(String message) {
+    public DeliveryException(String message) {
         super(message);
     }
 
-    public StoreException(String message, Throwable cause) {
+    public DeliveryException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public StoreException(Throwable cause) {
+    public DeliveryException(Throwable cause) {
         super(cause);
     }
 
-    public StoreException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public DeliveryException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
-    }  
-*/       
- // the action of the stringList will be null 
-
-public class StoreException extends Exception {
+    }
+*/    
+    
+public class DeliveryException extends Exception {
     
     public static void main(String args[]){
         
         // the action of the stringList will be null 
-        ArrayList<String> stringList = null; 
+        ArrayList<String> stringList = new ArrayList<>(); 
        
         try {               
             stringList.add("Sample");
@@ -50,4 +49,5 @@ public class StoreException extends Exception {
             System.out.println("Exception: " + nullException.toString());//message will be nullPointer exception
         }    
     }
-}
+}    
+

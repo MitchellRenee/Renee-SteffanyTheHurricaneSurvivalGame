@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Exception;
+package byui.cit260.theHurricaneSurvivalGame.Exception;
 
 import java.util.ArrayList;
 
@@ -11,41 +11,37 @@ import java.util.ArrayList;
  *
  * @author Renee
  */
-/*public class TimeException extends Exception {
+/*public class ProgramException extends Exception {
 
-    
-    public TimeException() {
-    }
+ public ProgramException() {
+ }
 
-    public TimeException(String message) {
-        super(message);
-    }
+ public ProgramException(String message) {
+ super(message);
+ }
 
-    public TimeException(String message, Throwable cause) {
-        super(message, cause);
-    }
+ public ProgramException(String message, Throwable cause) {
+ super(message, cause);
+ }
 
-    public TimeException(Throwable cause) {
-        super(cause);
-    }
+ public ProgramException(Throwable cause) {
+ super(cause);
+ }
 
-    public TimeException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
-    }   
-}
-*/
-//EX#2: create a method taking an argument of strings 
-public class TimeException extends Exception {
+ public ProgramException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+ super(message, cause, enableSuppression, writableStackTrace);
+ }
+ */
+public class ProgramException extends Exception {
 
     public static void main(String args[]) {
 
         // the action of the stringList will be null 
         ArrayList<String> stringList = null;
-        
+
         //Another way to write line 58
         //Pass in a new array list so the the stringList is not null.
         //ArrayList<String> stringList =  new ArrayList<>();
-
         //pass stringList call the method
         stringList = TimeException(stringList);
 
@@ -62,23 +58,21 @@ public class TimeException extends Exception {
             stringList.add("Sample Exception");
 
             System.out.println("Exception");
-            
+
             return null;
-         
+
         //Finally always executes.    
-        //add finally statement; assure program file is closed.
+            //add finally statement; assure program file is closed.
         } finally {
             stringList.add("Second");
-            
+
             return stringList;
         }
 
     }
 
-    public TimeException(String time_cannot_be_less_than_0) {
+    public ProgramException(String cannot_move_west) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
 }
-
-
-    

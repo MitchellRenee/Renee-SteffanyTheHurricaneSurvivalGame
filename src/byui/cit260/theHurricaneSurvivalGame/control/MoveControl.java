@@ -5,7 +5,7 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
 
-import Exception.MoveException;
+import byui.cit260.theHurricaneSurvivalGame.Exception.MoveException;
 import byui.cit260.theHurricaneSurvivalGame.model.CityMap;
 import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGame;
 import byui.cit260.theHurricaneSurvivalGame.model.Location;
@@ -17,13 +17,13 @@ import byui.cit260.theHurricaneSurvivalGame.model.Player;
  */
 public class MoveControl {
 
-    public boolean moveNorth(Player p) {
+    public boolean moveNorth(Player p) throws MoveException {
 
         int row = p.getPlayerLocation().getRow();
         int col = p.getPlayerLocation().getColumn();
 
         if (row == 0) {
-            return false; //HERE THROW AN EXCEPTION
+             throw new MoveException("Cannot move north.");
         }
 
         CityMap gameMap = HurricaneSurvivalGame.getInstance().getMap();
@@ -35,13 +35,13 @@ public class MoveControl {
         return true;
     }
 
-    public boolean moveEast(Player p) {
+    public boolean moveEast(Player p) throws MoveException {
 
         int row = p.getPlayerLocation().getRow();
         int col = p.getPlayerLocation().getColumn();
 
         if (col == 4) { // DONT HARDCODE
-            return false; //HERE THROW AN EXCEPTION
+             throw new MoveException("Cannot move west.");
         }
 
         CityMap gameMap = HurricaneSurvivalGame.getInstance().getMap();
@@ -53,13 +53,13 @@ public class MoveControl {
         return true;
     }
 
-    public boolean moveSouth(Player p) {
+    public boolean moveSouth(Player p) throws MoveException {
 
         int row = p.getPlayerLocation().getRow();
         int col = p.getPlayerLocation().getColumn();
 
         if (row == 4) { // DONT HARDCODE
-            return false; //HERE THROW AN EXCEPTION
+             throw new MoveException("Cannot move west.");
         }
 
         CityMap gameMap = HurricaneSurvivalGame.getInstance().getMap();

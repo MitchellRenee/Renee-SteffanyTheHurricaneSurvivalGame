@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Exception;
+package byui.cit260.theHurricaneSurvivalGame.Exception;
 
 import java.util.ArrayList;
 
@@ -13,31 +13,32 @@ import java.util.ArrayList;
  */
 /*public class PlayerException extends Exception {
 
-    public PlayerException() {
-    }
+ public PlayerException() {
+ }
 
-    public PlayerException(String message) {
-        super(message);
-    }
+ public PlayerException(String message) {
+ super(message);
+ }
 
-    public PlayerException(String message, Throwable cause) {
-        super(message, cause);
-    }
+ public PlayerException(String message, Throwable cause) {
+ super(message, cause);
+ }
 
-    public PlayerException(Throwable cause) {
-        super(cause);
-    }
+ public PlayerException(Throwable cause) {
+ super(cause);
+ }
 
-    public PlayerException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
-    }
-*/
-public class PlayerException extends Exception {    
+ public PlayerException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+ super(message, cause, enableSuppression, writableStackTrace);
+ }
+ */
+public class PlayerException extends Exception {
+
     public static void main(String args[]) {
 
         // the action of the stringList will be null 
-        ArrayList<String> stringList =  new ArrayList<>();
-        
+        ArrayList<String> stringList = new ArrayList<>();
+
         //pass stringList call the method
         stringList = PlayerException(stringList);
 
@@ -54,18 +55,14 @@ public class PlayerException extends Exception {
             stringList.add("Sample Exception");
 
             System.out.println("Exception");
-            
+
             return null;
-         
+
         } finally {
             stringList.add("Exception #2");
-            
+
             return stringList;
         }
 
     }
 }
-
-
-    
-

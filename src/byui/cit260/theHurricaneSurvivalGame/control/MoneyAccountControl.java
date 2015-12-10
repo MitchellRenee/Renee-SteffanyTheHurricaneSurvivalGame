@@ -5,7 +5,7 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
 
-import Exception.MoneyAccountException;
+import byui.cit260.theHurricaneSurvivalGame.Exception.MoneyAccountException;
 
 /**
  *

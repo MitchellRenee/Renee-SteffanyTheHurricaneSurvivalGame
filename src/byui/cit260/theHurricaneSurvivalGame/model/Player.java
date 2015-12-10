@@ -5,7 +5,7 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.model;
 
-import byui.cit260.theHurricaneSurvivalGame.control.HarvestControl;
+
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -144,6 +144,10 @@ public class Player implements Serializable {
     }
 
     public Object getLocation() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setLocation(Location newLoc) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

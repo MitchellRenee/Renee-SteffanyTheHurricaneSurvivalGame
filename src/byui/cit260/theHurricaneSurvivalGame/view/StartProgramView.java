@@ -5,6 +5,7 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
 
+import byui.cit260.theHurricaneSurvivalGame.Exception.ProgramException;
 import byui.cit260.theHurricaneSurvivalGame.control.ProgramControl;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
 import java.util.Scanner;
@@ -18,7 +19,7 @@ public class StartProgramView {
     public StartProgramView() {
     }
 
-    public void startProgram() {
+    public void startProgram() throws ProgramException {
 
         //Display the banner screen
         this.display();

@@ -5,6 +5,8 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
 
+import byui.cit260.theHurricaneSurvivalGame.Exception.MoveException;
+import byui.cit260.theHurricaneSurvivalGame.Exception.ProgramException;
 import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGame;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
 
@@ -15,9 +17,10 @@ import byui.cit260.theHurricaneSurvivalGame.model.Player;
 public class ProgramControl {
 //Did not pass 
     // This algorithm checks to make sure the value of name of the input parameter contains a value not a null
-    public static Player createPlayer(String name) {
+    public static Player createPlayer(String name) throws ProgramException {
         if (name == null) {
-            return null;
+             throw new ProgramException("Name cannot be null or empty.");
+           
         }
 
         Player player = new Player();
