@@ -65,27 +65,27 @@ public abstract class MovePlayerView extends View {
     }
 
     private void viewLocation() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.print("View the player's move."); 
     }
 
     private void moveNorth() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.print("View northward move."); 
     }
 
     private void moveEast() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.print("View eastward move."); 
     }
 
     private void moveSouth() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         System.out.print("View southward move."); 
     }
 
     private void moveWest() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         System.out.print("View westtward move."); 
     }
 
     private void viewMap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         System.out.print("View the main map."); 
     }
 }
 
