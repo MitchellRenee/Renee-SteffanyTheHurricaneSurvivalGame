@@ -62,10 +62,10 @@ public class CityMap implements Serializable {
     }
 
     public Location getHomeLocation() {
-        for (int row = 0; row < locationMatrix.length; row++) {
+        for (Location[] locationMatrix1 : locationMatrix) {
             for (int col = 0; col < locationMatrix[0].length; col++) {
-                if (locationMatrix[row][col].getLocationType() == LocationType.Home) {
-                    return locationMatrix[row][col];
+                if (locationMatrix1[col].getLocationType() == LocationType.Home) {
+                    return locationMatrix1[col];
                 }
             }
         }
@@ -88,9 +88,9 @@ public class CityMap implements Serializable {
 
         String rtn = "";
 
-        for (int row = 0; row < locationMatrix.length; row++) {
+        for (Location[] locationMatrix1 : locationMatrix) {
             for (int col = 0; col < locationMatrix[0].length; col++) {
-                rtn += "[" + locationMatrix[row][col].getLocationType() + "]";
+                rtn += "[" + locationMatrix1[col].getLocationType() + "]";
             }
             rtn += "\n";
         }

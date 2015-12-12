@@ -21,11 +21,11 @@ public class CityMapControl {
    
     public static boolean move(Player p, Location l)
             throws CityMapException {
-        if (Player.Move() && Location.exists()) {
+        //ADD RETURN FALSE THEN RETURN TRUE
+        if (Player.move() && Location.open()) {
             throw new CityMapException("Map cannot have less than 25 locations.");
         }
         p.setPlayerLocation(l);
         return false;
     }
-
 }

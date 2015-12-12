@@ -30,6 +30,8 @@ public class PlayerControl {
      * @return Was the player able to create a name?
      */
     public static boolean player(String name, Location l, String status ) {
+        //FINISH WRITING THE IF AND THROW EXCEPTIONS HERE
+        //if(name != null && l.open && status.toString("Yes"))
         
         return true;
     }

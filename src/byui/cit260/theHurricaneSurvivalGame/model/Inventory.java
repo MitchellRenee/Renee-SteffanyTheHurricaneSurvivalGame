@@ -14,14 +14,19 @@ import java.util.Objects;
  */
 public class Inventory implements Serializable {
 
-    public static boolean valid() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     //class instance variables
+    private int countListedItems;
     private String viewSupplyList;
 
     public Inventory() {
+    }
+
+    public int getCountListedItems() {
+        return countListedItems;
+    }
+
+    public void setCountListedItems(int countListedItems) {
+        this.countListedItems = countListedItems;
     }
 
     public String getViewSupplyList() {
@@ -33,15 +38,16 @@ public class Inventory implements Serializable {
     }
 
     @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 41 * hash + Objects.hashCode(this.viewSupplyList);
-        return hash;
+    public String toString() {
+        return "Inventory{" + "countListedItems=" + countListedItems + ", viewSupplyList=" + viewSupplyList + '}';
     }
 
     @Override
-    public String toString() {
-        return "ViewInventoryModel{" + "viewSupplyList=" + viewSupplyList + '}';
+    public int hashCode() {
+        int hash = 7;
+        hash = 17 * hash + this.countListedItems;
+        hash = 17 * hash + Objects.hashCode(this.viewSupplyList);
+        return hash;
     }
 
     @Override
@@ -53,10 +59,17 @@ public class Inventory implements Serializable {
             return false;
         }
         final Inventory other = (Inventory) obj;
+        if (this.countListedItems != other.countListedItems) {
+            return false;
+        }
         if (!Objects.equals(this.viewSupplyList, other.viewSupplyList)) {
             return false;
         }
         return true;
     }
 
+    public static boolean valid() {
+        System.out.println("Item cannot be vaild unless it is listed on the supply list.");
+        return true;
+    }
 }

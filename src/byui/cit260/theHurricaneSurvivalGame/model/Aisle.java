@@ -8,11 +8,18 @@ package byui.cit260.theHurricaneSurvivalGame.model;
 import java.io.Serializable;
 
 /**
+ * This calls a method based on the input
+ *
+ * @param input
+ */
+
+/**
  *
  * @author Renee
  */
-public class Aisle implements Serializable{
-    
+public class Aisle implements Serializable {
+
+    // make this a list or a single array
     //class instance variables
     private int aisle1;
     private int aisle2;
@@ -22,7 +29,7 @@ public class Aisle implements Serializable{
 
     public Aisle() {
     }
-    
+
     public int getAisle1() {
         return aisle1;
     }
@@ -67,7 +74,7 @@ public class Aisle implements Serializable{
     public String toString() {
         return "Aisle{" + "aisle1=" + aisle1 + ", aisle2=" + aisle2 + ", aisle3=" + aisle3 + ", aisle4=" + aisle4 + ", aisle5=" + aisle5 + '}';
     }
-    
+
     @Override
     public int hashCode() {
         int hash = 5;
@@ -104,177 +111,166 @@ public class Aisle implements Serializable{
             return false;
         }
         return true;
-    }   
+    }
 
-    
-    //Ques: Is it okay to use the int for the
-    //list and the String for the name of items listed?
-    
-    private Location[][] locationMatrix;
+    private Location[] locationMatrix;
     public static int getMapDisplay;
-   
-    /*public  Aisle() {
-        locationMatrix = new Location[0][5];
+
+    public Aisle() {
+        locationMatrix = new Location[0];
         //how do I creat a list instead of an array 
-    }  
-    */
-    public void init (){
+    }
 
-        for (int aisle = 0; aisle < locationMatrix.length; aisle++){
-            //for (int aisle = 0; aisle < locationMatrix[0].length; aisle++) {
-                Location tempLocation = new Location();
-                tempLocation.setAisle(aisle);
-                //tempLocation.setAisleNumber;
-                 tempLocation.setLocationType(LocationType.Empty);
-                
-    //            locationMatrix[aisle][] = tempLocation;
-            }
-          
-     
-       
-        locationMatrix[0][0].setLocationType(LocationType.Aisle1);
+    public void init() {
 
-        locationMatrix[1][1].setLocationType(LocationType.Aisle2);
+        for (int aisle = 0; aisle < locationMatrix.length; aisle++) {
+           
+            Location tempLocation = new Location();
+            tempLocation.setAisle(aisle);            
+            tempLocation.setLocationType(LocationType.Empty);
 
-        locationMatrix[2][2].setLocationType(LocationType.Aisle3);
+        locationMatrix[] = tempLocation;
         
-        locationMatrix[3][3].setLocationType(LocationType.Aisle4);
 
-        locationMatrix[4][4].setLocationType(LocationType.Aisle5);
+        locationMatrix[0].setLocationType(LocationType.Aisle1);
 
-        locationMatrix[5][5].setLocationType(LocationType.Empty);
+        locationMatrix[1].setLocationType(LocationType.Aisle2);
 
- 
-     }
+        locationMatrix[2].setLocationType(LocationType.Aisle3);
 
-    public Location[][] getLocationMatrix() {
+        locationMatrix[3].setLocationType(LocationType.Aisle4);
+
+        locationMatrix[4].setLocationType(LocationType.Aisle5);
+
+        locationMatrix[5].setLocationType(LocationType.Empty);
+
+    }
+
+    public Location[] getLocationMatrix() {
         return locationMatrix;
     }
 
-    public void setLocationMatrix(Location[][] locationMatrix) {
+    public void setLocationMatrix(Location[] locationMatrix) {
         this.locationMatrix = locationMatrix;
     }
 
-    /*public Location[] getAisleLocation() {
-        for (int aisle = 0; aisle < locationMatrix.length; aisle++) {
-            for (Location locationMatrix1 : locationMatrix[0]) {
-              if (locationMatrix[aisle].getLocationType() == LocationType.Aisle1) {
-                    return locationMatrix[aisle];
-                }
+    public Location getAisleLocation() {
+        for (Location locationMatrix1 : locationMatrix) {
+            if (locationMatrix1.getLocationType() == LocationType.Aisle1) {
+                return locationMatrix1;
             }
         }
+
         return null;
     }
-*/     
-                 
+
     void setProtein(String aisle_1) {
         System.out.println("Protein is located in aisle 1.");
-    } 
+    }
 
     void setSnacks(String aisle_1) {
-          System.out.println("Snacks is located in aisle 1.");
+        System.out.println("Snacks is located in aisle 1.");
     }
 
     void setSweets(String aisle_1) {
-          System.out.println("Sweets is located in aisle 1.");
+        System.out.println("Sweets is located in aisle 1.");
     }
 
     void setCarbs(String aisle1) {
-          System.out.println("Carbs is located in aisle 1.");
+        System.out.println("Carbs is located in aisle 1.");
     }
 
     void setWater(String aisle1) {
-          System.out.println("Water is located in aisle 1.");
+        System.out.println("Water is located in aisle 1.");
     }
 
     void setBatteries(String aisle_2) {
-          System.out.println("Batteries is located in aisle 1.");
+        System.out.println("Batteries is located in aisle 1.");
     }
 
     void setFlashlight(String aisle2) {
-          System.out.println("Flashlight is located in aisle 1.");
+        System.out.println("Flashlight is located in aisle 1.");
     }
 
     void setCandles(String aisle2) {
-          System.out.println("Candles is located in aisle 1.");
+        System.out.println("Candles is located in aisle 1.");
     }
 
     void setLedLantern(String aisle2) {
-          System.out.println("LedLantern is located in aisle 1.");
+        System.out.println("LedLantern is located in aisle 1.");
     }
 
     void setMatches(String aisle2) {
-          System.out.println("Matches is located in aisle 1.");
+        System.out.println("Matches is located in aisle 1.");
     }
 
     void setTent(String aisle3) {
-          System.out.println("Tent is located in aisle 1.");
+        System.out.println("Tent is located in aisle 1.");
     }
 
     void setCanopy(String aisle3) {
-          System.out.println("Canopy is located in aisle 1.");
+        System.out.println("Canopy is located in aisle 1.");
     }
 
     void setRainBoots(String aisle3) {
-          System.out.println("RainBoots is located in aisle 1.");
+        System.out.println("RainBoots is located in aisle 1.");
     }
 
     void setRainParker(String aisle3) {
-          System.out.println("RainParker is located in aisle 1.");
+        System.out.println("RainParker is located in aisle 1.");
     }
 
     void setBlanket(String aisle_3) {
-          System.out.println("Blanket is located in aisle 1.");
+        System.out.println("Blanket is located in aisle 1.");
     }
 
     void setPrescribedMeds(String aisle4) {
-          System.out.println("PrescribedMeds is located in aisle 1.");
+        System.out.println("PrescribedMeds is located in aisle 1.");
     }
 
     void setOverTheCounterMeds(String aisle4) {
-          System.out.println("OverTheCounterMeds is located in aisle 1.");
+        System.out.println("OverTheCounterMeds is located in aisle 1.");
     }
 
     void setFirstAidKit(String aisle4) {
-           System.out.println("FirstAidKit is located in aisle 1.");
+        System.out.println("FirstAidKit is located in aisle 1.");
     }
 
     void setToiletries(String aisle4) {
-          System.out.println("Toiletries is located in aisle 1.");
+        System.out.println("Toiletries is located in aisle 1.");
     }
 
     void setCrankRadio(String aisle5) {
-          System.out.println("CrankRadio is located in aisle 1.");
+        System.out.println("CrankRadio is located in aisle 1.");
     }
 
     void setCookingStove(String aisle5) {
-          System.out.println(" CookingStoveis located in aisle 1.");
+        System.out.println(" CookingStoveis located in aisle 1.");
     }
 
     void setGenerator(String aisle5) {
-          System.out.println("Generator is located in aisle 1.");
+        System.out.println("Generator is located in aisle 1.");
     }
 
     void setFuel(String aisle5) {
-          System.out.println("Fuel is located in aisle 1.");
+        System.out.println("Fuel is located in aisle 1.");
     }
 
     void setEmpty(String this_is_not_an_Aisle) {
-          System.out.println("EmptyItem is located in aisle 1.");
-    }  
-    
+        System.out.println("EmptyItem is located in aisle 1.");
+    }
+
     public int getLocationType() {
         System.out.println("Retrieve aisle location type.");
         return 0;
-    }    
-    
-    public void setAisle() {
-       System.out.println("Aisles are predetermined.");  
-      
+    }
 
-    Aisle department = new Aisle();
-        
-        department.setProtein ("Aisle1");
+    public void setAisle() {
+        System.out.println("Aisles are predetermined.");
+
+        Aisle department = new Aisle();
+
+        department.setProtein("Aisle1");
         department.setSnacks("Aisle1");
         department.setSweets("Aisle1");
         department.setCarbs("Aisle1");
@@ -297,10 +293,12 @@ public class Aisle implements Serializable{
         department.setCookingStove("Aisle5");
         department.setGenerator("Aisle5");
         department.setFuel("Aisle5");
-        department.setEmpty("This is not an Aisle.");  
+        department.setEmpty("This is not an Aisle.");
+    }
+
+    private static class locationMatrix {
+
+        public locationMatrix() {
+        }
     }
 }
-
-           
-   
-

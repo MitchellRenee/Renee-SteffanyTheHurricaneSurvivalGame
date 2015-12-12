@@ -43,9 +43,7 @@ import java.util.ArrayList;
         try {               
             stringList.add("Sample");
         } catch (NullPointerException nullException){//try/catch statement needs input parameters in the catch
-            //footnote: there are a variety of options of outputs from line 26-28 and more 
-                //nullException.printStackTrace();
-            //System.out.println("Exception: " + nullException.getMessage());//message will be null
+            //footnote: ADD A NULLPOINTER EXCEPTION HERE
             System.out.println("Exception: " + nullException.toString());//message will be nullPointer exception
         }    
     }

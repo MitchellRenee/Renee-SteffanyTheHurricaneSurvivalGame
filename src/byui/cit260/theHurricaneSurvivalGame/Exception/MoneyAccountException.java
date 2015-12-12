@@ -50,6 +50,7 @@ public class MoneyAccountException extends Exception {
         try {
             stringList.add("Sample");
             System.out.println("No Exception");
+            //ADD NULLPOINTER EXCEPTION
         } catch (NullPointerException nullException) {
             stringList = new ArrayList<String>();  //The stringList is null; initialize stringList.
             stringList.add("Sample Exception");
@@ -62,13 +63,13 @@ public class MoneyAccountException extends Exception {
             //add finally statement; assure program file is closed.
         } finally {
             stringList.add("Second");
-
+            //ADD A FINALLY STATEMENT
             return stringList;
         }
 
     }
 
     public MoneyAccountException(String player_cannot_buy_item) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Player cannot buy item if money account is less than 1.50."); 
     }
 }

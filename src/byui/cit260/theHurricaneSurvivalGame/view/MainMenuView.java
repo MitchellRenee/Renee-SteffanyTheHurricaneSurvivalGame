@@ -15,9 +15,11 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
 
+import byui.cit260.theHurricaneSurvivalGame.Exception.GameException;
 import byui.cit260.theHurricaneSurvivalGame.control.GameControl;
 import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGame;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
+import java.io.IOException;
 import java.util.Scanner;
 import thehurricanesurvivalgame.TheHurricaneSurvivalGame;
 
@@ -41,12 +43,7 @@ public class MainMenuView extends View {
                 + "\nS - Save game                       "
                 + "\nQ- Quit                             "
                 + "\n------------------------------------");
-        /**
-         * This calls a method based on the input
-         *
-         * @param input
-         */
-    }
+    }   
 
     public boolean doAction(Object obj) {
 
@@ -81,43 +78,42 @@ public class MainMenuView extends View {
         return true;
     }
 
-    /*private void startNewGame() {
+    private void startNewGame() {
      //Create a new game
-     //GameControl c = new GameControl();
-     GameControl.createNewGame();
-       
-     //Display the game menu
-     GameMenuView gameMenu = new GameMenuView();
-     gameMenu.display();
-     }
-     */
+        //GameControl c = new GameControl();
+        GameControl.createNewGame();
+
+        //Display the game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
+    }
+
     private void startExistingGame() {
         System.out.println("\n\nEnter the file path or file where the game "
-                            + "is to be saved.");
+                + "is to be saved.");
         String filePath = this.getInput();
-        
-        try { 
+
+        try {
             //start a saved game
             GameControl.getSavedGame(filePath);
         } catch (Exception ex) {
             ErrorView.display("MainMenuView", ex.getMessage());
         }
-        
+
         //display game menu
-        
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
     }
 
     private void saveGame() {
         System.out.println("\n\nEnter the file path or file where the game "
-                            + "is to be saved.");
+                + "is to be saved.");
         String filePath = this.getInput();
-        
-        try { 
+
+        try {
             //save game specified file
             GameControl.saveGame(TheHurricaneSurvivalGame.getCurrentGame(), filePath);
-        } catch (Exception ex) {
+        } catch (GameException | IOException ex) {
             ErrorView.display("MainMenuView", ex.getMessage());
         }
     }

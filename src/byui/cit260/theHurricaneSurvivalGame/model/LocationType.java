@@ -32,4 +32,8 @@ public enum LocationType {
     Garagae,
     Kitchen,    
     ADDMORE;    
+
+    public boolean open() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }    
 }

@@ -31,7 +31,8 @@ public class MoveException extends Exception {
             stringList.add("Sample");
             System.out.println("No Exception");
         } catch (NullPointerException nullException) {
-            stringList = new ArrayList<String>();  //The stringList is null; initialize stringList.
+            //ADD A NULLPOINTEREXCEPTION
+            stringList = new ArrayList<>();  //The stringList is null; initialize stringList.
             stringList.add("Sample Exception");
 
             System.out.println("Exception");
@@ -42,17 +43,18 @@ public class MoveException extends Exception {
             //add finally statement; assure program file is closed.
         } finally {
             stringList.add("Second");
-
+            //ADD FINALLY STATEMENT 
             return stringList;
+            //ADD FINALLY STATEMENT
         }
     }
 
     public MoveException(String player_cannot_leave_map_locaation) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 
-    public boolean getMessag() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void getMessag() {
+        System.out.println("Retrieve message from computer");
     }  
 
     public MoveException() {

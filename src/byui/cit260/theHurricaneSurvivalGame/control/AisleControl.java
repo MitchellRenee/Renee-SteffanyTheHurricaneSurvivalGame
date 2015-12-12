@@ -38,6 +38,16 @@ class AisleControl {
         }
         return 0;
     }
+
+    static boolean valid() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }    
+
+    static boolean open() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
 }
     
 

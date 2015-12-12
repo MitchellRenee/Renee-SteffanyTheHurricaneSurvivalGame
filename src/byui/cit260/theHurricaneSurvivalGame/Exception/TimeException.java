@@ -71,12 +71,13 @@ public class TimeException extends Exception {
             stringList.add("Second");
             
             return stringList;
+            //ADD A FINALLY STATEMENT HERE
         }
 
     }
 
     public TimeException(String time_cannot_be_less_than_0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Total start time cannot be less than 48 hours."); 
     }
 }
 

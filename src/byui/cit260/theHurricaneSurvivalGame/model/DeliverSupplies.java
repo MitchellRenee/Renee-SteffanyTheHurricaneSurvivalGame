@@ -18,7 +18,7 @@ public class DeliverSupplies implements Serializable {
     private boolean item;
     private boolean purchased;
     private Location deliveryCenter;
-    private boolean deliveryLocation;
+    private Location deliveryLocation;
     private double deliveryTime;
 
     public DeliverSupplies() {
@@ -48,11 +48,11 @@ public class DeliverSupplies implements Serializable {
         this.deliveryCenter = deliveryCenter;
     }
 
-    public boolean isDeliveryLocation() {
+    public Location isDeliveryLocation() {
         return deliveryLocation;
     }
 
-    public void setDeliveryLocation(boolean deliveryLocation) {
+    public void setDeliveryLocation(Location deliveryLocation) {
         this.deliveryLocation = deliveryLocation;
     }
 
@@ -75,8 +75,7 @@ public class DeliverSupplies implements Serializable {
         hash = 19 * hash + (this.item ? 1 : 0);
         hash = 19 * hash + (this.purchased ? 1 : 0);
         hash = 19 * hash + Objects.hashCode(this.deliveryCenter);
-        hash = 19 * hash + (this.deliveryLocation ? 1 : 0);
-        hash = 19 * hash + (int) (Double.doubleToLongBits(this.deliveryTime) ^ (Double.doubleToLongBits(this.deliveryTime) >>> 32));
+       hash = 19 * hash + (int) (Double.doubleToLongBits(this.deliveryTime) ^ (Double.doubleToLongBits(this.deliveryTime) >>> 32));
         return hash;
     }
 

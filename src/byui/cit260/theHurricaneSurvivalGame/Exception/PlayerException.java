@@ -51,7 +51,7 @@ public class PlayerException extends Exception {
             stringList.add("Sample");
             System.out.println("No Exception");
         } catch (NullPointerException nullException) {
-            stringList = new ArrayList<String>();  //The stringList is null; initialize stringList.
+            stringList = new ArrayList<>();  //The stringList is null; initialize stringList.
             stringList.add("Sample Exception");
 
             System.out.println("Exception");
@@ -60,7 +60,7 @@ public class PlayerException extends Exception {
 
         } finally {
             stringList.add("Exception #2");
-
+        //WRITE A FINALLY CLOSING STATEMENT HERE
             return stringList;
         }
 

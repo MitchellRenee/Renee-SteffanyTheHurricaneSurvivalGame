@@ -90,23 +90,56 @@ public class WelcomeView {
 
             // Get the user's selection
             String input = this.getInput();
+            
             // Get first character of string
             selection = input.charAt(0);
 
             // Do action based on selection
             this.doAction(selection);
 
-            // An selection is not "Exit"
+            // A selection is not "Exit"
         } while (selection != 'E');
 
     }
+    public boolean doAction(char selection) {
 
+        switch (selection) {
+            case 'M': // Display main menu
+                this.startDisplayMainMenu();
+                break;
+            case 'G': // Get user's input
+                this.getInput();
+                break;
+            case 'H': // Retrieve first character of string
+                this.inputCharAt(0);
+                break;
+            case 'S': // Do action based on selection 
+                this.performAction();
+                break;
+            case 'Q': // Quit 
+                return true;
+            default:
+                System.out.println("\n*** This is an invalid selection *** Please try again");
+                break;
+        }
+        return false;
+    }
+    
     private String getInput() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Retrieve input."); 
+        return null;
     }
 
-    private void doAction(char selection) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private void startDisplayMainMenu() {
+        System.out.println("Display main menu."); 
+    }    
+    
+    private void inputCharAt(int i) {
+        System.out.println("User."); 
+    }
+
+       private void performAction() {
+        System.out.println("Retrieve input."); 
     }
 
 }

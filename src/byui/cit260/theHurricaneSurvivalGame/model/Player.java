@@ -15,18 +15,6 @@ import java.util.Objects;
  */
 public class Player implements Serializable {
 
-    public static boolean Move() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public static boolean exists() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public static boolean move() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     //class instance variable
     private String namePlayer;
     private boolean bestTime;
@@ -148,14 +136,19 @@ public class Player implements Serializable {
     }
 
     public Object getLocation() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     public void setLocation(Location newLoc) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
-}
-//    public void setItem(HarvestControl.Item i) {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-// 
 
+    public static boolean move() {
+        throw new UnsupportedOperationException("Not supported yet."); 
+    }
+
+    public static boolean exists() {
+        throw new UnsupportedOperationException("Not supported yet."); 
+    }    
+}
+    

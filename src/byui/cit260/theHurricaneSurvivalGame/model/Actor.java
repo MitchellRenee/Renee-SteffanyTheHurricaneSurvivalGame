@@ -13,7 +13,7 @@ import java.util.Objects;
  * @author Renee
  */
 //modify class keyword with enum keyword in class defininition.
-/*public enum Actor implements Serializable {
+public enum Actor implements Serializable {
 
     Joan("She is a middle-aged single woman, who is a naturalist."),
     Zion("He is a disaster relief specialist, with a family."),
@@ -74,5 +74,6 @@ private String ;
 
     @Override
         public String toString() {
+    String name;
         return "Actor{" + "name=" + name + ", description=" + description + ", coordinates=" + coordinates + '}';
- */
+ 

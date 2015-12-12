@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author Renee
  */
 //now create an nullpoint exception
-public class CityMapException  extends Exception {
+public class CityMapException extends Exception {
 
     public CityMapException() {
     }
@@ -32,8 +32,6 @@ public class CityMapException  extends Exception {
     public CityMapException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
-    
-    
 
     public static void main(String args[]) {
 
@@ -52,28 +50,26 @@ public class CityMapException  extends Exception {
             System.out.println("No Exception");
 
         } catch (NullPointerException nullException) {
-            /**nullException.printStackTrace();
-            System.out.println("Exception: " + nullException.getMessage());
-            another way to write an exception is with a String.
-            System.out.println("Exception: " + nullException.toString());
-            */
+            /**
+             * nullException.printStackTrace(); System.out.println("Exception: "
+             * + nullException.getMessage()); another way to write an exception
+             * is with a String. System.out.println("Exception: " +
+             * nullException.toString());
+             */
             stringList = new ArrayList<>();//initialize the local reference stringlist
             stringList.add("Sample Exception");
 
             System.out.println("Exception");
 
             return null;
-        
-        }catch (Exception e){
+
+        } catch (Exception e) {
 
         } finally {
             stringList.add("Second");
-    
-         return stringList;
+
+            return stringList;
+            // WRITE A FINALLY STATEMENT HERE
         }
     }
 }
-
-    
-
-        

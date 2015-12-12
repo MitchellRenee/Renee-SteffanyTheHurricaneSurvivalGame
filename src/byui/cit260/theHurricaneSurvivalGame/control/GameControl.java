@@ -11,11 +11,13 @@ package byui.cit260.theHurricaneSurvivalGame.control;
 import byui.cit260.theHurricaneSurvivalGame.Exception.CityMapException;
 import byui.cit260.theHurricaneSurvivalGame.Exception.GameException;
 import static byui.cit260.theHurricaneSurvivalGame.control.PlayerControl.player;
+import byui.cit260.theHurricaneSurvivalGame.model.Aisle;
 import byui.cit260.theHurricaneSurvivalGame.model.CityMap;
 import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGame;
 import byui.cit260.theHurricaneSurvivalGame.model.Item;
 import byui.cit260.theHurricaneSurvivalGame.model.Location;
 import byui.cit260.theHurricaneSurvivalGame.model.LocationType;
+import byui.cit260.theHurricaneSurvivalGame.model.MegaStore;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -275,7 +277,16 @@ public class GameControl {
     
     }
 }           
-
+    private static  MegaStore initMegaStore()  {
+        
+        MegaStore store = new MegaStore();
+        Aisle  a =  new Aisle ();
+        a.init();        
+        store.setAisle(a);
+        return store;   
+    }
+     
+            
     public static void createNewGame() {
         System.out.println("Displays create new player for new game.");      
      } 
@@ -286,14 +297,8 @@ public class GameControl {
     public static void saveGame() {
         System.out.println("Locate current game."); 
    
-    }
-    // ERROR
-    //close the output file
-    //TheHurricaneSurvivalGame.setCurrentGame(game);  
-
-    private void startNewGame() {
-        
-    //Create a new game GameControl.createNewGame();
+    //Create a new game
+    GameControl.createNewGame();
     
         CityMap map = new CityMap();
         map.init();

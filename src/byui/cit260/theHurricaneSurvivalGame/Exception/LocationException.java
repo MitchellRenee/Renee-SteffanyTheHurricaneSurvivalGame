@@ -50,8 +50,9 @@ public class LocationException extends Exception {
         try {
             stringList.add("Sample");
             System.out.println("No Exception");
+            //ADD NULLPOINTEREXCEPTION
         } catch (NullPointerException nullException) {
-            stringList = new ArrayList<String>();  //The stringList is null; initialize stringList.
+            stringList = new ArrayList<>();  //The stringList is null; initialize stringList.
             stringList.add("Sample Exception");
 
             System.out.println("Exception");
@@ -60,9 +61,13 @@ public class LocationException extends Exception {
 
         } finally {
             stringList.add("No.2 Exception");
-
+            //ADD A FINALLY STATEMENT
             return stringList;
         }
 
+    }
+
+    public LocationException(String player_cannot_leave_map_location) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

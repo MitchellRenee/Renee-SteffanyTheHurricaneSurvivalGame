@@ -14,12 +14,9 @@ import java.util.Objects;
  */
 public class Location implements Serializable {
 
-    public static boolean exists() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     private int row;
     private int column;
+    private Aisle aisle;
     private String visited;
     private LocationType locationType;
 
@@ -28,6 +25,14 @@ public class Location implements Serializable {
     public Location() {
     }
 
+    public Aisle getAisle() {
+        return aisle;
+    }
+
+    public void setAisle(Aisle aisle) {
+        this.aisle = aisle;
+    }
+    
     public int getRow() {
         return row;
     }
@@ -76,12 +81,13 @@ public class Location implements Serializable {
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 79 * hash + this.row;
-        hash = 79 * hash + this.column;
-        hash = 79 * hash + Objects.hashCode(this.visited);
-        hash = 79 * hash + Objects.hashCode(this.locationType);
-        hash = 79 * hash + Objects.hashCode(this.megaStore);
+        int hash = 3;
+        hash = 83 * hash + this.row;
+        hash = 83 * hash + this.column;
+        hash = 83 * hash + Objects.hashCode(this.aisle);
+        hash = 83 * hash + Objects.hashCode(this.visited);
+        hash = 83 * hash + Objects.hashCode(this.locationType);
+        hash = 83 * hash + Objects.hashCode(this.megaStore);
         return hash;
     }
 
@@ -100,6 +106,9 @@ public class Location implements Serializable {
         if (this.column != other.column) {
             return false;
         }
+        if (!Objects.equals(this.aisle, other.aisle)) {
+            return false;
+        }
         if (!Objects.equals(this.visited, other.visited)) {
             return false;
         }
@@ -111,9 +120,14 @@ public class Location implements Serializable {
         }
         return true;
     }
-
     void setAisle(int aisle) {
+        System.out.println("Create new aisle.");
+    }
+     public static boolean exists() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    public static boolean open() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }   
 }

@@ -31,10 +31,43 @@ public class MegaStore implements Serializable {
     private String unprescrbedMeds;
     private String tent;
     private String gameMenu;
+    private Aisle aisle;
 
     public MegaStore() {
     }
 
+    public String getPrescribedMeds() {
+        return prescribedMeds;
+    }
+
+    public void setPrescribedMeds(String prescribedMeds) {
+        this.prescribedMeds = prescribedMeds;
+    }
+
+    public String getUnprescrbedMeds() {
+        return unprescrbedMeds;
+    }
+
+    public void setUnprescrbedMeds(String unprescrbedMeds) {
+        this.unprescrbedMeds = unprescrbedMeds;
+    }
+
+    public String getTent() {
+        return tent;
+    }
+
+    public void setTent(String tent) {
+        this.tent = tent;
+    }
+
+    public Aisle getAisle() {
+        return aisle;
+    }
+
+    public void setAisle(Aisle aisle) {
+        this.aisle = aisle;
+    }
+    
     public String getProtien() {
         return protien;
     }
