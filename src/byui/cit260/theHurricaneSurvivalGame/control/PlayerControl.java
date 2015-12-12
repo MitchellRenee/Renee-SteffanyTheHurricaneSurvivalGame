@@ -29,7 +29,7 @@ public class PlayerControl {
      * and time left to play game
      * @return Was the player able to create a name?
      */
-    public static boolean player(String name, Location l, String status) {
+    public static boolean player(String name, Location l, String status ) {
         
         return true;
     }

@@ -18,16 +18,7 @@ import byui.cit260.theHurricaneSurvivalGame.model.Player;
  */
 public class CityMapControl {
 
-    /**
-     * <h2>Move:</h2>
-     * <p>
-     * Move player from current location to a new location if the location is
-     * available.</p>
-     *
-     * @param Player is the person to be moved
-     * @param Location is the destination
-     * @return Was the player able to move to the new location?
-     */
+   
     public static boolean move(Player p, Location l)
             throws CityMapException {
         if (Player.Move() && Location.exists()) {

@@ -5,7 +5,7 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
 
-import com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
+
 import java.io.PrintWriter;
 import thehurricanesurvivalgame.TheHurricaneSurvivalGame;
 
@@ -30,5 +30,9 @@ public class ErrorView {
 
         //log error
         logFile.println(className + " - " + errorMessage + successMessage);
+    }
+
+    static void display(String name) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

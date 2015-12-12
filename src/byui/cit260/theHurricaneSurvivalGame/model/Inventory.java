@@ -14,6 +14,10 @@ import java.util.Objects;
  */
 public class Inventory implements Serializable {
 
+    public static boolean valid() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     //class instance variables
     private String viewSupplyList;
 

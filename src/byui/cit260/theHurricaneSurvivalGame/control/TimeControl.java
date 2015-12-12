@@ -4,15 +4,6 @@
  * and open the template in the editor.
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
-
-import byui.cit260.theHurricaneSurvivalGame.Exception.TimeException;
-
-/**
- *
- * @author Steffany
- */
-public class TimeControl {
-
     /**
      * <h2>Time:</h2>
      * <p>
@@ -24,6 +15,15 @@ public class TimeControl {
      * @return What is the time remaining?
      * @throws Exception.TimeException
      */
+import byui.cit260.theHurricaneSurvivalGame.Exception.TimeException;
+
+/**
+ *
+ * @author Steffany
+ */
+public class TimeControl {
+
+
     //Did not pass test
 
     public double calcTimeRemainingInGame(double timeSpent, double totalTime)

@@ -26,7 +26,7 @@ public class DeliveryCenter implements Serializable {
     private double totalTimeOfDelivery;
     private double totalCostofDelivery;
 
-    private DeliverySupplies deliverySupplies;
+    private DeliverSupplies deliverySupplies;
 
     public DeliveryCenter() {
     }
@@ -79,11 +79,11 @@ public class DeliveryCenter implements Serializable {
         this.totalCostofDelivery = totalCostofDelivery;
     }
 
-    public DeliverySupplies getDeliverySupplies() {
+    public DeliverSupplies getDeliverySupplies() {
         return deliverySupplies;
     }
 
-    public void setDeliverySupplies(DeliverySupplies deliverySupplies) {
+    public void setDeliverySupplies(DeliverSupplies deliverySupplies) {
         this.deliverySupplies = deliverySupplies;
     }
 
@@ -132,6 +132,10 @@ public class DeliveryCenter implements Serializable {
             return false;
         }
         return true;
+    }
+
+    public boolean locates() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

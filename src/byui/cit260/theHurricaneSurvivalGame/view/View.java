@@ -5,6 +5,11 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
 
+/**
+ * This just gets the player's input
+ *
+ * @return
+ */
 import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.util.Scanner;
@@ -47,41 +52,35 @@ public abstract class View implements ViewInterface {
         } while (!done);
     }
 
-    /**
-     * This just gets the player's input
-     *
-     * @return
-     */
     public String getInput() {
         //Scanner keyboard = new Scanner(System.in); //Keyboard input stream
         boolean valid = false; // Indicates the input has been retrieved
         String selection = " ";
         try {
-        
+
             while (!valid) { //while a valid has not been entered
-            //Prompt for the player's input
-            System.out.println("Enter the input value below:");
+                //Prompt for the player's input
+                System.out.println("Enter the input value below:");
 
-            //Get the value entered from the keyboard and trim off the blanks at the end of value
-            selection = this.keyboard.nextLine();
-            selection = selection.trim();
+                //Get the value entered from the keyboard and trim off the blanks at the end of value
+                selection = this.keyboard.nextLine();
+                selection = selection.trim();
 
-            //If invalid input entered (blank value entered)
-            if (selection.length() < 1) {
-                ErrorView.display(this.getClass().getName(),
-                        "You must enter a value.");
-                continue; //and repeat again        
+                //If invalid input entered (blank value entered)
+                if (selection.length() < 1) {
+                    ErrorView.display(this.getClass().getName(),
+                            "You must enter a value.");
+                    continue; //and repeat again        
+                }
+                break;// Out of the (exit) the repetition
             }
-            break;// Out of the (exit) the repetition
-        }       
-    }
-        catch (Exception e) {
+        } catch (Exception e) {
 
             ErrorView.display(this.getClass().getName(),
-                "Error reading input:" + e.getMessage());
- 
-    return selection;
-    }
+                    "Error reading input:" + e.getMessage());
 
-
-
+            return selection;
+        }
+        return null;
+    }    
+}    

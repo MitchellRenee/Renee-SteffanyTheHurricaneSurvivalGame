@@ -49,5 +49,9 @@ public class DeliveryException extends Exception {
             System.out.println("Exception: " + nullException.toString());//message will be nullPointer exception
         }    
     }
+
+    public DeliveryException(String delivery_cannot_be_delivered_to_an_invali) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }    
 

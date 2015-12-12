@@ -287,13 +287,13 @@ public class GameControl {
         System.out.println("Locate current game."); 
    
     }
-
+    // ERROR
     //close the output file
-    TheHurricaneSurvivalGame.setCurrentGame(game);  
+    //TheHurricaneSurvivalGame.setCurrentGame(game);  
 
     private void startNewGame() {
         
-    Create a new game GameControl.createNewGame();
+    //Create a new game GameControl.createNewGame();
     
         CityMap map = new CityMap();
         map.init();

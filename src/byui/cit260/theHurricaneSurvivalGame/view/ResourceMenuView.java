@@ -5,6 +5,7 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
 
+import byui.cit260.theHurricaneSurvivalGame.Exception.MoveException;
 import byui.cit260.theHurricaneSurvivalGame.model.Item;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
 import java.io.FileOutputStream;
@@ -20,7 +21,7 @@ import thehurricanesurvivalgame.TheHurricaneSurvivalGame;
  * @author Renee
  */
 public class ResourceMenuView extends View {
-
+    
     private static final PrintWriter outFile = null;
     //private static final Buffered inFile = null;
     
@@ -38,13 +39,6 @@ public class ResourceMenuView extends View {
         super(message);
     }
 
-    
-    /*} catch(Exception e) {
-              System.out.print("Error reading input: " + e.getMessage());
-    }      
-    return selecton;
-    */
-    
     //Ref pg 8
     //Link: https://content.byui.edu/file/2a20357d-883f-4256-bfe5-8297c455549b/1/Lesson%2011%20-%20Team%20Assignment.pdf
     
@@ -74,20 +68,20 @@ public class ResourceMenuView extends View {
         Ref pg 3
         Link: https://content.byui.edu/file/2a20357d-883f-4256-bfe5-8297c455549b/1/Lesson%2011%20-%20Individual%20Assignment.pdf
         */
-  
-    public boolean doAction(Object obj) {
-        Item item;
 
+        public boolean doAction(Object obj) {
+        Item item;
+        
+        try {
         String value = (String) obj;
 
         value = value.toUpperCase(); // Convert to all upper case
         char choice = value.charAt(0); // Get first character entered
 
         switch (choice) {
-            /*case 'N': // Create and start a new game
+            case 'N': // Create and start a new game
              this.startNewGame();
-             break;
-             */
+             break;             
             case 'S': // Get and start an exiting game
                 this.selectReportMenu();
                 break;
@@ -106,41 +100,52 @@ public class ResourceMenuView extends View {
                 System.out.println("\n*** This is an invalid selection *** Please try again");
                 break;
         }
+        return false;
+        
+        }catch(Exception e) {
+            
+            System.out.print("Error reading input: " + e.getMessage());
+                ErrorView.display(this.getClass().getName());
+    
         return true;
     }
+}    
+        private void selectReportMenu() {
+             System.out.println("Select report menu");
+        }
 
-    private void selectReportMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        private void displayReportMenu() {
+             System.out.println("View of report menu displays."); 
+        }
 
-    private void displayReportMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        private void callResourceViewLayerFunction() {
+              System.out.println("View of report menu displays.");
+        }
 
-    private void callResourceViewLayerFunction() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        private void displayResourceViewLayer() {
+             System.out.println("View of report menu displays.");
+        }
 
-    private void displayResourceViewLayer() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        private void displayResourceMenuView() {
+              System.out.println("View of report menu displays.");
+        }
 
-    private void displayResourceMenuView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        private void callResourceMenuViewFunction() {
+              System.out.println("View of report menu displays.");
+        }
 
-    private void callResourceMenuViewFunction() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void write(int b) throws IOException {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        public void write(int b) throws IOException {
+             System.out.println("View of report menu displays."); 
+        }
 
     public void printResourceMenuViewReport(ArrayList<Item> resourceItems,
                                             String outputLocaton) {
     } 
-}    
+
+    private void startNewGame() {
+        System.out.println("View of report menu displays."); 
+   }
+}
    
 
 

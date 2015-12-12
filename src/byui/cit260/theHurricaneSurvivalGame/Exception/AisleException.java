@@ -48,6 +48,10 @@ import java.util.ArrayList;
             System.out.println("Exception: " + nullException.toString());//message will be nullPointer exception
         }    
     }
+
+    public AisleException(String aisle_cannot_be_less_than_0_or_greater_th) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
    
 

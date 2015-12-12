@@ -122,15 +122,19 @@ public class TheHurricaneSurvivalGame {
     public static void setCurrentGame() {
         System.out.println("Retreive current game.");     }
 
-    public static void setCurrentGame(byui.cit260.theHurricaneSurvivalGame.control.Game game) {
+    /*public static void setCurrentGame(byui.cit260.theHurricaneSurvivalGame.Game game) {
          //close the output file
+        
         TheHurricaneSurvivalGame.setCurrentGame(game);  
+        
+    }    
 
-        public void startNewGame() {
+    public static void startNewGame() {
       
-        Create a new game GameControl.createNewGame(); 
-        }
-
+        Game = new game.GameControl.createNewGame(); 
+        
+    }
+    */
         public void write(int b) throws IOException {
             System.out.println("Write to file and throw IOException if error."); 
         }
@@ -138,6 +142,24 @@ public class TheHurricaneSurvivalGame {
     public static class setCurrentGame {
 
         public setCurrentGame() {
+        }
+    }
+
+    private static class game {
+
+        public game() {
+        }
+
+        private static class GameControl {
+
+            public GameControl() {
+            }
+        }
+    }
+
+    private static class Create {
+
+        public Create() {
         }
     }
 
@@ -270,7 +292,7 @@ public class MainMenuView {
 }
 /*
  //Prompt the player to enter their name
-Map mainMap = new Map();
+ Map mainMap = new Map();
             
  mainMap.setLocation("House");
  mainMap.setCoordinates(7);
@@ -279,21 +301,13 @@ Map mainMap = new Map();
  System.out.println(mainMap);
         
         
- CampingStore department = new CampingStore();
-        
- department.setTentAndCanopyAisle("Aisle 2");
- department.setLightingAisle("Aisle 5");
- department.setCookingSupplyAisle("Aisle 1");
- department.setGearAisle("Aisle 4");
- department.setGeneratorsAisle("Aisle 3");
- department.setLocation("Row 4, Column 7");
- department.setGearAisle("Create 5 Aisle with a maximum of 3 stock shelving");
- department.setStoreSize("Store size is 500 x 325 square feet");
- department.setGameMenu("Return to game menu");
+ MegaStore department = new MegaStore();
+
+ 
         
         
- String campingStoreInfo = department.toString();
- System.out.println(campingStoreInfo);
+ String megaStoreInfo = department.toString();
+ System.out.println(megaStoreInfo);
         
         
  CampingStoreSupplies nameCampingSupply = new CampingStoreSupplies();

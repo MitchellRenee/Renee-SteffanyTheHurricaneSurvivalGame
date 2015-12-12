@@ -49,4 +49,8 @@ public class RoomException extends Exception {
             System.out.println("Exception: " + nullException.toString());//message will be nullPointer exception
         }
     }
+
+    public RoomException(String rooms_cannot_be_outside_of_the_house) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

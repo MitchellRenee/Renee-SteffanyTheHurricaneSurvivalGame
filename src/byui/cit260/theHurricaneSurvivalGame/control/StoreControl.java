@@ -28,7 +28,8 @@ public class StoreControl {
      * player's money account.
      * @return correct items if money is in the money account.
      */
-    public static boolean purchase(Item i, ItemAmount a, MoneyAccountControl m) throws StoreException {
+    public static boolean purchase(Item i, ItemAmount a, MoneyAccountControl m)
+            throws StoreException {
         boolean returnValue = false;
         if (Item.located() && ItemAmount() >= 1 && MoneyAccount() >= 4.50) {
              throw new StoreException("Cannot move west.");
