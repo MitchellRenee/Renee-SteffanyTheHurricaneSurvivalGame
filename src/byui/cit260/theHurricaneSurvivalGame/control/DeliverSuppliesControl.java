@@ -22,39 +22,17 @@ import static byui.cit260.theHurricaneSurvivalGame.model.LocationType.DeliveryCe
  *
  * @author Renee
  */
-public class DeliverSuppliesControl {
+public class DeliverSuppliesControl {}
     
-    public static double deliverSupplies(Item i, Purchased p, DeliveryCenter c, DeliveryLocation d)
+    /*public static double deliverSupplies(Item i, Purchased p, DeliveryCenter c, DeliveryLocation d)
            throws DeliveryException { 
         double returnValue = 0;
-        if (i.exists() && p.valid() && c.located () && d.exists()){
+        if (i.exists() && p.valid() && c.locates () && d.exists()){
             throw new DeliveryException("Delivery cannot be delivered to an invalid location.");
-        }            
+    }            
             return 0;
-        }  
-
-    private static class DeliveryLocation {
-
-        public DeliveryLocation() {
         }
-
-        private boolean exists() {
-            System.out.println("Item must be in Mega Store.");
-            return true;
-        }
-    }
-
-    private static class Purchased {
-
-        public Purchased() {
-        }
-
-        private boolean valid() {
-            System.out.println("A purchase is valid when cost item is deducted from player's money account.");
-            return true;
-        }
-    }
-} 
-
+    } 
+*/
 
  

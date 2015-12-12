@@ -6,7 +6,6 @@
 package byui.cit260.theHurricaneSurvivalGame.model;
 
 import java.io.Serializable;
-import java.util.Arrays;
 
 /**
  *
@@ -21,42 +20,6 @@ public class CityMap implements Serializable {
         locationMatrix = new Location[5][5];
     }
 
-    public boolean isGetMapDisplay() {
-        return getMapDisplay;
-    }
-
-    public void setGetMapDisplay(boolean getMapDisplay) {
-        this.getMapDisplay = getMapDisplay;
-    }
-
-    @Override
-    public String toString() {
-        return "CityMap{" + "locationMatrix=" + locationMatrix + ", getMapDisplay=" + getMapDisplay + '}';
-    }
-    
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 29 * hash + Arrays.deepHashCode(this.locationMatrix);
-        hash = 29 * hash + (this.getMapDisplay ? 1 : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final CityMap other = (CityMap) obj;
-        if (!Arrays.deepEquals(this.locationMatrix, other.locationMatrix)) {
-            return false;
-        }
-        return true;
-    }
-    
     public void init() {
 
         for (int row = 0; row < locationMatrix.length; row++) {

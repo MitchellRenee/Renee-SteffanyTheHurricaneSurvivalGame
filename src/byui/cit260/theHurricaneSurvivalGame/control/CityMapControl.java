@@ -27,4 +27,5 @@ public class CityMapControl {
         p.setPlayerLocation(l);
         return false;
     }
+
 }

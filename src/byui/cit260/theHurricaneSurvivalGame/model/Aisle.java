@@ -113,11 +113,11 @@ public class Aisle implements Serializable{
     private Location[][] locationMatrix;
     public static int getMapDisplay;
    
-    public  Aisle() {
+    /*public  Aisle() {
         locationMatrix = new Location[0][5];
         //how do I creat a list instead of an array 
     }  
-  
+    */
     public void init (){
 
         for (int aisle = 0; aisle < locationMatrix.length; aisle++){
@@ -155,7 +155,7 @@ public class Aisle implements Serializable{
         this.locationMatrix = locationMatrix;
     }
 
-    public Location[] getAisleLocation() {
+    /*public Location[] getAisleLocation() {
         for (int aisle = 0; aisle < locationMatrix.length; aisle++) {
             for (Location locationMatrix1 : locationMatrix[0]) {
               if (locationMatrix[aisle].getLocationType() == LocationType.Aisle1) {
@@ -165,7 +165,7 @@ public class Aisle implements Serializable{
         }
         return null;
     }
-     
+*/     
                  
     void setProtein(String aisle_1) {
         System.out.println("Protein is located in aisle 1.");
