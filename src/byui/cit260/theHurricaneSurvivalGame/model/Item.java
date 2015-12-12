@@ -110,4 +110,8 @@ public class Item implements Serializable {
         return true;
     }
 
+    public boolean exists() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

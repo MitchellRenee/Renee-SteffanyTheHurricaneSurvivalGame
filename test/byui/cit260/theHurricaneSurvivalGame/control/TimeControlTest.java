@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author SteffanyFaldmo
+ * @author Renee
  */
 public class TimeControlTest {
     
@@ -18,19 +18,16 @@ public class TimeControlTest {
     }
 
     /**
-     * Test of calcTimeRemainingInGame method, of class timeControl.
+     * Test of calcTimeRemainingInGame method, of class TimeControl.
      */
     @Test
-    public void testCalcTimeRemainingInGame() {
+    public void testCalcTimeRemainingInGame() throws Exception {
         System.out.println("calcTimeRemainingInGame");
-        double TimeSpent = 0.0;
-        double TotalTime = 0.0;
+        double timeSpent = 0.0;
+        double totalTime = 0.0;
         TimeControl instance = new TimeControl();
-       ouble expResult = 0.0;
-        //double result = instance.calcTimeRemainingInGame(timeSpent, totalTime);
+        double expResult = 0.0;
+        double result = instance.calcTimeRemainingInGame(timeSpent, totalTime);
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
+    }    
 }

@@ -90,6 +90,7 @@ public class WelcomeView {
 
             // Get the user's selection
             String input = this.getInput();
+            
             // Get first character of string
             selection = input.charAt(0);
 
@@ -102,11 +103,54 @@ public class WelcomeView {
     }
 
     private String getInput() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Input cannot be empty."); 
+        return null;
     }
 
-    private void doAction(char selection) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private boolean doAction(char selection) {    
+
+        switch (selection) {
+            case 'M': // Display main menu
+                this.displayMainMenu();
+                break;
+            case 'G': // Get user's seletion
+                this.getUserInput();
+                break;
+            case 'I': // Get first character of string
+                this.inputAtChar(0);
+                break;
+            case 'D': // Get first character of string
+                this.doAction();
+                break;    
+            case 'S': // Save the current game view 
+                this.saveGame();
+                break;
+            case 'Q': // Quit the program
+                return true;
+            default:
+                System.out.println("\n*** This is an invalid selection *** Please try again");
+                break;
+        }
+        return false;
     }
 
+    private void displayMainMenu() {
+        System.out.print("Screen will display menu."); 
+    }
+
+    private void getUserInput() {
+        System.out.print("Retrieve user's input."); 
+    }
+
+    private void inputAtChar(int i) {
+        System.out.print("Screen will display menu."); 
+    }
+
+    private void doAction() {
+        System.out.print("Implement the action."); 
+    }
+
+    private void saveGame() {
+        System.out.print("Save the game."); 
+    }
 }

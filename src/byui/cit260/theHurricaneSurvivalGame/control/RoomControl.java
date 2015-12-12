@@ -26,36 +26,43 @@ import java.io.Serializable;
  */
 public class RoomControl {
     
-}    
-    /*public static boolean room(Home h, Room r,Inventory i, Supplies s) 
+    
+    public static boolean room(Home h, Room r,Inventory i, Supplies s) 
             throws RoomException {
         boolean returnValue = false;    
         if(h.exists() && r.open() && i.valid && s.needed ()) {
             throw new RoomException("Room cannot exists outside the home.");
         }                       
         return true;
-        }
+    }    
+    boolean returnValue = false;
 
-    private static void RoomException(String room_cannot_exists_outside_the_home) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-       boolean returnValue = false;
-
-    private static class Supplies {
+    class Supplies {
 
         public Supplies() {
         }
+
+        private boolean needed() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
     }
 
-    private static class Room {
+    class Room {
 
         public Room() {
         }
+
+        private boolean open() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
     }
 
-    private static class Home {
+    class Home {
 
         public Home() {
         }
+
+        private boolean exists() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
     }
-}*/
