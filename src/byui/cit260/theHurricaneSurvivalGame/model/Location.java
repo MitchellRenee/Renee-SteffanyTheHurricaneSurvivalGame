@@ -21,6 +21,7 @@ public class Location implements Serializable {
     private LocationType locationType;
 
     private MegaStore megaStore;
+    int length;
 
     public Location() {
     }

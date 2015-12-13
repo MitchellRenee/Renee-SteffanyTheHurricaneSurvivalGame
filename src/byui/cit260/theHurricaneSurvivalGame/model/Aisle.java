@@ -12,7 +12,6 @@ import java.io.Serializable;
  *
  * @param input
  */
-
 /**
  *
  * @author Renee
@@ -26,9 +25,6 @@ public class Aisle implements Serializable {
     private int aisle3;
     private int aisle4;
     private int aisle5;
-
-    public Aisle() {
-    }
 
     public int getAisle1() {
         return aisle1;
@@ -113,37 +109,37 @@ public class Aisle implements Serializable {
         return true;
     }
 
-    private Location[] locationMatrix;
+private Location[] locationMatrix;
     public static int getMapDisplay;
 
-    public Aisle() {
-        locationMatrix = new Location[0];
-        //how do I creat a list instead of an array 
-    }
+        public Aisle() {
+        locationMatrix = new Location[5];
+        }
 
     public void init() {
 
         for (int aisle = 0; aisle < locationMatrix.length; aisle++) {
-           
-            Location tempLocation = new Location();
-            tempLocation.setAisle(aisle);            
-            tempLocation.setLocationType(LocationType.Empty);
+            for (int a = 0; a < locationMatrix[0].length; a++) {
+                Location tempLocation = new Location();
+                tempLocation.setAisle(aisle);
+                tempLocation.setLocationType(LocationType.Empty);
 
-        locationMatrix[] = tempLocation;
-        
+                locationMatrix[aisle] = tempLocation;
+            }
 
-        locationMatrix[0].setLocationType(LocationType.Aisle1);
+            locationMatrix[0].setLocationType(LocationType.Aisle1);
 
-        locationMatrix[1].setLocationType(LocationType.Aisle2);
+            locationMatrix[1].setLocationType(LocationType.Aisle2);
 
-        locationMatrix[2].setLocationType(LocationType.Aisle3);
+            locationMatrix[2].setLocationType(LocationType.Aisle3);
 
-        locationMatrix[3].setLocationType(LocationType.Aisle4);
+            locationMatrix[3].setLocationType(LocationType.Aisle4);
 
-        locationMatrix[4].setLocationType(LocationType.Aisle5);
+            locationMatrix[4].setLocationType(LocationType.Aisle5);
 
-        locationMatrix[5].setLocationType(LocationType.Empty);
+            locationMatrix[5].setLocationType(LocationType.Empty);
 
+        }
     }
 
     public Location[] getLocationMatrix() {

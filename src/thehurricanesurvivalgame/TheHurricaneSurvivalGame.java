@@ -21,6 +21,7 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import thehurricanesurvivalgame.TheHurricaneSurvivalGame.MainMenuView;
+import thehurricanesurvivalgame.TheHurricaneSurvivalGame.MainMenuView.Game;
 
 /**
  * @param args the command line arguments
@@ -86,7 +87,6 @@ public class TheHurricaneSurvivalGame {
                     + "\nCause: " + e.getCause()
                     + "\nMessage: " + e.getMessage());
 
-            e.printStackTrace();
         } finally {
             try {
                 if (TheHurricaneSurvivalGame.inFile != null) {
@@ -118,7 +118,6 @@ public class TheHurricaneSurvivalGame {
     //Ask Steffany why is this here
     //public static void setCurrentGame(GameControl.Game game) {
     //  System.out.println("Not supported yet.");    
-
     public class MainMenuView {
 
         private final String MENU = "\n"
@@ -204,55 +203,42 @@ public class TheHurricaneSurvivalGame {
         }
 
         private void saveGame() {
-            System.out.println("*** saveGame function called ***");
-        }
-        public static GameControl getCurrentGame() {
-            throw new UnsupportedOperationException("Not supported yet.");
+            System.out.println("*** Save the saveGame function  ***");
         }
 
-        public static void setCurrentGame() {
-            System.out.println("Retreive current game.");
-        }       
-
-        public static Player getPlayer() {
-            throw new UnsupportedOperationException("Not supported yet.");
-        }     
-
-        public static void setCurrentGame(byui.cit260.theHurricaneSurvivalGame.Game game) {
-            //close the output file
-
-        TheHurricaneSurvivalGame.setCurrentGame(game);
-
-        }
-
-        public static void startNewGame() {
-
-            Game = new game.GameControl.createNewGame();
-
+        public void setCurrentGame() {
+            System.out.println("Initialize current game.");
         }
 
         public void write(int b) throws IOException {
             System.out.println("Write to file and throw IOException if error.");
         }
-        public static class setCurrentGame {
+
+        public class setCurrentGame {
 
             public setCurrentGame() {
             }
         }
 
-        private static class game {
+        private class game {
 
             public game() {
             }
 
-            private static class GameControl {
+            private class GameControl {
 
                 public GameControl() {
+                }
+
+                private class createNewGame {
+
+                    public createNewGame() {
+                    }
                 }
             }
         }
 
-        private static class Create {
+        private class Create {
 
             public Create() {
             }

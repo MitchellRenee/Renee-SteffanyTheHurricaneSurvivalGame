@@ -28,8 +28,5 @@ public class TimeControlTest {
         TimeControl instance = new TimeControl();
         double expResult = 0.0;
         double result = 0;
-        //double result = instance.calcTimeRemainingInGame(timeSpent, totalTime);
-        assertEquals(expResult, result, 0.0);
-    }
-    
+    }    
 }

@@ -23,7 +23,7 @@ public class MoveControl {
         int col = p.getPlayerLocation().getColumn();
 
         if (row == 0) {
-             throw new MoveException("Cannot move north.");
+            throw new MoveException("Cannot move north.");
         }
 
         CityMap gameMap = HurricaneSurvivalGame.getInstance().getMap();
@@ -41,7 +41,7 @@ public class MoveControl {
         int col = p.getPlayerLocation().getColumn();
 
         if (col == 4) { // DONT HARDCODE
-             throw new MoveException("Cannot move west.");
+            throw new MoveException("Cannot move west.");
         }
 
         CityMap gameMap = HurricaneSurvivalGame.getInstance().getMap();
@@ -59,7 +59,7 @@ public class MoveControl {
         int col = p.getPlayerLocation().getColumn();
 
         if (row == 4) { // DONT HARDCODE
-             throw new MoveException("Cannot move west.");
+            throw new MoveException("Cannot move west.");
         }
 
         CityMap gameMap = HurricaneSurvivalGame.getInstance().getMap();
@@ -76,7 +76,7 @@ public class MoveControl {
         int row = p.getPlayerLocation().getRow();
         int col = p.getPlayerLocation().getColumn();
 
-        if (col == 0) { // DONT HARDCODE
+        if (col == 0) {
             throw new MoveException("Cannot move west.");
             //HERE THROW AN EXCEPTION
 
@@ -90,5 +90,4 @@ public class MoveControl {
 
         return true;
     }
-
 }

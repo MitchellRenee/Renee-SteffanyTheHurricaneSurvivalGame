@@ -34,20 +34,20 @@ class AisleControl {
         if (aisle < 1) {
             throw new AisleException("Aisle cannot be less than 1.");
         }
-            return -1;
+            return 0;
         }
         return 0;
     }
 
     static boolean valid() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Aisle is not valid if less[0].");         
+        return false;
     }    
 
     static boolean open() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    
+        System.out.println("Location is not open if it is not on the CityMap."); //To change body of generated methods, choose Tools | Templates.
+        return false;
+    }    
 }
     
 

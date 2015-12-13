@@ -7,13 +7,14 @@ package byui.cit260.theHurricaneSurvivalGame.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+import javafx.scene.effect.Light.Point;
 
 /**
  *
  * @author Renee
  */
 //modify class keyword with enum keyword in class defininition.
-public enum Actor implements Serializable {
+/*public enum Actor implements Serializable {
 
     Joan("She is a middle-aged single woman, who is a naturalist."),
     Zion("He is a disaster relief specialist, with a family."),
@@ -41,7 +42,7 @@ public enum Actor implements Serializable {
 /class instance variables
 private String ;
     private final String description;
-    private final Point coordinates;
+    private Point coordinates;
 
     public Actor() {
     }
@@ -76,4 +77,4 @@ private String ;
         public String toString() {
     String name;
         return "Actor{" + "name=" + name + ", description=" + description + ", coordinates=" + coordinates + '}';
- 
+ */
