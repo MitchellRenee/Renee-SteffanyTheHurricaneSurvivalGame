@@ -13,15 +13,15 @@ import static byui.cit260.theHurricaneSurvivalGame.control.PlayerControl.player;
  * @author Renee
  */
 public class RotateView extends View {
-/*    doAction(){
+    /*    doAction(){
      try{
      movePlayer(player,0,1);
-    } catch (MoveException me) {   
-        System.out.println(me.getMessage());
-    }
-}
-*/    
-   
+     } catch (MoveException me) {   
+     System.out.println(me.getMessage());
+     }
+     }
+     */
+
     public RotateView(String message) {
 
         super("Please make a selection:\n"
@@ -62,9 +62,12 @@ public class RotateView extends View {
                 break;
         }
         return true;
+
     }
+
     //Returns error when I added in the try catch according to the video from wk 10
     //Video link: https://www.youtube.com/watch?v=9iAcqnesaS4&feature=youtu.be
+
     private void moveNorth() {
 
         LocationControl l = new LocatonControl();
@@ -72,27 +75,26 @@ public class RotateView extends View {
     }
 
     private void moveEast() {
-        
+
         LocationControl l = new LocatonControl();
         l.moveEast(0, 0);
     }
 
     private void moveSouth() {
-        
+
         LocationControl l = new LocatonControl();
         l.moveSouth(0, 0);
     }
 
     private void moveWest() {
-        
+
         LocationControl l = new LocatonControl();
         l.moveWest(0, 0);
-}
-   
+    }
+
     public boolean doAction(Object obj) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
 
     private static class pubic {
 
@@ -106,9 +108,8 @@ public class RotateView extends View {
         }
 
         private void moveNorth(double getRow, double getCol) {
-           System.out.println("Row location cannot be null.");
+            System.out.println("Row location cannot be null.");
         }
-    
 
         private void moveEast(double getRow, double getCol) {
             System.out.println("Row location cannot be null.");

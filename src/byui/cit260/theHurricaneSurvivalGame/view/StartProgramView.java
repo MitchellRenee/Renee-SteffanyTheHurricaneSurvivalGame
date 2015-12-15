@@ -123,6 +123,10 @@ public class StartProgramView {
                 + "\n------------------------------------";
         private boolean displayMessage;
 
+        startProgramView() {
+        //    this.m = new movePlayerView(;
+        }
+
         public void display() {
 
             char selection = ' ';
@@ -170,32 +174,40 @@ public class StartProgramView {
         }
 
         public boolean doAction(char choice) {
+            try {
 
-            switch (choice) {
-                case 'N': // Create and start a new game
-                    this.startNewGame();
-                    break;
-                case 'G': // Get and start an exiting game
-                    this.startExistingGame();
-                    break;
-                case 'H': // Display the help menu
-                    this.displayHelpMenu();
-                    break;
-                case 'S': // Save the current game view 
-                    this.saveGame();
-                    break;
-                case 'Q': // Quit the program
-                    return true;
-                default:
-                    System.out.println("\n*** This is an invalid selection *** Please try again");
-                    break;
+                switch (choice) {
+                    case 'N': // Create and start a new game
+                        this.startNewGame();
+                        break;
+                    case 'G': // Get and start an exiting game
+                        this.startExistingGame();
+                        break;
+                    case 'H': // Display the help menu
+                        this.displayHelpMenu();
+                        break;
+                    case 'S': // Save the current game view 
+                        this.saveGame();
+                        break;
+                    case 'Q': // Quit the program
+                        return true;
+                    default:
+                        System.out.println("\n*** This is an invalid selection *** Please try again");
+                        break;
+                }
+                return false;
+            } catch (Exception e) {
+
+                System.out.print("Error reading input: " + e.getMessage());
+                ErrorView.display(this.getClass().getName());
+
+                return true;
             }
-            return false;
         }
 
-        //MoveView m = new moveView(;
-        //m.display();
-        //implement controllers here to change direction of view
+       
+        
+                
         public boolean doAction(Object obj) {
 
             String value = (String) obj;

@@ -27,5 +27,4 @@ public class ProgramControl {
         HurricaneSurvivalGame.getInstance().setPlayer(player);// save 
         return player;
     }
-
 }

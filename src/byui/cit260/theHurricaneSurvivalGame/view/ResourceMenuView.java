@@ -21,10 +21,10 @@ import thehurricanesurvivalgame.TheHurricaneSurvivalGame;
  * @author Renee
  */
 public class ResourceMenuView extends View {
-    
+
     private static final PrintWriter outFile = null;
     //private static final Buffered inFile = null;
-    
+
     private static final PrintWriter logFile = null;
 
     public static PrintWriter getLogFile() {
@@ -41,7 +41,6 @@ public class ResourceMenuView extends View {
 
     //Ref pg 8
     //Link: https://content.byui.edu/file/2a20357d-883f-4256-bfe5-8297c455549b/1/Lesson%2011%20-%20Team%20Assignment.pdf
-    
     //Reference pg. 9 
     //Link: https://content.byui.edu/file/2a20357d-883f-4256-bfe5-8297c455549b/1/Lesson%2011%20-%20Team%20Assignment.pdf
     //To print in Windows directory: C:\Users\Document\tmp\logfile.txt
@@ -49,7 +48,6 @@ public class ResourceMenuView extends View {
 
     //This is implemented in the main(String [] args) of Line 67-68
     //TheHurricaneSurvivalGame.logFile = new PrintWriter(filePath);
-    
     //Menu Option
     public ResourceMenuView() {
         super("\n"
@@ -60,97 +58,90 @@ public class ResourceMenuView extends View {
                 + "\nH - Get help on how to inventory resource"
                 + "\nS - Save resource list                   "
                 + "\nE - Exit                                 "
-                + "\n-----------------------------------------"); 
-    }        
-        /*Add code to doActon()function to
-        selection the report menu option
-        call a view layer function that prints the report.
-        Ref pg 3
-        Link: https://content.byui.edu/file/2a20357d-883f-4256-bfe5-8297c455549b/1/Lesson%2011%20-%20Individual%20Assignment.pdf
-        */
-
-        public boolean doAction(Object obj) {
-        Item item;
-        
-        try {
-        String value = (String) obj;
-
-        value = value.toUpperCase(); // Convert to all upper case
-        char choice = value.charAt(0); // Get first character entered
-
-        switch (choice) {
-            case 'N': // Create and start a new game
-             this.startNewGame();
-             break;             
-            case 'S': // Get and start an exiting game
-                this.selectReportMenu();
-                break;
-            case 'R': //Lets the player view the player's location
-                this.displayReportMenu();
-                break;
-            case 'V': // Display the help menu
-                this.callResourceMenuViewFunction();
-                break;
-            case 'D': // Save the current game view 
-                this.displayResourceMenuView();
-                break;
-            case 'Q': // Quit the program
-                return true;
-            default:
-                System.out.println("\n*** This is an invalid selection *** Please try again");
-                break;
-        }
-        return false;
-        
-        }catch(Exception e) {
-            
-            System.out.print("Error reading input: " + e.getMessage());
-                ErrorView.display(this.getClass().getName());
-    
-        return true;
+                + "\n-----------------------------------------");
     }
-}    
-        private void selectReportMenu() {
-             System.out.println("Select report menu");
-        }
+    /*Add code to doActon()function to
+     selection the report menu option
+     call a view layer function that prints the report.
+     Ref pg 3
+     Link: https://content.byui.edu/file/2a20357d-883f-4256-bfe5-8297c455549b/1/Lesson%2011%20-%20Individual%20Assignment.pdf
+     */
 
-        private void displayReportMenu() {
-             System.out.println("View of report menu displays."); 
-        }
+    public boolean doAction(Object obj) {
+        Item item;
 
-        private void callResourceViewLayerFunction() {
-              System.out.println("View of report menu displays.");
-        }
+        try {
+            String value = (String) obj;
 
-        private void displayResourceViewLayer() {
-             System.out.println("View of report menu displays.");
-        }
+            value = value.toUpperCase(); // Convert to all upper case
+            char choice = value.charAt(0); // Get first character entered
 
-        private void displayResourceMenuView() {
-              System.out.println("View of report menu displays.");
-        }
+            switch (choice) {
+                case 'N': // Create and start a new game
+                    this.startNewGame();
+                    break;
+                case 'S': // Get and start an exiting game
+                    this.selectReportMenu();
+                    break;
+                case 'R': //Lets the player view the player's location
+                    this.displayReportMenu();
+                    break;
+                case 'V': // Display the help menu
+                    this.callResourceMenuViewFunction();
+                    break;
+                case 'D': // Save the current game view 
+                    this.displayResourceMenuView();
+                    break;
+                case 'Q': // Quit the program
+                    return true;
+                default:
+                    System.out.println("\n*** This is an invalid selection *** Please try again");
+                    break;
+            }
+            return false;
 
-        private void callResourceMenuViewFunction() {
-              System.out.println("View of report menu displays.");
-        }
+        } catch (Exception e) {
 
-        public void write(int b) throws IOException {
-             System.out.println("View of report menu displays."); 
+            System.out.print("Error reading input: " + e.getMessage());
+            ErrorView.display(this.getClass().getName());
+
+            return true;
         }
+    }
+
+    private void selectReportMenu() {
+        System.out.println("Select report menu");
+    }
+
+    private void displayReportMenu() {
+        System.out.println("View of report menu displays.");
+    }
+
+    private void callResourceViewLayerFunction() {
+        System.out.println("View of report menu displays.");
+    }
+
+    private void displayResourceViewLayer() {
+        System.out.println("View of report menu displays.");
+    }
+
+    private void displayResourceMenuView() {
+        System.out.println("View of report menu displays.");
+    }
+
+    private void callResourceMenuViewFunction() {
+        System.out.println("View of report menu displays.");
+    }
+
+    public void write(int b) throws IOException {
+        System.out.println("View of report menu displays.");
+    }
 
     public void printResourceMenuViewReport(ArrayList<Item> resourceItems,
-                                            String outputLocaton) {
-    } 
+            String outputLocaton) {
+    }
 
     private void startNewGame() {
-        System.out.println("View of report menu displays."); 
-   }
+        System.out.println("View of report menu displays.");
+    }
 }
-   
-
-
-  
-
-    
-        
-     

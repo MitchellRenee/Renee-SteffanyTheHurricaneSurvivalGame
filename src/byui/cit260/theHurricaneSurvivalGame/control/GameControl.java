@@ -231,6 +231,7 @@ public class GameControl {
    
     public static boolean move(Player p, Location l)
             throws CityMapException {
+        boolean returnValue = false;
         if (Player.move() && Location.exists()) {
             throw new CityMapException("Map cannot have less than 25 locations.");
         }
@@ -238,8 +239,9 @@ public class GameControl {
         return false;
     }   
 
-    public static void getSavedGame(String filePath) 
-            throws GameException {
+    public static void getSavedGame(String filePath)
+           throws GameException {
+        
         if (Game.exists() && Game.saved()) {
         throw new GameException ("Computer retrieves saved game."); 
         }
@@ -303,7 +305,8 @@ public class GameControl {
         CityMap map = new CityMap();
         map.init();
         HurricaneSurvivalGame.getInstance().setMap(map);
-        //HurricaneSurvivalGame.getInstance().setPlayer(player);
+        Player player = null;
+        HurricaneSurvivalGame.getInstance().setPlayer(player);
         finishCreatePlayer();    
     } 
     public static Player finishCreatePlayer() {

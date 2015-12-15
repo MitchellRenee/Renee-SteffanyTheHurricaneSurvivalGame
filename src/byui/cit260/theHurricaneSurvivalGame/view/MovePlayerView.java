@@ -6,6 +6,7 @@
 package byui.cit260.theHurricaneSurvivalGame.view;
 
 import byui.cit260.theHurricaneSurvivalGame.Exception.MoveException;
+import byui.cit260.theHurricaneSurvivalGame.Exception.ViewException;
 import static byui.cit260.theHurricaneSurvivalGame.control.CityMapControl.move;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
 import static java.nio.file.Files.move;
@@ -32,64 +33,67 @@ public abstract class MovePlayerView extends View {
     }
 
     public boolean doAction(Object move) {
-        Player player;
-        
-        String value = (String)move;//action was in place of move
-        value = value.toUpperCase();
-        char choice = value.charAt(0);
-        switch (choice) {
-            case 'V': // Create and start a new game
-                this.viewLocation();
-                break;
-            case 'N':
-                this.moveNorth();
-                break;
-            case 'E':
-                this.moveEast();
-                break;
-            case 'S':
-                this.moveSouth();
-                break;
-            case 'W':
-                this.moveWest();
-                break;
-            case 'M':
-                this.viewMap();
-                break;
-            default:
-                System.out.println("\n*** This is an invalid selection *** Please try again");
-                break;
+        try {
+
+            Player player;
+
+            String value = (String) move;//action was in place of move
+            value = value.toUpperCase();
+            char choice = value.charAt(0);
+            switch (choice) {
+                case 'V': // Create and start a new game
+                    this.viewLocation();
+                    break;
+                case 'N':
+                    this.moveNorth();
+                    break;
+                case 'E':
+                    this.moveEast();
+                    break;
+                case 'S':
+                    this.moveSouth();
+                    break;
+                case 'W':
+                    this.moveWest();
+                    break;
+                case 'M':
+                    this.viewMap();
+                    break;
+                default:
+                    System.out.println("\n*** This is an invalid selection *** Please try again");
+                    break;
+            }
+            return false;
+        } catch (Exception e) {
+
+            System.out.print("Error reading input: " + e.getMessage());
+            ErrorView.display(this.getClass().getName());
+
+            return true;
         }
-        return false;
-     
     }
 
     private void viewLocation() {
-        System.out.print("View the player's move."); 
+        System.out.print("View the player's move.");
     }
 
     private void moveNorth() {
-        System.out.print("View northward move."); 
+        System.out.print("View northward move.");
     }
 
     private void moveEast() {
-        System.out.print("View eastward move."); 
+        System.out.print("View eastward move.");
     }
 
     private void moveSouth() {
-         System.out.print("View southward move."); 
+        System.out.print("View southward move.");
     }
 
     private void moveWest() {
-         System.out.print("View westtward move."); 
+        System.out.print("View westtward move.");
     }
 
     private void viewMap() {
-         System.out.print("View the main map."); 
+        System.out.print("View the main map.");
     }
 }
-
-
-   
-
-

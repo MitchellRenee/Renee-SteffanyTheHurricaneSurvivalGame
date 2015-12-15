@@ -22,7 +22,7 @@ public class CityMapControl {
     public static boolean move(Player p, Location l)
             throws CityMapException {
          
-        //ADD RETURN FALSE THEN RETURN TRUE
+        boolean returnValue = false;
         if (Player.move() && Location.open()) {
             throw new CityMapException("Map cannot have less than 25 locations.");
             

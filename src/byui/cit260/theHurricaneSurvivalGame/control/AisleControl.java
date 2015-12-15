@@ -29,26 +29,23 @@ class AisleControl {
             aisle = a.getAisle3();
             aisle = a.getAisle4();
             aisle = a.getAisle5();
-            
-    int totalAisle = a1 + a2 + a3 + a4 + a5;               
-        if (aisle < 1) {
-            throw new AisleException("Aisle cannot be less than 1.");
-        }
+
+            int totalAisle = a1 + a2 + a3 + a4 + a5;
+            if (aisle < 1) {
+                throw new AisleException("Aisle cannot be less than 1.");
+            }
             return 0;
         }
         return 0;
     }
 
     static boolean valid() {
-        System.out.println("Aisle is not valid if less[0].");         
+        System.out.println("Aisle is not valid if less[0].");
         return false;
-    }    
+    }
 
     static boolean open() {
         System.out.println("Location is not open if it is not on the CityMap."); //To change body of generated methods, choose Tools | Templates.
         return false;
-    }    
+    }
 }
-    
-
-   

@@ -5,7 +5,6 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
 
-
 import java.io.PrintWriter;
 import thehurricanesurvivalgame.TheHurricaneSurvivalGame;
 
@@ -33,6 +32,7 @@ public class ErrorView {
     }
 
     static void display(String name) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("An error has occured.");
+
     }
 }

@@ -102,7 +102,7 @@ public class WelcomeView {
 
     }
     public boolean doAction(char selection) {
-
+        try {
         switch (selection) {
             case 'M': // Display main menu
                 this.startDisplayMainMenu();
@@ -123,6 +123,13 @@ public class WelcomeView {
                 break;
         }
         return false;
+        } catch (Exception e) {
+
+            System.out.print("Error reading input: " + e.getMessage());
+            ErrorView.display(this.getClass().getName());
+
+            return true;
+        }    
     }
     
     private String getInput() {

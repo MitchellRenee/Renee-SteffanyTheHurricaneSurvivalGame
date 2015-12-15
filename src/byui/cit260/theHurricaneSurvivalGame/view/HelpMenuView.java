@@ -5,14 +5,17 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
 
+import byui.cit260.theHurricaneSurvivalGame.Exception.MoveException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author SteffanyFaldmo
  */
 public class HelpMenuView extends View {
-    
+
     boolean display;
     private boolean MENU;
 
@@ -35,31 +38,38 @@ public class HelpMenuView extends View {
      * @return
      */
     public boolean doAction(Object obj) {
-        String value = (String) obj;
+        try {
 
-        value = value.toUpperCase(); // Convert to all upper case
-        char choice = value.charAt(0); // Get first character entered
+            String value = (String) obj;
+            value = value.toUpperCase();
+            char choice = value.charAt(0);
+            switch (choice) {
+                case 'G':
+                    this.startResourceList();
+                    break;
+                case 'H':
+                    this.inventoryHelp();
+                    break;
+                case 'S':
+                    this.saveResourceList();
+                    break;
+                case 'E':
+                    this.exitHelpMenu();
+                    break;
+                case 'Q':
+                    return true;
+                default:
+                    System.out.println("\n*** This is an invalid selection *** Please try again");
+                    break;
+            }
+            return false;
+        } catch (Exception e) {
 
-        switch (choice) {
-            case 'G':
-                this.startResourceList();
-                break;
-            case 'H':
-                this.inventoryHelp();
-                break;
-            case 'S':
-                this.saveResourceList();
-                break;
-            case 'E':
-                this.exitHelpMenu();
-                break;
-            case 'Q':
-                return true;
-            default:
-                System.out.println("\n*** This is an invalid selection *** Please try again");
-                break;
+            System.out.print("Error reading input: " + e.getMessage());
+            ErrorView.display(this.getClass().getName());
+
+            return true;
         }
-        return true;
     }
 
     private void startResourceList() {
