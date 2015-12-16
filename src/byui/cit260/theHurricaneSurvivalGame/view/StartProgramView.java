@@ -108,6 +108,12 @@ public class StartProgramView {
         System.out.println("display startProgramView");//??????? 
     }
 
+    private static class movePlayerView {
+
+        public movePlayerView() {
+        }
+    }
+
     class startProgramView {
 
         //void displayMenu() {
@@ -124,7 +130,7 @@ public class StartProgramView {
         private boolean displayMessage;
 
         startProgramView() {
-        //    this.m = new movePlayerView(;
+            this.m = new movePlayerView;
         }
 
         public void display() {
@@ -141,8 +147,7 @@ public class StartProgramView {
                 selection = input.charAt(0);
 
                 // Do action based on selection
-                this.doAction(selection);
-
+                boolean doAction = this.doAction(selection);
                 // An selection is not "Exit"
             } while (selection != 'E');
         }
@@ -205,9 +210,6 @@ public class StartProgramView {
             }
         }
 
-       
-        
-                
         public boolean doAction(Object obj) {
 
             String value = (String) obj;
@@ -215,7 +217,7 @@ public class StartProgramView {
             value = value.toUpperCase();// Convert to all upper case
             char choice = value.charAt(0); // Get first charater entered
 
-            //public boolean display() {
+           
             //String value = " ";
             boolean done = true;
 

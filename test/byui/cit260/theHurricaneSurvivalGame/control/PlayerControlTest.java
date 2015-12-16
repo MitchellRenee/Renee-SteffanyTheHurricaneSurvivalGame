@@ -6,8 +6,6 @@
 package byui.cit260.theHurricaneSurvivalGame.control;
 
 import byui.cit260.theHurricaneSurvivalGame.model.Location;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -20,25 +18,16 @@ public class PlayerControlTest {
     public PlayerControlTest() {
     }
 
-    @Before
-    public void setUp() {
-    }
-
-    @After
-    public void tearDown() {
-    }
-
     /**
      * Test of player method, of class PlayerControl.
      */
     @Test
-    public void testPlayer() {
+    public void testPlayer() throws Exception {
         System.out.println("player");
         String name = "";
         Location l = null;
-        String status = "";
         boolean expResult = false;
-        boolean result = PlayerControl.player(name, l, status);
+        boolean result = PlayerControl.player(name, l);
         assertEquals(expResult, result);
     }
 }

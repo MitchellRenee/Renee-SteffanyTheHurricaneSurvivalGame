@@ -45,7 +45,7 @@ class AisleControl {
     }
 
     static boolean open() {
-        System.out.println("Location is not open if it is not on the CityMap."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Location is not open if it is not on the CityMap."); 
         return false;
     }
 }

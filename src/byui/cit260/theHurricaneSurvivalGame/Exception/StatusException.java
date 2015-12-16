@@ -11,39 +11,42 @@ import java.util.ArrayList;
  *
  * @author Renee
  */
-public class PlayerException extends Exception {
+public class StatusException extends Exception {
 
-    public PlayerException() {
+    public StatusException() {
     }
 
-    public PlayerException(String message) {
+    public StatusException(String message) {
         super(message);
     }
 
-    public PlayerException(String message, Throwable cause) {
+    public StatusException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public PlayerException(Throwable cause) {
+    public StatusException(Throwable cause) {
         super(cause);
     }
 
-    public PlayerException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public StatusException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
 
     public static void main(String args[]) {
 
         // the action of the stringList will be null 
-        ArrayList<String> stringList = new ArrayList<>();
+        ArrayList<String> stringList = null;
 
+        //Another way to write line 58
+        //Pass in a new array list so the the stringList is not null.
+        //ArrayList<String> stringList =  new ArrayList<>();
         //pass stringList call the method
-        stringList = PlayerException(stringList);
+        stringList = TimeException(stringList);
 
         System.out.println("List: " + stringList);
     }
 
-    public static ArrayList<String> PlayerException(ArrayList<String> stringList) {
+    public static ArrayList<String> TimeException(ArrayList<String> stringList) {
 
         try {
             stringList.add("Sample");
@@ -56,10 +59,13 @@ public class PlayerException extends Exception {
 
             return null;
 
+        //Finally always executes.    
+            //add finally statement; assure program file is closed.
         } finally {
-            stringList.add("Exception #2");
-            //WRITE A FINALLY CLOSING STATEMENT HERE
+            stringList.add("Second");
+
             return stringList;
+            //ADD A FINALLY STATEMENT HERE
         }
 
     }

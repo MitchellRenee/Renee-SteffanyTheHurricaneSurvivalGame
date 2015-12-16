@@ -90,7 +90,7 @@ public class WelcomeView {
 
             // Get the user's selection
             String input = this.getInput();
-            
+
             // Get first character of string
             selection = input.charAt(0);
 
@@ -101,52 +101,52 @@ public class WelcomeView {
         } while (selection != 'E');
 
     }
+
     public boolean doAction(char selection) {
         try {
-        switch (selection) {
-            case 'M': // Display main menu
-                this.startDisplayMainMenu();
-                break;
-            case 'G': // Get user's input
-                this.getInput();
-                break;
-            case 'H': // Retrieve first character of string
-                this.inputCharAt(0);
-                break;
-            case 'S': // Do action based on selection 
-                this.performAction();
-                break;
-            case 'Q': // Quit 
-                return true;
-            default:
-                System.out.println("\n*** This is an invalid selection *** Please try again");
-                break;
-        }
-        return false;
+            switch (selection) {
+                case 'M': // Display main menu
+                    this.startDisplayMainMenu();
+                    break;
+                case 'G': // Get user's input
+                    this.getInput();
+                    break;
+                case 'H': // Retrieve first character of string
+                    this.inputCharAt(0);
+                    break;
+                case 'S': // Do action based on selection 
+                    this.performAction();
+                    break;
+                case 'Q': // Quit 
+                    return true;
+                default:
+                    System.out.println("\n*** This is an invalid selection *** Please try again");
+                    break;
+            }
+            return false;
         } catch (Exception e) {
 
             System.out.print("Error reading input: " + e.getMessage());
             ErrorView.display(this.getClass().getName());
 
             return true;
-        }    
+        }
     }
-    
+
     private String getInput() {
-        System.out.println("Retrieve input."); 
+        System.out.println("Retrieve input.");
         return null;
     }
 
     private void startDisplayMainMenu() {
-        System.out.println("Display main menu."); 
-    }    
-    
+        System.out.println("Display main menu.");
+    }
+
     private void inputCharAt(int i) {
-        System.out.println("User."); 
+        System.out.println("User.");
     }
 
-       private void performAction() {
-        System.out.println("Retrieve input."); 
+    private void performAction() {
+        System.out.println("Retrieve input.");
     }
-
 }

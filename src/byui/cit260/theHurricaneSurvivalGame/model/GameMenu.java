@@ -131,7 +131,7 @@ public class GameMenu implements Serializable {
     public String toString() {
         return "GameMenu{" + "mapOfTown=" + mapOfTown + ", supplyList=" + supplyList + ", inventoryList=" + inventoryList + ", newLocation=" + newLocation + ", deliverSupplies=" + deliverSupplies + ", viewDeliveries=" + viewDeliveries + ", whatLocationHas=" + whatLocationHas + ", moneyAccount=" + moneyAccount + ", survivalPointsEarned=" + survivalPointsEarned + ", timeBeforeHurricane=" + timeBeforeHurricane + ", help=" + help + ", mainMenu=" + mainMenu + '}';
     }
-    
+
     @Override
     public int hashCode() {
         int hash = 5;
@@ -197,8 +197,5 @@ public class GameMenu implements Serializable {
         }
         return true;
     }
-    
-   }
 
-
-
+}

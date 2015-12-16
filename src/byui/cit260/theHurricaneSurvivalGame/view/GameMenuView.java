@@ -115,5 +115,4 @@ public class GameMenuView extends View {
     public void viewMap() {
         System.out.println(HurricaneSurvivalGame.getInstance().getMap().getMapDisplay());
     }
-
 }

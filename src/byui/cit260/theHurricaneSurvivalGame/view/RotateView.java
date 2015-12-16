@@ -12,15 +12,12 @@ import static byui.cit260.theHurricaneSurvivalGame.control.PlayerControl.player;
  *
  * @author Renee
  */
+/**
+ * Call method for input
+ *
+ * @param input
+ */
 public class RotateView extends View {
-    /*    doAction(){
-     try{
-     movePlayer(player,0,1);
-     } catch (MoveException me) {   
-     System.out.println(me.getMessage());
-     }
-     }
-     */
 
     public RotateView(String message) {
 
@@ -35,39 +32,38 @@ public class RotateView extends View {
 
     }
 
-    /**
-     * Call method for input
-     *
-     * @param input
-     */
     public boolean doAction(char input) {
+        try {
+            switch (input) {
+                case 'N':
+                    moveNorth();
+                    break;
+                case 'G':
+                    moveEast();
+                    break;
+                case 'H':
+                    moveSouth();
+                    break;
+                case 'S':
+                    moveWest();
+                    break;
+                case 'Q': // Quit the program
+                    return true;
+                default:
+                    System.out.println("\n*** This is an invalid selection *** Please try again");
+                    break;
+            }
+            return true;
+        } catch (Exception e) {
 
-        switch (input) {
-            case 'N':
-                moveNorth();
-                break;
-            case 'G':
-                moveEast();
-                break;
-            case 'H':
-                moveSouth();
-                break;
-            case 'S':
-                moveWest();
-                break;
-            case 'Q': // Quit the program
-                return true;
-            default:
-                System.out.println("\n*** This is an invalid selection *** Please try again");
-                break;
+            System.out.print("Error reading input: " + e.getMessage());
+            ErrorView.display(this.getClass().getName());
         }
-        return true;
-
+        return false;
     }
 
     //Returns error when I added in the try catch according to the video from wk 10
     //Video link: https://www.youtube.com/watch?v=9iAcqnesaS4&feature=youtu.be
-
     private void moveNorth() {
 
         LocationControl l = new LocatonControl();
@@ -92,6 +88,7 @@ public class RotateView extends View {
         l.moveWest(0, 0);
     }
 
+    @Override
     public boolean doAction(Object obj) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -123,13 +120,6 @@ public class RotateView extends View {
             System.out.println("Row location cannot be null.");
         }
 
-        private void moveNorth(Object object, Object object0) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        private void moveSouth(int i, int i0) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
     }
 
     private static class LocatonControl extends LocationControl {
@@ -143,5 +133,4 @@ public class RotateView extends View {
         public getRow() {
         }
     }
-
 }

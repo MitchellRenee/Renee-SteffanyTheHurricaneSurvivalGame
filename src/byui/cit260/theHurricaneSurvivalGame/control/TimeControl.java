@@ -41,13 +41,5 @@ public class TimeControl {
         return timeRemaining;
     }
 }
-    
-    /*try {
-        TimeControl.calTimeRemainingInGame(double timeSpent, double totalTime){
-    } catch (TimeException te) {
-        System.out.println(te.getMessage());
-    }*/ 
 
-
-    
 

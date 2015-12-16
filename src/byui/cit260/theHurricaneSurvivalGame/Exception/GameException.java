@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Renee
  */
-/*public class GameException extends Exception {
+public class GameException extends Exception {
 
     public GameException() {
     }
@@ -26,34 +26,24 @@ import java.util.ArrayList;
 
     public GameException(Throwable cause) {
         super(cause);
-
-     public GameException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    }
+    public GameException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
-    }
-    
-    
-}    
-    }
-*/
-public class GameException extends Exception {
-    
+    }    
+   
     public static void main(String args[]){
         
         // the action of the stringList will be null 
         ArrayList<String> stringList = null; 
        
         try {               
-            stringList.add("Sample");
+            boolean add = stringList.add("Sample");
         } catch (NullPointerException nullException){//try/catch statement needs input parameters in the catch
             //footnote: there are a variety of options of outputs from line 26-28 and more 
                 //nullException.printStackTrace();
             //System.out.println("Exception: " + nullException.getMessage());//message will be null
             System.out.println("Exception: " + nullException.toString());//message will be nullPointer exception
         }    
-    }
-
-    public GameException(String message) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
    

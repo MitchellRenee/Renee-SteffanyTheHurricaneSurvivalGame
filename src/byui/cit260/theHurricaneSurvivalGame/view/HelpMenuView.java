@@ -14,6 +14,12 @@ import java.util.logging.Logger;
  *
  * @author SteffanyFaldmo
  */
+/**
+ * This just gets the player's input
+ *
+ * @param obj
+ * @return
+ */
 public class HelpMenuView extends View {
 
     boolean display;
@@ -31,12 +37,7 @@ public class HelpMenuView extends View {
                 + "\n------------------------------------");
     }
 
-    /**
-     * This just gets the player's input
-     *
-     * @param obj
-     * @return
-     */
+    
     public boolean doAction(Object obj) {
         try {
 
@@ -73,18 +74,18 @@ public class HelpMenuView extends View {
     }
 
     private void startResourceList() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Retrieve resource list.");
     }
 
     private void inventoryHelp() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("View help for inventory.");
     }
 
     private void saveResourceList() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Save resource list.");
     }
 
     private void exitHelpMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Exit the help menu.");
     }
 }

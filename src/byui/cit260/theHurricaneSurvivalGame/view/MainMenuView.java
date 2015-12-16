@@ -61,7 +61,7 @@ public class MainMenuView extends View {
                  this.startNewGame();
                  break;
                  */
-                case 'G': // Get and start an exiting game
+                case 'G': // Get and start an existing game
                     this.startExistingGame();
                     break;
                 case 'V': //Lets the player view the player's location
@@ -92,7 +92,7 @@ public class MainMenuView extends View {
 
     private void startNewGame() {
         //Create a new game
-        //GameControl c = new GameControl();
+        GameControl c = new GameControl();
         GameControl.createNewGame();
 
         //Display the game menu

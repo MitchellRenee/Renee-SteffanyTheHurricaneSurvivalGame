@@ -5,7 +5,6 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.model;
 
-
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -21,7 +20,7 @@ public class Player implements Serializable {
     private Location playerLocation;
     private boolean items;
     private double moneyAccount;
-    private boolean status;
+    private double status;
     private String description;
 
     public Player() {
@@ -67,11 +66,11 @@ public class Player implements Serializable {
         this.moneyAccount = moneyAccount;
     }
 
-    public boolean isStatus() {
+    public double isStatus() {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus(double status) {
         this.status = status;
     }
 
@@ -84,21 +83,21 @@ public class Player implements Serializable {
     }
 
     @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 67 * hash + Objects.hashCode(this.namePlayer);
-        hash = 67 * hash + (this.bestTime ? 1 : 0);
-        hash = 67 * hash + Objects.hashCode(this.playerLocation);
-        hash = 67 * hash + (this.items ? 1 : 0);
-        hash = 67 * hash + (int) (Double.doubleToLongBits(this.moneyAccount) ^ (Double.doubleToLongBits(this.moneyAccount) >>> 32));
-        hash = 67 * hash + (this.status ? 1 : 0);
-        hash = 67 * hash + Objects.hashCode(this.description);
-        return hash;
+    public String toString() {
+        return "Player{" + "namePlayer=" + namePlayer + ", bestTime=" + bestTime + ", playerLocation=" + playerLocation + ", items=" + items + ", moneyAccount=" + moneyAccount + ", status=" + status + ", description=" + description + '}';
     }
 
     @Override
-    public String toString() {
-        return "Player{" + "namePlayer=" + namePlayer + ", bestTime=" + bestTime + ", playerLocation=" + playerLocation + ", items=" + items + ", moneyAccount=" + moneyAccount + ", status=" + status + ", description=" + description + '}';
+    public int hashCode() {
+        int hash = 7;
+        hash = 53 * hash + Objects.hashCode(this.namePlayer);
+        hash = 53 * hash + (this.bestTime ? 1 : 0);
+        hash = 53 * hash + Objects.hashCode(this.playerLocation);
+        hash = 53 * hash + (this.items ? 1 : 0);
+        hash = 53 * hash + (int) (Double.doubleToLongBits(this.moneyAccount) ^ (Double.doubleToLongBits(this.moneyAccount) >>> 32));
+        hash = 53 * hash + (int) (Double.doubleToLongBits(this.status) ^ (Double.doubleToLongBits(this.status) >>> 32));
+        hash = 53 * hash + Objects.hashCode(this.description);
+        return hash;
     }
 
     @Override
@@ -125,30 +124,28 @@ public class Player implements Serializable {
         if (Double.doubleToLongBits(this.moneyAccount) != Double.doubleToLongBits(other.moneyAccount)) {
             return false;
         }
-        if (this.status != other.status) {
+        if (Double.doubleToLongBits(this.status) != Double.doubleToLongBits(other.status)) {
             return false;
         }
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
         return true;
-        //To change body of generated methods, choose Tools | Templates.
     }
 
     public Object getLocation() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     public void setLocation(Location newLoc) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     public static boolean move() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     public static boolean exists() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }    
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }
-    

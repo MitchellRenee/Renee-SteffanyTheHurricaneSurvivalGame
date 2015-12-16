@@ -107,7 +107,8 @@ public class DeliverSupplies implements Serializable {
     }
 
     public double getDeliverCenterCost() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Delivery cost cannot be less than 0."); 
+        return 0;
     }
     
     

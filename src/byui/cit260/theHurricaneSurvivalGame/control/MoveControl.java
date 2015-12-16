@@ -78,7 +78,6 @@ public class MoveControl {
 
         if (col == 0) {
             throw new MoveException("Cannot move west.");
-            //HERE THROW AN EXCEPTION
 
         }
 

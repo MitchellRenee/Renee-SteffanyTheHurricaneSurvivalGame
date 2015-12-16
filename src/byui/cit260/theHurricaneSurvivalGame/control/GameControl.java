@@ -4,10 +4,7 @@
  * and open the template in the editor.
  */
 package byui.cit260.theHurricaneSurvivalGame.control;
-/**
-* @param nameCreates a player for a new gam
-* @return  
-*/
+
 import byui.cit260.theHurricaneSurvivalGame.Exception.CityMapException;
 import byui.cit260.theHurricaneSurvivalGame.Exception.GameException;
 import static byui.cit260.theHurricaneSurvivalGame.control.PlayerControl.player;
@@ -228,7 +225,20 @@ public class GameControl {
 
         return inventory;
     }
-   
+    /**
+     * @param Creates a player for a new game
+     * @param name
+     * @return
+     */  
+    public static Player createPlayer(String name ){
+        player p = newPlayer();
+        
+        p.setName(name);
+        p.setMoneyAccount(STARTING_CASH);
+        p.setPlayerLocation(null);
+        return null;
+    }    
+
     public static boolean move(Player p, Location l)
             throws CityMapException {
         boolean returnValue = false;

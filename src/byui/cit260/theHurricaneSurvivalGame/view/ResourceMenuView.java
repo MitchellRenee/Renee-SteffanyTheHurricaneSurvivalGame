@@ -114,15 +114,11 @@ public class ResourceMenuView extends View {
     }
 
     private void displayReportMenu() {
-        System.out.println("View of report menu displays.");
+        System.out.println("View of report menu display.");
     }
 
-    private void callResourceViewLayerFunction() {
-        System.out.println("View of report menu displays.");
-    }
-
-    private void displayResourceViewLayer() {
-        System.out.println("View of report menu displays.");
+    private void displayResourceMenuViewLayer() {
+        System.out.println("View report of resource menu view.");
     }
 
     private void displayResourceMenuView() {
@@ -130,7 +126,7 @@ public class ResourceMenuView extends View {
     }
 
     private void callResourceMenuViewFunction() {
-        System.out.println("View of report menu displays.");
+        System.out.println("Get resource menu view.");
     }
 
     public void write(int b) throws IOException {
@@ -142,6 +138,6 @@ public class ResourceMenuView extends View {
     }
 
     private void startNewGame() {
-        System.out.println("View of report menu displays.");
+        System.out.println("Retrieve new game.");
     }
 }

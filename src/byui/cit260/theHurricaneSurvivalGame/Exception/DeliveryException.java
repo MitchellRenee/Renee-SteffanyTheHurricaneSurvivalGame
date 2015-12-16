@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Renee
  */
-/*public class DeliveryException extends Exception {
+public class DeliveryException extends Exception {
 
     public DeliveryException() {
     }
@@ -31,27 +31,19 @@ import java.util.ArrayList;
     public DeliveryException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
-*/    
-    
-public class DeliveryException extends Exception {
-    
-    public static void main(String args[]){
-        
+
+    public static void main(String args[]) {
+
         // the action of the stringList will be null 
-        ArrayList<String> stringList = new ArrayList<>(); 
-       
-        try {               
+        ArrayList<String> stringList = new ArrayList<>();
+
+        try {
             stringList.add("Sample");
-        } catch (NullPointerException nullException){//try/catch statement needs input parameters in the catch
+        } catch (NullPointerException nullException) {//try/catch statement needs input parameters in the catch
             //footnote: there are a variety of options of outputs from line 26-28 and more 
-                //nullException.printStackTrace();
+            //nullException.printStackTrace();
             //System.out.println("Exception: " + nullException.getMessage());//message will be null
             System.out.println("Exception: " + nullException.toString());//message will be nullPointer exception
-        }    
+        }
     }
-
-    public DeliveryException(String delivery_cannot_be_delivered_to_an_invali) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-}    
-
+}
