@@ -45,6 +45,8 @@ import java.util.ArrayList;
         } catch (NullPointerException nullException){//try/catch statement needs input parameters in the catch
             //footnote: ADD A NULLPOINTER EXCEPTION HERE
             System.out.println("Exception: " + nullException.toString());//message will be nullPointer exception
+        } finally { 
+            System.out.close();
         }    
     }
 }

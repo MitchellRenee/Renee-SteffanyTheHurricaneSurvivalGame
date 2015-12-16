@@ -17,11 +17,13 @@ public interface ViewInterface {
      * Interfaces are method declaration only must implement the methods below
      * the display, getInput, and doAction methods.
      */
+    //instead of writing methods you write out the method signatures only
+    //Write out the first line of the method signature
+    //for examplepublic void, public, and public boolean are method signatures
+    
     public void display();
 
     public String getInput();
-    //ADD MISSING CODE HERE
-   
 
     public boolean doAction(Object obj);
     //Remember only the function signature are required

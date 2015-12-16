@@ -14,7 +14,7 @@ import byui.cit260.theHurricaneSurvivalGame.Exception.StatusException;
  * @author Renee
  */
 public class StatusControl {
-
+   
     public int calPercentageCompletedInGame(int totalPercent, int percentRemaining, int percentCompleted)
             throws StatusException {
         if (percentCompleted < 100) { // TotalPercent must start at 100 for the beginning of the game.        
@@ -24,8 +24,9 @@ public class StatusControl {
         if (percentCompleted < 100 || totalPercent <= 100) {
             throw new StatusException("Percentage completed cannot be less than one hundred to win game.");
         }
-
+        
         return percentCompleted;
+     
     }
 
     public int calAmountOfResourcesCollected(int resourcesRemaining, int totalResources, int resourcesCollected)

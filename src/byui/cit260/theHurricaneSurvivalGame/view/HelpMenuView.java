@@ -27,14 +27,14 @@ public class HelpMenuView extends View {
 
     public HelpMenuView() {
         super("\n"
-                + "\n------------------------------------"
-                + "\n| Resource Menu                     "
-                + "\n------------------------------------"
-                + "\nG - Start resource list                     "
-                + "\nH - Get help on how to inventory resource"
-                + "\nS - Save resource list"
-                + "\nE - Exit"
-                + "\n------------------------------------");
+                + "\n-----------------------------------------"
+                + "\n| Help Menu                              "
+                + "\n-----------------------------------------"
+                + "\nG - Start help menu                      "
+                + "\nH - Get help to view inventory resources "
+                + "\nS - Save help menu                       "
+                + "\nE - Exit                                 "
+                + "\n-----------------------------------------");
     }
 
     
@@ -65,6 +65,7 @@ public class HelpMenuView extends View {
             }
             return false;
         } catch (Exception e) {
+            e.printStackTrace();
 
             System.out.print("Error reading input: " + e.getMessage());
             ErrorView.display(this.getClass().getName());
@@ -87,5 +88,11 @@ public class HelpMenuView extends View {
 
     private void exitHelpMenu() {
         System.out.println("Exit the help menu.");
+    }
+
+    @Override
+    public String getInput() {
+        System.out.println("Not supported yet."); 
+        return null;
     }
 }

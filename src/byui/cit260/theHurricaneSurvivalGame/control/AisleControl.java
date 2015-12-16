@@ -6,8 +6,9 @@
 package byui.cit260.theHurricaneSurvivalGame.control;
 
 import byui.cit260.theHurricaneSurvivalGame.Exception.AisleException;
-import static byui.cit260.theHurricaneSurvivalGame.control.AisleControl.aisle;
+
 import byui.cit260.theHurricaneSurvivalGame.model.Aisle;
+import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGame;
 import byui.cit260.theHurricaneSurvivalGame.model.Location;
 import byui.cit260.theHurricaneSurvivalGame.model.LocationType;
 
@@ -15,15 +16,18 @@ import byui.cit260.theHurricaneSurvivalGame.model.LocationType;
  *
  * @author Renee
  */
-class AisleControl {
-
-    public static int aisle(Aisle a, int a1, int a2, int a3, int a4, int a5, int aisle) throws AisleException {
-        if (a1 < 0 || a2 < 0 || a3 < 0 || a4 < 0 || a5 < 0) {
-
+public class AisleControl {
+       
+    public static int calAisle(Aisle a, int a1, int a2, int a3, int a4, int a5, int aisle) throws AisleException {
+         try {
+        
+        if (a1 < 0 || a2 < 0 || a3 < 0 || a4 < 0 || a5 < 0) {        
+            
             int returnValue = 0;
             if (a == null) {
                 return 0;
-            }
+            
+            }   
             aisle = a.getAisle1();
             aisle = a.getAisle2();
             aisle = a.getAisle3();
@@ -33,19 +37,34 @@ class AisleControl {
             int totalAisle = a1 + a2 + a3 + a4 + a5;
             if (aisle < 1) {
                 throw new AisleException("Aisle cannot be less than 1.");
+          
             }
             return 0;
         }
+        Aisle.calAisle(HurricaneSurvivalGame.getInstance());   
+        }catch (AisleException ae) {
+                System.out.println(ae.getMessage());
+                return 0;
+        } catch (Throwable te) { 
+                System.out.println(te.getMessage());    
+                te.printStackTrace();
+            }finally {
+                 System.out.close();    
+            }   
         return 0;
+        }      
+
+    static int aisle(Aisle a, int a1, int a2, int a3, int a4, int a5, int aisle) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     static boolean valid() {
-        System.out.println("Aisle is not valid if less[0].");
-        return false;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     static boolean open() {
-        System.out.println("Location is not open if it is not on the CityMap."); 
-        return false;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-}
+
+}    
+

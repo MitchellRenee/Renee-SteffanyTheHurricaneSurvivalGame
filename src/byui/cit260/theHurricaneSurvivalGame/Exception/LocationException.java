@@ -68,6 +68,6 @@ public class LocationException extends Exception {
     }
 
     public LocationException(String player_cannot_leave_map_location) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Not supported yet."); 
     }
 }

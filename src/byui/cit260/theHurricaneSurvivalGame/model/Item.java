@@ -6,6 +6,7 @@
 package byui.cit260.theHurricaneSurvivalGame.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -25,6 +26,10 @@ public class Item implements Serializable {
     private double requiredAmount;
 
     public Item() {
+    }
+
+    private Item(String protein, int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getName() {
@@ -110,4 +115,26 @@ public class Item implements Serializable {
         return true;
     }
 
+    public ArrayList<Item> addInventoryItems() {
+
+        ArrayList<Item> inventory = new ArrayList<>();
+
+        
+        Item protein = new Item("protein", 0);
+        inventory.add(protein);
+
+        inventory.add(new Item("protein", 1));
+        inventory.add(new Item("carbs", 3));
+        inventory.add(new Item("toiletries", 4));
+        inventory.add(new Item("overTheCounterMeds", 7));
+        inventory.add(new Item("clothing", 8));
+        inventory.add(new Item("blankets", 9));
+        inventory.add(new Item("flashlight", 13));
+        inventory.add(new Item("batteries", 15));
+        
+        inventory.add(1, new Item ("waterPurifierKit", 24));
+        
+        
+        return inventory;
+    }
 }

@@ -9,7 +9,7 @@ package byui.cit260.theHurricaneSurvivalGame.view;
  *
  * @author Renee
  */
-public class StatusView  {
+public class StatusView extends View {
 
     int display;
     private int MENU;
@@ -28,7 +28,7 @@ public class StatusView  {
                 + "\n------------------------------------");
     }
 
-    public int doAction(Object obj) {
+    public boolean doAction(Object obj) {
         try {
 
             String value = (String) obj;
@@ -54,19 +54,19 @@ public class StatusView  {
                     this.saveGame();
                     break;
                 case 'Q': // Quit the program
-                    return 0;
+                    return false;
                 default:
                     System.out.println("\n*** This is an invalid selection *** Please try again");
                     break;
             }
-            return 0;
+            return false;
 
         } catch (Exception e) {
 
             System.out.print("Error reading input: " + e.getMessage());
             ErrorView.display(this.getClass().getName());
 
-            return 0;
+            return true;
         }
     }
 

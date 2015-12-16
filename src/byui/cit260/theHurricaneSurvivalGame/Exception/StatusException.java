@@ -52,6 +52,7 @@ public class StatusException extends Exception {
             stringList.add("Sample");
             System.out.println("No Exception");
         } catch (NullPointerException nullException) {
+            
             stringList = new ArrayList<>();  //The stringList is null; initialize stringList.
             stringList.add("Sample Exception");
 
@@ -59,13 +60,11 @@ public class StatusException extends Exception {
 
             return null;
 
-        //Finally always executes.    
-            //add finally statement; assure program file is closed.
         } finally {
             stringList.add("Second");
 
             return stringList;
-            //ADD A FINALLY STATEMENT HERE
+           
         }
 
     }

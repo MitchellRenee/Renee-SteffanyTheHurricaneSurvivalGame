@@ -18,6 +18,10 @@ import java.io.Serializable;
  */
 public class Aisle implements Serializable {
 
+    public static void calAisle(HurricaneSurvivalGame instance) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     // make this a list or a single array
     //class instance variables
     private int aisle1;
@@ -120,9 +124,9 @@ private Location[] locationMatrix;
 
         for (int aisle = 0; aisle < locationMatrix.length; aisle++) {
             for (int a = 0; a < locationMatrix[0].length; a++) {
-                Location tempLocation = new Location();
-                tempLocation.setAisle(aisle);
-                tempLocation.setLocationType(LocationType.Empty);
+                Location tempLocation = new Location();// creating new location
+                tempLocation.setAisle(aisle); //give the aisle a temporary location with a setter
+                tempLocation.setLocationType(LocationType.Empty);// set an empty location for the empty locations on the map.
 
                 locationMatrix[aisle] = tempLocation;
             }

@@ -19,7 +19,6 @@ public class Location implements Serializable {
     private Aisle aisle;
     private String visited;
     private LocationType locationType;
-
     private MegaStore megaStore;
     int length;
 
@@ -131,4 +130,12 @@ public class Location implements Serializable {
     public static boolean open() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }   
+
+    public void moveEast(int i, int i0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void moveNorth(int i, int i0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

@@ -19,10 +19,30 @@ public class AisleControlTest {
     }
 
     /**
+     * Test of calAisle method, of class AisleControl.
+     */
+    @Test
+    public void testCalAisle() throws Exception {
+        System.out.println("calAisle");
+        Aisle a = null;
+        int a1 = 0;
+        int a2 = 0;
+        int a3 = 0;
+        int a4 = 0;
+        int a5 = 0;
+        int aisle = 0;
+        int expResult = 0;
+        int result = AisleControl.calAisle(a, a1, a2, a3, a4, a5, aisle);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
      * Test of aisle method, of class AisleControl.
      */
     @Test
-    public void testAisle() throws Exception {
+    public void testAisle() {
         System.out.println("aisle");
         Aisle a = null;
         int a1 = 0;
@@ -34,6 +54,8 @@ public class AisleControlTest {
         int expResult = 0;
         int result = AisleControl.aisle(a, a1, a2, a3, a4, a5, aisle);
         assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -45,6 +67,8 @@ public class AisleControlTest {
         boolean expResult = false;
         boolean result = AisleControl.valid();
         assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -56,5 +80,8 @@ public class AisleControlTest {
         boolean expResult = false;
         boolean result = AisleControl.open();
         assertEquals(expResult, result);
-    }    
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+    
 }

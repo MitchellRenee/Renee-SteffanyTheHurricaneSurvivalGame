@@ -36,12 +36,15 @@ import java.util.ArrayList;
 */
 //EX#2: create a method taking an argument of strings 
 public class TimeException extends Exception {
-
+    
     public static void main(String args[]) {
 
         // the action of the stringList will be null 
         ArrayList<String> stringList = null;
-        
+        try {
+            stringList.add("Sample");
+        } catch (NullPointerException nullException) {
+        }
         //Another way to write line 58
         //Pass in a new array list so the the stringList is not null.
         //ArrayList<String> stringList =  new ArrayList<>();
@@ -50,7 +53,9 @@ public class TimeException extends Exception {
         stringList = TimeException(stringList);
 
         System.out.println("List: " + stringList);
+        System.out.close();         
     }
+    
 
     public static ArrayList<String> TimeException(ArrayList<String> stringList) {
 
@@ -65,19 +70,16 @@ public class TimeException extends Exception {
             
             return null;
          
-        //Finally always executes.    
-        //add finally statement; assure program file is closed.
         } finally {
             stringList.add("Second");
             
             return stringList;
-            //ADD A FINALLY STATEMENT HERE
         }
 
     }
 
     public TimeException(String time_cannot_be_less_than_0) {
-        throw new UnsupportedOperationException("Total start time cannot be less than 48 hours."); 
+        System.out.println("Total start time cannot be less than 48 hours."); 
     }
 }
 

@@ -43,15 +43,15 @@ public class StoreException extends Exception {
        
         try {               
             stringList.add("Sample");
-        } catch (NullPointerException nullException){//try/catch statement needs input parameters in the catch
-            //footnote: there are a variety of options of outputs from line 26-28 and more 
-                //nullException.printStackTrace();
-            //System.out.println("Exception: " + nullException.getMessage());//message will be null
+        } catch (NullPointerException nullException){     
+            System.out.println("Exception: " + nullException.getMessage());//message will be null
             System.out.println("Exception: " + nullException.toString());//message will be nullPointer exception
+        } finally {
+            System.out.close();        
         }    
     }
 
     public StoreException(String cannot_move_west) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Not supported yet.");
     }
 }

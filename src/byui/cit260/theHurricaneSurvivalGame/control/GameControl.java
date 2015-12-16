@@ -231,7 +231,8 @@ public class GameControl {
      * @return
      */  
     public static Player createPlayer(String name ){
-        player p = newPlayer();
+        
+        Player p = new Player();
         
         p.setName(name);
         p.setMoneyAccount(STARTING_CASH);
@@ -328,6 +329,10 @@ public class GameControl {
 
         return p;
 
+    }
+
+    static void saveGame(HurricaneSurvivalGame HurricaneSurvivalGame, String filepath) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public boolean exists() {

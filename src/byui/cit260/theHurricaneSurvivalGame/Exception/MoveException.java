@@ -43,9 +43,9 @@ public class MoveException extends Exception {
             //add finally statement; assure program file is closed.
         } finally {
             stringList.add("Second");
-            //ADD FINALLY STATEMENT 
+            
             return stringList;
-            //ADD FINALLY STATEMENT
+         
         }
     }
 

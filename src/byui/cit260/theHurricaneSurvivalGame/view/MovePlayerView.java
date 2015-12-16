@@ -65,6 +65,8 @@ public abstract class MovePlayerView extends View {
             }
             return false;
         } catch (Exception e) {
+            e.printStackTrace();
+            
 
             System.out.print("Error reading input: " + e.getMessage());
             ErrorView.display(this.getClass().getName());

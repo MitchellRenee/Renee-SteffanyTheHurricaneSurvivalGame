@@ -64,12 +64,10 @@ public class CityMapException extends Exception {
             return null;
 
         } catch (Exception e) {
-
         } finally {
             stringList.add("Second");
 
             return stringList;
-            // WRITE A FINALLY STATEMENT HERE
         }
     }
 }

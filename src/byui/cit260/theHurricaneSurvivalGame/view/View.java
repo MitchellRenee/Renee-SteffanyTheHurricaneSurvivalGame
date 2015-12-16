@@ -12,6 +12,9 @@ package byui.cit260.theHurricaneSurvivalGame.view;
  */
 import java.io.BufferedReader;
 import java.io.PrintWriter;
+import static java.util.Arrays.stream;
+import static java.util.Arrays.stream;
+
 import java.util.Scanner;
 import thehurricanesurvivalgame.TheHurricaneSurvivalGame;
 
@@ -53,7 +56,8 @@ public abstract class View implements ViewInterface {
     }
 
     public String getInput() {
-        //Scanner keyboard = new Scanner(System.in); //Keyboard input stream
+        Scanner keyboard = new Scanner(System.in); 
+        //Keyboard = input stream;
         boolean valid = false; // Indicates the input has been retrieved
         String selection = " ";
         try {
@@ -75,7 +79,7 @@ public abstract class View implements ViewInterface {
                 break;// Out of the (exit) the repetition
             }
         } catch (Exception e) {
-
+            
             ErrorView.display(this.getClass().getName(),
                     "Error reading input:" + e.getMessage());
 

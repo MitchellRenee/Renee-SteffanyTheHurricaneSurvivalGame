@@ -44,6 +44,8 @@ public class DeliveryException extends Exception {
             //nullException.printStackTrace();
             //System.out.println("Exception: " + nullException.getMessage());//message will be null
             System.out.println("Exception: " + nullException.toString());//message will be nullPointer exception
+        } finally {
+            System.out.close();
         }
     }
 }
