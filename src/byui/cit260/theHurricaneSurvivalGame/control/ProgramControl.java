@@ -14,6 +14,11 @@ import byui.cit260.theHurricaneSurvivalGame.model.Player;
  * @author Renee
  */
 public class ProgramControl {
+    
+    public static void main(String[] args) {
+        System.out.println("Let the games begin.");
+    }
+
 //Did not pass 
     // This algorithm checks to make sure the value of name of the input parameter contains a value not a null
     public static Player createPlayer(String name) throws ProgramException {

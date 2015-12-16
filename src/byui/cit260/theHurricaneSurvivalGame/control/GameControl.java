@@ -13,7 +13,6 @@ import byui.cit260.theHurricaneSurvivalGame.model.CityMap;
 import byui.cit260.theHurricaneSurvivalGame.model.HurricaneSurvivalGame;
 import byui.cit260.theHurricaneSurvivalGame.model.Item;
 import byui.cit260.theHurricaneSurvivalGame.model.Location;
-import byui.cit260.theHurricaneSurvivalGame.model.LocationType;
 import byui.cit260.theHurricaneSurvivalGame.model.MegaStore;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
 import java.io.FileInputStream;
@@ -24,8 +23,6 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import static javafx.beans.binding.Bindings.or;
-import thehurricanesurvivalgame.TheHurricaneSurvivalGame;
 
 /**
  *
@@ -226,7 +223,6 @@ public class GameControl {
         return inventory;
     }
     /**
-     * @param Creates a player for a new game
      * @param name
      * @return
      */  
