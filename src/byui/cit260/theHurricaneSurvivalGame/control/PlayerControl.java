@@ -24,16 +24,16 @@ public class PlayerControl {
      * Move player from current location to a new location if the location is
      * available.</p>
      *
-     * @param player is the person interacting as the end user.
-     * @param Name is the valid by alphabet, first and/or last name, or
-     * abbreviation then name exists
-     * @param Status gives player's best time played,amount of cash in account,
-     * and time left to play game
-     * @return Was the player able to retrieve the game status?
+     * @param args
      */
     //Status 
+    public static void main(String[] args) {
+        System.out.println("Create the player.");
+    }
+
     public static boolean player(String name, Location l)
             throws PlayerException {
+        
 
         boolean returnValue = false;
         if (name != null && Location.open()) {
