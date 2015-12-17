@@ -155,7 +155,7 @@ public class RotateView extends View {
       
             
     }
-    }
+}
 
     private static class LocatonControl extends LocationControl {
 

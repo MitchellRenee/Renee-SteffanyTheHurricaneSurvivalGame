@@ -137,4 +137,14 @@ public class Item implements Serializable {
         
         return inventory;
     }
+    public void iteratesTheIndex(ArrayList<Item> inventoryItems){
+        
+        for (int i =0; i < inventoryItems.size(); i++){
+        
+            Item item = inventoryItems.get(i);
+            System.out.println("\n\tItem: "  + item.getName() +
+                                "\n\tQuantity: "  + item.getQuantityInStock());
+        }
+    }
+    
 }

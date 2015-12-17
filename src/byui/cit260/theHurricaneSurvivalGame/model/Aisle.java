@@ -19,7 +19,7 @@ import java.io.Serializable;
 public class Aisle implements Serializable {
 
     public static void calAisle(HurricaneSurvivalGame instance) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     // make this a list or a single array
@@ -112,7 +112,7 @@ public class Aisle implements Serializable {
         }
         return true;
     }
-
+//Create a single array
 private Location[] locationMatrix;
     public static int getMapDisplay;
 

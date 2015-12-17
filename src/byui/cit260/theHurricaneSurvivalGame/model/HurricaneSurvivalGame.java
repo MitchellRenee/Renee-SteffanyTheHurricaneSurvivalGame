@@ -21,7 +21,6 @@ public class HurricaneSurvivalGame implements Serializable {
     private double totalTime;
     private double gameTime;
     private Player player;
-
     private MainMenu mainMenu;
     private CityMap map;
 

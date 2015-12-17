@@ -5,14 +5,17 @@
  */
 package byui.cit260.theHurricaneSurvivalGame.view;
 
+import byui.cit260.theHurricaneSurvivalGame.Exception.LocationException;
 import byui.cit260.theHurricaneSurvivalGame.Exception.MoveException;
 import byui.cit260.theHurricaneSurvivalGame.Exception.ViewException;
 import static byui.cit260.theHurricaneSurvivalGame.control.CityMapControl.move;
+import byui.cit260.theHurricaneSurvivalGame.control.GameControl;
 import byui.cit260.theHurricaneSurvivalGame.model.Player;
 import static java.nio.file.Files.move;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import thehurricanesurvivalgame.TheHurricaneSurvivalGame;
 
 /**
  *
@@ -76,8 +79,15 @@ public abstract class MovePlayerView extends View {
     }
 
     private void viewLocation() {
-        System.out.print("View the player's move.");
+        try {
+            GameControl.moveNorth(TheHurricaneSurvivalGame.getCurrentGame());
+        //}catch (MoveException me){
+        //    System.out.print(me.getMessage());
+        }catch(Throwable te){
+            System.out.println(te.getMessage());
+            te.printStackTrace();
     }
+}
 
     private void moveNorth() {
         System.out.print("View northward move.");
