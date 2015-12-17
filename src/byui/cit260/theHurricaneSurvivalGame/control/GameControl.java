@@ -331,6 +331,10 @@ public class GameControl {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    public static void moveNorth(GameControl currentGame) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public boolean exists() {
         return false;     
     }
